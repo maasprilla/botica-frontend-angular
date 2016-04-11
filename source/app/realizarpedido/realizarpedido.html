@@ -1,0 +1,46 @@
+<div>
+  <section class="SectionAdministrarPedido">
+
+          <form jsf:id="FormRealizarPedido" class="FormRealizarPedido" enctype="multipart/form-data">
+              <h1>Pedido</h1>
+
+              <md-input-container class="md-block">
+                <label>Direccion</label>
+                <input md-maxlength="30" required md-no-asterisk name="description" ng-model="project.description">
+                <div ng-messages="projectForm.description.$error">
+                  <div ng-message="required">This is required.</div>
+                  <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+                </div>
+              </md-input-container>
+
+              <md-input-container class="md-block">
+                <label>Ciudad</label>
+                <input md-maxlength="30" required md-no-asterisk name="description" ng-model="project.description">
+                <div ng-messages="projectForm.description.$error">
+                  <div ng-message="required">This is required.</div>
+                  <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+                </div>
+              </md-input-container>
+
+              <select jsf:value="#{pedidoController.idZona}"
+                      class="form-control FormRegistro-input"
+                      required="true"
+                      size="1">
+              <f:selectItem itemLabel="Zona"/>
+              <f:selectItems value="#{zonaEnvioController.zonaEnvioList}"
+                             var="zona"
+                             itemLabel="#{zona.descripcionZona}"
+                             itemValue="#{zona.idZonaEnvios}"/>
+              <f:ajax execute="@this" render="FormRegistro"/>
+              </select>
+
+              <md-input-container class="md-block">
+                <label>Descripcion</label>
+                <textarea ng-model="user.biography" md-maxlength="150" rows="5" md-select-on-focus class="FormRealizarPedido-textarea"></textarea>
+              </md-input-container>
+              <p:fileUpload  class="FormRealizarPedido-add"  mode="simple" value="#{pedidoController.fileUpload}"/>
+              <input type="submit" value="Realizar Pedido" class="FormRealizarPedido-button" jsf:actionListener="#{pedidoController.create()}"/>
+         </form>
+
+  </section>
+</div>

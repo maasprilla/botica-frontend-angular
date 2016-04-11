@@ -1,0 +1,56 @@
+.Header {
+  background-color: #3d9bff;
+  height: 48em;
+  text-align: center;
+}
+.Header-content {
+  height: 40em;
+}
+.MainMenu {
+  background-color: #4385f6;
+  border-radius: 0px;
+}
+.MainMenu-Ambiental {
+  background-color: #24cc0d;
+  border-color: #24cc0d;
+}
+.MainMenu-link {
+  color: #fff;
+}
+.MainMenu-linkLogo {
+  padding: 0;
+}
+.MainMenu-logo {
+  width: 5em;
+  height: 100%;
+  margin: 0;
+  margin-left: 1em;
+}
+.MainMenu-logo>img {
+  width: 100%;
+  height: 100%;
+}
+.MainMenuSecundary {
+  width: 80%;
+  display: inline-block;
+}
+.MainMenuSecundary-group>li>a {
+  color: #000;
+}
+.PanelLogin {
+  position: absolute;
+  display: inline-block;
+  background: #fffafa;
+  right: 0em;
+  padding: 1.5em;
+  display: none;
+}
+.PanelLogin-form {
+  width: 20em;
+}
+.PanelLogin-input {
+  text-align: center;
+}
+.headeronlynav-navbar {
+  margin-bottom: 0;
+}

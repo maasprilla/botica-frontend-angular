@@ -1,0 +1,56 @@
+.Login {
+  position: absolute;
+  max-width: 20em;
+  background-color: #f8f8f8;
+  right: 10px;
+  padding: 2em;
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  border: 2px solid #d3d3d3;
+  border-top: none;
+  display: none;
+  z-index: 1;
+}
+.LoginForm-Input {
+  display: inline-block;
+  margin-bottom: 1em;
+}
+.LoginForm-botonLogin {
+  background-color: #00aecc;
+  color: #fff;
+  border: none;
+}
+.LoginForm-botonLogin:hover {
+  border: 1px solid;
+  border-color: #00aecc;
+}
+.SectionLogin {
+  background-color: #3d9bff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  padding-top: 2em;
+  padding-bottom: 5em;
+  max-height: 70em;
+}
+.FormLogin {
+  background-color: #fffafa;
+  display: inline-block;
+  padding: 2em;
+  margin: 3em 0em;
+  border-radius: 0.5em;
+  box-shadow: 0.1em 0.1em #555;
+  width: 30em;
+  background-image: url("../images/fondo.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+}
+.FormLogin-tittle {
+  color: #000;
+}
+.FormLogin-input {
+  margin-bottom: 1em;
+}

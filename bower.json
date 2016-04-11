@@ -1,0 +1,41 @@
+{
+  "name": "inmobiliariafrontend",
+  "description": "Frontend para el software de gestión de Inmobiliarias",
+  "main": "server.js",
+  "authors": [
+    "Ruber Rodríguez V"
+  ],
+  "license": "UNLICENSED",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "less/bootstrap.less",
+        "dist/css/bootstrap.css",
+        "dist/js/bootstrap.js"
+      ]
+    }
+  },
+  "dependencies": {
+    "angular": "^1.5.0",
+    "angular-resource": "^1.5.0",
+    "angular-ui-router": "^0.2.18",
+    "angular-filter": "^0.5.8",
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.1",
+    "hover": "Hover#^2.0.2"
+  },
+  "devDependencies": {
+    "satellizer": "^0.14.0",
+    "bootstrap": "^3.3.6"
+  }
+}

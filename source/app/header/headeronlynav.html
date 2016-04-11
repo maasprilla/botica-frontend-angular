@@ -1,0 +1,52 @@
+<header class="headeronlynav">
+  <div class="navbar  MainMenu headeronlynav-navbar">
+  <div class="container-fluid">
+    <!-- responsive movil -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle"  data-target=".navbar-inverse-collapse" onclick="showMainMenuPrimary();">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand MainMenu-linkLogo" href="/" ><figure class="MainMenu-logo"><img src="./images/logo.png" /></figure></a>
+    </div>
+
+    <!-- view desktop -->
+    <div id="MainMenuPrimary" class="navbar-collapse collapse"  >
+
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="" onclick="showLogin()" class="MainMenu-link">Iniciar Sesion▼</a>
+          <div id="PanelLogin" class="PanelLogin z-depth-1">
+            <form class="PanelLogin-form">
+              <h2 class="PanelLogin-tittle">Iniciar Sesion</h2>
+              <md-input-container class="md-block">
+                <label>Email*</label>
+                <input required type="email" name="clientEmail" ng-model="project.clientEmail"
+                minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+                <div ng-messages="projectForm.clientEmail.$error" role="alert">
+                  <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                    Your email must be between 10 and 100 characters long and look like an e-mail address.
+                  </div>
+                </div>
+              </md-input-container>
+              <md-input-container class="md-block">
+                <label>Password*</label>
+                <input required name="clientName" ng-model="project.clientName">
+                <div ng-messages="projectForm.clientName.$error">
+                  <div ng-message="required">This is required.</div>
+                </div>
+              </md-input-container>
+              <md-button md-no-ink class="md-raised md-primary">Login</md-button>
+            </form>
+          </div>
+        </li>
+        <li><a href="" class="MainMenu-link">Registrarse</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+</header>
