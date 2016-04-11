@@ -33,7 +33,11 @@
     "bootstrap": "^3.3.6",
     "jquery": "^2.2.1",
     "hover": "Hover#^2.0.2",
-    "satellizer": "^0.14.0"
+    "satellizer": "^0.14.0",
+    "angular-aria": "^1.5.3",
+    "angular-animate": "^1.5.3",
+    "angular-messages": "^1.5.3",
+    "angular-material": "^1.0.7"
   },
   "devDependencies": {
     "satellizer": "^0.14.0"
