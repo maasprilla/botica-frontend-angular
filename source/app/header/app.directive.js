@@ -20,7 +20,9 @@
   function encabezadosimple(){
     return {
       scope:{},
-      templateUrl: 'app/header/headeronlynav.html'
+      templateUrl: 'app/header/headeronlynav.html',
+      controller:'LoginController',
+      controllerAs:'vm'
   };
 }
 
