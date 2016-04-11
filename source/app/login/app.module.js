@@ -3,8 +3,9 @@
 
   angular.module('app.login',[
     'app.login.directive',
-    'app.login.router'
-    
+    'app.login.router',
+    'app.login.controller'
+
   ]);
 
 })();

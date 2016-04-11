@@ -32,7 +32,6 @@
 
   function getIdCiudad(id){
     var array = id.split('-');
-    console.log(array.length)
     return array;
   }
 

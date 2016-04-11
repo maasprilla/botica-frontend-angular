@@ -1,13 +1,13 @@
 <section class="SectionRegistro">
 
-    <form jsf:id="FormRegistro" class="FormRegistro">
+    <form name="FormRegistroUsuarios" class="FormRegistro" ng-submit="vm.create()">
         <h1 class="FormRegistro-tittle">Registro Usuarios</h1>
 
 
         <md-input-container class="md-block">
           <label>Nombre</label>
           <input md-maxlength="30" required md-no-asterisk name="nombre" ng-model="vm.usuario.nombre">
-          <div ng-messages="projectForm.nombre.$error">
+          <div ng-messages="FormRegistroUsuarios.nombre.$error">
             <div ng-message="required">This is required.</div>
             <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
           </div>
@@ -16,7 +16,7 @@
         <md-input-container class="md-block">
           <label>Apellido</label>
           <input md-maxlength="30" required md-no-asterisk name="apellido" ng-model="vm.usuario.apellido">
-          <div ng-messages="projectForm.apellido.$error">
+          <div ng-messages="FormRegistroUsuarios.apellido.$error">
             <div ng-message="required">This is required.</div>
             <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
           </div>
@@ -25,7 +25,7 @@
         <md-input-container class="md-block">
           <label>Cedula</label>
           <input md-maxlength="10" required md-no-asterisk name="cedula" ng-model="vm.usuario.cedula" numbersonly>
-          <div ng-messages="projectForm.cedula.$error">
+          <div ng-messages="FormRegistroUsuarios.cedula.$error">
             <div ng-message="required">This is required.</div>
             <div ng-message="md-maxlength">The name has to be less than 10 characters long.</div>
 
@@ -36,7 +36,7 @@
         <label>Email</label>
         <input required type="email" name="email" ng-model="vm.usuario.email"
                minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
-        <div ng-messages="projectForm.clientEmail.$error" role="alert">
+        <div ng-messages="FormRegistroUsuarios.clientEmail.$error" role="alert">
           <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
             Your email must be between 10 and 100 characters long and look like an e-mail address.
           </div>
@@ -46,7 +46,7 @@
         <md-input-container class="md-block">
           <label>Telefono</label>
           <input md-maxlength="10" required md-no-asterisk name="telefono" ng-model="vm.usuario.telefono" numbersonly>
-          <div ng-messages="projectForm.telefono.$error">
+          <div ng-messages="FormRegistroUsuarios.telefono.$error">
             <div ng-message="required">This is required.</div>
             <div ng-message="md-maxlength">The name has to be less than 10 characters long.</div>
 
@@ -56,7 +56,7 @@
         <md-input-container class="md-block">
           <label>Direccion</label>
           <input md-maxlength="30" required md-no-asterisk name="direccion" ng-model="vm.usuario.direccion">
-          <div ng-messages="projectForm.direccion.$error">
+          <div ng-messages="FormRegistroUsuarios.direccion.$error">
             <div ng-message="required">This is required.</div>
             <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
           </div>
@@ -76,16 +76,16 @@
         <md-input-container class="md-block">
           <label>Password</label>
           <input required type="password" name="password" ng-model="vm.usuario.clave">
-          <div ng-messages="projectForm.password.$error">
+          <div ng-messages="FormRegistroUsuarios.password.$error">
             <div ng-message="required">This is required.</div>
           </div>
         </md-input-container>
 
 
-        <md-button ng-click="vm.create()" class="md-raised md-primary">Guardar</md-button>
+        <md-button type="submit" class="md-raised md-primary">Guardar</md-button>
     </form>
 
-  
+
 
 
 

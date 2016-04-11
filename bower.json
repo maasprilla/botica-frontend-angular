@@ -32,10 +32,10 @@
     "angular-filter": "^0.5.8",
     "bootstrap": "^3.3.6",
     "jquery": "^2.2.1",
-    "hover": "Hover#^2.0.2"
+    "hover": "Hover#^2.0.2",
+    "satellizer": "^0.14.0"
   },
   "devDependencies": {
-    "satellizer": "^0.14.0",
-    "bootstrap": "^3.3.6"
+    "satellizer": "^0.14.0"
   }
 }
