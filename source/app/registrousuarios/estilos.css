@@ -1,6 +1,6 @@
 .SectionRegistro {
   text-align: center;
-  padding: 8em;
+  padding: 8em 0;
   background-color: #3d9bff;
 }
 .FormRegistro {
@@ -23,4 +23,9 @@
 }
 .FormRegistro-tittle {
   color: #000;
+}
+@media (max-width: 422px) {
+  .FormRegistro {
+    width: 100%;
+  }
 }

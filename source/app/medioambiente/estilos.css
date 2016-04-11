@@ -1,3 +1,19 @@
+body {
+  background-color: #3d9bff;
+}
+div.AmbientalMainMenu {
+  background-color: #4385f6;
+  border-color: #4385f6;
+}
+div.navbar-collapse ul.nav li a {
+  color: #fff;
+}
+div.AmbientalMainMenu-container ul.AmbientalAmbientalMainMenu-list li.AmbientalMainMenu-item:hover {
+  background-color: #000;
+}
+div.navbar-collapse ul.nav li a:hover {
+  color: #fff;
+}
 .Brand {
   text-align: center;
   background-color: #eaf3f8;
@@ -17,47 +33,98 @@
 }
 .EnviromentInfo-container {
   background-color: #fff;
+  font-family: 'Open Sans';
 }
 .EnviromentInfo-title {
   padding-top: 3em;
   padding-bottom: 2em;
+  font-family: 'Open Sans';
 }
 .EnviromentInfo-text {
   padding-bottom: 2em;
+  font-family: 'Open Sans';
+  font-size: 16px;
+  font-weight: 300;
+  color: #252525;
 }
 .BluePoints-container {
   text-align: center;
+  font-family: 'Open Sans';
 }
 .BluePoints-container-title {
   margin-top: 0;
   padding-top: 2em;
   padding-bottom: 0.5em;
+  font-family: 'Open Sans';
 }
 .art-medicametoPuntoAzul {
   background-color: #87cefa;
-  display: inline-block;
-  width: 30em;
-  vertical-align: top;
-  height: 15em;
-  margin-top: 0.3em;
+/** display inline-block
+	width 30em
+	vertical-align top**/
+  height: 17em;
+/**margin-right 0.15em**/
+  border: 2px solid #fff;
 }
-.IconBp5Image-container {
+/**.art-medicametoPuntoAzul2
+	background-color lightskyblue
+	height 17em
+	margin-left 0.15em
+
+.art-medicametoPuntoAzul3
+	background-color lightskyblue
+	height 17em
+	margin-top 0.3em
+	margin-right 0.15em
+
+.art-medicametoPuntoAzul4
+	background-color lightskyblue
+	height 17em
+	margin-top 0.3em
+	margin-left 0.15em**/
+/**.IconBp5Image-container
+	padding-bottom 2em**/
+.IconBp {
+  max-width: 100%;
+}
+.IconBp5 {
+  max-width: 100%;
   padding-bottom: 2em;
 }
-/**.map-responsive
-	overflow hidden
-	padding-bottom 56.25%
-	position relative
-	height 0
-
+.map-responsive {
+  display: inline-block;
+  width: 50em;
+  height: 30em;
+}
+/**
 .map-responsive iframe
 	left 0
 	top 0
 	height 100%
 	width 100%
 	position absolute **/
+/**.map-responsive
+	max-width 610px
+
+.map-responsive iframe
+	width 100%**/
+div.Map-container {
+  min-height: 460px;
+}
+.map {
+  max-width: 100%;
+}
 .LinkMoreInfo {
   margin-bottom: 0;
   padding-top: 1em;
   padding-bottom: 1em;
+}
+@media (max-width: 735px) {
+  .map-responsive {
+    width: 100%;
+    height: 30em;
+  }
+  .Ambiental-image1 {
+    width: 100%;
+  }
 }

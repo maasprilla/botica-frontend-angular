@@ -16,6 +16,9 @@
                     'encabezado':{
                        template: '<encabezado/>'
                     },
+                    'home':{
+                       template: '<home/>'
+                    },
                     'piedepagina':{
                        template: '<piedepagina/>'
                     }
