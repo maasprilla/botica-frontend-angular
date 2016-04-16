@@ -1,8 +1,8 @@
 (function(){
     'use strict';
 
-    angular.module('app.registrousuarios.router', [
-      'app.registrousuarios.controller'
+    angular.module('app.usuarios.create.router', [
+      'app.usuarios.create.controller'
     ]).config(configure);
 
     function configure($stateProvider, $urlRouterProvider){

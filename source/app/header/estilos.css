@@ -1,7 +1,11 @@
 .Header {
-  background-color: #3d9bff;
   height: 48em;
   text-align: center;
+  background-color: #3d9bff;
+  background-image: url("/images/header.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .Header-content {
   height: 40em;

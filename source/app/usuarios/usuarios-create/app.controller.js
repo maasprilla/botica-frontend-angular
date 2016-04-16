@@ -1,7 +1,7 @@
 (function(){
   'use strict';
 
-  angular.module('app.registrousuarios.controller', [
+  angular.module('app.usuarios.create.controller', [
   ]).controller('usuariosCreateCtrl', usuariosCreateCtrl);
 
 

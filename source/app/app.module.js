@@ -13,7 +13,7 @@
         'app.footer',
         'app.header',
         'app.home',
-        'app.registrousuario',
+        'app.usuarios',
         'app.registrodroguerias',
         'app.login',
         'app.administrarpedido',

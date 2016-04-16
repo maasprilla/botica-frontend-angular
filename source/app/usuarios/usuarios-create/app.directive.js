@@ -1,7 +1,7 @@
 (function(){
     'use strict';
 
-    angular.module('app.registrousuarios.directive', [
+    angular.module('app.usuarios.create.directive', [
 
     ]).directive('registrousuario', registrousuario)
     .directive('numbersonly', numbersonly);
@@ -9,7 +9,7 @@
     function registrousuario(){
       return{
         scope:{},
-        templateUrl:'app/registrousuarios/registrousuarios.html',
+        templateUrl:'app/usuarios/usuarios-create/usuarios-create.html',
         controller: 'usuariosCreateCtrl',
         controllerAs: 'vm'
       }
