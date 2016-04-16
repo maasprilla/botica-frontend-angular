@@ -1,7 +1,7 @@
 (function(){
   'use strict';
 
-  angular.module('app.registrodroguerias.controller', [
+  angular.module('app.droguerias.create.controller', [
   ]).controller('drogueriaCreateCtrl', drogueriaCreateCtrl);
 
 

@@ -14,7 +14,7 @@
         'app.header',
         'app.home',
         'app.usuarios',
-        'app.registrodroguerias',
+        'app.droguerias',
         'app.login',
         'app.administrarpedido',
         'app.realizarpedido',

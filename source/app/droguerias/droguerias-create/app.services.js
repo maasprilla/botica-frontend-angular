@@ -1,6 +1,6 @@
 (function () {
     'use strict';
-    angular.module('app.registrodroguerias.services', [
+    angular.module('app.droguerias.create.services', [
 
     ])
         .factory('Ciudades', Ciudades)

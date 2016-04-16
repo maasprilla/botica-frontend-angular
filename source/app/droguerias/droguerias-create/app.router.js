@@ -1,8 +1,8 @@
 (function(){
     'use strict';
 
-    angular.module('app.registrodroguerias.router', [
-      'app.registrodroguerias.controller'
+    angular.module('app.droguerias.create.router', [
+      'app.droguerias.create.controller'
     ]).config(configure);
 
     function configure($stateProvider, $urlRouterProvider){
