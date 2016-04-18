@@ -6,8 +6,8 @@
 
               <md-input-container class="md-block">
                 <label>Direccion</label>
-                <input md-maxlength="30" required md-no-asterisk name="description" ng-model="project.description">
-                <div ng-messages="projectForm.description.$error">
+                <input md-maxlength="30" required md-no-asterisk name="direccion" ng-model="project.direccion">
+                <div ng-messages="projectForm.direccion.$error">
                   <div ng-message="required">This is required.</div>
                   <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
                 </div>
@@ -15,31 +15,36 @@
 
               <md-input-container class="md-block">
                 <label>Ciudad</label>
-                <input md-maxlength="30" required md-no-asterisk name="description" ng-model="project.description">
-                <div ng-messages="projectForm.description.$error">
+                <input md-maxlength="30" required md-no-asterisk name="ciudad" ng-model="project.ciudad">
+                <div ng-messages="projectForm.ciudad.$error">
                   <div ng-message="required">This is required.</div>
                   <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
                 </div>
               </md-input-container>
 
-              <select jsf:value="#{pedidoController.idZona}"
-                      class="form-control FormRegistro-input"
-                      required="true"
-                      size="1">
-              <f:selectItem itemLabel="Zona"/>
-              <f:selectItems value="#{zonaEnvioController.zonaEnvioList}"
-                             var="zona"
-                             itemLabel="#{zona.descripcionZona}"
-                             itemValue="#{zona.idZonaEnvios}"/>
-              <f:ajax execute="@this" render="FormRegistro"/>
-              </select>
+        <md-input-container class="md-block" style="color:black;">
+            <label>Zona de Envio</label>
+            <md-select ng-model="vm.zonaenvio">
+                <md-option ng-repeat="zonaenvio in vm.zonasenvios"  value="{{zonaenvio.idZonaEnvio}}">
+                   {{zonaenvio.descripcionZona}}
+                </md-option>
+            </md-select>
+        </md-input-container>
 
-              <md-input-container class="md-block">
-                <label>Descripcion</label>
-                <textarea ng-model="user.biography" md-maxlength="150" rows="5" md-select-on-focus class="FormRealizarPedido-textarea"></textarea>
+          <div class="AgregarProd">
+              <md-input-container class="md-block" class="AgregarProd-input">
+                <label>Pedido</label>
+                <input md-maxlength="30" required md-no-asterisk name="pedido" ng-model="project.pedido">
+                <div ng-messages="projectForm.pedido.$error">
+                  <div ng-message="required">This is required.</div>
+                  <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+                </div>
               </md-input-container>
-              <p:fileUpload  class="FormRealizarPedido-add"  mode="simple" value="#{pedidoController.fileUpload}"/>
-              <input type="submit" value="Realizar Pedido" class="FormRealizarPedido-button" jsf:actionListener="#{pedidoController.create()}"/>
+              <md-button md-no-ink class="md-primary">Agregar</md-button>
+          </div>
+
+             
+              <input type="submit" value="Realizar Pedido" class="FormRealizarPedido-button" />
          </form>
 
   </section>
