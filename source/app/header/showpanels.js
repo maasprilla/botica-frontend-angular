@@ -18,3 +18,8 @@
    $('#MainMenuSecundary').slideToggle();
    return false;
  }
+
+ function showOptions(){
+   $('#Options').slideToggle();
+   return false;
+ }
