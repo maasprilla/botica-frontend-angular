@@ -58,3 +58,17 @@
 .headeronlynav-navbar {
   margin-bottom: 0;
 }
+.Options {
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  background: #fffafa;
+  right: 0em;
+  display: none;
+  border: 6px solid #e7e7e7;
+}
+.OptSelect,
+.OptSelect2 {
+  width: 15em;
+  padding: 1em;
+}
