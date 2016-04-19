@@ -3,7 +3,7 @@
   text-align: center;
   background-color: #3d9bff;
   background-image: url("/images/header.jpg");
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }

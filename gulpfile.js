@@ -4,7 +4,6 @@
 var gulp = require('gulp'),
     concat = require('gulp-concat'),
     jshint = require('gulp-jshint'),
-    jade = require('gulp-jade'),
     stylus = require('gulp-stylus'),
     browserSync = require('browser-sync').create(),
     inject = require('gulp-inject'),
