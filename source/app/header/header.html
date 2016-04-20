@@ -45,7 +45,16 @@
         <li ng-show="vm.isAuthenticated()"><a href="" class="MainMenu-link">{{vm.getCurrentUser()}}</a></li>
         <li ng-show="!vm.isAuthenticated()"><a href="#/regisuser" class="MainMenu-link" >Registrar Usuarios</a></li>
         <li ng-show="!vm.isAuthenticated()"><a href="#/regisdrog" class="MainMenu-link" >Registrar Droguerias</a></li>
-        <li ng-show="vm.isAuthenticated()"><a href="" class="MainMenu-link"  ng-click="vm.logout()">Cerrar Sesion</a></li>
+        <li ng-show="vm.isAuthenticated()">
+          <span class="glyphicon glyphicon-user" onclick="showOptions()" style="font-size:40px; top:0; background-color:#e7e7e7; padding:5px"></span>
+            <div id="Options" class="Options z-depth-1">
+              <div class="OptSelect">
+                <a href="#/usuariosview" class="ViewProfile" style="color:#3D9BFF">Ver perfil</a>
+              </div>
+              <div class="OptSelect2" style="border-top: 6px solid #e7e7e7">
+                <a href="" class="MainMenu-link MainMenu-linkLogOut"  ng-click="vm.logout()" style="color:#3D9BFF">Cerrar Sesion</a>
+              </div>
+        </li>
       </ul>
     </div>
   </div>
