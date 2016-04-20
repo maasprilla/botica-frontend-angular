@@ -13,6 +13,7 @@
     vm.logout = logout;
     vm.isAdmin = isAdmin;
     vm.isUser = isUser;
+    vm.getIdCurrentUser=getIdCurrentUser;
 
 
     function signIn(){
@@ -38,12 +39,21 @@
     function getCurrentUser() {
       if (isAuthenticated()) {
 
-
       return $auth.getPayload().user;
     }else{
       return '';
     }
   }
+
+  function getIdCurrentUser() {
+    if (isAuthenticated()) {
+        console.log($auth.getPayload().sub);
+    return $auth.getPayload().sub;
+  }else{
+    return '';
+  }
+}
+
     function isAuthenticated() {
       return $auth.isAuthenticated();
     }
