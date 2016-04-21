@@ -4,7 +4,7 @@
   angular.module('app.config',[
 
   ]).constant('BASEURL',
-    'http://localhost:43096/botica-backend-java/webresources')
+    'http://localhost:18047/botica-backend-java/webresources')
     .config(configure);
 
     configure.$inject = ['$authProvider', 'BASEURL'];

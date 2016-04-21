@@ -1,11 +1,9 @@
 (function () {
     'use strict';
-    angular.module('app.droguerias.create.services', [
+    angular.module('app.droguerias.list.services', [
 
     ])
-        
         .factory('Usuarios', Usuarios);
-
 
 
 
