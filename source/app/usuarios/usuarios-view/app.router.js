@@ -11,7 +11,7 @@
 
       $stateProvider
               .state('usuariosview',{
-                  url: '/usuariosview',
+                  url: '/usuariosview/:idUsuario',
                   views:{
                     'encabezadosimple':{
                        template: '<encabezadosimple/>'
