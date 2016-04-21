@@ -16,10 +16,11 @@
         'app.usuarios',
         'app.droguerias',
         'app.login',
+        'app.administradores',
         'app.administrarpedido',
         'app.realizarpedido',
         'app.medioambiente',
-        'app.portafolioservicios'
+        'app.portafolioservicios',
     ]);
 
 })();

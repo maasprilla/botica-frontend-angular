@@ -47,7 +47,6 @@
 
   function getIdCurrentUser() {
     if (isAuthenticated()) {
-        console.log($auth.getPayload().sub);
     return $auth.getPayload().sub;
   }else{
     return '';
