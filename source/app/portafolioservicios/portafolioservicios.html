@@ -7,30 +7,30 @@
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800">
   </head>
   <body>
-    <section id="identidad" class="IdentidadMajor-container">
+    <section id="identidad" ng-init="tab = mision" class="IdentidadMajor-container">
 			<div class="container IdentidadContainer">
 				<h2 class="text-center Identidad-title">LA EMPRESA</h2>
 					<ul class="nav nav-tabs Identidad-item" role="tablist">
-						<li role="presentation" class="Identidad-list active"><a href="#mision" aria-controls="mision" class="Identidad-link" role="tab" data-toggle="tab">Misión</a></li>
-						<li role="presentation" class="Identidad-list"><a href="#vision" aria-controls="vision" class="Identidad-link" role="tab" data-toggle="tab">Visión</a></li>
-						<li role="presentation" class="Identidad-list"><a href="#objetivo" aria-controls="objetivo" class="Identidad-link" role="tab" data-toggle="tab">Objetivo</a></li>
-						<li role="presentation" class="Identidad-list"><a href="#identidadcorp" aria-controls="identidadcorp" class="Identidad-link" role="tab" data-toggle="tab">Valores</a></li>
-						<li role="presentation" class="Identidad-list"><a href="#equipo" aria-controls="equipo" class="Identidad-link" role="tab" data-toggle="tab">Equipo</a></li>
+						<li role="presentation" class="Identidad-list active"><a href="" ng-click="tab = mision" aria-controls="mision" class="Identidad-link" role="tab" data-toggle="tab">Misión</a></li>
+						<li role="presentation" class="Identidad-list"><a href="" ng-click="tab = 2" aria-controls="vision" class="Identidad-link" role="tab" data-toggle="tab">Visión</a></li>
+						<li role="presentation" class="Identidad-list"><a href="" ng-click="tab = 3" aria-controls="objetivo" class="Identidad-link" role="tab" data-toggle="tab">Objetivo</a></li>
+						<li role="presentation" class="Identidad-list"><a href="" ng-click="tab = 4" aria-controls="identidadcorp" class="Identidad-link" role="tab" data-toggle="tab">Valores</a></li>
+						<li role="presentation" class="Identidad-list"><a href="" ng-click="tab = 5" aria-controls="equipo" class="Identidad-link" role="tab" data-toggle="tab">Equipo</a></li>
 					</ul>
 					<div class="tab-content IdentidadDescription-container">
-						<div role="tabpanel" class="tab-pane fade in active" id="mision">
+						<div role="tabpanel" class="tab-pane fade in active" id="mision" ng-show="tab === mision">
 							<br>
 							<p class="Identidad-text">Botica es una empresa emprendedora que busca a través de la innovación y el desarrollo de software, ofrecer soluciones y oportunidades asociadas al sector de la salud y así optimizar este mercado y posicionarse en él.</p>
 						</div>
-						<div role="tabpanel" class="tab-pane fade" id="vision">
+						<div role="tabpanel" class="tab-pane fade" ng-show="tab === 2">
 							<br>
 							<p class="Identidad-text">Para el 2015, Botica habrá alcanzado un alto reconocimiento a nivel nacional y empezará su proyecto de internalización.</p>
 						</div>
-						<div role="tabpanel" class="tab-pane fade" id="objetivo">
+						<div role="tabpanel" class="tab-pane fade" ng-show="tab === 3">
 							<br>
 							<p class="Identidad-text">Suplir la necesidad que poseen las personas a la hora de adquirir un medicamento acercando las droguerías y brindando la capacidad de ejecutar los pedidos virtualmente, ya que en ocasiones resulta tediosa la búsqueda de productos en distintas droguerías de forma física.</p>
 						</div>
-						<div role="tabpanel" class="tab-pane fade" id="identidadcorp">
+						<div role="tabpanel" class="tab-pane fade" ng-show="tab === 4">
 							<br>
 							<h3 class="IdentidadCorp-title">Compromiso</h3>
 							<p class="Identidad-text">Permite brindar a nuestros clientes y usuarios satisfacción a través del uso de nuestra herramienta tecnológica y a su vez adquirimos reconocimiento por nuestra labor.</p>
@@ -47,7 +47,7 @@
               <h3 class="IdentidadCorp-title">Equidad</h3>
               <p class="Identidad-text">Facilita el progreso y desarrollo integral de nuestros grupos de trabajo mediante la distribución justa de cargas laborales y beneficios económicos, permitiendo a su vez el avance y establecimiento de nuestro producto.</p>
 						</div>
-						<div role="tabpanel" class="tab-pane fade" id="equipo">
+						<div role="tabpanel" class="tab-pane fade" ng-show="tab === 5">
 							<br>
 							<p class="Identidad-text">Ingrid Yazmin Aguirre Salas</p>
 							<p class="Identidad-text">David Julián Aranzazu Navas</p>
