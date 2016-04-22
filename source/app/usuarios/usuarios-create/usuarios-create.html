@@ -24,7 +24,7 @@
 
         <md-input-container class="md-block">
           <label>Cedula</label>
-          <input md-maxlength="10" required md-no-asterisk name="cedula" ng-model="vm.usuario.cedula" numbersonly>
+          <input md-maxlength="10" required md-no-asterisk name="cedula" ng-model="vm.usuario.dni" numbersonly>
           <div ng-messages="FormRegistroUsuarios.cedula.$error">
             <div ng-message="required">This is required.</div>
             <div ng-message="md-maxlength">The name has to be less than 10 characters long.</div>
@@ -75,7 +75,7 @@
 
         <md-input-container class="md-block">
           <label>Password</label>
-          <input required type="password" name="password" ng-model="vm.usuario.clave">
+          <input required type="password" name="password" ng-model="vm.usuario.password">
           <div ng-messages="FormRegistroUsuarios.password.$error">
             <div ng-message="required">This is required.</div>
           </div>

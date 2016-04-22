@@ -15,6 +15,9 @@
                     'encabezadosimple':{
                        template: '<encabezadosimple/>'
                     },
+                    'administradoresview':{
+                       template: '<administradoresview/>'
+                    },
 
                     'piedepagina':{
                        template: '<piedepagina/>'

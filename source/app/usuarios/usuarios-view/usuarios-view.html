@@ -8,62 +8,72 @@
             <h3 class="FormPerfil-tittle">Perfil De Usuario</h3>
 
           <div class="FormPerfil-label">
-            <md-input-container class="md-block">
+
+            <md-input-container class=" FormPerfil-input" >
               <label>Nombre</label>
-              <input md-maxlength="30" required md-no-asterisk name="nombre" ng-model="vm.usuario.nombre">
+              <input md-maxlength="30" required md-no-asterisk name="nombre" ng-model="vm.usuario.nombre" ng-disabled="true">
               <div ng-messages="FormRegistroUsuarios.nombre.$error">
                 <div ng-message="required">This is required.</div>
                 <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
               </div>
             </md-input-container>
-            <md-input-container class="md-block">
+            <label class="FormPerfil-edit">Editar</label>
+
+
+
+            <md-input-container class=" FormPerfil-input">
               <label>Apellido</label>
-              <input md-maxlength="30" required md-no-asterisk name="apellido" ng-model="vm.usuario.apellido">
+              <input md-maxlength="30" required md-no-asterisk name="apellido" ng-model="vm.usuario.apellido" ng-disabled="true">
               <div ng-messages="FormRegistroUsuarios.apellido.$error">
                 <div ng-message="required">This is required.</div>
                 <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
               </div>
             </md-input-container>
+            <label class="FormPerfil-edit">Editar</label>
 
-            <md-input-container class="md-block">
+            <md-input-container class=" FormPerfil-input">
               <label>Cedula</label>
-              <input md-maxlength="10" required md-no-asterisk name="cedula" ng-model="vm.usuario.cedula" numbersonly>
+              <input md-maxlength="10" required md-no-asterisk name="cedula" ng-model="vm.usuario.dni" ng-disabled="true" numbersonly >
               <div ng-messages="FormRegistroUsuarios.cedula.$error">
                 <div ng-message="required">This is required.</div>
                 <div ng-message="md-maxlength">The name has to be less than 10 characters long.</div>
 
               </div>
             </md-input-container>
+            <label class="FormPerfil-edit">Editar</label>
 
-            <md-input-container class="md-block">
+            <md-input-container class=" FormPerfil-input">
             <label>Email</label>
             <input required type="email" name="email" ng-model="vm.usuario.email"
-                   minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+                   minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" ng-disabled="true"/>
             <div ng-messages="FormRegistroUsuarios.clientEmail.$error" role="alert">
               <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
                 Your email must be between 10 and 100 characters long and look like an e-mail address.
               </div>
             </div>
             </md-input-container>
+            <label class="FormPerfil-edit">Editar</label>
 
-            <md-input-container class="md-block">
+            <md-input-container class=" FormPerfil-input">
               <label>Telefono</label>
-              <input md-maxlength="10" required md-no-asterisk name="telefono" ng-model="vm.usuario.telefono" numbersonly>
+              <input md-maxlength="10" required md-no-asterisk name="telefono" ng-model="vm.usuario.telefono" ng-disabled="true" numbersonly>
               <div ng-messages="FormRegistroUsuarios.telefono.$error">
                 <div ng-message="required">This is required.</div>
                 <div ng-message="md-maxlength">The name has to be less than 10 characters long.</div>
 
               </div>
             </md-input-container>
+            <label class="FormPerfil-edit">Editar</label>
 
-            <md-input-container class="md-block">
+            <md-input-container class=" FormPerfil-input">
               <label>Direccion</label>
-              <input md-maxlength="30" required md-no-asterisk name="direccion" ng-model="vm.usuario.direccion">
+              <input md-maxlength="30" required md-no-asterisk name="direccion" ng-model="vm.usuario.direccion" ng-disabled="true">
               <div ng-messages="FormRegistroUsuarios.direccion.$error">
                 <div ng-message="required">This is required.</div>
                 <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
               </div>
             </md-input-container>
+            <label class="FormPerfil-edit">Editar</label>
 
             <md-input-container class="md-block" style="color:black;">
                 <label>Ciudad</label>
@@ -76,13 +86,7 @@
             </md-input-container>
 
 
-            <md-input-container class="md-block">
-              <label>Password</label>
-              <input required type="password" name="password" ng-model="vm.usuario.clave">
-              <div ng-messages="FormRegistroUsuarios.password.$error">
-                <div ng-message="required">This is required.</div>
-              </div>
-            </md-input-container>
+
 
             <div>
 
