@@ -37,3 +37,9 @@
   border-radius: 0.5em;
   color: #fff;
 }
+.AgregarProd {
+  text-align: center;
+}
+.AgregarProd-input {
+  display: inline-block;
+}

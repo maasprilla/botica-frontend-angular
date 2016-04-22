@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('app.realizarpedido.router',[
-
+      'app.realizarpedido.controller'
   ]).config(configure);
 
   function configure($stateProvider, $urlRouterProvider){

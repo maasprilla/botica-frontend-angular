@@ -12,18 +12,18 @@
     <link rel="stylesheet" href="lib/angular-material/angular-material.min.css">
     <!-- endbower -->
     <!-- inject:css -->
+    <link rel="stylesheet" href="/app/header/estilos.css">
+    <link rel="stylesheet" href="/app/footer/estilos.css">
     <link rel="stylesheet" href="/app/administrarpedido/administrarpedido.css">
     <link rel="stylesheet" href="/app/administrarpedido/estilos.css">
-    <link rel="stylesheet" href="/app/footer/estilos.css">
-    <link rel="stylesheet" href="/app/header/estilos.css">
-    <link rel="stylesheet" href="/app/home/estilos.css">
     <link rel="stylesheet" href="/app/login/estilos.css">
     <link rel="stylesheet" href="/app/medioambiente/estilos.css">
+    <link rel="stylesheet" href="/app/home/estilos.css">
     <link rel="stylesheet" href="/app/portafolioservicios/estilos.css">
     <link rel="stylesheet" href="/app/realizarpedido/realizarpedido.css">
     <link rel="stylesheet" href="/app/droguerias/droguerias-create/estilos.css">
-    <link rel="stylesheet" href="/app/usuarios/usuarios-create/estilos.css">
     <link rel="stylesheet" href="/app/usuarios/usuarios-view/estilos.css">
+    <link rel="stylesheet" href="/app/usuarios/usuarios-create/estilos.css">
     <!-- endinject -->
     <!-- endbuild -->
 </head>
@@ -72,9 +72,6 @@
     <!-- inject:js -->
     <script src="/app/app.module.js"></script>
     <script src="/app/templates.js"></script>
-    <script src="/app/administrarpedido/app.directive.js"></script>
-    <script src="/app/administrarpedido/app.module.js"></script>
-    <script src="/app/administrarpedido/app.router.js"></script>
     <script src="/app/config/app.constantes.js"></script>
     <script src="/app/footer/app.directive.js"></script>
     <script src="/app/footer/app.module.js"></script>
@@ -85,6 +82,15 @@
     <script src="/app/home/app.directive.js"></script>
     <script src="/app/home/app.module.js"></script>
     <script src="/app/home/app.router.js"></script>
+    <script src="/app/header/app.directive.js"></script>
+    <script src="/app/header/app.module.js"></script>
+    <script src="/app/header/showpanels.js"></script>
+    <script src="/app/footer/app.directive.js"></script>
+    <script src="/app/footer/app.module.js"></script>
+    <script src="/app/administrarpedido/app.directive.js"></script>
+    <script src="/app/administrarpedido/app.module.js"></script>
+    <script src="/app/administrarpedido/app.router.js"></script>
+    <script src="/app/droguerias/app.module.js"></script>
     <script src="/app/login/app.controller.js"></script>
     <script src="/app/login/app.directive.js"></script>
     <script src="/app/login/app.module.js"></script>
@@ -92,28 +98,33 @@
     <script src="/app/medioambiente/app.directive.js"></script>
     <script src="/app/medioambiente/app.module.js"></script>
     <script src="/app/medioambiente/app.router.js"></script>
+    <script src="/app/home/app.directive.js"></script>
+    <script src="/app/home/app.module.js"></script>
+    <script src="/app/home/app.router.js"></script>
     <script src="/app/portafolioservicios/app.directive.js"></script>
     <script src="/app/portafolioservicios/app.module.js"></script>
     <script src="/app/portafolioservicios/app.router.js"></script>
+    <script src="/app/usuarios/app.module.js"></script>
+    <script src="/app/realizarpedido/app.controller.js"></script>
     <script src="/app/realizarpedido/app.directive.js"></script>
     <script src="/app/realizarpedido/app.module.js"></script>
     <script src="/app/realizarpedido/app.router.js"></script>
-    <script src="/app/usuarios/app.module.js"></script>
+    <script src="/app/realizarpedido/app.services.js"></script>
     <script src="/app/droguerias/droguerias-create/app.controller.js"></script>
     <script src="/app/droguerias/droguerias-create/app.directive.js"></script>
     <script src="/app/droguerias/droguerias-create/app.module.js"></script>
     <script src="/app/droguerias/droguerias-create/app.router.js"></script>
     <script src="/app/droguerias/droguerias-create/app.services.js"></script>
-    <script src="/app/usuarios/usuarios-create/app.controller.js"></script>
-    <script src="/app/usuarios/usuarios-create/app.directive.js"></script>
-    <script src="/app/usuarios/usuarios-create/app.module.js"></script>
-    <script src="/app/usuarios/usuarios-create/app.router.js"></script>
-    <script src="/app/usuarios/usuarios-create/app.services.js"></script>
     <script src="/app/usuarios/usuarios-view/app.controller.js"></script>
     <script src="/app/usuarios/usuarios-view/app.directive.js"></script>
     <script src="/app/usuarios/usuarios-view/app.module.js"></script>
     <script src="/app/usuarios/usuarios-view/app.router.js"></script>
     <script src="/app/usuarios/usuarios-view/app.services.js"></script>
+    <script src="/app/usuarios/usuarios-create/app.controller.js"></script>
+    <script src="/app/usuarios/usuarios-create/app.directive.js"></script>
+    <script src="/app/usuarios/usuarios-create/app.module.js"></script>
+    <script src="/app/usuarios/usuarios-create/app.router.js"></script>
+    <script src="/app/usuarios/usuarios-create/app.services.js"></script>
     <!-- endinject -->
     <!-- endbuild -->
 </body>

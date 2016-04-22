@@ -8,7 +8,9 @@
   function realizarpedido(){
     return{
       scope:{},
-      templateUrl:'app/realizarpedido/realizarpedido.html'
+      templateUrl:'app/realizarpedido/realizarpedido.html',
+      controller: 'realizarPedidoCreateCtrl',
+      controllerAs: 'vm'
     };
   }
 
