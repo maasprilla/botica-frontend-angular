@@ -3,7 +3,8 @@
 
     angular.module('app.droguerias', [
       'app.droguerias.create',
-      'app.droguerias.list'
+      'app.droguerias.list',
+      'app.droguerias.view'
 
     ]);
 })();

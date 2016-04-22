@@ -1,7 +1,8 @@
 (function(){
     'use strict';
 
-    angular.module('app.administradores.view.router', [
+    angular.module('app.droguerias.view.router', [
+      'app.droguerias.view.controller'
     ]).config(configure);
 
     function configure($stateProvider, $urlRouterProvider){
@@ -9,16 +10,15 @@
       $urlRouterProvider.otherwise('/');
 
       $stateProvider
-              .state('administradoresview',{
-                  url: '/administradoresview/:idAdministrador',
+              .state('drogueriasview',{
+                  url: '/drogueriasview/:idDroguerias',
                   views:{
                     'encabezadosimple':{
                        template: '<encabezadosimple/>'
                     },
-                    'administradoresview':{
-                       template: '<administradoresview/>'
+                    'drogueriasview':{
+                       template: '<drogueriasview/>'
                     },
-
                     'piedepagina':{
                        template: '<piedepagina/>'
                     }

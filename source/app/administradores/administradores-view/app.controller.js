@@ -5,9 +5,10 @@
   ]).controller('administradoresViewCtrl', administradoresViewCtrl);
 
 
-  administradoresViewCtrl.$inject = ['$location', '$mdToast','Administradores'];
-  function administradoresViewCtrl($location, $mdToast, Administradores){
-
+  administradoresViewCtrl.$inject = ['$stateParams','$location', '$mdToast','Administradores'];
+  function administradoresViewCtrl($stateParams, $location, $mdToast, Administradores){
+         this.usuario = Administradores.get({idUsuario: $stateParams.idAdministrador });
+         console.log(this.usuario);
     }
 
 })();

@@ -7,7 +7,7 @@
 
   usuariosViewCtrl.$inject = ['$stateParams','$location', '$mdToast','Usuarios'];
   function usuariosViewCtrl($stateParams, $location, $mdToast, Usuarios){
-         this.usuario = Usuarios.get({ idUsuario: $stateParams.idUsuario });
+         this.usuario = Usuarios.get({idUsuario: $stateParams.idUsuario });
          console.log(this.usuario);
     }
 

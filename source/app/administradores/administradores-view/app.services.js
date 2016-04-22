@@ -11,8 +11,8 @@
 
         function Administradores($resource, BASEURL) {
             return $resource(BASEURL + '/usuarios/:idUsuario',
-              { idUsuario: '@idUsuario' }
-            )
+            { idUsuario: '@idUsuario' }
+          )
         }
 
 
