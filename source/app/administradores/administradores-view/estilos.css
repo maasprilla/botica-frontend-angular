@@ -1,0 +1,68 @@
+.SectionPerfil {
+  text-align: center;
+  padding: 8em 0;
+  background-color: #3d9bff;
+}
+.FormPerfil {
+  background-color: #fffafa;
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+  margin: auto;
+  border-radius: 0.5em;
+  box-shadow: 0.1em 0.1em #555;
+  max-width: 55em;
+}
+.FormPerfil-input {
+  margin-bottom: 1em;
+  border-radius: 1em;
+}
+.FormPerfil-tittle {
+  color: #000;
+  border: 1px solid #999;
+  margin: 0 0 1.5em 0;
+  padding: 0.5em 0;
+  box-shadow: 3px 2px 4px -3px #999;
+}
+.FormPerfil-img {
+  width: 9em;
+  height: 9em;
+  border: 1px solid #999;
+  box-shadow: 3px 3px 4px -3px #999;
+}
+.FormPerfil-info {
+  width: 80%;
+  display: inline-block;
+}
+.FormPerfil-label {
+  box-sizing: border-box;
+  padding: 2em;
+  border: 1px solid #999;
+  box-shadow: 3px 3px 4px -3px #999;
+}
+@media (max-width: 422px) {
+  .FormRegistro {
+    width: 100%;
+  }
+}
+@media (max-width: 800px) {
+  .FormPerfil {
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+  }
+  .FormPerfil-img {
+    margin-bottom: 2em;
+  }
+  .FormPerfil-info {
+    width: 100%;
+  }
+}
+@media (max-width: 400px) {
+  .FormPerfil {
+    padding: 1em;
+  }
+  .FormPerfil-label {
+    padding: 1em;
+  }
+}

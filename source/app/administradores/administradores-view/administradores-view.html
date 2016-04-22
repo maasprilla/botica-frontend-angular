@@ -1,0 +1,97 @@
+<section class="SectionPerfil">
+
+    <article class="FormPerfil">
+      <figure class="FormPerfil-img">
+        <p>Imagen</p>
+      </figure>
+      <article class="FormPerfil-info">
+            <h3 class="FormPerfil-tittle">Perfil De Usuario</h3>
+
+          <div class="FormPerfil-label">
+            <md-input-container class="md-block">
+              <label>Nombre</label>
+              <input md-maxlength="30" required md-no-asterisk name="nombre" ng-model="vm.usuario.nombre">
+              <div ng-messages="FormRegistroAdministradores.nombre.$error">
+                <div ng-message="required">This is required.</div>
+                <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+              </div>
+            </md-input-container>
+            <md-input-container class="md-block">
+              <label>Apellido</label>
+              <input md-maxlength="30" required md-no-asterisk name="apellido" ng-model="vm.usuario.apellido">
+              <div ng-messages="FormRegistroAdministradores.apellido.$error">
+                <div ng-message="required">This is required.</div>
+                <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+              </div>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+              <label>Cedula</label>
+              <input md-maxlength="10" required md-no-asterisk name="cedula" ng-model="vm.usuario.cedula" numbersonly>
+              <div ng-messages="FormRegistroAdministradores.cedula.$error">
+                <div ng-message="required">This is required.</div>
+                <div ng-message="md-maxlength">The name has to be less than 10 characters long.</div>
+
+              </div>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+            <label>Email</label>
+            <input required type="email" name="email" ng-model="vm.usuario.email"
+                   minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+            <div ng-messages="FormRegistroAdministradores.clientEmail.$error" role="alert">
+              <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                Your email must be between 10 and 100 characters long and look like an e-mail address.
+              </div>
+            </div>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+              <label>Telefono</label>
+              <input md-maxlength="10" required md-no-asterisk name="telefono" ng-model="vm.usuario.telefono" numbersonly>
+              <div ng-messages="FormRegistroAdministradores.telefono.$error">
+                <div ng-message="required">This is required.</div>
+                <div ng-message="md-maxlength">The name has to be less than 10 characters long.</div>
+
+              </div>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+              <label>Direccion</label>
+              <input md-maxlength="30" required md-no-asterisk name="direccion" ng-model="vm.usuario.direccion">
+              <div ng-messages="FormRegistroAdministradores.direccion.$error">
+                <div ng-message="required">This is required.</div>
+                <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+              </div>
+            </md-input-container>
+
+            <md-input-container class="md-block" style="color:black;">
+                <label>Ciudad</label>
+                <md-select ng-model="vm.ciudad">
+                    <md-option ng-repeat="ciudad in vm.ciudades"  value="{{ciudad.ciudadPK.idCiudad}}-{{ciudad.ciudadPK.iddepartamento}}">
+                       {{ciudad.nombre}} -
+                       {{ciudad.departamento.nombre}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+
+
+            <md-input-container class="md-block">
+              <label>Password</label>
+              <input required type="password" name="password" ng-model="vm.usuario.clave">
+              <div ng-messages="FormRegistroAdministradores.password.$error">
+                <div ng-message="required">This is required.</div>
+              </div>
+            </md-input-container>
+
+            <div>
+
+      </article>
+    </article>
+
+
+
+
+
+
+</section>

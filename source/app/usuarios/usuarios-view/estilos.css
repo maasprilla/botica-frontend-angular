@@ -16,6 +16,15 @@
 .FormPerfil-input {
   margin-bottom: 1em;
   border-radius: 1em;
+  diplay: inline-block;
+  width: 80%;
+}
+.FormPerfil-edit {
+  display: inline-block;
+  width: 10%;
+  color: #3d9bff;
+  cursor: pointer;
+  padding-left: 1.5em;
 }
 .FormPerfil-tittle {
   color: #000;

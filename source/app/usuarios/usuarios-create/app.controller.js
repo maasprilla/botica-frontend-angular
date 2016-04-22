@@ -17,6 +17,7 @@
         vm.idciudades=getIdCiudad(vm.ciudad)
         vm.usuario.ciudad={ciudadPK:{idCiudad:vm.idciudades[0], iddepartamento:vm.idciudades[1]}};
         vm.usuario.idRol={idRol:1};
+        console.log(vm.usuario);
         Ususarios.save(vm.usuario, function() {
                 $location.path('/');
                 $mdToast.show(

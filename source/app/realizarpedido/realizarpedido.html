@@ -34,16 +34,16 @@
           <div class="AgregarProd">
               <md-input-container class="md-block" class="AgregarProd-input">
                 <label>Pedido</label>
-                <input md-maxlength="30" required md-no-asterisk name="pedido" ng-model="project.pedido">
+                <input md-maxlength="30" required md-no-asterisk name="pedido" ng-model="vm.producto">
                 <div ng-messages="projectForm.pedido.$error">
                   <div ng-message="required">This is required.</div>
                   <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
                 </div>
               </md-input-container>
-              <md-button md-no-ink class="md-primary">Agregar</md-button>
+              <md-button md-no-ink class="md-primary" ng-click="vm.addProducto()">Agregar</md-button>
           </div>
 
-             
+
               <input type="submit" value="Realizar Pedido" class="FormRealizarPedido-button" />
          </form>
 

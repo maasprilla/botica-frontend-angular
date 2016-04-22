@@ -4,7 +4,8 @@
     angular.module('app.usuarios', [
       'app.usuarios.create',
       'app.usuarios.view',
-      'app.password.recovery'
+      'app.password.recovery',
+      'app.usuarios.list'
 
     ]);
 })();

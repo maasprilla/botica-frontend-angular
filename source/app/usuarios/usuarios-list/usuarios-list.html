@@ -1,0 +1,41 @@
+<section>
+  <!-- <md-toolbar class="md-table-toolbar md-default">
+      <div class="md-toolbar-tools">
+          <span>Lista de usuarios</span>
+      </div>
+  </md-toolbar> -->
+
+  <h3 class="text-center UsersList-title">Lista de usuarios</h3>
+  <md-table-container>
+      <table class="table table-bordered" md-table>
+          <thead md-head>
+              <tr md-row>
+                  <th md-column>Id</th>
+                  <th md-column>Nombres</th>
+                  <th md-column>Apellidos</th>
+                  <th md-column>Teléfono</th>
+                  <th md-column>Dirección</th>
+                  <th md-column>Ciudad</th>
+                  <th md-column>Departamento</th>
+                  <th md-column>E-mail</th>
+                  <th md-column>Fecha nácimiento</th>
+              </tr>
+          </thead>
+          <tbody md-body>
+              <tr md-row ng-repeat="usuario in vm.usuarios">
+                  <td md-cell>{{usuario.idUsuario}}</td>
+                  <td md-cell>{{usuario.nombre}}</td>
+                  <td md-cell>{{usuario.apellido}}</td>
+                  <td md-cell>{{usuario.telefono}}</td>
+                  <td md-cell>{{usuario.direccion}}</td>
+                  <td md-cell>{{usuario.idCiudad.nombre}}</td>
+                  <td md-cell>{{usuario.idDepartamento}}</td>
+                  <td md-cell>{{usuario.email}}</td>
+                  <td md-cell>{{usuario.fechaNac}}</td>
+              </tr>
+          </tbody>
+      </table>
+  </md-table-container>
+
+  <md-table-pagination md-limit-options="[5, 10, 15]" md-total="{{vm.usuarios.count}}" md-page-select></md-table-pagination>
+</section>

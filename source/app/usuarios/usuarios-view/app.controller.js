@@ -5,9 +5,10 @@
   ]).controller('usuariosViewCtrl', usuariosViewCtrl);
 
 
-  usuariosViewCtrl.$inject = ['$location', '$mdToast','Usuarios'];
-  function usuariosViewCtrl($location, $mdToast, Ususarios){
-
+  usuariosViewCtrl.$inject = ['$stateParams','$location', '$mdToast','Usuarios'];
+  function usuariosViewCtrl($stateParams, $location, $mdToast, Usuarios){
+         this.usuario = Usuarios.get({ idUsuario: $stateParams.idUsuario });
+         console.log(this.usuario);
     }
 
 })();
