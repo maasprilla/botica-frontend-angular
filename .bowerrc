@@ -1,6 +1,4 @@
 
 {
-    "directory": "source/lib",
-    "proxy": "proxy2.sena.edu.co:80",
-    "https-proxy": "proxy2.sena.edu.co:80"
+    "directory": "source/lib"
 }
