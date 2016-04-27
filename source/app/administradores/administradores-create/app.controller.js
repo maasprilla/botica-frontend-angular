@@ -16,7 +16,8 @@
     vm.create=function(){
         vm.idciudades=getIdCiudad(vm.ciudad)
         vm.administrador.ciudad={ciudadPK:{idCiudad:vm.idciudades[0], iddepartamento:vm.idciudades[1]}};
-        vm.administrador.idRol={idRol:1};
+        vm.administrador.idRol={idRol:'ADMIN'};
+        console.log(vm.administrador);
         Administradores.save(vm.administrador, function() {
                 $location.path('/');
                 $mdToast.show(

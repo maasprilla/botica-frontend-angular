@@ -6,9 +6,9 @@
                         <h1 class="FormLogin-tittle">Inicio de Sesion</h1>
                         <md-input-container class="md-block">
                           <label>Email*</label>
-                          <input required type="email" name="clientEmail" ng-model="project.clientEmail"
+                          <input required type="email" name="clientEmail" ng-model="vm.user.email"
                           minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
-                          <div ng-messages="projectForm.clientEmail.$error" role="alert">
+                          <div ng-messages="FormLogin.clientEmail.$error" role="alert">
                             <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
                               Your email must be between 10 and 100 characters long and look like an e-mail address.
                             </div>
@@ -16,13 +16,12 @@
                         </md-input-container>
                         <md-input-container class="md-block">
                           <label>Password*</label>
-                          <input required type="password" name="clientName" ng-model="project.clientName">
-                          <div ng-messages="projectForm.clientName.$error">
+                          <input required type="password" name="clientName" ng-model="vm.user.password">
+                          <div ng-messages="FormLogin.clientName.$error">
                             <div ng-message="required">This is required.</div>
                           </div>
                         </md-input-container>
-                        <md-button type="submit" md-no-ink class="md-raised md-primary" ng-disabled="loginDespForm.$invalid">Login</md-button>
-                        <!--<button class="btn btn-primary waves-effect waves-light"
+                        <md-button type="submit" md-no-ink class="md-raised md-primary" ng-disabled="FormLogin.$invalid">Login</md-button>                        <!--<button class="btn btn-primary waves-effect waves-light"
                                 type="submit"
                                 >
                             Login

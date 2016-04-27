@@ -7,7 +7,9 @@
   function login(){
     return{
       scope:{},
-      templateUrl:'app/login/login.html'
+      templateUrl:'app/login/login.html',
+      controller: 'LoginController',
+      controllerAs: 'vm'
     };
   }
 })();
