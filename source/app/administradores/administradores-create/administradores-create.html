@@ -6,7 +6,7 @@
         <h1 class="FormRegistro-tittle">Registro Administradores</h1>
 
 
-        <md-input-container class="md-block">
+        <md-input-container class="md-block AdminCreate-container">
           <label>Nombre</label>
           <input md-maxlength="30" required md-no-asterisk name="nombre" ng-model="vm.administrador.nombre">
           <div ng-messages="FormRegistroAdministradores.nombre.$error">
@@ -15,7 +15,7 @@
           </div>
         </md-input-container>
 
-        <md-input-container class="md-block">
+        <md-input-container class="md-block AdminCreate-container">
           <label>Apellido</label>
           <input md-maxlength="30" required md-no-asterisk name="apellido" ng-model="vm.administrador.apellido">
           <div ng-messages="FormRegistroAdministradores.apellido.$error">
@@ -24,7 +24,7 @@
           </div>
         </md-input-container>
 
-        <md-input-container class="md-block">
+        <md-input-container class="md-block AdminCreate-container">
           <label>Cedula</label>
           <input md-maxlength="10" required md-no-asterisk name="cedula" ng-model="vm.adminstrador.cedula" numbersonly>
           <div ng-messages="FormRegistroAdministradores.cedula.$error">
@@ -34,7 +34,7 @@
           </div>
         </md-input-container>
 
-        <md-input-container class="md-block">
+        <md-input-container class="md-block AdminCreate-container">
         <label>Email</label>
         <input required type="email" name="email" ng-model="vm.administrador.email"
                minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
@@ -45,7 +45,7 @@
         </div>
         </md-input-container>
 
-        <md-input-container class="md-block">
+        <md-input-container class="md-block AdminCreate-container">
           <label>Telefono</label>
           <input md-maxlength="10" required md-no-asterisk name="telefono" ng-model="vm.administrador.telefono" numbersonly>
           <div ng-messages="FormRegistroAdminstradores.telefono.$error">
@@ -55,7 +55,7 @@
           </div>
         </md-input-container>
 
-        <md-input-container class="md-block">
+        <md-input-container class="md-block AdminCreate-container">
           <label>Direccion</label>
           <input md-maxlength="30" required md-no-asterisk name="direccion" ng-model="vm.administrador.direccion">
           <div ng-messages="FormRegistroAdministradores.direccion.$error">
@@ -64,7 +64,7 @@
           </div>
         </md-input-container>
 
-        <md-input-container class="md-block" style="color:black;">
+        <md-input-container class="md-block AdminCreate-container" style="color:black;">
             <label>Ciudad</label>
             <md-select ng-model="vm.ciudad">
                 <md-option ng-repeat="ciudad in vm.ciudades"  value="{{ciudad.ciudadPK.idCiudad}}-{{ciudad.ciudadPK.iddepartamento}}">
@@ -75,7 +75,7 @@
         </md-input-container>
 
 
-        <md-input-container class="md-block">
+        <md-input-container class="md-block AdminCreate-container">
           <label>Password</label>
           <input required type="password" name="password" ng-model="vm.administrador.clave">
           <div ng-messages="FormRegistroAdministradores.password.$error">

@@ -4,3 +4,14 @@
 .FormRegistro {
   font-family: 'Open Sans';
 }
+@media screen and (max-width: 450px) {
+  .AdminCreate-container {
+    font-size: 11px;
+  }
+  .FormRegistro-tittle {
+    font-size: 22px;
+  }
+}
+.FormRegistro {
+  width: 100%;
+}
