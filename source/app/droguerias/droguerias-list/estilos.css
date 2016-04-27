@@ -1,31 +1,11 @@
-.SectionRegistro {
-  text-align: center;
-  padding: 8em 0;
-  background-color: #3d9bff;
+.DrogeriasList-majorContainer {
+  font-family: 'Open Sans';
 }
-.FormRegistro {
-  background-color: #fffafa;
-  display: inline-block;
-  padding: 2em;
-  border-radius: 0.5em;
-  box-shadow: 0.1em 0.1em #555;
-  width: 30em;
-  background-image: url("../images/fondo.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  color: Snow;
-  text-align: center;
+.DrogeriasList-title {
+  font-family: 'Open Sans';
+  padding-top: 3em;
+  padding-bottom: 2.5em;
 }
-.FormRegistro-input {
-  margin-bottom: 1em;
-  border-radius: 1em;
-}
-.FormRegistro-tittle {
-  color: #000;
-}
-@media (max-width: 422px) {
-  .FormRegistro {
-    width: 100%;
-  }
+.DrogeriasList-table {
+  font-family: 'Open Sans';
 }

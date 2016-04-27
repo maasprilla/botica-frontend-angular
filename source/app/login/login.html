@@ -1,6 +1,8 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,500">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800">
 <div>
   <section class="SectionLogin">
-                    <h:form class="FormLogin">
+                    <form class="FormLogin" ng-submit="vm.signIn()">
                         <h1 class="FormLogin-tittle">Inicio de Sesion</h1>
                         <md-input-container class="md-block">
                           <label>Email*</label>
@@ -19,11 +21,12 @@
                             <div ng-message="required">This is required.</div>
                           </div>
                         </md-input-container>
-                        <button class="btn btn-primary waves-effect waves-light"
+                        <md-button type="submit" md-no-ink class="md-raised md-primary" ng-disabled="loginDespForm.$invalid">Login</md-button>
+                        <!--<button class="btn btn-primary waves-effect waves-light"
                                 type="submit"
                                 >
-                            Guardar
-                        </button>
-                    </h:form>
+                            Login
+                        </button>-->
+                    </form>
                 </section>
 </div>

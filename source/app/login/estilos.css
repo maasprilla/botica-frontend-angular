@@ -18,6 +18,7 @@
 .LoginForm-botonLogin {
   background-color: #00aecc;
   color: #fff;
+  font-family: 'Open Sans';
   border: none;
 }
 .LoginForm-botonLogin:hover {
@@ -33,6 +34,7 @@
   padding-top: 2em;
   padding-bottom: 5em;
   max-height: 70em;
+  font-family: 'Open Sans';
 }
 .FormLogin {
   background-color: #fffafa;
@@ -47,9 +49,11 @@
   background-position: center;
   background-size: cover;
   color: #fff;
+  font-family: 'Open Sans';
 }
 .FormLogin-tittle {
   color: #000;
+  font-family: 'Open Sans';
 }
 .FormLogin-input {
   margin-bottom: 1em;

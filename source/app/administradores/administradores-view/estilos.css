@@ -1,10 +1,12 @@
 .SectionPerfil {
   text-align: center;
+  font-family: 'Open Sans';
   padding: 8em 0;
   background-color: #3d9bff;
 }
 .FormPerfil {
   background-color: #fffafa;
+  font-family: 'Open Sans';
   display: flex;
   justify-content: space-between;
   padding: 2em;
@@ -16,9 +18,21 @@
 .FormPerfil-input {
   margin-bottom: 1em;
   border-radius: 1em;
+  font-family: 'Open Sans';
+  display: inline-block;
+  width: 80%;
+}
+.FormPerfil-edit {
+  display: inline-block;
+  font-family: 'Open Sans';
+  width: 10%;
+  color: #3d9bff;
+  cursor: pointer;
+  padding-left: 1.5em;
 }
 .FormPerfil-tittle {
   color: #000;
+  font-family: 'Open Sans';
   border: 1px solid #999;
   margin: 0 0 1.5em 0;
   padding: 0.5em 0;

@@ -1,63 +1,49 @@
-<div class="page-header">
-    <form class="form-inline">
-        <div>
-            <!-- <a href="#/drogerias/create" class="btn btn-primary">Crear DE  DROGUERIAS</a> -->
-        </div>
-        <br>
-        <div class="form-group">
-            <label>Buscar</label>
-            <input type="text" ng-model="vm.busqueda" class="form-control" placeholder="Buscar">
-        </div>
-    </form>
-</div>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,500">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800">
+<section class="DrogeriasList-majorContainer">
+  <!-- <md-toolbar class="md-table-toolbar md-default">
+      <div class="md-toolbar-tools">
+          <span> Listado de Droguerias</span>
+      </div>
+  </md-toolbar> -->
 
-<md-toolbar class="md-table-toolbar md-default">
-    <div class="md-toolbar-tools">
-        <span> Listado de Droguerias</span>
-    </div>
-</md-toolbar>
+  <h3 class="text-center DrogeriasList-title">Lista de drogerias</h3>
+  <md-table-container>
+      <table class="table table-bordered DrogeriasList-table" md-table>
+          <thead md-head>
+              <tr md-row>
+                  <th md-column>Id</th>
+                  <th md-column>Nombre</th>
+                  <th md-column>Apellidos</th>
+                  <th md-column>Email</th>
+                  <th md-column>Teléfono</th>
+                  <th md-column>Dirección</th>
+                  <th md-column>Ciudad</th>
+                  <th md-column>Nit</th>
+                  <th md-column>Camara de comercio</th>
+                  <th md-column>Invima</th>
+              </tr>
+          </thead>
+          <tbody md-body>
+              <tr md-row ng-repeat="usuario in vm.usuarios">
+                  <td md-cell>{{usuario.idUsuario}}</td>
+                  <td md-cell>{{usuario.nombres}}</td>
+                  <td md-cell>{{usuario.apellidos}}</td>
+                  <td md-cell>{{usuario.email}}</td>
+                  <td md-cell>{{usuario.telefono}}</td>
+                  <td md-cell>{{usuario.direccion}}</td>
+                  <td md-cell>{{usuario.idCiudad.nombre}}</td>
+                  <td md-cell>{{usuario.nit}}</td>
+                  <td md-cell>{{usuario.camaracomercio}}</td>
+                  <td md-cell>{{usuario.invima}}</td>
+                  <!-- <td md-cell>{{usuario.idDepartamento}}</td> -->
+                  <!-- <td md-cell>{{usuario.fechaNac}}</td>
+                  <td md-cell>{{usuario.sexo}}</td>
+                  <td md-cell>{{usuario.usuarioVendedor}}</td> -->
+              </tr>
+          </tbody>
+      </table>
+  </md-table-container>
 
-<!-- exact table from live demo -->
-<md-table-container>
-    <table md-table>
-        <thead md-head>
-            <tr md-row>
-                <th md-column>Nombre</th>
-                <th md-column>Email</th>
-                <th md-column>Teléfono</th>
-                <th md-column>Dirección</th>
-                <th md-column>Ciudad</th>
-                <th md-column>Nit</th>
-                <th md-column>Camara de comercio</th>
-                <th md-column>Invima</th>
-                <th></th>
-
-            </tr>
-        </thead>
-        <tbody md-body>
-            <tr md-row ng-repeat="usuario in vm.usuarios">
-                <td md-cell>{{usuario.idUsuario}}</td>
-                <td md-cell>{{usuario.nombres}}</td>
-                <td md-cell>{{usuario.email}}</td>
-                <td md-cell>{{usuario.telefono}}</td>
-                <td md-cell>{{usuario.direccion}}</td>
-                <td md-cell>{{usuario.apellidos}}</td>
-                <td md-cell>{{usuario.idCiudad.nombre}}</td>
-                <td md-cell>{{usuario.nit}}</td>
-                <td md-cell>{{usuario.camaracomercio}}</td>
-                <td md-cell>{{usuario.invima}}</td>
-
-
-                <!-- <td md-cell>{{usuario.idDepartamento}}</td> -->
-
-                <!-- <td md-cell>{{usuario.fechaNac}}</td>
-                <td md-cell>{{usuario.sexo}}</td>
-                <td md-cell>{{usuario.usuarioVendedor}}</td> -->
-
-                <td md-cell><a href="#/usuarios/update/{{usuario.idUsuario}}">Editar</a></td>
-            </tr>
-        </tbody>
-    </table>
-</md-table-container>
-
-<md-table-pagination md-limit-options="[5, 10, 15]" md-total="{{vm.usuarios.count}}" md-page-select></md-table-pagination>
+  <md-table-pagination md-limit-options="[5, 10, 15]" md-total="{{vm.usuarios.count}}" md-page-select></md-table-pagination>
+</section>

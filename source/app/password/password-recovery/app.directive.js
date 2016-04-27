@@ -3,14 +3,14 @@
 
     angular.module('app.password.recovery.directive', [
 
-    ]).directive('registrousuario', registrousuario)
+    ]).directive('passrecover', passrecover)
     .directive('numbersonly', numbersonly);
 
-    function registrousuario(){
+    function passrecover(){
       return{
         scope:{},
-        templateUrl:'app/usuarios/usuarios-create/usuarios-create.html',
-        controller: 'usuariosCreateCtrl',
+        templateUrl:'app/password/password-recovery/password-recovery.html',
+        controller: 'passRecoveryCtrl',
         controllerAs: 'vm'
       }
     }

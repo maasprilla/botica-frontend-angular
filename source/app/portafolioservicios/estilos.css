@@ -1,4 +1,5 @@
 div.PortafolioMainMenu {
+  font-family: 'Open Sans';
   background-color: #4385f6;
   border-color: #4385f6;
 }
@@ -124,6 +125,7 @@ div.ProductoContainer h2 {
 }
 .PortafolioFooter {
   background-color: #546d87;
+  font-family: 'Open Sans';
   min-height: 13.75em;
   height: auto;
   text-align: center;

@@ -1,5 +1,5 @@
 <header class="Header">
-  <div class="navbar  MainMenu">
+  <div class="navbar MainMenu">
   <div class="container-fluid">
     <!-- responsive movil -->
     <div class="navbar-header">
@@ -13,11 +13,11 @@
     </div>
 
     <!-- view desktop -->
-    <div id="MainMenuPrimary" class="navbar-collapse collapse"  >
+    <div id="MainMenuPrimary" class="navbar-collapse collapse MainMenu-container">
 
 
-      <ul class="nav navbar-nav navbar-right">
-        <li ng-show="!vm.isAuthenticated()"><a href="" onclick="showLogin()" class="MainMenu-link">Iniciar Sesion▼</a>
+      <ul class="nav navbar-nav navbar-right MainMenu-list">
+        <li ng-show="!vm.isAuthenticated()" class="MainMenu-item"><a href="" onclick="showLogin()" class="MainMenu-link">Iniciar Sesion▼</a>
           <div id="PanelLogin" class="PanelLogin z-depth-1">
             <form name="loginDespForm" class="PanelLogin-form" ng-submit="vm.signIn()">
               <h2 class="PanelLogin-tittle">Iniciar Sesion</h2>
@@ -33,7 +33,7 @@
               </md-input-container>
               <md-input-container class="md-block" >
                 <label>Password*</label>
-                <input required name="password" ng-model="vm.user.password">
+                <input type="password" name="password" ng-model="vm.user.password" required>
                 <div ng-messages="loginDespForm.password.$error">
                   <div ng-message="required">This is required.</div>
                 </div>
@@ -42,10 +42,10 @@
             </form>
           </div>
         </li>
-        <li ng-show="vm.isAuthenticated()"><a href="" class="MainMenu-link">{{vm.getCurrentUser()}}</a></li>
-        <li ng-show="!vm.isAuthenticated()"><a href="#/regisuser" class="MainMenu-link" >Registrar Usuarios</a></li>
-        <li ng-show="!vm.isAuthenticated()"><a href="#/regisdrog" class="MainMenu-link" >Registrar Droguerias</a></li>
-        <li ng-show="vm.isAuthenticated()">
+        <li ng-show="vm.isAuthenticated()" class="MainMenu-item"><a href="" class="MainMenu-link">{{vm.getCurrentUser()}}</a></li>
+        <li ng-show="!vm.isAuthenticated()" class="MainMenu-item"><a href="#/regisuser" class="MainMenu-link" >Registrar Usuarios</a></li>
+        <li ng-show="!vm.isAuthenticated()" class="MainMenu-item"><a href="#/regisdrog" class="MainMenu-link" >Registrar Droguerias</a></li>
+        <li ng-show="vm.isAuthenticated()" class="MainMenu-item">
           <span class="glyphicon glyphicon-user" onclick="showOptions()" style="font-size:40px; top:0; background-color:#e7e7e7; padding:5px"></span>
             <div id="Options" class="Options z-depth-1">
               <div class="OptSelect">
@@ -66,7 +66,7 @@
 </div>
 
 
-<div class="navbar grey lighten-2   navbar-default MainMenuSecundary">
+<div class="navbar grey lighten-2 navbar-default MainMenuSecundary">
 <div class="container-fluid">
   <!-- responsive movil -->
   <div class="navbar-header">

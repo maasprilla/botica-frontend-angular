@@ -2,11 +2,11 @@
   'use strict';
 
   angular.module('app.password.recovery.controller', [
-  ]).controller('usuariosCreateCtrl', usuariosCreateCtrl);
+  ]).controller('passRecoveryCtrl', passRecoveryCtrl);
 
 
-  usuariosCreateCtrl.$inject = ['$location', '$mdToast','Usuarios', 'Ciudades'];
-  function usuariosCreateCtrl($location, $mdToast, Ususarios ,Ciudades){
+  passRecoveryCtrl.$inject = ['$location', '$mdToast','Usuarios', 'Ciudades'];
+  function passRecoveryCtrl($location, $mdToast, Ususarios ,Ciudades){
   }
 
 

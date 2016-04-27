@@ -11,7 +11,7 @@
 
       $stateProvider
               .state('usuarios-list',{
-                  url: '/usuarios-list',
+                  url: '/usuarioslist',
                   views:{
                     'encabezadosimple':{
                        template: '<encabezadosimple/>'

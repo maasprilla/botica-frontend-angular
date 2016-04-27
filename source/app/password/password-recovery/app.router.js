@@ -2,7 +2,7 @@
     'use strict';
 
     angular.module('app.password.recovery.router', [
-      'app.usuarios.create.controller'
+      'app.password.recovery.controller'
     ]).config(configure);
 
     function configure($stateProvider, $urlRouterProvider){
@@ -10,14 +10,14 @@
       $urlRouterProvider.otherwise('/');
 
       $stateProvider
-              .state('regisuser',{
-                  url: '/regisuser',
+              .state('password-recovery',{
+                  url: '/passrecover',
                   views:{
                     'encabezadosimple':{
                        template: '<encabezadosimple/>'
                     },
-                    'registrousuario':{
-                       template: '<registrousuario/>'
+                    'passrecover':{
+                       template: '<passrecover/>'
                     },
                     'piedepagina':{
                        template: '<piedepagina/>'

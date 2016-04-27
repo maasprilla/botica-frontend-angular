@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,500">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800">
 <section class="SectionPerfil">
 
     <article class="FormPerfil">
@@ -8,36 +10,41 @@
             <h3 class="FormPerfil-tittle">Perfil De Administradores</h3>
 
           <div class="FormPerfil-label">
-            <md-input-container class="md-block">
+
+            <md-input-container class=" FormPerfil-input">
               <label>Nombre</label>
-              <input md-maxlength="30" required md-no-asterisk name="nombre" ng-model="vm.usuario.nombre">
+              <input md-maxlength="30" required md-no-asterisk name="nombre" ng-model="vm.usuario.nombre" ng-disabled="true">
               <div ng-messages="FormRegistroAdministradores.nombre.$error">
                 <div ng-message="required">This is required.</div>
                 <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
               </div>
             </md-input-container>
-            <md-input-container class="md-block">
+            <label class="FormPerfil-edit">Editar</label>
+
+            <md-input-container class=" FormPerfil-input">
               <label>Apellido</label>
-              <input md-maxlength="30" required md-no-asterisk name="apellido" ng-model="vm.usuario.apellido">
+              <input md-maxlength="30" required md-no-asterisk name="apellido" ng-model="vm.usuario.apellido" ng-disabled="true">
               <div ng-messages="FormRegistroAdministradores.apellido.$error">
                 <div ng-message="required">This is required.</div>
                 <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
               </div>
             </md-input-container>
+            <label class="FormPerfil-edit">Editar</label>
 
-            <md-input-container class="md-block">
+            <md-input-container class=" FormPerfil-input">
               <label>Cedula</label>
-              <input md-maxlength="10" required md-no-asterisk name="cedula" ng-model="vm.usuario.cedula" numbersonly>
+              <input md-maxlength="10" required md-no-asterisk name="cedula" ng-model="vm.usuario.cedula" ng-disabled="true" numbersonly>
               <div ng-messages="FormRegistroAdministradores.cedula.$error">
                 <div ng-message="required">This is required.</div>
                 <div ng-message="md-maxlength">The name has to be less than 10 characters long.</div>
 
               </div>
             </md-input-container>
+            <label class="FormPerfil-edit">Editar</label>
 
-            <md-input-container class="md-block">
+            <md-input-container class=" FormPerfil-input">
             <label>Email</label>
-            <input required type="email" name="email" ng-model="vm.usuario.email"
+            <input required type="email" name="email" ng-model="vm.usuario.email" ng-disabled="true"
                    minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
             <div ng-messages="FormRegistroAdministradores.clientEmail.$error" role="alert">
               <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
@@ -45,44 +52,40 @@
               </div>
             </div>
             </md-input-container>
+            <label class="FormPerfil-edit">Editar</label>
 
-            <md-input-container class="md-block">
+            <md-input-container class=" FormPerfil-input">
               <label>Telefono</label>
-              <input md-maxlength="10" required md-no-asterisk name="telefono" ng-model="vm.usuario.telefono" numbersonly>
+              <input md-maxlength="10" required md-no-asterisk name="telefono" ng-model="vm.usuario.telefono" ng-disabled="true" numbersonly>
               <div ng-messages="FormRegistroAdministradores.telefono.$error">
                 <div ng-message="required">This is required.</div>
                 <div ng-message="md-maxlength">The name has to be less than 10 characters long.</div>
 
               </div>
             </md-input-container>
+            <label class="FormPerfil-edit">Editar</label>
 
-            <md-input-container class="md-block">
+            <md-input-container class=" FormPerfil-input">
               <label>Direccion</label>
-              <input md-maxlength="30" required md-no-asterisk name="direccion" ng-model="vm.usuario.direccion">
+              <input md-maxlength="30" required md-no-asterisk name="direccion" ng-model="vm.usuario.direccion" ng-disabled="true">
               <div ng-messages="FormRegistroAdministradores.direccion.$error">
                 <div ng-message="required">This is required.</div>
                 <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
               </div>
             </md-input-container>
+            <label class="FormPerfil-edit">Editar</label>
 
-            <md-input-container class="md-block" style="color:black;">
+            <md-input-container class=" FormPerfil-input" style="color:black">
                 <label>Ciudad</label>
-                <md-select ng-model="vm.ciudad">
+                <input md-maxlength="30" required md-no-asterisk name="ciudad" ng-model="vm.usuario.ciudad" ng-disabled="true">
+                <!--<md-select ng-model="vm.ciudad">
                     <md-option ng-repeat="ciudad in vm.ciudades"  value="{{ciudad.ciudadPK.idCiudad}}-{{ciudad.ciudadPK.iddepartamento}}">
                        {{ciudad.nombre}} -
                        {{ciudad.departamento.nombre}}
                     </md-option>
-                </md-select>
+                </md-select>-->
             </md-input-container>
-
-
-            <md-input-container class="md-block">
-              <label>Password</label>
-              <input required type="password" name="password" ng-model="vm.usuario.clave">
-              <div ng-messages="FormRegistroAdministradores.password.$error">
-                <div ng-message="required">This is required.</div>
-              </div>
-            </md-input-container>
+            <label class="FormPerfil-edit">Editar</label>
 
             <div>
 

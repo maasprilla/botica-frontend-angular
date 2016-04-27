@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,500">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800">
 <section class="SectionPerfil">
 
     <article class="FormPerfil">
@@ -75,15 +77,17 @@
             </md-input-container>
             <label class="FormPerfil-edit">Editar</label>
 
-            <md-input-container class="md-block" style="color:black;">
+            <md-input-container class="FormPerfil-input" style="color:black">
                 <label>Ciudad</label>
-                <md-select ng-model="vm.ciudad">
+                <input md-maxlength="30" required md-no-asterisk name="ciudad" ng-model="vm.usuario.ciudad" ng-disabled="true">
+                <!--<md-select ng-model="vm.ciudad">
                     <md-option ng-repeat="ciudad in vm.ciudades"  value="{{ciudad.ciudadPK.idCiudad}}-{{ciudad.ciudadPK.iddepartamento}}">
                        {{ciudad.nombre}} -
                        {{ciudad.departamento.nombre}}
                     </md-option>
-                </md-select>
+                </md-select>-->
             </md-input-container>
+            <label class="FormPerfil-edit">Editar</label>
 
 
 

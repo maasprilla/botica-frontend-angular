@@ -13,13 +13,18 @@
 .MainMenu {
   background-color: #4385f6;
   border-radius: 0px;
+  font-family: 'Open Sans';
 }
 .MainMenu-Ambiental {
   background-color: #24cc0d;
+  font-family: 'Open Sans';
   border-color: #24cc0d;
 }
 .MainMenu-link {
   color: #fff;
+}
+.MainMenu-link:hover {
+  color: #000;
 }
 .MainMenu-linkLogo {
   padding: 0;
@@ -36,6 +41,7 @@
 }
 .MainMenuSecundary {
   width: 80%;
+  font-family: 'Open Sans';
   display: inline-block;
 }
 .MainMenuSecundary-group>li>a {

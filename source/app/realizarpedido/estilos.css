@@ -3,6 +3,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  font-family: 'Open Sans';
   text-align: center;
   padding: 0em 5em;
   padding-top: 2em;
@@ -12,6 +13,7 @@
   background-color: #fffafa;
   padding: 3em;
   width: 30em;
+  font-family: 'Open Sans';
   text-align: center;
   display: inline-block;
 }
@@ -22,6 +24,7 @@
   margin-bottom: 0.8em;
   resize: none;
   padding: 0.5em;
+  font-family: 'Open Sans';
 }
 .FormRealizarPedido-textarea {
   height: 12em;
@@ -36,10 +39,13 @@
   padding: 1em 2em;
   border-radius: 0.5em;
   color: #fff;
+  font-family: 'Open Sans';
 }
 .AgregarProd {
   text-align: center;
+  font-family: 'Open Sans';
 }
 .AgregarProd-input {
   display: inline-block;
+  font-family: 'Open Sans';
 }

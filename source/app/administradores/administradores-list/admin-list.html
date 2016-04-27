@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,500">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800">
+<section class="AdministradoresList-majorContainer">
+  <!-- <md-toolbar class="md-table-toolbar md-default">
+      <div class="md-toolbar-tools">
+          <span>Administradores</span>
+      </div>
+  </md-toolbar> -->
+
+  <h3 class="text-center AdministradoresList-title">Lista de administradores</h3>
+  <md-table-container>
+      <table class="table table-bordered AdministradoresList-table" md-table>
+          <thead md-head>
+              <tr md-row>
+                  <th md-column>Nombres</th>
+                  <th md-column>Apellidos</th>
+                  <th md-column>Cedula</th>
+                  <th md-column>Email</th>
+                  <th md-column>Teléfono</th>
+                  <th md-column>Dirección</th>
+                  <th md-column>Ciudad</th>
+              </tr>
+          </thead>
+          <tbody md-body>
+              <tr md-row ng-repeat="administrador in vm.administrador">
+                  <td md-cell>{{administrador.nombre}}</td>
+                  <td md-cell>{{administrador.apellido}}</td>
+                  <td md-cell>{{administrador.cedula}}</td>
+                  <td md-cell>{{administrador.email}}</td>
+                  <td md-cell>{{administrador.telefono}}</td>
+                  <td md-cell>{{administrador.direccion}}</td>
+                  <td md-cell>{{administrador.idCiudad.nombre}}</td>
+              </tr>
+          </tbody>
+      </table>
+  </md-table-container>
+
+  <md-table-pagination md-limit-options="[5, 10, 15]" md-total="{{vm.administradores.count}}" md-page-select></md-table-pagination>
+</section>
