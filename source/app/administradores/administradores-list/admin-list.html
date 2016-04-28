@@ -7,33 +7,33 @@
       </div>
   </md-toolbar> -->
 
-  <h3 class="text-center AdministradoresList-title">Lista de administradores</h3>
-  <md-table-container>
-      <table class="table table-bordered AdministradoresList-table" md-table>
-          <thead md-head>
-              <tr md-row>
-                  <th md-column>Nombres</th>
-                  <th md-column>Apellidos</th>
-                  <th md-column>Cedula</th>
-                  <th md-column>Email</th>
-                  <th md-column>Teléfono</th>
-                  <th md-column>Dirección</th>
-                  <th md-column>Ciudad</th>
+  <h2 class="text-center AdministradoresList-title">Lista de administradores</h2>
+  <div class="container table-responsive shadow-z-1 AdministradoresList-tableContainer">
+      <table id="table" class="table table-hover table-mc-light-blue AdministradoresList-table">
+          <thead>
+              <tr>
+                  <th>Nombres</th>
+                  <th>Apellidos</th>
+                  <th>Cedula</th>
+                  <th>Email</th>
+                  <th>Teléfono</th>
+                  <!--<th md-column>Dirección</th>
+                  <th md-column>Ciudad</th>-->
               </tr>
           </thead>
-          <tbody md-body>
-              <tr md-row ng-repeat="administrador in vm.administrador">
-                  <td md-cell>{{administrador.nombre}}</td>
-                  <td md-cell>{{administrador.apellido}}</td>
-                  <td md-cell>{{administrador.cedula}}</td>
-                  <td md-cell>{{administrador.email}}</td>
-                  <td md-cell>{{administrador.telefono}}</td>
-                  <td md-cell>{{administrador.direccion}}</td>
-                  <td md-cell>{{administrador.idCiudad.nombre}}</td>
+          <tbody>
+              <tr ng-repeat="administrador in vm.administrador">
+                  <td>{{administrador.nombre}}</td>
+                  <td>{{administrador.apellido}}</td>
+                  <td>{{administrador.cedula}}-</td>
+                  <td>{{administrador.email}}</td>
+                  <td>{{administrador.telefono}}</td>
+                  <!--<td md-cell>{{administrador.direccion}}</td>
+                  <td md-cell>{{administrador.idCiudad.nombre}}</td>-->
               </tr>
           </tbody>
       </table>
-  </md-table-container>
+  </div>
 
   <md-table-pagination md-limit-options="[5, 10, 15]" md-total="{{vm.administradores.count}}" md-page-select></md-table-pagination>
 </section>

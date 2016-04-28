@@ -55,6 +55,15 @@
   border: 1px solid #999;
   box-shadow: 3px 3px 4px -3px #999;
 }
+@media (max-width: 463px) {
+  .FormPerfil-edit {
+    padding-left: 0.5em;
+    font-size: 11px;
+  }
+  .FormPerfil-label {
+    padding-left: 0.2em;
+  }
+}
 @media (max-width: 422px) {
   .FormRegistro {
     width: 100%;
@@ -75,9 +84,6 @@
 }
 @media (max-width: 400px) {
   .FormPerfil {
-    padding: 1em;
-  }
-  .FormPerfil-label {
     padding: 1em;
   }
 }

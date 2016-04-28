@@ -1,11 +1,76 @@
 .UsersList-majorContainer {
   font-family: 'Open Sans';
+  padding: 5em 0.7em 3em 0.7em;
+  background-color: #3d9bff;
 }
 .UsersList-title {
   font-family: 'Open Sans';
-  padding-top: 3em;
-  padding-bottom: 2.5em;
+  padding-bottom: 2em;
+}
+.UsersList-tableContainer {
+  width: 100%;
+  background-color: #fffafa;
+  justify-content: space-between;
+  box-shadow: 0.1em 0.1em #555;
+  border-radius: 0.5em;
 }
 .UsersList-table {
   font-family: 'Open Sans';
 }
+@media screen and (max-width: 642px) {
+  table.UsersList-table,
+  .UsersList-table thead,
+  .UsersList-table tbody,
+  .UsersList-table th,
+  .UsersList-table td,
+  .UsersList-table tr {
+    display: block;
+  }
+  .UsersList-table thead tr {
+    display: none;
+  }
+  .UsersList-table tr {
+    border: 1px solid #ccc;
+    margin-bottom: 2em;
+    border-radius: 0.5em;
+  }
+  .UsersList-table td {
+    position: relative;
+    padding-left: 50%;
+    text-align: left;
+    min-height: 2.5em;
+  }
+  .UsersList-table td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+}
+/**#table
+  width 100%
+  max-width 100%
+  margin-bottom 2rem
+
+table
+  border-collapse collapse
+  border-spacing 0
+
+td,th
+  padding 4px 8px
+
+@media screen and (max-width:642px)
+  .UsersList-majorContainer
+    padding  5em 0 3em 0
+  .UsersList-tableContainer
+    flex-direction column
+    align-items center
+    width 80%
+  .UsersList-tableContainer
+    width 100%
+    font-size 12px
+  table
+    overflow-x auto
+    display block**/

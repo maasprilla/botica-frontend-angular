@@ -1,10 +1,62 @@
-.DrogeriasList-majorContainer
+.DrogueriasList-majorContainer
   font-family 'Open Sans'
+  padding  5em 0.7em 3em 0.7em
+  background-color #3D9BFF
 
-.DrogeriasList-title
+.DrogueriasList-title
   font-family 'Open Sans'
-  padding-top 3em
-  padding-bottom 2.5em
+  padding-bottom 2em
 
-.DrogeriasList-table
+.DrogueriasList-tableContainer
+  width 100%
+  background-color snow
+  justify-content space-between
+  box-shadow 0.1em 0.1em  #555
+  border-radius 0.5em
+
+.DrogueriasList-table
   font-family 'Open Sans'
+  width 100%
+
+@media screen and (max-width:795px)
+  table.DrogueriasList-table, .DrogueriasList-table thead, .DrogueriasList-table tbody, .DrogueriasList-table th, .DrogueriasList-table td, .DrogueriasList-table tr
+    display block
+  .DrogueriasList-table thead tr
+    display none
+  .DrogueriasList-table tr
+    border 1px solid #ccc
+    margin-bottom 2em
+    border-radius 0.5em
+  .DrogueriasList-table td
+    position relative
+    padding-left 50%
+    text-align left
+    min-height 2.5em
+  .DrogueriasList-table td:before
+    position absolute
+    top 6px
+    left 6px
+    width 45%
+    padding-right 10px
+    white-space nowrap
+
+/**table
+  border-collapse collapse
+  border-spacing 0
+
+td,th
+  padding 4px 8px
+
+@media screen and (max-width:642px)
+  .DrogueriasList-majorContainer
+    padding  5em 0 3em 0
+  .DrogueriasList-tableContainer
+    flex-direction column
+    align-items center
+    width 80%
+  .DrogueriasList-tableContainer
+    width 100%
+    font-size 12px
+  table
+    overflow-x auto
+    display block**/

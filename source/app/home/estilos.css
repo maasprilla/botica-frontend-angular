@@ -1,41 +1,74 @@
 .Nosotros {
   font-family: 'Open Sans';
 }
+.Nosotros-container {
+  padding: 2.5em;
+}
+.UsImage-container {
+  max-width: 35em;
+  padding-top: 1em;
+}
+.UsImage {
+  width: 100%;
+}
 .UsInfo-container {
   padding-top: 3em;
   padding-bottom: 2em;
-  max-width: 35em;
-  float: right;
   text-align: justify;
 }
 .Objetivos {
   background-color: #3d9bff;
   font-family: 'Open Sans';
 }
+.Objetivos-container {
+  padding: 2.5em;
+}
 .ObjetivosInfo-container {
+  padding-top: 3em;
   padding-bottom: 2em;
-  max-width: 35em;
-  float: right;
   text-align: justify;
+}
+.ObjetivosImage-container {
+  max-width: 35em;
+}
+.ObjetivosImage {
+  width: 100%;
 }
 .Beneficios {
   font-family: 'Open Sans';
 }
-.BeneficiosInfo-container {
-  padding-bottom: 2em;
+.Beneficios-container {
+  padding: 2.5em;
+}
+.BeneficiosImage-container {
   max-width: 35em;
-  float: right;
+  padding-top: 1em;
+}
+.BeneficiosImage {
+  width: 100%;
+}
+.BeneficiosInfo-container {
+  padding-top: 2em;
+  padding-bottom: 2em;
   text-align: justify;
 }
 .MedioAmbienteHome {
   background-color: #3d9bff;
   font-family: 'Open Sans';
 }
+.MedioAmbienteHome-container {
+  padding: 2.5em;
+}
 .MDHomeInfo-container {
+  padding-top: 3em;
   padding-bottom: 2em;
-  max-width: 35em;
-  float: right;
   text-align: justify;
+}
+.MDHomeImage-container {
+  max-width: 35em;
+}
+.MDHomeImage {
+  width: 100%;
 }
 .UsTitle,
 .ObjTitle,
