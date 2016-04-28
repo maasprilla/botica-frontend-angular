@@ -1,4 +1,3 @@
-<header class="Header">
   <div class="navbar MainMenu">
   <div class="container-fluid">
     <!-- responsive movil -->
@@ -16,7 +15,7 @@
     <div id="MainMenuPrimary" class="navbar-collapse collapse MainMenu-container">
 
 
-      <ul class="nav navbar-nav navbar-right MainMenu-list">
+      <ul id="MainMenu-list" class="nav navbar-nav navbar-right MainMenu-list">
         <li ng-show="!vm.isAuthenticated()" class="MainMenu-item"><a href="" onclick="showLogin()" class="MainMenu-link">Iniciar Sesion▼</a>
           <div id="PanelLogin" class="PanelLogin z-depth-1">
             <form name="loginDespForm" class="PanelLogin-form" ng-submit="vm.signIn()">
@@ -59,6 +58,10 @@
     </div>
   </div>
 </div>
+
+
+<header class="Header">
+
 
 
 

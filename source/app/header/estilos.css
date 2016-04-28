@@ -1,3 +1,6 @@
+body {
+  min-height: 100vh;
+}
 .Header {
   height: 48em;
   text-align: center;
@@ -14,6 +17,7 @@
   background-color: #4385f6;
   border-radius: 0px;
   font-family: 'Open Sans';
+  margin-bottom: 0;
 }
 .MainMenu-Ambiental {
   background-color: #24cc0d;
@@ -22,9 +26,6 @@
 }
 .MainMenu-link {
   color: #fff;
-}
-.MainMenu-link:hover {
-  color: #000;
 }
 .MainMenu-linkLogo {
   padding: 0;
@@ -43,6 +44,7 @@
   width: 80%;
   font-family: 'Open Sans';
   display: inline-block;
+  z-index: 3;
 }
 .MainMenuSecundary-group>li>a {
   color: #000;
@@ -54,6 +56,10 @@
   right: 0em;
   padding: 1.5em;
   display: none;
+  border: 1px solid #d3d3d3;
+  border-top: none;
+  text-align: center;
+  z-index: 3;
 }
 .PanelLogin-form {
   width: 20em;
@@ -77,4 +83,23 @@
 .OptSelect2 {
   width: 15em;
   padding: 1em;
+}
+#MainMenu-list>li>a:hover {
+  background: #fffafa;
+  color: #3d9bff;
+}
+#MainMenu-list>li>a:focus {
+  background: #fffafa;
+  color: #3d9bff;
+}
+@media (max-width: 695px) {
+  .Header {
+    height: 28em;
+    background-image: url("/images/header.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  .Header-content {
+    height: 20em;
+  }
 }

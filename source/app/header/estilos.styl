@@ -1,3 +1,5 @@
+body
+  min-height 100vh
 .Header
   height 48em
   text-align center
@@ -6,20 +8,19 @@
   background-size cover
   background-position center
   background-repeat no-repeat
-  &-content
+  &-content    
     height 40em
 .MainMenu
   background-color #4385F6
   border-radius 0px
   font-family 'Open Sans'
+  margin-bottom 0
   &-Ambiental
     background-color #24CC0D
     font-family 'Open Sans'
     border-color #24CC0D
   &-link
     color white
-  &-link:hover
-    color black
   &-linkLogo
     padding 0
   &-logo
@@ -35,6 +36,7 @@
   width 80%
   font-family 'Open Sans'
   display inline-block
+  z-index 3
   &-group>li>a
     color black
 .PanelLogin
@@ -44,6 +46,10 @@
   right 0em
   padding 1.5em
   display none
+  border 1px solid lightgray
+  border-top none
+  text-align center
+  z-index 3
   &-form
     width 20em
   &-input
@@ -64,3 +70,21 @@
 .OptSelect, .OptSelect2
   width 15em
   padding 1em
+
+
+#MainMenu-list>li>a:hover
+  background snow
+  color #3D9BFF
+
+#MainMenu-list>li>a:focus
+  background snow
+  color #3D9BFF
+
+@media (max-width: 695px)
+  .Header
+    height 28em
+    background-image url('/images/header.jpg')
+    background-size 100% 100%
+    background-repeat no-repeat
+    &-content    
+      height 20em
