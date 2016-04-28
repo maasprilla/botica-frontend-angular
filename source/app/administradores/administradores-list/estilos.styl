@@ -1,10 +1,53 @@
 .AdministradoresList-majorContainer
   font-family 'Open Sans'
+  padding  5em 0.7em 3em 0.7em
+  background-color #3D9BFF
 
 .AdministradoresList-title
   font-family 'Open Sans'
-  padding-top 3em
-  padding-bottom 2.5em
+  padding-bottom 2em
+
+.AdministradoresList-tableContainer
+  width 100%
+  background-color snow
+  justify-content space-between
+  box-shadow 0.1em 0.1em  #555
+  border-radius 0.5em
 
 .AdministradoresList-table
   font-family 'Open Sans'
+
+@media screen and (max-width:642px)
+  table.AdministradoresList-table, .AdministradoresList-table thead, .AdministradoresList-table tbody, .AdministradoresList-table th, .AdministradoresList-table td, .AdministradoresList-table tr
+    display block
+  .AdministradoresList-table thead tr
+    display none
+  .AdministradoresList-table tr
+    border 1px solid #ccc
+    margin-bottom 2em
+    border-radius 0.5em
+  .AdministradoresList-table td
+    position relative
+    padding-left 50%
+    text-align left
+    min-height 2.5em
+  .AdministradoresList-table td:before
+    position absolute
+    top 6px
+    left 6px
+    width 45%
+    padding-right 10px
+    white-space nowrap
+  /**.AdministradoresList-table td:nth-of-type(1):before
+    content "Nombres"
+  .AdministradoresList-table td:nth-of-type(2):before
+    content "Apellidos"
+  .AdministradoresList-table td:nth-of-type(3):before
+    content "Cedula"
+  .AdministradoresList-table td:nth-of-type(4):before
+    content "Email"
+  .AdministradoresList-table td:nth-of-type(5):before
+    content "Teléfono"
+  .AdministradoresList-table td:nth-of-type(6):before
+    padding-left 0
+    text-align center**/

@@ -7,37 +7,33 @@
       </div>
   </md-toolbar> -->
 
-  <h3 class="text-center UsersList-title">Lista de usuarios</h3>
-  <md-table-container>
-      <table class="table table-bordered UsersList-table" md-table>
-          <thead md-head>
-              <tr md-row>
-                  <th md-column>Id</th>
-                  <th md-column>Nombres</th>
-                  <th md-column>Apellidos</th>
-                  <th md-column>Teléfono</th>
-                  <th md-column>Dirección</th>
-                  <th md-column>Ciudad</th>
-                  <th md-column>Departamento</th>
-                  <th md-column>E-mail</th>
-                  <th md-column>Fecha nácimiento</th>
+  <h2 class="text-center UsersList-title">Lista de usuarios</h2>
+  <div class="container table-responsive shadow-z-1 UsersList-tableContainer">
+      <table id="table" class="table table-hover table-mc-light-blue UsersList-table">
+          <thead>
+              <tr>
+                  <th >ID</th>
+                  <th >Nombres</th>
+                  <th >Apellidos</th>
+                  <th >Teléfono</th>
+                  <th >Dirección</th>
+                  <th >Ciudad</th>
+                  <th >E-mail</th>
               </tr>
           </thead>
-          <tbody md-body>
-              <tr md-row ng-repeat="usuario in vm.usuarios">
-                  <td md-cell>{{usuario.idUsuario}}</td>
-                  <td md-cell>{{usuario.nombre}}</td>
-                  <td md-cell>{{usuario.apellido}}</td>
-                  <td md-cell>{{usuario.telefono}}</td>
-                  <td md-cell>{{usuario.direccion}}</td>
-                  <td md-cell>{{usuario.idCiudad.nombre}}</td>
-                  <td md-cell>{{usuario.idDepartamento}}</td>
-                  <td md-cell>{{usuario.email}}</td>
-                  <td md-cell>{{usuario.fechaNac}}</td>
-              </tr>
+          <tbody>
+            <tr ng-repeat="usuario in vm.usuarios">
+                <td >{{usuario.idUsuario}}</td>
+                <td >{{usuario.nombre}}</td>
+                <td >{{usuario.apellido}}</td>
+                <td >{{usuario.telefono}}</td>
+                <td >{{usuario.direccion}}</td>
+                <td >{{usuario.idciudades}}-</td>
+                <td >{{usuario.email}}</td>
+            </tr>
           </tbody>
       </table>
-  </md-table-container>
+  </div>
 
-  <md-table-pagination md-limit-options="[5, 10, 15]" md-total="{{vm.usuarios.count}}" md-page-select></md-table-pagination>
+  <!--<md-table-pagination md-limit-options="[5, 10, 15]" md-total="{{vm.usuarios.count}}" md-page-select></md-table-pagination>-->
 </section>
