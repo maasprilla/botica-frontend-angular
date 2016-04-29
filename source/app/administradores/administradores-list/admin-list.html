@@ -1,39 +1,53 @@
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,500">
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800">
-<section class="AdministradoresList-majorContainer">
-  <!-- <md-toolbar class="md-table-toolbar md-default">
-      <div class="md-toolbar-tools">
-          <span>Administradores</span>
-      </div>
-  </md-toolbar> -->
 
-  <h2 class="text-center AdministradoresList-title">Lista de administradores</h2>
-  <div class="container table-responsive shadow-z-1 AdministradoresList-tableContainer">
-      <table id="table" class="table table-hover table-mc-light-blue AdministradoresList-table">
+<section class="Listreg">
+  <h2 class="Listreg-title">Lista de Administradores</h2>
+  <div class="container table-responsive shadow-z-1 Listreg-table">
+      <table id="table" class="table table-hover width200">
           <thead>
               <tr>
-                  <th>Nombres</th>
-                  <th>Apellidos</th>
-                  <th>Cedula</th>
-                  <th>Email</th>
-                  <th>Teléfono</th>
-                  <!--<th md-column>Dirección</th>
-                  <th md-column>Ciudad</th>-->
+                  <th >ID</th>
+                  <th >Nombres</th>
+                  <th >Apellidos</th>
+                  <th >Teléfono</th>
+                  <th >Dirección</th>
+                  <th >Ciudad</th>
+                  <th >E-mail</th>
               </tr>
           </thead>
           <tbody>
-              <tr ng-repeat="administrador in vm.administrador">
-                  <td>{{administrador.nombre}}</td>
-                  <td>{{administrador.apellido}}</td>
-                  <td>{{administrador.cedula}}-</td>
-                  <td>{{administrador.email}}</td>
-                  <td>{{administrador.telefono}}</td>
-                  <!--<td md-cell>{{administrador.direccion}}</td>
-                  <td md-cell>{{administrador.idCiudad.nombre}}</td>-->
-              </tr>
+            <tr ng-repeat="administrador in vm.administrador">
+                <td >{{administrador.idUsuario}}</td>
+                <td >{{administrador.nombre}}</td>
+                <td >{{administrador.apellido}}</td>
+                <td >{{administrador.telefono}}</td>
+                <td >{{administrador.direccion}}</td>
+                <td >{{administrador.idciudades}}-</td>
+                <td >{{administrador.email}}</td>
+            </tr>
           </tbody>
       </table>
+      <nav>
+    <nav>
+  <ul class="pagination">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+</nav>
   </div>
-
-  <md-table-pagination md-limit-options="[5, 10, 15]" md-total="{{vm.administradores.count}}" md-page-select></md-table-pagination>
 </section>
+
+
