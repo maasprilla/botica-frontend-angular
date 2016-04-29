@@ -1,22 +1,22 @@
-<header class="headeronlynav">
-  <div class="navbar MainMenu headeronlynav-navbar">
+<header class="HeaderSecundary">
+  <div class="navbar navbar-default MainMenuSecundary">
   <div class="container-fluid">
     <!-- responsive movil -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle"  data-target=".navbar-inverse-collapse" onclick="showMainMenuPrimary();"
-      style="background: #00B3D2">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" 
+      style="background: #3D9BFF; z-index: 3">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand MainMenu-linkLogo" href="/" ><figure class="MainMenu-logo"><img src="./images/logo.png" /></figure></a>
+      <a class="navbar-brand MainMenuSecundary-linkLogo" href="/" ><figure class="MainMenu-logo"><img src="./images/logo.png" /></figure></a>
     </div>
 
     <!-- view desktop -->
-    <div id="MainMenuPrimary" class="navbar-collapse collapse MainMenu-container">
+    <div id="bs-example-navbar-collapse-1" class="navbar-collapse collapse MainMenu-container">
 
 
-            <ul id="MainMenu-list" class="nav navbar-nav navbar-right MainMenu-list">
+            <ul id="MainMenuSecundary-list" class="nav navbar-nav navbar-right MainMenuSecundary-list">
               <li ng-show="!vm.isAuthenticated()" class="MainMenu-item"><a href="" onclick="showLogin()" class="MainMenu-link">Iniciar Sesion▼</a>
                 <div id="PanelLogin" class="PanelLogin z-depth-1">
                   <form name="loginDespForm" class="PanelLogin-form" ng-submit="vm.signIn()">

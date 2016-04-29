@@ -1,3 +1,7 @@
+/**
+  estilos para el header del index
+*/
+
 body
   min-height 100vh
 .Header
@@ -11,34 +15,36 @@ body
   &-content    
     height 40em
 .MainMenu
+  position fixed
+  right 0
+  left 0
+  z-index 3
   background-color #4385F6
   border-radius 0px
+  border none
   font-family 'Open Sans'
+  text-align center
   margin-bottom 0
-  &-Ambiental
-    background-color #24CC0D
-    font-family 'Open Sans'
-    border-color #24CC0D
+  &-list
+    display inline-block  
   &-link
     color white
   &-linkLogo
     padding 0
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
   &-logo
     width 5em
     height 100%
     margin 0
     margin-left 1em
+    display inline-block
   &-logo>img
     width 100%
     height 100%
 
-.MainMenuSecundary
-  width 80%
-  font-family 'Open Sans'
-  display inline-block
-  z-index 3
-  &-group>li>a
-    color black
 .PanelLogin
   position absolute
   display inline-block
@@ -54,9 +60,6 @@ body
     width 20em
   &-input
     text-align center
-.headeronlynav
-  &-navbar
-    margin-bottom 0
 
 .Options
   position absolute
@@ -80,6 +83,24 @@ body
   background snow
   color #3D9BFF
 
+
+
+@media (max-width: 987px)
+  .MainMenu
+    padding-top 3em
+    &-list      
+      width 100%
+      text-align center
+  #MainMenu-list>li
+      display inline-block
+      float none
+@media (max-width: 767px)
+  .MainMenu
+    padding-top 0
+    &-list
+      display block
+  #MainMenu-list>li      
+      display block      
 @media (max-width: 695px)
   .Header
     height 28em
@@ -88,3 +109,34 @@ body
     background-repeat no-repeat
     &-content    
       height 20em
+
+/**
+  estilos para los demas headers
+*/
+
+.MainMenuSecundary
+  position fixed
+  right 0
+  left 0
+  z-index 3
+  background-color #4385F6
+  border-radius 0px
+  border none
+  font-family 'Open Sans'
+  text-align center
+  margin-bottom 0
+  &-linkLogo
+    padding 0
+#MainMenuSecundary-list>li>a:hover
+  background snow
+  color #3D9BFF
+
+#MainMenuSecundary-list>li>a:focus
+  background snow
+  color #3D9BFF
+
+
+.MainMenuAmbiental
+    background-color #24CC0D
+    font-family 'Open Sans'
+    border-color #24CC0D
