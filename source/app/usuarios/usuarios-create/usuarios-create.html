@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,500">
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800">
 <section class="SectionRegistro">
 
     <form name="FormRegistroUsuarios" class="FormRegistro" ng-submit="vm.create()">
@@ -64,7 +62,7 @@
           </div>
         </md-input-container>
 
-        
+
         <md-autocomplete required
           md-selected-item="vm.usuario.ciudad"
           md-search-text="vm.searchTextCiudades"
@@ -78,10 +76,10 @@
             {{item.nombre}}</span>
         </md-item-template>
         <md-not-found>
-          La ciudad "{{vm.searchTextCiudades}}" no se encuentra.          
+          La ciudad "{{vm.searchTextCiudades}}" no se encuentra.
         </md-not-found>
       </md-autocomplete>
-      
+
 
         <md-input-container class="md-block UserCreate-container">
           <label>Password</label>

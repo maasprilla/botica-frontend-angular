@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,500">
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800">
 <section class="SectionRegistro">
 
     <form name="FormRegistroAdministradores" class="FormRegistro" ng-submit="vm.create()">
@@ -71,13 +69,13 @@
           md-item-text="item.nombre"
           md-min-length="1"
           md-floating-label="Ciudad de Domicilio"
-          class="FormRegistro-input">
+          class="FormRegistro-input AdminCreate-AutoCompleteContainer">
         <md-item-template>
           <span md-highlight-text="vm.searchTextCiudades" md-highlight-flags="^i">
             {{item.nombre}}</span>
         </md-item-template>
         <md-not-found>
-          La ciudad "{{vm.searchTextCiudades}}" no se encuentra.          
+          La ciudad "{{vm.searchTextCiudades}}" no se encuentra.
         </md-not-found>
       </md-autocomplete>
 
