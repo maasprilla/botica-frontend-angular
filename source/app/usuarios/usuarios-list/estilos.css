@@ -12,7 +12,6 @@
   text-align center**/
 .UsersHeaderImage {
   width: 100%;
-  min-height: 15em;
   border: solid 4px #f9f9f9;
   border-radius: 50%;
 }

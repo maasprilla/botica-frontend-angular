@@ -12,12 +12,11 @@
   text-align center**/
 .AdminHeaderImage {
   width: 100%;
-  min-height: 15em;
 }
 /**.UserHeaderList-content
   max-width 15em**/
 .IconsHeaderAdminList-container {
-  padding: 1em 1.5em 1em 0;
+  padding: 2em 1.5em 1em 0;
 }
 .Listreg {
   padding: 6em 0;
