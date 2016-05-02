@@ -12,6 +12,7 @@
         'app.config',
         'app.footer',
         'app.header',
+        'app.ciudades',
         'app.home',
         'app.usuarios',
         'app.droguerias',

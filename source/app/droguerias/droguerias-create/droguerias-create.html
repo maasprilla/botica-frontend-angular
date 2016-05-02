@@ -46,15 +46,22 @@
           </div>
         </md-input-container>
 
-        <md-input-container class="md-block" style="color:black;">
-            <label>Ciudad</label>
-            <md-select ng-model="vm.ciudad">
-                <md-option ng-repeat="ciudad in vm.ciudades"  value="{{ciudad.ciudadPK.idCiudad}}-{{ciudad.ciudadPK.iddepartamento}}">
-                   {{ciudad.nombre}} -
-                   {{ciudad.departamento.nombre}}
-                </md-option>
-            </md-select>
-        </md-input-container>
+        <md-autocomplete required
+          md-selected-item="vm.usuario.ciudad"
+          md-search-text="vm.searchTextCiudades"
+          md-items="item in vm.foundCiudadesByNombre(vm.searchTextCiudades)"
+          md-item-text="item.nombre"
+          md-min-length="1"
+          md-floating-label="Ciudad de Domicilio"
+          class="FormRegistro-input">
+        <md-item-template>
+          <span md-highlight-text="vm.searchTextCiudades" md-highlight-flags="^i">
+            {{item.nombre}}</span>
+        </md-item-template>
+        <md-not-found>
+          La ciudad "{{vm.searchTextCiudades}}" no se encuentra.          
+        </md-not-found>
+      </md-autocomplete>
 
         <md-input-container class="md-block">
           <label>Nit</label>
