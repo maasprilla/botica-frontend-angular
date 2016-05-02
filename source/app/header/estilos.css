@@ -1,3 +1,6 @@
+/**
+  estilos para el header del index
+*/
 body {
   min-height: 100vh;
 }
@@ -14,40 +17,40 @@ body {
   height: 40em;
 }
 .MainMenu {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 3;
   background-color: #4385f6;
   border-radius: 0px;
+  border: none;
   font-family: 'Open Sans';
+  text-align: center;
   margin-bottom: 0;
 }
-.MainMenu-Ambiental {
-  background-color: #24cc0d;
-  font-family: 'Open Sans';
-  border-color: #24cc0d;
+.MainMenu-list {
+  display: inline-block;
 }
 .MainMenu-link {
   color: #fff;
 }
 .MainMenu-linkLogo {
   padding: 0;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
 }
 .MainMenu-logo {
   width: 5em;
   height: 100%;
   margin: 0;
   margin-left: 1em;
+  display: inline-block;
 }
 .MainMenu-logo>img {
   width: 100%;
   height: 100%;
-}
-.MainMenuSecundary {
-  width: 80%;
-  font-family: 'Open Sans';
-  display: inline-block;
-  z-index: 3;
-}
-.MainMenuSecundary-group>li>a {
-  color: #000;
 }
 .PanelLogin {
   position: absolute;
@@ -66,9 +69,6 @@ body {
 }
 .PanelLogin-input {
   text-align: center;
-}
-.headeronlynav-navbar {
-  margin-bottom: 0;
 }
 .Options {
   position: absolute;
@@ -92,6 +92,30 @@ body {
   background: #fffafa;
   color: #3d9bff;
 }
+@media (max-width: 987px) {
+  .MainMenu {
+    padding-top: 3em;
+  }
+  .MainMenu-list {
+    width: 100%;
+    text-align: center;
+  }
+  #MainMenu-list>li {
+    display: inline-block;
+    float: none;
+  }
+}
+@media (max-width: 767px) {
+  .MainMenu {
+    padding-top: 0;
+  }
+  .MainMenu-list {
+    display: block;
+  }
+  #MainMenu-list>li {
+    display: block;
+  }
+}
 @media (max-width: 695px) {
   .Header {
     height: 28em;
@@ -102,4 +126,35 @@ body {
   .Header-content {
     height: 20em;
   }
+}
+/**
+  estilos para los demas headers
+*/
+.MainMenuSecundary {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 3;
+  background-color: #4385f6;
+  border-radius: 0px;
+  border: none;
+  font-family: 'Open Sans';
+  text-align: center;
+  margin-bottom: 0;
+}
+.MainMenuSecundary-linkLogo {
+  padding: 0;
+}
+#MainMenuSecundary-list>li>a:hover {
+  background: #fffafa;
+  color: #3d9bff;
+}
+#MainMenuSecundary-list>li>a:focus {
+  background: #fffafa;
+  color: #3d9bff;
+}
+.MainMenuAmbiental {
+  background-color: #24cc0d;
+  font-family: 'Open Sans';
+  border-color: #24cc0d;
 }

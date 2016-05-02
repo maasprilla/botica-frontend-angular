@@ -20,14 +20,18 @@
   color: #f9f9f9;
 }
 .MDHomeLink:hover {
-  color: #f9f9f9;
+  color: #000;
   text-decoration: none;
 }
+.UsTitle,
+.UsText {
+  color: #0a81ff;
+}
 .UsLink {
-  color: #3d9bff;
+  color: #0a81ff;
 }
 .UsLink:hover {
-  color: #3d9bff;
+  color: #000;
   text-decoration: none;
 }
 .Objetivos {
@@ -45,6 +49,10 @@
 .ObjetivosImage-container {
   max-width: 30em;
 }
+.ObjTitle,
+.ObjText {
+  color: #f9f9f9;
+}
 .ObjetivosImage {
   width: 100%;
 }
@@ -57,6 +65,10 @@
 .BeneficiosImage-container {
   max-width: 30em;
   padding-top: 1em;
+}
+.BenTitle,
+.BenText {
+  color: #0a81ff;
 }
 .BeneficiosImage {
   width: 100%;
@@ -80,6 +92,10 @@
 }
 .MDHomeImage-container {
   max-width: 30em;
+}
+.MDHomeTitle,
+.MDHomeText {
+  color: #f9f9f9;
 }
 .MDHomeImage {
   width: 100%;

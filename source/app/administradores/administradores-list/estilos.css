@@ -1,51 +1,111 @@
-.AdministradoresList-majorContainer {
+.HeaderAdminList {
+  background-color: #1d8fd5;
+  height: 28em;
+  padding-top: 3.6em;
+}
+.HeaderAdminList-content {
+  text-align: center;
+  padding-top: 1em;
+}
+/**.UsersHeaderImage-container
+  max-width 15em
+  text-align center**/
+.AdminHeaderImage {
+  width: 100%;
+  min-height: 15em;
+}
+/**.UserHeaderList-content
+  max-width 15em**/
+.IconsHeaderAdminList-container {
+  padding: 1em 1.5em 1em 0;
+}
+.Listreg {
+  padding: 6em 0;
   font-family: 'Open Sans';
-  padding: 5em 0.7em 3em 0.7em;
+  text-align: center;
   background-color: #3d9bff;
 }
-.AdministradoresList-title {
-  font-family: 'Open Sans';
-  padding-bottom: 2em;
+.Listreg-title {
+  margin-top: 0;
+  color: #fff;
 }
-.AdministradoresList-tableContainer {
+.Listreg-table {
+  background-color: #fff;
+  padding-top: 3em;
+}
+.width200 {
   width: 100%;
-  background-color: #fffafa;
-  justify-content: space-between;
-  box-shadow: 0.1em 0.1em #555;
-  border-radius: 0.5em;
+  margin: 0 0 50px 0;
 }
-.AdministradoresList-table {
-  font-family: 'Open Sans';
+.width200 th {
+  background: #d3d3d3;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px;
+  text-align: center;
 }
-@media screen and (max-width: 642px) {
-  table.AdministradoresList-table,
-  .AdministradoresList-table thead,
-  .AdministradoresList-table tbody,
-  .AdministradoresList-table th,
-  .AdministradoresList-table td,
-  .AdministradoresList-table tr {
+.width200 td {
+  border-bottom: 1px solid #ccc;
+  padding: 5px;
+  text-align: center;
+}
+.width200 tr:last-child td {
+  border-top: 1px solid #ccc;
+}
+@media only screen and (max-width: 760px), (min-width: 768px) and (max-width: 1024px) {
+  .width200,
+  .width200 thead,
+  .width200 tbody,
+  .width200 th,
+  .width200 td,
+  .width200 tr {
     display: block;
   }
-  .AdministradoresList-table thead tr {
-    display: none;
-  }
-  .AdministradoresList-table tr {
-    border: 1px solid #ccc;
-    margin-bottom: 2em;
-    border-radius: 0.5em;
-  }
-  .AdministradoresList-table td {
-    position: relative;
-    padding-left: 50%;
-    text-align: left;
-    min-height: 2.5em;
-  }
-  .AdministradoresList-table td:before {
+  .width200 thead tr {
     position: absolute;
-    top: 6px;
-    left: 6px;
-    width: 45%;
-    padding-right: 10px;
-    white-space: nowrap;
+    top: -9999px;
+    left: -9999px;
+  }
+  .width200 tr {
+    border: 1px solid #ccc;
+  }
+  .width200 td {
+    border: none;
+    position: relative;
+  }
+  .width200 td:before {
+    position: relative;
+    font-weight: bold;
+  }
+  .width200 td:nth-of-type(1):before {
+    content: "Id: ";
+  }
+  .width200 td:nth-of-type(2):before {
+    content: "Nombres: ";
+  }
+  .width200 td:nth-of-type(3):before {
+    content: "Apellidos: ";
+  }
+  .width200 td:nth-of-type(4):before {
+    content: "Telefono: ";
+  }
+  .width200 td:nth-of-type(5):before {
+    content: "Direccion: ";
+  }
+  .width200 td:nth-of-type(6):before {
+    content: "Ciudad: ";
+  }
+  .width200 td:nth-of-type(7):before {
+    content: "Email: ";
+  }
+}
+@media screen and (max-width: 1000px) {
+  .IconsHeaderAdminList-container {
+    text-align: center;
+  }
+  .IconsAdmin-container {
+    max-width: 55px;
+    margin-right: 0.5em;
+    display: inline-block;
   }
 }

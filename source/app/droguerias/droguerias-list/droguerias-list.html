@@ -1,15 +1,40 @@
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,500">
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800">
-<section class="DrogueriasList-majorContainer">
-  <!-- <md-toolbar class="md-table-toolbar md-default">
-      <div class="md-toolbar-tools">
-          <span> Listado de Droguerias</span>
+<section class="HeaderUserList">
+  <div class="container UsListHeader-container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="UserHeaderList-content"></div>
       </div>
-  </md-toolbar> -->
+      <div class="col-md-4 HeaderUsList-content">
 
-  <h2 class="text-center DrogueriasList-title">Lista de droguerías</h2>
-  <div class="container table-responsive shadow-z-1 DrogueriasList-tableContainer">
-      <table id="table" class="table table-hover table-mc-light-blue DrogueriasList-table" md-table>
+          <img src="./images/users1.png" alt="Usuarios" class="UsersHeaderImage" style="max-width:15em">
+
+      </div>
+      <div class="col-md-4">
+        <div class="UserHeaderList-content"></div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row IconsHeaderUserList-container">
+      <div class="col-md-3 text-center IconsUsers-container">
+        <i class="material-icons" style="font-size:48px;color:#f9f9f9">account_circle</i>
+      </div>
+      <div class="col-md-3 text-center IconsUsers-container">
+        <i class="material-icons" style="font-size:48px;color:#f9f9f9">list</i>
+      </div>
+      <div class="col-md-3 text-center IconsUsers-container">
+        <i class="material-icons" style="font-size:48px;color:#f9f9f9">desktop_windows</i>
+      </div>
+      <div class="col-md-3 text-center IconsUsers-container">
+        <i class="material-icons" style="font-size:48px;color:#f9f9f9">remove_red_eye</i>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="Listreg">
+  <h2 class="Listreg-title">Lista de Droguerias</h2>
+  <div class="container table-responsive shadow-z-1 Listreg-table">
+      <table id="table" class="table table-hover width200">
           <thead>
               <tr>
                   <th>ID</th>
@@ -37,7 +62,26 @@
               </tr>
           </tbody>
       </table>
+      <nav>
+    <nav>
+  <ul class="pagination">
+    <li>
+      <a href="" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li><a href="">1</a></li>
+    <li><a href="">2</a></li>
+    <li><a href="">3</a></li>
+    <li><a href="">4</a></li>
+    <li><a href="">5</a></li>
+    <li>
+      <a href="" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+</nav>
   </div>
-
-  <md-table-pagination md-limit-options="[5, 10, 15]" md-total="{{vm.usuarios.count}}" md-page-select></md-table-pagination>
 </section>
