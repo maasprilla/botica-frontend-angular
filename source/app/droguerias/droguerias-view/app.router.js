@@ -11,7 +11,7 @@
 
       $stateProvider
               .state('drogueriasview',{
-                  url: '/drogueriasview/:idDroguerias',
+                  url: '/drogueriasview/:idUsuario',
                   views:{
                     'encabezadosimple':{
                        template: '<encabezadosimple/>'
