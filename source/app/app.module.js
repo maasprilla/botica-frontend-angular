@@ -8,6 +8,7 @@
         'ngMessages',
         'ngMaterial',
         'satellizer',
+        'ngTable',
         //'templates',
         'app.config',
         'app.footer',
