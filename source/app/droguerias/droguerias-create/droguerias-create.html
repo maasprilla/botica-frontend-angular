@@ -6,7 +6,7 @@
         <h1 class="FormRegistro-tittle">Registro Droguerias</h1>
 
 
-        <md-input-container class="md-block">
+        <md-input-container class="md-block DrogCreate-container">
           <label>Nombre</label>
           <input md-maxlength="30" required md-no-asterisk name="nombre" ng-model="vm.usuario.nombre">
           <div ng-messages="FormRegistroDroguerias.nombre.$error">
@@ -16,7 +16,7 @@
         </md-input-container>
 
 
-        <md-input-container class="md-block">
+        <md-input-container class="md-block DrogCreate-container">
         <label>Email</label>
         <input required type="email" name="email" ng-model="vm.usuario.email"
                minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
@@ -27,7 +27,7 @@
         </div>
         </md-input-container>
 
-        <md-input-container class="md-block">
+        <md-input-container class="md-block DrogCreate-container">
           <label>Telefono</label>
           <input md-maxlength="10" required md-no-asterisk name="telefono" ng-model="vm.usuario.telefono" numbersonly>
           <div ng-messages="FormRegistroDroguerias.telefono.$error">
@@ -37,7 +37,7 @@
           </div>
         </md-input-container>
 
-        <md-input-container class="md-block">
+        <md-input-container class="md-block DrogCreate-container">
           <label>Direccion</label>
           <input md-maxlength="30" required md-no-asterisk name="direccion" ng-model="vm.usuario.direccion">
           <div ng-messages="FormRegistroDroguerias.direccion.$error">
@@ -62,8 +62,9 @@
           La ciudad "{{vm.searchTextCiudades}}" no se encuentra.          
         </md-not-found>
       </md-autocomplete>
+       
 
-        <md-input-container class="md-block">
+        <md-input-container class="md-block DrogCreate-container">
           <label>Nit</label>
           <input md-maxlength="30" required md-no-asterisk name="nit" ng-model="vm.usuario.nit">
           <div ng-messages="FormRegistroDroguerias.nit.$error">
@@ -72,7 +73,7 @@
           </div>
         </md-input-container>
 
-        <md-input-container class="md-block">
+        <md-input-container class="md-block DrogCreate-container">
           <label>Camara de Comercio</label>
           <input md-maxlength="30" required md-no-asterisk name="camaracomercio" ng-model="vm.usuario.camaracomercio">
           <div ng-messages="FormRegistroDroguerias.camaracomercio.$error">
@@ -81,7 +82,7 @@
           </div>
         </md-input-container>
 
-        <md-input-container class="md-block">
+        <md-input-container class="md-block DrogCreate-container">
           <label>Invima</label>
           <input md-maxlength="30" required md-no-asterisk name="invima" ng-model="vm.usuario.invima">
           <div ng-messages="FormRegistroDroguerias.invima.$error">
@@ -91,7 +92,7 @@
         </md-input-container>
 
 
-        <md-input-container class="md-block">
+        <md-input-container class="md-block DrogCreate-container">
           <label>Password</label>
           <input required type="password" name="password" ng-model="vm.usuario.password">
           <div ng-messages="FormRegistroDroguerias.password.$error">
