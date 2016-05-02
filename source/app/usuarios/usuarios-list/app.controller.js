@@ -9,7 +9,6 @@
   function usuariosListCtrl($q, $location, $mdToast, Usuarios, NgTableParams){
 
     var vm=this;
-    vm.usuarios=Usuarios.query();
 
     activate();
 
