@@ -37,7 +37,8 @@
     "angular-aria": "^1.5.3",
     "angular-animate": "^1.5.3",
     "angular-messages": "^1.5.3",
-    "angular-material": "^1.0.7"
+    "angular-material": "^1.0.7",
+    "ng-table": "^0.8.3"
   },
   "devDependencies": {
     "satellizer": "^0.14.0"

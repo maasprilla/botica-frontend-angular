@@ -5,7 +5,7 @@
   padding: 2.5em;
 }
 .UsImage-container {
-  max-width: 35em;
+  max-width: 30em;
   padding-top: 1em;
 }
 .UsImage {
@@ -15,6 +15,24 @@
   padding-top: 3em;
   padding-bottom: 2em;
   text-align: justify;
+}
+.MDHomeLink {
+  color: #f9f9f9;
+}
+.MDHomeLink:hover {
+  color: #000;
+  text-decoration: none;
+}
+.UsTitle,
+.UsText {
+  color: #0a81ff;
+}
+.UsLink {
+  color: #0a81ff;
+}
+.UsLink:hover {
+  color: #000;
+  text-decoration: none;
 }
 .Objetivos {
   background-color: #3d9bff;
@@ -29,7 +47,11 @@
   text-align: justify;
 }
 .ObjetivosImage-container {
-  max-width: 35em;
+  max-width: 30em;
+}
+.ObjTitle,
+.ObjText {
+  color: #f9f9f9;
 }
 .ObjetivosImage {
   width: 100%;
@@ -41,8 +63,12 @@
   padding: 2.5em;
 }
 .BeneficiosImage-container {
-  max-width: 35em;
+  max-width: 30em;
   padding-top: 1em;
+}
+.BenTitle,
+.BenText {
+  color: #0a81ff;
 }
 .BeneficiosImage {
   width: 100%;
@@ -65,7 +91,11 @@
   text-align: justify;
 }
 .MDHomeImage-container {
-  max-width: 35em;
+  max-width: 30em;
+}
+.MDHomeTitle,
+.MDHomeText {
+  color: #f9f9f9;
 }
 .MDHomeImage {
   width: 100%;

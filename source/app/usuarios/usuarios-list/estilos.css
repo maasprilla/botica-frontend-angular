@@ -1,10 +1,34 @@
+.HeaderUserList {
+  background-color: #1d8fd5;
+  height: 28em;
+  padding-top: 3.6em;
+}
+.HeaderUsList-content {
+  text-align: center;
+  padding-top: 1em;
+}
+/**.UsersHeaderImage-container
+  max-width 15em
+  text-align center**/
+.UsersHeaderImage {
+  width: 100%;
+  border: solid 4px #f9f9f9;
+  border-radius: 50%;
+}
+/**.UserHeaderList-content
+  max-width 15em**/
+.IconsHeaderUserList-container {
+  padding: 1em 1.5em 1em 0;
+}
 .Listreg {
-  padding: 6em 0;
+  padding: 2em 0;
+  font-family: 'Open Sans';
   text-align: center;
   background-color: #3d9bff;
 }
 .Listreg-title {
   margin-top: 0;
+  padding-bottom: 1em;
   color: #fff;
 }
 .Listreg-table {
@@ -75,5 +99,15 @@
   }
   .width200 td:nth-of-type(7):before {
     content: "Email: ";
+  }
+}
+@media screen and (max-width: 1000px) {
+  .IconsHeaderUserList-container {
+    text-align: center;
+  }
+  .IconsUsers-container {
+    max-width: 55px;
+    margin-right: 0.5em;
+    display: inline-block;
   }
 }

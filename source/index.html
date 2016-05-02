@@ -3,13 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Botica</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,500">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <!-- build:css css/style.min.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="lib/angular-material/angular-material.min.css">
+    <link rel="stylesheet" href="lib/ng-table/dist/ng-table.min.css">    
     <!-- endbower -->
     <!-- inject:css -->
     <link rel="stylesheet" href="/app/administrarpedido/estilos.css">
@@ -23,12 +27,12 @@
     <link rel="stylesheet" href="/app/administradores/administradores-create/estilos.css">
     <link rel="stylesheet" href="/app/administradores/administradores-list/estilos.css">
     <link rel="stylesheet" href="/app/administradores/administradores-view/estilos.css">
-    <link rel="stylesheet" href="/app/droguerias/droguerias-list/estilos.css">
     <link rel="stylesheet" href="/app/droguerias/droguerias-create/estilos.css">
+    <link rel="stylesheet" href="/app/droguerias/droguerias-list/estilos.css">
     <link rel="stylesheet" href="/app/droguerias/droguerias-view/estilos.css">
+    <link rel="stylesheet" href="/app/usuarios/usuarios-list/estilos.css">
     <link rel="stylesheet" href="/app/usuarios/usuarios-create/estilos.css">
     <link rel="stylesheet" href="/app/usuarios/usuarios-view/estilos.css">
-    <link rel="stylesheet" href="/app/usuarios/usuarios-list/estilos.css">
     <!-- endinject -->
     <!-- endbuild -->
 </head>
@@ -80,6 +84,7 @@
     <script src="lib/jquery/dist/jquery.js"></script>
     <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
     <script src="lib/satellizer/satellizer.min.js"></script>
+    <script src="lib/ng-table/dist/ng-table.min.js"></script>
 
     <!-- endbower -->
     <!-- endbuild -->
@@ -91,10 +96,12 @@
     <script src="/app/administrarpedido/app.directive.js"></script>
     <script src="/app/administrarpedido/app.module.js"></script>
     <script src="/app/administrarpedido/app.router.js"></script>
+    <script src="/app/ciudades/app.module.js"></script>
+    <script src="/app/ciudades/app.services.js"></script>
+    <script src="/app/droguerias/app.module.js"></script>
     <script src="/app/config/app.constantes.js"></script>
     <script src="/app/footer/app.directive.js"></script>
     <script src="/app/footer/app.module.js"></script>
-    <script src="/app/droguerias/app.module.js"></script>
     <script src="/app/header/app.directive.js"></script>
     <script src="/app/header/app.module.js"></script>
     <script src="/app/header/showpanels.js"></script>
@@ -132,16 +139,16 @@
     <script src="/app/administradores/administradores-view/app.module.js"></script>
     <script src="/app/administradores/administradores-view/app.router.js"></script>
     <script src="/app/administradores/administradores-view/app.services.js"></script>
-    <script src="/app/droguerias/droguerias-list/app.controller.js"></script>
-    <script src="/app/droguerias/droguerias-list/app.directive.js"></script>
-    <script src="/app/droguerias/droguerias-list/app.module.js"></script>
-    <script src="/app/droguerias/droguerias-list/app.router.js"></script>
-    <script src="/app/droguerias/droguerias-list/app.services.js"></script>
     <script src="/app/droguerias/droguerias-create/app.controller.js"></script>
     <script src="/app/droguerias/droguerias-create/app.directive.js"></script>
     <script src="/app/droguerias/droguerias-create/app.module.js"></script>
     <script src="/app/droguerias/droguerias-create/app.router.js"></script>
     <script src="/app/droguerias/droguerias-create/app.services.js"></script>
+    <script src="/app/droguerias/droguerias-list/app.controller.js"></script>
+    <script src="/app/droguerias/droguerias-list/app.directive.js"></script>
+    <script src="/app/droguerias/droguerias-list/app.module.js"></script>
+    <script src="/app/droguerias/droguerias-list/app.router.js"></script>
+    <script src="/app/droguerias/droguerias-list/app.services.js"></script>
     <script src="/app/droguerias/droguerias-view/app.controller.js"></script>
     <script src="/app/droguerias/droguerias-view/app.directive.js"></script>
     <script src="/app/droguerias/droguerias-view/app.module.js"></script>
@@ -151,6 +158,11 @@
     <script src="/app/password/password-recovery/app.directive.js"></script>
     <script src="/app/password/password-recovery/app.module.js"></script>
     <script src="/app/password/password-recovery/app.router.js"></script>
+    <script src="/app/usuarios/usuarios-list/app.controller.js"></script>
+    <script src="/app/usuarios/usuarios-list/app.directive.js"></script>
+    <script src="/app/usuarios/usuarios-list/app.module.js"></script>
+    <script src="/app/usuarios/usuarios-list/app.router.js"></script>
+    <script src="/app/usuarios/usuarios-list/app.services.js"></script>
     <script src="/app/usuarios/usuarios-create/app.controller.js"></script>
     <script src="/app/usuarios/usuarios-create/app.directive.js"></script>
     <script src="/app/usuarios/usuarios-create/app.module.js"></script>
@@ -161,11 +173,6 @@
     <script src="/app/usuarios/usuarios-view/app.module.js"></script>
     <script src="/app/usuarios/usuarios-view/app.router.js"></script>
     <script src="/app/usuarios/usuarios-view/app.services.js"></script>
-    <script src="/app/usuarios/usuarios-list/app.controller.js"></script>
-    <script src="/app/usuarios/usuarios-list/app.directive.js"></script>
-    <script src="/app/usuarios/usuarios-list/app.module.js"></script>
-    <script src="/app/usuarios/usuarios-list/app.router.js"></script>
-    <script src="/app/usuarios/usuarios-list/app.services.js"></script>
     <!-- endinject -->
     <!-- endbuild -->
 </body>

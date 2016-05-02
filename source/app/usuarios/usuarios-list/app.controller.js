@@ -5,29 +5,48 @@
   ]).controller('usuariosListCtrl', usuariosListCtrl);
 
 
-  usuariosListCtrl.$inject = ['$location', '$mdToast','Usuarios'];
-  function usuariosListCtrl($location, $mdToast, Usuarios){
+  usuariosListCtrl.$inject = ['$q', '$location', '$mdToast','Usuarios', 'NgTableParams'];
+  function usuariosListCtrl($q, $location, $mdToast, Usuarios, NgTableParams){
 
     var vm=this;
     vm.usuarios=Usuarios.query();
-    vm.idciudades;
 
+    activate();
 
-    vm.create=function(){
-        vm.idciudades=getIdCiudad(vm.ciudad)
-        vm.usuario.ciudad={ciudadPK:{idCiudad:vm.idciudades[0], iddepartamento:vm.idciudades[1]}};
-        vm.usuario.idRol={idRol:1};
+      function activate() {
+          var promises = [getUsuarios()];
+          return $q.all(promises).then(function() {
 
-    }
+          });
+      }
 
+          function getUsuarios() {
 
+        return Usuarios.query(
+        ).$promise.then(function(data) {
+          console.log('data');
+          console.log(data);
+          vm.info=data;
+
+          vm.usersTable = new NgTableParams({
+                page: 1,
+                count: 5
+            }, {
+                total: vm.info.length, 
+                getData: function ($defer, params) {
+                    vm.data = vm.info.slice((params.page() - 1) * params.count(), params.page() * params.count());
+                    $defer.resolve(vm.data);
+                    console.log(vm.data);
+                }
+            });
+          
+        });
+
+      }     
 
   }
 
-  function getIdUsuario(id){
-    var array = id.split('-');
-    return array;
-  }
+ 
 
 
 

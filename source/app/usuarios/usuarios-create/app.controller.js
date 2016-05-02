@@ -10,12 +10,15 @@
 
     var vm=this;
     vm.ciudades=Ciudades.query();
+    Ciudades.foundByNombre({
+            nombre:'c'
+        });
 
-    vm.idciudades;
+  //  vm.idciudades;
 
     vm.create=function(){
-        vm.idciudades=getIdCiudad(vm.ciudad)
-        vm.usuario.ciudad={ciudadPK:{idCiudad:vm.idciudades[0], iddepartamento:vm.idciudades[1]}};
+    //    vm.idciudades=getIdCiudad(vm.ciudad)
+     //   vm.usuario.ciudad={ciudadPK:{idCiudad:vm.idciudades[0], iddepartamento:vm.idciudades[1]}};
         vm.usuario.idRol={idRol:'USER'};
         console.log(vm.usuario);
         Ususarios.save(vm.usuario, function() {
@@ -26,6 +29,15 @@
                         .position('bottom right'));
             });
     }
+
+
+    vm.foundCiudadesByNombre= function(nombre){
+        return Ciudades.foundByNombre({
+            nombre:nombre
+        });
+    }
+
+
 
 
 

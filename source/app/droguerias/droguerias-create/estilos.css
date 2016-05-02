@@ -19,8 +19,7 @@
   text-align: center;
 }
 .FormRegistro-input {
-  margin-bottom: 1em;
-  border-radius: 1em;
+  color: #000;
 }
 .FormRegistro-tittle {
   color: #000;
@@ -28,5 +27,13 @@
 @media (max-width: 422px) {
   .FormRegistro {
     width: 100%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .DrogCreate-container {
+    font-size: 11px;
+  }
+  .FormRegistro-tittle {
+    font-size: 22px;
   }
 }

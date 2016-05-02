@@ -6,7 +6,7 @@
         <h1 class="FormRegistro-tittle">Registro Usuarios</h1>
 
 
-        <md-input-container class="md-block">
+        <md-input-container class="md-block UserCreate-container">
           <label>Nombre</label>
           <input md-maxlength="30" required md-no-asterisk name="nombre" ng-model="vm.usuario.nombre">
           <div ng-messages="FormRegistroUsuarios.nombre.$error">
@@ -15,7 +15,7 @@
           </div>
         </md-input-container>
 
-        <md-input-container class="md-block">
+        <md-input-container class="md-block UserCreate-container">
           <label>Apellido</label>
           <input md-maxlength="30" required md-no-asterisk name="apellido" ng-model="vm.usuario.apellido">
           <div ng-messages="FormRegistroUsuarios.apellido.$error">
@@ -24,7 +24,7 @@
           </div>
         </md-input-container>
 
-        <md-input-container class="md-block">
+        <md-input-container class="md-block UserCreate-container">
           <label>Cedula</label>
           <input md-maxlength="10" required md-no-asterisk name="cedula" ng-model="vm.usuario.dni" numbersonly>
           <div ng-messages="FormRegistroUsuarios.cedula.$error">
@@ -34,7 +34,7 @@
           </div>
         </md-input-container>
 
-        <md-input-container class="md-block">
+        <md-input-container class="md-block UserCreate-container">
         <label>Email</label>
         <input required type="email" name="email" ng-model="vm.usuario.email"
                minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
@@ -45,7 +45,7 @@
         </div>
         </md-input-container>
 
-        <md-input-container class="md-block">
+        <md-input-container class="md-block UserCreate-container">
           <label>Telefono</label>
           <input md-maxlength="10" required md-no-asterisk name="telefono" ng-model="vm.usuario.telefono" numbersonly>
           <div ng-messages="FormRegistroUsuarios.telefono.$error">
@@ -55,7 +55,7 @@
           </div>
         </md-input-container>
 
-        <md-input-container class="md-block">
+        <md-input-container class="md-block UserCreate-container">
           <label>Direccion</label>
           <input md-maxlength="30" required md-no-asterisk name="direccion" ng-model="vm.usuario.direccion">
           <div ng-messages="FormRegistroUsuarios.direccion.$error">
@@ -64,18 +64,26 @@
           </div>
         </md-input-container>
 
-        <md-input-container class="md-block" style="color:black;">
-            <label>Ciudad</label>
-            <md-select ng-model="vm.ciudad">
-                <md-option ng-repeat="ciudad in vm.ciudades"  value="{{ciudad.ciudadPK.idCiudad}}-{{ciudad.ciudadPK.iddepartamento}}">
-                   {{ciudad.nombre}} -
-                   {{ciudad.departamento.nombre}}
-                </md-option>
-            </md-select>
-        </md-input-container>
+        
+        <md-autocomplete required
+          md-selected-item="vm.usuario.ciudad"
+          md-search-text="vm.searchTextCiudades"
+          md-items="item in vm.foundCiudadesByNombre(vm.searchTextCiudades)"
+          md-item-text="item.nombre"
+          md-min-length="1"
+          md-floating-label="Ciudad de Domicilio"
+          class="FormRegistro-input">
+        <md-item-template>
+          <span md-highlight-text="vm.searchTextCiudades" md-highlight-flags="^i">
+            {{item.nombre}}</span>
+        </md-item-template>
+        <md-not-found>
+          La ciudad "{{vm.searchTextCiudades}}" no se encuentra.          
+        </md-not-found>
+      </md-autocomplete>
+      
 
-
-        <md-input-container class="md-block">
+        <md-input-container class="md-block UserCreate-container">
           <label>Password</label>
           <input required type="password" name="password" ng-model="vm.usuario.password">
           <div ng-messages="FormRegistroUsuarios.password.$error">

@@ -11,11 +11,8 @@
     var vm=this;
     vm.ciudades=Ciudades.query();
 
-    vm.idciudades;
 
     vm.create=function(){
-        vm.idciudades=getIdCiudad(vm.ciudad)
-        vm.administrador.ciudad={ciudadPK:{idCiudad:vm.idciudades[0], iddepartamento:vm.idciudades[1]}};
         vm.administrador.idRol={idRol:'ADMIN'};
         console.log(vm.administrador);
         Administradores.save(vm.administrador, function() {
@@ -27,14 +24,16 @@
             });
     }
 
+    vm.foundCiudadesByNombre= function(nombre){
+        return Ciudades.foundByNombre({
+            nombre:nombre
+        });
+    }
+
 
 
   }
 
-  function getIdCiudad(id){
-    var array = id.split('-');
-    return array;
-  }
 
 
 
