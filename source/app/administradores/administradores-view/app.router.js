@@ -10,7 +10,7 @@
 
       $stateProvider
               .state('administradoresview',{
-                  url: '/administradoresview/:idAdministrador',
+                  url: '/administradoresview/:idUsuario',
                   views:{
                     'encabezadosimple':{
                        template: '<encabezadosimple/>'

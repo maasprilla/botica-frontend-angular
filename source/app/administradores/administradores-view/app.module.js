@@ -5,8 +5,7 @@
 
         'app.administradores.view.router',
         'app.administradores.view.controller',
-        'app.administradores.view.directive',
-        'app.administradores.view.services'
+        'app.administradores.view.directive'
 
 
 

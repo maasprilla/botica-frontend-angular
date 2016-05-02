@@ -10,9 +10,6 @@
 
     var vm=this;
     vm.ciudades=Ciudades.query();
-    Ciudades.foundByNombre({
-            nombre:'c'
-        });
 
   //  vm.idciudades;
 
