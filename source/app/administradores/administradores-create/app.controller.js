@@ -6,7 +6,7 @@
 
 
   administradoresCreateCtrl.$inject = ['$location', '$mdToast','Usuarios', 'Ciudades'];
-  function administradoresCreateCtrl($location, $mdToast, Administradores ,Ciudades){
+  function administradoresCreateCtrl($location, $mdToast, Usuarios ,Ciudades){
 
     var vm=this;
     vm.ciudades=Ciudades.query();
@@ -15,7 +15,7 @@
     vm.create=function(){
         vm.administrador.idRol={idRol:'ADMIN'};
         console.log(vm.administrador);
-        Administradores.save(vm.administrador, function() {
+        Usuarios.save(vm.administrador, function() {
                 $location.path('/');
                 $mdToast.show(
                     $mdToast.simple()

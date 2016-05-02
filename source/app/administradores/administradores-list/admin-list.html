@@ -34,50 +34,27 @@
 <section class="Listreg">
   <h2 class="Listreg-title">Lista de Administradores</h2>
   <div class="container table-responsive shadow-z-1 Listreg-table">
-      <table id="table" class="table table-hover width200">
-          <thead>
-              <tr>
-                  <th >ID</th>
-                  <th >Nombres</th>
-                  <th >Apellidos</th>
-                  <th >Teléfono</th>
-                  <th >Dirección</th>
-                  <th >Ciudad</th>
-                  <th >E-mail</th>
-              </tr>
-          </thead>
-          <tbody>
-            <tr ng-repeat="administrador in vm.administrador">
-                <td >{{administrador.idUsuario}}</td>
-                <td >{{administrador.nombre}}</td>
-                <td >{{administrador.apellido}}</td>
-                <td >{{administrador.telefono}}</td>
-                <td >{{administrador.direccion}}</td>
-                <td >{{administrador.idciudades}}-</td>
-                <td >{{administrador.email}}</td>
-            </tr>
-          </tbody>
-      </table>
-      <nav>
-    <nav>
-  <ul class="pagination">
-    <li>
-      <a href="" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    <li><a href="">1</a></li>
-    <li><a href="">2</a></li>
-    <li><a href="">3</a></li>
-    <li><a href="">4</a></li>
-    <li><a href="">5</a></li>
-    <li>
-      <a href="" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
-  </ul>
-</nav>
-</nav>
+      <table id="table" class="table table-hover width200" ng-table="vm.usersTable">
+          <tr ng-repeat="user in vm.data">
+       <td data-title="'Nombre'" >
+           {{user.nombre}}
+       </td>
+       <td data-title="'Apellido'" >
+           {{user.apellido}}
+       </td>
+       <td data-title="'Telefono'" >
+           {{user.telefono}}
+       </td>    
+       <td data-title="'Direccion'" >
+           {{user.direccion}}
+       </td>    
+       <td data-title="'Ciudad'">
+           {{user.idciudades}}
+       </td>    
+       <td data-title="'Email'" >
+           {{user.email}}
+       </td>    
+   </tr>
+      </table>   
   </div>
 </section>
