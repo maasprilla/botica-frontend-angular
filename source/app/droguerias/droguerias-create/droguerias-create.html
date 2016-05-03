@@ -1,5 +1,22 @@
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,700,500">
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800">
+<section class="HeaderDrogCreate">
+  <div class="container DrogCreateHeader-container">
+    <div class="row IconsHeaderDrogCreate-container">
+      <div class="col-md-12 text-center IconsDrogCreate-container">
+        <i class="material-icons" style="font-size:48px;color:#f9f9f9">accessibility</i>
+      </div>
+    </div>
+    <div class="row IconsHeaderDrogCreate-container">
+      <div class="col-md-12 text-center IconsDrogCreate-container">
+        <i class="material-icons" style="font-size:48px;color:#f9f9f9">settings</i>
+      </div>
+    </div>
+    <div class="row IconsHeaderDrogCreate-container">
+      <div class="col-md-12 text-center IconsDrogCreate-container">
+        <i class="material-icons" style="font-size:48px;color:#f9f9f9">build</i>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="SectionRegistro">
 
     <form name="FormRegistroDroguerias" class="FormRegistro" ng-submit="vm.create()">
@@ -59,10 +76,10 @@
             {{item.nombre}}</span>
         </md-item-template>
         <md-not-found>
-          La ciudad "{{vm.searchTextCiudades}}" no se encuentra.          
+          La ciudad "{{vm.searchTextCiudades}}" no se encuentra.
         </md-not-found>
       </md-autocomplete>
-       
+
 
         <md-input-container class="md-block DrogCreate-container">
           <label>Nit</label>
