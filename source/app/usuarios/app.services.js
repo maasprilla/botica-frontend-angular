@@ -1,12 +1,12 @@
 (function () {
     'use strict';
-    angular.module('app.usuarios.list.services', [
+    angular.module('app.usuarios.services', [
 
     ])
         .factory('Usuarios', Usuarios);
 
 
-      
+        
 
 
         function Usuarios($resource, BASEURL) {

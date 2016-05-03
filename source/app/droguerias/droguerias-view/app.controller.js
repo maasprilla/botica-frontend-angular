@@ -5,9 +5,9 @@
   ]).controller('drogueriasViewCtrl', drogueriasViewCtrl);
 
 
-  drogueriasViewCtrl.$inject = ['$stateParams','$location', '$mdToast','Droguerias'];
-  function drogueriasViewCtrl($stateParams, $location, $mdToast, Droguerias){
-         this.usuario = Droguerias.get({ idUsuario: $stateParams.idDroguerias });
+  drogueriasViewCtrl.$inject = ['$stateParams','$location', '$mdToast','Usuarios'];
+  function drogueriasViewCtrl($stateParams, $location, $mdToast, Usuarios){
+         this.usuario = Usuarios.get({idUsuario: $stateParams.idUsuario });
          console.log(this.usuario);
     }
 

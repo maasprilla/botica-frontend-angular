@@ -1,0 +1,141 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'bower' ]
+2 info using npm@3.8.2
+3 info using node@v4.4.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData bower
+8 silly fetchNamedPackageData bower
+9 silly mapToRegistry name bower
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry uri https://registry.npmjs.org/bower
+13 verbose request uri https://registry.npmjs.org/bower
+14 verbose request no auth needed
+15 info attempt registry request try #1 at 16:12:06
+16 verbose request id 9b9dc42220f4a9ab
+17 verbose etag "4ROBWR7UHG2PSUPOBZQZHB05H"
+18 http request GET https://registry.npmjs.org/bower
+19 http 304 https://registry.npmjs.org/bower
+20 verbose headers { date: 'Mon, 02 May 2016 21:12:08 GMT',
+20 verbose headers   via: '1.1 varnish',
+20 verbose headers   'cache-control': 'max-age=300',
+20 verbose headers   etag: '"4ROBWR7UHG2PSUPOBZQZHB05H"',
+20 verbose headers   age: '131',
+20 verbose headers   connection: 'keep-alive',
+20 verbose headers   'x-served-by': 'cache-iad2126-IAD',
+20 verbose headers   'x-cache': 'HIT',
+20 verbose headers   'x-cache-hits': '5',
+20 verbose headers   'x-timer': 'S1462223528.125780,VS0,VE0',
+20 verbose headers   vary: 'Accept-Encoding' }
+21 silly get cb [ 304,
+21 silly get   { date: 'Mon, 02 May 2016 21:12:08 GMT',
+21 silly get     via: '1.1 varnish',
+21 silly get     'cache-control': 'max-age=300',
+21 silly get     etag: '"4ROBWR7UHG2PSUPOBZQZHB05H"',
+21 silly get     age: '131',
+21 silly get     connection: 'keep-alive',
+21 silly get     'x-served-by': 'cache-iad2126-IAD',
+21 silly get     'x-cache': 'HIT',
+21 silly get     'x-cache-hits': '5',
+21 silly get     'x-timer': 'S1462223528.125780,VS0,VE0',
+21 silly get     vary: 'Accept-Encoding' } ]
+22 verbose etag https://registry.npmjs.org/bower from cache
+23 verbose get saving bower to C:\Users\Jose\AppData\Roaming\npm-cache\registry.npmjs.org\bower\.cache.json
+24 verbose correctMkdir C:\Users\Jose\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+25 silly install normalizeTree
+26 silly loadCurrentTree Finishing
+27 silly loadIdealTree Starting
+28 silly install loadIdealTree
+29 silly cloneCurrentTree Starting
+30 silly install cloneCurrentTreeToIdealTree
+31 silly cloneCurrentTree Finishing
+32 silly loadShrinkwrap Starting
+33 silly install loadShrinkwrap
+34 silly loadShrinkwrap Finishing
+35 silly loadAllDepsIntoIdealTree Starting
+36 silly install loadAllDepsIntoIdealTree
+37 silly resolveWithNewModule bower@1.7.9 checking installable status
+38 silly cache add args [ 'bower', null ]
+39 verbose cache add spec bower
+40 silly cache add parsed spec Result {
+40 silly cache add   raw: 'bower',
+40 silly cache add   scope: null,
+40 silly cache add   name: 'bower',
+40 silly cache add   rawSpec: '',
+40 silly cache add   spec: 'latest',
+40 silly cache add   type: 'tag' }
+41 silly addNamed bower@latest
+42 verbose addNamed "latest" is being treated as a dist-tag for bower
+43 info addNameTag [ 'bower', 'latest' ]
+44 silly mapToRegistry name bower
+45 silly mapToRegistry using default registry
+46 silly mapToRegistry registry https://registry.npmjs.org/
+47 silly mapToRegistry uri https://registry.npmjs.org/bower
+48 verbose addNameTag registry:https://registry.npmjs.org/bower not in flight; fetching
+49 verbose get https://registry.npmjs.org/bower not expired, no request
+50 silly addNameTag next cb for bower with tag latest
+51 silly addNamed bower@1.7.9
+52 verbose addNamed "1.7.9" is a plain semver version for bower
+53 silly cache afterAdd bower@1.7.9
+54 verbose afterAdd C:\Users\Jose\AppData\Roaming\npm-cache\bower\1.7.9\package\package.json not in flight; writing
+55 verbose correctMkdir C:\Users\Jose\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+56 verbose afterAdd C:\Users\Jose\AppData\Roaming\npm-cache\bower\1.7.9\package\package.json written
+57 silly loadAllDepsIntoIdealTree Finishing
+58 silly idealTree:prePrune nodejs
+58 silly idealTree:prePrune `-- bower@1.7.9
+59 silly loadIdealTree Finishing
+60 silly currentTree nodejs
+61 silly idealTree nodejs
+61 silly idealTree `-- bower@1.7.9
+62 silly generateActionsToTake Starting
+63 silly install generateActionsToTake
+64 silly generateActionsToTake Finishing
+65 silly diffTrees action count 1
+66 silly diffTrees add bower@1.7.9
+67 silly decomposeActions action count 8
+68 silly decomposeActions fetch bower@1.7.9
+69 silly decomposeActions extract bower@1.7.9
+70 silly decomposeActions test bower@1.7.9
+71 silly decomposeActions preinstall bower@1.7.9
+72 silly decomposeActions build bower@1.7.9
+73 silly decomposeActions install bower@1.7.9
+74 silly decomposeActions postinstall bower@1.7.9
+75 silly decomposeActions finalize bower@1.7.9
+76 silly executeActions Starting
+77 silly install executeActions
+78 silly doSerial global-install 0
+79 silly doParallel fetch 1
+80 verbose correctMkdir C:\Users\Jose\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+81 verbose lock using C:\Users\Jose\AppData\Roaming\npm-cache\_locks\staging-dfd8fbf9c1feea0f.lock for C:\Program Files\nodejs\node_modules\.staging
+82 verbose unlock done using C:\Users\Jose\AppData\Roaming\npm-cache\_locks\staging-dfd8fbf9c1feea0f.lock for C:\Program Files\nodejs\node_modules\.staging
+83 silly rollbackFailedOptional Starting
+84 silly rollbackFailedOptional Finishing
+85 silly runTopLevelLifecycles Starting
+86 silly runTopLevelLifecycles Finishing
+87 silly install printInstalled
+88 verbose stack Error: EPERM: operation not permitted, mkdir 'C:\Program Files\nodejs\node_modules\.staging'
+88 verbose stack     at Error (native)
+89 verbose cwd D:\DOCUMENTOS\sena\REPOSITORIOS\botica-frontend-angular
+90 error Windows_NT 10.0.10586
+91 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "-g" "bower"
+92 error node v4.4.0
+93 error npm  v3.8.2
+94 error path C:\Program Files\nodejs\node_modules\.staging
+95 error code EPERM
+96 error errno -4048
+97 error syscall mkdir
+98 error Error: EPERM: operation not permitted, mkdir 'C:\Program Files\nodejs\node_modules\.staging'
+98 error     at Error (native)
+98 error  { [Error: EPERM: operation not permitted, mkdir 'C:\Program Files\nodejs\node_modules\.staging']
+98 error   errno: -4048,
+98 error   code: 'EPERM',
+98 error   syscall: 'mkdir',
+98 error   path: 'C:\\Program Files\\nodejs\\node_modules\\.staging' }
+99 error Please try running this command again as root/Administrator.
+100 verbose exit [ -4048, true ]
