@@ -5,7 +5,7 @@
 
   ]).constant('BASEURL',
 
-    'http://localhost:31409/botica-backend-java/webresources')
+    'http://localhost:43096/botica-backend-java/webresources')
 
 
     .config(configure);

@@ -1,7 +1,36 @@
+.HeaderUserCreate {
+  background-color: #1d8fd5;
+  padding-top: 3.3em;
+}
+.UserCreateHeader-container {
+  background-image: url("/images/banner5.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 22em;
+}
+.HeaderUserCreate-content {
+  text-align: center;
+  padding-top: 1em;
+}
+/**.UsersHeaderImage-container
+  max-width 15em
+  text-align center**/
+.UserCreateHeaderImage {
+  width: 100%;
+}
+/**.UserHeaderList-content
+  max-width 15em**/
+.IconsHeaderUserCreate-container {
+  padding: 2em 8.5em 1em 0;
+}
+.IconsUserCreate-container {
+  text-align: right;
+}
 .SectionRegistro {
   text-align: center;
   font-family: 'Open Sans';
-  padding: 8em 0;
+  padding: 3em 0;
   background-color: #3d9bff;
 }
 .FormRegistro {
@@ -41,5 +70,10 @@
   }
   .FormRegistro-tittle {
     font-size: 22px;
+  }
+}
+@media screen and (max-width: 760px) {
+  .IconsHeaderUserCreate-container {
+    padding: 2em 1.5em 1em 0;
   }
 }

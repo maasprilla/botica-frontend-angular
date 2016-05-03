@@ -1,7 +1,36 @@
+.HeaderDrogCreate {
+  background-color: #1d8fd5;
+  padding-top: 3.3em;
+}
+.DrogCreateHeader-container {
+  background-image: url("/images/banner5.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 22em;
+}
+.HeaderDrogCreate-content {
+  text-align: center;
+  padding-top: 1em;
+}
+/**.UsersHeaderImage-container
+  max-width 15em
+  text-align center**/
+.DrogCreateHeaderImage {
+  width: 100%;
+}
+/**.UserHeaderList-content
+  max-width 15em**/
+.IconsHeaderDrogCreate-container {
+  padding: 2em 8.5em 1em 0;
+}
+.IconsDrogCreate-container {
+  text-align: right;
+}
 .SectionRegistro {
   text-align: center;
   font-family: 'Open Sans';
-  padding: 8em 0;
+  padding: 3em 0;
   background-color: #3d9bff;
 }
 .FormRegistro {
@@ -11,7 +40,6 @@
   border-radius: 0.5em;
   box-shadow: 0.1em 0.1em #555;
   width: 30em;
-  background-image: url("../images/fondo.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -42,5 +70,10 @@
   }
   .FormRegistro-tittle {
     font-size: 22px;
+  }
+}
+@media screen and (max-width: 760px) {
+  .IconsHeaderDrogCreate-container {
+    padding: 2em 1.5em 1em 0;
   }
 }
