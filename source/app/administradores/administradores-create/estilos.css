@@ -3,7 +3,7 @@
   padding-top: 3.3em;
 }
 .AdminCreateHeader-container {
-  background-image: url("/images/banner5.jpg");
+  background-image: url("/images/bann.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   width: 100%;
@@ -52,5 +52,10 @@
 @media screen and (max-width: 760px) {
   .IconsHeaderAdminCreate-container {
     padding: 2em 1.5em 1em 0;
+  }
+}
+@media screen and (max-width: 960px) {
+  .AdminCreateHeader-container {
+    height: 18em;
   }
 }
