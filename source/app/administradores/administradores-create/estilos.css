@@ -21,6 +21,9 @@
 }
 /**.UserHeaderList-content
   max-width 15em**/
+.ng-binding {
+  color: #4385f6;
+}
 .IconsHeaderAdminCreate-container {
   padding: 2em 8.5em 1em 0;
 }
