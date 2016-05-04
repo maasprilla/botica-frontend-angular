@@ -1,9 +1,15 @@
+.Gear {
+  border: solid 4px #f9f9f9;
+  border-radius: 50%;
+  width: 15em;
+  height: 15em;
+}
 .HeaderAdminCreate {
   background-color: #1d8fd5;
   padding-top: 3.3em;
 }
 .AdminCreateHeader-container {
-  background-image: url("/images/banner5.jpg");
+  background-image: url("/images/bann.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   width: 100%;
@@ -52,5 +58,10 @@
 @media screen and (max-width: 760px) {
   .IconsHeaderAdminCreate-container {
     padding: 2em 1.5em 1em 0;
+  }
+}
+@media screen and (max-width: 960px) {
+  .AdminCreateHeader-container {
+    height: 18em;
   }
 }

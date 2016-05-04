@@ -99,6 +99,11 @@ body {
   .MainMenu-list {
     width: 100%;
     text-align: center;
+    padding-left: 0;
+  }
+  .MainMenu-containerIndex {
+    padding-left: 0;
+    padding-right: 0;
   }
   #MainMenu-list>li {
     display: inline-block;
@@ -108,9 +113,6 @@ body {
 @media (max-width: 767px) {
   .MainMenu {
     padding-top: 0;
-  }
-  .MainMenu-list {
-    display: block;
   }
   #MainMenu-list>li {
     display: block;
