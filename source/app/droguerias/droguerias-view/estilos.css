@@ -1,10 +1,10 @@
 .HeaderDrogueriasView {
-  background-color: #1d8fd5;
+  background-color: #166ba2;
   height: 28em;
   padding-top: 3.6em;
   margin-bottom: 5em;
 }
-.Gear {
+.GearPills {
   border: solid 4px #f9f9f9;
   border-radius: 50%;
   width: 15em;
@@ -43,7 +43,7 @@
   text-align: center;
   font-family: 'Open Sans';
   padding: 0 0 8em 0;
-  background-color: #3d9bff;
+  background-color: #fafafa;
 }
 .FormPerfil {
   background-color: #fffafa;

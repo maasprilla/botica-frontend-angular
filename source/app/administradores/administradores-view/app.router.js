@@ -4,6 +4,7 @@
     angular.module('app.administradores.view.router', [
     ]).config(configure);
 
+    configure.$inject = ['$stateProvider', '$urlRouterProvider'];
     function configure($stateProvider, $urlRouterProvider){
 
       $urlRouterProvider.otherwise('/');

@@ -1,5 +1,5 @@
 .HeaderUserList {
-  background-color: #1d8fd5;
+  background-color: #166ba2;
   height: 28em;
   padding-top: 3.6em;
 }
@@ -24,15 +24,15 @@
   padding: 2em 0;
   font-family: 'Open Sans';
   text-align: center;
-  background-color: #3d9bff;
+  background-color: #fafafa;
 }
 .Listreg-title {
   margin-top: 0;
   padding-bottom: 1em;
-  color: #fff;
+  color: rgba(17,85,34,0.533) 3;
 }
 .Listreg-table {
-  background-color: #fff;
+  background-color: #fafafa;
   padding-top: 3em;
 }
 .width200 {
@@ -40,19 +40,23 @@
   margin: 0 0 50px 0;
 }
 .width200 th {
-  background: #d3d3d3;
-  color: #fff;
+  background: #152836;
+  color: #fafafa;
   font-weight: bold;
   padding: 5px;
   text-align: center;
 }
 .width200 td {
+  color: #337ab7;
   border-bottom: 1px solid #ccc;
   padding: 5px;
   text-align: center;
 }
 .width200 tr:last-child td {
   border-top: 1px solid #ccc;
+}
+.ng-binding {
+  color: #fafafa;
 }
 @media only screen and (max-width: 760px), (min-width: 768px) and (max-width: 1024px) {
   .width200,

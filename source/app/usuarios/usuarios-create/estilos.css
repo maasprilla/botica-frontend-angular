@@ -1,13 +1,13 @@
-.HeaderUserCreate {
-  background-color: #1d8fd5;
-  padding-top: 3.3em;
+.Gear {
+  border: solid 4px #f9f9f9;
+  border-radius: 50%;
+  width: 15em;
+  height: 15em;
 }
-.UserCreateHeader-container {
-  background-image: url("/images/banner5.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  width: 100%;
-  height: 22em;
+.HeaderUserCreate {
+  background-color: #166ba2;
+  height: 28em;
+  padding-top: 3.3em;
 }
 .HeaderUserCreate-content {
   text-align: center;
@@ -16,13 +16,15 @@
 /**.UsersHeaderImage-container
   max-width 15em
   text-align center**/
-.UserCreateHeaderImage {
+.UserHeaderImage {
   width: 100%;
+  border: solid 4px #f9f9f9;
+  border-radius: 50%;
 }
 /**.UserHeaderList-content
   max-width 15em**/
 .IconsHeaderUserCreate-container {
-  padding: 2em 8.5em 1em 0;
+  padding: 1em 0.5em 1em 0;
 }
 .IconsUserCreate-container {
   text-align: right;
@@ -74,6 +76,16 @@
 }
 @media screen and (max-width: 760px) {
   .IconsHeaderUserCreate-container {
-    padding: 2em 1.5em 1em 0;
+    padding: 1em 1.5em 1em 0;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .IconsHeaderUserCreate-container {
+    text-align: center;
+  }
+  .IconsUser-container {
+    max-width: 55px;
+    margin-right: 0.5em;
+    display: inline-block;
   }
 }

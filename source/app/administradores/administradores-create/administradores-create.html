@@ -1,22 +1,37 @@
-<section class="HeaderAdminCreate">
-  <div class="container AdminCreateHeader-container">
-    <div class="row IconsHeaderAdminCreate-container">
-      <div class="col-md-12 text-center IconsAdminCreate-container">
+<section class="HeaderUserCreate">
+  <div class="container UserCreateHeader-container">
+    <div class="row">
+      <div class="col-md-4 IconsUserTop-container">
+        <div class="UserHeaderCreate-content"></div>
+      </div>
+      <div class="col-md-4 HeaderUserCreate-content">
+
+          <img src="./images/equipo.png" alt="Usuarios" class="UserHeaderImage Gear" style="max-width:17em">
+
+      </div>
+      <div class="col-md-4 IconsUserTop-container">
+        <div class="UserHeaderCreate-content"></div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row IconsHeaderUserCreate-container">
+      <div class="col-md-3 text-center IconsUser-container">
         <i class="material-icons" style="font-size:48px;color:#f9f9f9">accessibility</i>
       </div>
-    </div>
-    <div class="row IconsHeaderAdminCreate-container">
-      <div class="col-md-12 text-center IconsAdminCreate-container">
+      <div class="col-md-3 text-center IconsUser-container">
         <i class="material-icons" style="font-size:48px;color:#f9f9f9">settings</i>
       </div>
-    </div>
-    <div class="row IconsHeaderAdminCreate-container">
-      <div class="col-md-12 text-center IconsAdminCreate-container">
+      <div class="col-md-3 text-center IconsUser-container">
         <i class="material-icons" style="font-size:48px;color:#f9f9f9">build</i>
+      </div>
+      <div class="col-md-3 text-center IconsUser-container">
+        <i class="material-icons" style="font-size:48px;color:#f9f9f9">bug_report</i>
       </div>
     </div>
   </div>
 </section>
+
 <section class="SectionRegistro">
 
     <form name="FormRegistroAdministradores" class="FormRegistro" ng-submit="vm.create()">
@@ -108,7 +123,7 @@
         </md-input-container>
 
 
-        <md-button type="submit" class="md-raised md-primary">Guardar</md-button>
+        <md-button type="submit" class="md-raised md-primary FormRegistroAdministradores-Button">Guardar</md-button>
     </form>
 
 

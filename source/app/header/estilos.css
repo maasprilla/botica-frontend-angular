@@ -21,7 +21,7 @@ body {
   right: 0;
   left: 0;
   z-index: 3;
-  background-color: #4385f6;
+  background-color: #152836;
   border-radius: 0px;
   border: none;
   font-family: 'Open Sans';
@@ -99,6 +99,11 @@ body {
   .MainMenu-list {
     width: 100%;
     text-align: center;
+    padding-left: 0;
+  }
+  .MainMenu-containerIndex {
+    padding-left: 0;
+    padding-right: 0;
   }
   #MainMenu-list>li {
     display: inline-block;
@@ -108,9 +113,6 @@ body {
 @media (max-width: 767px) {
   .MainMenu {
     padding-top: 0;
-  }
-  .MainMenu-list {
-    display: block;
   }
   #MainMenu-list>li {
     display: block;
@@ -135,7 +137,7 @@ body {
   right: 0;
   left: 0;
   z-index: 3;
-  background-color: #4385f6;
+  background-color: #152836;
   border-radius: 0px;
   border: none;
   font-family: 'Open Sans';
@@ -154,7 +156,7 @@ body {
   color: #3d9bff;
 }
 .MainMenuAmbiental {
-  background-color: #24cc0d;
+  background-color: #007e33;
   font-family: 'Open Sans';
   border-color: #24cc0d;
 }

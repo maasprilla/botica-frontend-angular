@@ -5,6 +5,7 @@
 
     ]).directive('administradoresview', administradoresview);
 
+    administradoresview.$inject = [];
     function administradoresview(){
       return{
         scope:{},
