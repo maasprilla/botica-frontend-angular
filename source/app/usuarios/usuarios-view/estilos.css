@@ -1,5 +1,5 @@
 .HeaderUserView {
-  background-color: #1d8fd5;
+  background-color: #166ba2;
   height: 28em;
   padding-top: 3.6em;
   margin-bottom: 5em;
@@ -42,7 +42,7 @@
 .SectionPerfil {
   text-align: center;
   font-family: 'Open Sans';
-  background-color: #3d9bff;
+  background-color: #fafafa;
 }
 .FormPerfil {
   background-color: #fffafa;

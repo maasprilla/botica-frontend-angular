@@ -5,7 +5,7 @@
 
   ]).directive('administrarpedido',administrarpedido);
 
-
+  administrarpedido.$inject = [];
   function administrarpedido(){
     return {
       scope:{},

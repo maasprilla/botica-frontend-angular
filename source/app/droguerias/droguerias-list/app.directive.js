@@ -5,6 +5,7 @@
 
     ]).directive('listdroguerias', listDroguerias);
 
+    listDroguerias.$inject = [];
     function listDroguerias(){
       return{
         scope:{},
