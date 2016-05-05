@@ -5,6 +5,7 @@
 
     ]).directive('home', home);
 
+    home.$inject = [];
     function home(){
       return{
         scope:{},

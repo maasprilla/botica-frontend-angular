@@ -4,6 +4,7 @@
 
   ]).directive('login', login);
 
+  login.$inject = [];
   function login(){
     return{
       scope:{},

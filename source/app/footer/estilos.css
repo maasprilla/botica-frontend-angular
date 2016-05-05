@@ -1,5 +1,5 @@
 .Footer {
-  background: #000;
+  background: #152836;
   min-height: 13.75em;
   height: auto;
   padding-top: 2em;
@@ -87,6 +87,7 @@
 }
 .icon-follow {
   display: inline-block;
+  margin-left: 1em;
 }
 .icon-mail4:before {
   content: "\e900";

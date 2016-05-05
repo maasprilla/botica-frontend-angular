@@ -1,7 +1,7 @@
 (function(){
     'use strict';
 
-    angular.module('app.home.router', [
+    angular.module('app.bienvenido.router', [
 
     ]).config(configure);
 
@@ -11,14 +11,14 @@
       $urlRouterProvider.otherwise('/');
 
       $stateProvider
-              .state('home',{
-                  url: '/',
+              .state('bienvenido',{
+                  url: 'bienvenido',
                   views:{
                     'encabezado':{
                        template: '<encabezado/>'
                     },
-                    'home':{
-                       template: '<home/>'
+                    'bienvenido':{
+                       template: '<bienvenido/>'
                     },
                     'piedepagina':{
                        template: '<piedepagina/>'

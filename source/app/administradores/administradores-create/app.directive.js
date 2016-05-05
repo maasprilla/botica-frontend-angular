@@ -6,6 +6,7 @@
     ]).directive('registroadministrador', registroadministrador)
     .directive('numbersonly', numbersonly);
 
+    registroadministrador.$inject = [];
     function registroadministrador(){
       return{
         scope:{},
@@ -15,6 +16,7 @@
       }
     }
 
+    numbersonly.$inject
     function numbersonly(){
       return {
         restrict: 'A',

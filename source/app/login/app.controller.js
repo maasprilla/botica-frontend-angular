@@ -16,6 +16,7 @@
     vm.getIdCurrentUser=getIdCurrentUser;
 
 
+    signIn.$inject = [];
     function signIn(){
     $auth.login(vm.user)
         .then(function(){
@@ -36,6 +37,7 @@
         });
     }
 
+    getCurrentUser.$inject = [];
     function getCurrentUser() {
       if (isAuthenticated()) {
 
@@ -45,6 +47,7 @@
     }
   }
 
+  getIdCurrentUser.$inject = [];
   function getIdCurrentUser() {
     if (isAuthenticated()) {
     return $auth.getPayload().sub;
@@ -53,9 +56,12 @@
   }
 }
 
+    isAuthenticated.$inject = [];
     function isAuthenticated() {
       return $auth.isAuthenticated();
     }
+
+    logout.$inject = [];
     function logout() {
   if (!$auth.isAuthenticated()) {
     return;
@@ -71,6 +77,7 @@
   })
 }
 
+isAdmin.$inject = [];
 function isAdmin() {
   if (isAuthenticated()){
     return $auth.getPayload().roles.indexOf('ADMIN') !== -1;
@@ -80,6 +87,7 @@ function isAdmin() {
 
 }
 
+isUser.$inject = [];
 function isUser() {
   if (isAuthenticated()){
     return $auth.getPayload().roles.indexOf('USER') !== -1;
