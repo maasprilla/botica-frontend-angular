@@ -1,3 +1,10 @@
+.Gear1 {
+  border: solid 4px #f9f9f9;
+  border-radius: 50%;
+  width: 15em;
+  height: 15em;
+  padding: 0.5em;
+}
 .HeaderDrogCreate {
   background-color: #1d8fd5;
   height: 28em;
@@ -10,9 +17,6 @@
 /**.UsersHeaderImage-container
   max-width 15em
   text-align center**/
-.DrogHeaderImage {
-  width: 100%;
-}
 /**.UserHeaderList-content
   max-width 15em**/
 .IconsHeaderDrogCreate-container {
