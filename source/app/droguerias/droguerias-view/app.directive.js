@@ -5,6 +5,7 @@
 
     ]).directive('drogueriasview', drogueriasview);
 
+    drogueriasview.$inject = [];
     function drogueriasview(){
       return{
         scope:{},

@@ -5,6 +5,7 @@
 
     ]).directive('registrodroguerias', registrodroguerias);
 
+    registrodroguerias.$inject = [];
     function registrodroguerias(){
       return{
         scope:{},
