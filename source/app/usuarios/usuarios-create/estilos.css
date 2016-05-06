@@ -5,7 +5,7 @@
   height: 15em;
 }
 .HeaderUserCreate {
-  background-color: #1d8fd5;
+  background-color: #166ba2;
   height: 28em;
   padding-top: 3.3em;
 }
@@ -18,6 +18,8 @@
   text-align center**/
 .UserHeaderImage {
   width: 100%;
+  border: solid 4px #f9f9f9;
+  border-radius: 50%;
 }
 /**.UserHeaderList-content
   max-width 15em**/

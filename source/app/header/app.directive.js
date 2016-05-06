@@ -8,6 +8,7 @@
   .directive('encabezadoportafolio', encabezadoportafolio)
   .directive('encabezadoambiental', encabezadoambiental);
 
+  encabezado.$inject = [];
   function encabezado(){
     return {
       scope:{},
@@ -17,6 +18,7 @@
   };
 }
 
+  encabezadosimple.$inject = [];
   function encabezadosimple(){
     return {
       scope:{},
@@ -26,6 +28,7 @@
   };
 }
 
+  encabezadoportafolio.$inject = [];
   function encabezadoportafolio(){
     return {
       scope:{},
@@ -33,6 +36,7 @@
   };
 }
 
+encabezadoambiental.$inject = [];
 function encabezadoambiental(){
   return {
     scope:{},

@@ -5,6 +5,7 @@
 
     ]).directive('listadministrador', listadministrador);
 
+    listadministrador.$inject = [];
     function listadministrador(){
       return{
         scope:{},

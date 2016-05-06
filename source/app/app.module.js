@@ -23,6 +23,7 @@
         'app.realizarpedido',
         'app.medioambiente',
         'app.portafolioservicios',
+        'app.bienvenido'
     ]);
 
 })();

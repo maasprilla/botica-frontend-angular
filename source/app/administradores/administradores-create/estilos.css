@@ -68,3 +68,9 @@
     height: 18em;
   }
 }
+.ng-scope {
+  color: #fafafa;
+}
+.md-button.md-primary.md-raised {
+  background: #166ba2;
+}

@@ -5,6 +5,7 @@
 
     ]).directive('medioambiente', medioambiente);
 
+    medioambiente.$inject = [];
     function medioambiente(){
       return{
         scope:{},

@@ -4,6 +4,7 @@
   ]).directive('piedepagina', piedepagina)
   .directive('piedepaginaambiental', piedepaginaambiental);
 
+  piedepagina.$inject = [];
   function piedepagina(){
     return {
       scope:{},
@@ -11,6 +12,7 @@
     };
   }
 
+  piedepaginaambiental.$inject = [];
   function piedepaginaambiental(){
     return {
       scope:{},

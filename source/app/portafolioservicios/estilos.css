@@ -110,10 +110,11 @@ div.ProductoContainer h2 {
   background-color: #eaf3f8;
 }
 .Brand-logo {
-  background-color: #00aeef;
+/** background-color #00aeef **/
+  background-color: #152836;
   padding-top: 2em;
   padding-bottom: 1em;
-  border-bottom: solid 1px #000;
+/** border-bottom solid 1px black **/
 }
 .Brand-text {
   margin-top: 0;
@@ -124,7 +125,8 @@ div.ProductoContainer h2 {
   color: #000;
 }
 .PortafolioFooter {
-  background-color: #546d87;
+/** background-color #546d87 **/
+  background-color: #152836;
   font-family: 'Open Sans';
   min-height: 13.75em;
   height: auto;
