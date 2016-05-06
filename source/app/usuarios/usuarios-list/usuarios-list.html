@@ -1,40 +1,36 @@
 <section class="HeaderUserList">
-  <div class="container UsListHeader-container">
+  <div class="container">
     <div class="row">
-      <div class="col-md-4">
-        <div class="UserHeaderList-content"></div>
+      <div class="col-md-4">        
       </div>
-      <div class="col-md-4 HeaderUsList-content">
-
-          <img src="./images/users1.png" alt="Usuarios" class="UsersHeaderImage" style="max-width:15em">
-
+      <div class="col-md-4 HeaderUserList-logo">
+          <img src="./images/users1.png" alt="Usuarios" class="HeaderUserList-logoImg" style="max-width:15em">
       </div>
-      <div class="col-md-4">
-        <div class="UserHeaderList-content"></div>
+      <div class="col-md-4">        
       </div>
     </div>
   </div>
   <div class="container">
-    <div class="row IconsHeaderUserList-container">
-      <div class="col-md-3 text-center IconsUsers-container">
+    <div class="row HeaderUserList-containerIcon">
+      <div class="col-md-3 text-center HeaderUserList-icons">
         <i class="material-icons" style="font-size:48px;color:#f9f9f9">account_circle</i>
       </div>
-      <div class="col-md-3 text-center IconsUsers-container">
+      <div class="col-md-3 text-center HeaderUserList-icons">
         <i class="material-icons" style="font-size:48px;color:#f9f9f9">list</i>
       </div>
-      <div class="col-md-3 text-center IconsUsers-container">
+      <div class="col-md-3 text-center HeaderUserList-icons">
         <i class="material-icons" style="font-size:48px;color:#f9f9f9">desktop_windows</i>
       </div>
-      <div class="col-md-3 text-center IconsUsers-container">
+      <div class="col-md-3 text-center HeaderUserList-icons">
         <i class="material-icons" style="font-size:48px;color:#f9f9f9">remove_red_eye</i>
       </div>
     </div>
   </div>
 </section>
-<section class="Listreg">
-  <h2 class="Listreg-title">Lista de usuarios</h2>
-  <div class="container table-responsive shadow-z-1 Listreg-table">
-      <table id="table" class="table table-hover width200" ng-table="vm.usersTable">
+<section class="UserTable">
+  <h2 class="UserTable-title">Lista de usuarios</h2>
+  <div class="container  UserTable-containerTable">
+      <table id="table" class="table table-hover UserTable-table" ng-table="vm.usersTable">
           <tr ng-repeat="user in vm.data">
        <td data-title="'Nombre'" >
            {{user.nombre}}

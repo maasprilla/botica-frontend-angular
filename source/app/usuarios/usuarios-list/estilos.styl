@@ -1,34 +1,18 @@
 .HeaderUserList
-  // background-color #02A2DC
-  // background-color #F8F8F8
-  // background-color #3F71B8
   background-color #166ba2
   height 28em
   padding-top 3.6em
+  &-logo
+    text-align center
+    padding-top 1em
+  &-logoImg
+    width 100%
+    border solid 4px #f9f9f9
+    border-radius 50%
+  &-icons
+    padding 1em 1.5em 1em 0
 
-.HeaderUsList-content
-  text-align center
-  padding-top 1em
-
-
-/**.UsersHeaderImage-container
-  max-width 15em
-  text-align center**/
-
-.UsersHeaderImage
-  width 100%
-  // min-height 15em
-  // padding 0.5em
-  border solid 4px #f9f9f9
-  border-radius 50%
-
-/**.UserHeaderList-content
-  max-width 15em**/
-
-.IconsHeaderUserList-container
-	padding 1em 1.5em 1em 0
-
-.Listreg
+.UserTable
   padding 2em 0
   font-family 'Open Sans'
   text-align center
@@ -37,63 +21,69 @@
     margin-top 0
     padding-bottom 1em
     color #15283
-  &-table
+  &-containerTable
     background-color #fafafa
+    padding 0
     padding-top 3em
-.width200
-  width 100%
-  margin 0 0 50px 0
-.width200 th
-  background #152836
-  color #fafafa
-  font-weight bold
-  padding 5px
-  text-align center
-.width200 td
-  color #337ab7
-  border-bottom 1px solid #ccc
-  padding 5px
-  text-align center
-.width200 tr:last-child td
-  border-top 1px solid #ccc
+  &-table
+    width 100%
+    margin 0 0 50px 0
+  &-table th
+    background #152836
+    color #fafafa
+    font-weight bold
+    padding 5px
+    text-align center
+  &-table td
+    color #337ab7
+    border-bottom 1px solid #ccc
+    padding 5px
+    text-align center
+  &-table tr:last-child td
+    border-top 1px solid #ccc
+  &-table tbody
+    border 1px solid #152836
 
 .ng-binding.sort-indicator
   color #fafafa
 
 @media only screen and (max-width: 760px), (min-width: 768px) and (max-width: 1024px)
-  .width200, .width200 thead, .width200 tbody, .width200 th, .width200 td, .width200 tr
-    display block
-  .width200 thead tr
-    position absolute
-    top -9999px
-    left -9999px
-  .width200 tr
-    border 1px solid #ccc
-  .width200 td
-    border none
-    position relative
-  .width200 td:before
-    position relative
-    font-weight bold
-  .width200 td:nth-of-type(1):before
-    content "Id: "
-  .width200 td:nth-of-type(2):before
-    content "Nombres: "
-  .width200 td:nth-of-type(3):before
-    content "Apellidos: "
-  .width200 td:nth-of-type(4):before
-    content "Telefono: "
-  .width200 td:nth-of-type(5):before
-    content "Direccion: "
-  .width200 td:nth-of-type(6):before
-    content "Ciudad: "
-  .width200 td:nth-of-type(7):before
-    content "Email: "
+  .UserTable
+    &-table, &-table thead, &-table tbody, &-table th, &-table td, &-table tr
+      display block
+    &-table thead tr
+      position absolute
+      top -9999px
+      left -9999px
+    &-table tr
+      border 1px solid #ccc
+    &-table td
+      border none
+      position relative
+    &-table td:before
+      position relative
+      font-weight bold
+    &-table td:nth-of-type(1):before
+      content "Id: "
+    &-table td:nth-of-type(2):before
+      content "Nombres: "
+    &-table td:nth-of-type(3):before
+      content "Apellidos: "
+    &-table td:nth-of-type(4):before
+      content "Telefono: "
+    &-table td:nth-of-type(5):before
+      content "Direccion: "
+    &-table td:nth-of-type(6):before
+      content "Ciudad: "
+    &-table td:nth-of-type(7):before
+      content "Email: "
 
 @media screen and (max-width: 1000px)
-  .IconsHeaderUserList-container
-    text-align center
-  .IconsUsers-container
-    max-width 55px
-    margin-right 0.5em
-    display inline-block
+  .HeaderUserList
+    &-icons
+      max-width 55px
+      margin-right 0.5em
+      display inline-block
+    &-containerIcon
+      text-align center
+    

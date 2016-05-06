@@ -1,40 +1,36 @@
-<section class="HeaderDrogueriasList">
-  <div class="container DrogueriasListHeader-container">
+<section class="HeaderDrogList">
+  <div class="container">
     <div class="row">
-      <div class="col-md-4">
-        <div class="DrogueriasHeaderList-content"></div>
+      <div class="col-md-4">        
       </div>
-      <div class="col-md-4 HeaderDrogueriasList-content">
-
-          <img src="./images/droglist.png" alt="Droguerias" class="DrogueriasHeaderImage GearDrog" style="">
-
+      <div class="col-md-4 HeaderDrogList-logo">
+          <img src="./images/jajaj.png" alt="Usuarios" class="HeaderDrogList-logoImg" style="max-width:15em">
       </div>
-      <div class="col-md-4">
-        <div class="DrogueriasHeaderList-content"></div>
+      <div class="col-md-4">        
       </div>
     </div>
   </div>
   <div class="container">
-    <div class="row IconsHeaderDrogueriasList-container">
-      <div class="col-md-3 text-center IconsDroguerias-container">
-        <i class="material-icons" style="font-size:48px;color:#f9f9f9">supervisor_account</i>
+    <div class="row HeaderDrogList-containerIcon">
+      <div class="col-md-3 text-center HeaderDrogList-icons">
+        <i class="material-icons" style="font-size:48px;color:#f9f9f9">account_circle</i>
       </div>
-      <div class="col-md-3 text-center IconsDroguerias-container">
-        <i class="material-icons" style="font-size:48px;color:#f9f9f9">verified_user</i>
+      <div class="col-md-3 text-center HeaderDrogList-icons">
+        <i class="material-icons" style="font-size:48px;color:#f9f9f9">list</i>
       </div>
-      <div class="col-md-3 text-center IconsDroguerias-container">
-        <i class="material-icons" style="font-size:48px;color:#f9f9f9">store</i>
+      <div class="col-md-3 text-center HeaderDrogList-icons">
+        <i class="material-icons" style="font-size:48px;color:#f9f9f9">desktop_windows</i>
       </div>
-      <div class="col-md-3 text-center IconsDroguerias-container">
-        <i class="material-icons" style="font-size:48px;color:#f9f9f9">add_shopping_cart</i>
+      <div class="col-md-3 text-center HeaderDrogList-icons">
+        <i class="material-icons" style="font-size:48px;color:#f9f9f9">remove_red_eye</i>
       </div>
     </div>
   </div>
 </section>
-<section class="Listreg">
-  <h2 class="Listreg-title">Lista de Droguerias</h2>
-  <div class="container table-responsive shadow-z-1 Listreg-table">
-      <table id="table" class="table table-hover width200" ng-table="vm.usersTable">
+<section class="DrogTable">
+  <h2 class="DrogTable-title">Lista de Droguerias</h2>
+  <div class="container  DrogTable-containerTable">
+      <table id="table" class="table table-hover DrogTable-table" ng-table="vm.usersTable">
           <tr ng-repeat="user in vm.data">
        <td data-title="'Nombre'" >
            {{user.nombre}}
@@ -44,18 +40,20 @@
        </td>
        <td data-title="'Telefono'" >
            {{user.telefono}}
-       </td>
+       </td>    
        <td data-title="'Direccion'" >
            {{user.direccion}}
-       </td>
+       </td>    
        <td data-title="'Ciudad'">
            {{user.idciudades}}
-       </td>
+       </td>    
        <td data-title="'Email'" >
            {{user.email}}
-       </td>
+       </td>    
    </tr>
-      </table>
-
+      </table>      
   </div>
+
+
+
 </section>

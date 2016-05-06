@@ -3,115 +3,114 @@
   height: 28em;
   padding-top: 3.6em;
 }
-.HeaderUsList-content {
+.HeaderUserList-logo {
   text-align: center;
   padding-top: 1em;
 }
-/**.UsersHeaderImage-container
-  max-width 15em
-  text-align center**/
-.UsersHeaderImage {
+.HeaderUserList-logoImg {
   width: 100%;
   border: solid 4px #f9f9f9;
   border-radius: 50%;
 }
-/**.UserHeaderList-content
-  max-width 15em**/
-.IconsHeaderUserList-container {
+.HeaderUserList-icons {
   padding: 1em 1.5em 1em 0;
 }
-.Listreg {
+.UserTable {
   padding: 2em 0;
   font-family: 'Open Sans';
   text-align: center;
   background-color: #fafafa;
 }
-.Listreg-title {
+.UserTable-title {
   margin-top: 0;
   padding-bottom: 1em;
   color: rgba(17,85,34,0.533) 3;
 }
-.Listreg-table {
+.UserTable-containerTable {
   background-color: #fafafa;
+  padding: 0;
   padding-top: 3em;
 }
-.width200 {
+.UserTable-table {
   width: 100%;
   margin: 0 0 50px 0;
 }
-.width200 th {
+.UserTable-table th {
   background: #152836;
   color: #fafafa;
   font-weight: bold;
   padding: 5px;
   text-align: center;
 }
-.width200 td {
+.UserTable-table td {
   color: #337ab7;
   border-bottom: 1px solid #ccc;
   padding: 5px;
   text-align: center;
 }
-.width200 tr:last-child td {
+.UserTable-table tr:last-child td {
   border-top: 1px solid #ccc;
+}
+.UserTable-table tbody {
+  border: 1px solid #152836;
 }
 .ng-binding.sort-indicator {
   color: #fafafa;
 }
 @media only screen and (max-width: 760px), (min-width: 768px) and (max-width: 1024px) {
-  .width200,
-  .width200 thead,
-  .width200 tbody,
-  .width200 th,
-  .width200 td,
-  .width200 tr {
+  .UserTable-table,
+  .UserTable-table thead,
+  .UserTable-table tbody,
+  .UserTable-table th,
+  .UserTable-table td,
+  .UserTable-table tr {
     display: block;
   }
-  .width200 thead tr {
+  .UserTable-table thead tr {
     position: absolute;
     top: -9999px;
     left: -9999px;
   }
-  .width200 tr {
+  .UserTable-table tr {
     border: 1px solid #ccc;
   }
-  .width200 td {
+  .UserTable-table td {
     border: none;
     position: relative;
   }
-  .width200 td:before {
+  .UserTable-table td:before {
     position: relative;
     font-weight: bold;
   }
-  .width200 td:nth-of-type(1):before {
+  .UserTable-table td:nth-of-type(1):before {
     content: "Id: ";
   }
-  .width200 td:nth-of-type(2):before {
+  .UserTable-table td:nth-of-type(2):before {
     content: "Nombres: ";
   }
-  .width200 td:nth-of-type(3):before {
+  .UserTable-table td:nth-of-type(3):before {
     content: "Apellidos: ";
   }
-  .width200 td:nth-of-type(4):before {
+  .UserTable-table td:nth-of-type(4):before {
     content: "Telefono: ";
   }
-  .width200 td:nth-of-type(5):before {
+  .UserTable-table td:nth-of-type(5):before {
     content: "Direccion: ";
   }
-  .width200 td:nth-of-type(6):before {
+  .UserTable-table td:nth-of-type(6):before {
     content: "Ciudad: ";
   }
-  .width200 td:nth-of-type(7):before {
+  .UserTable-table td:nth-of-type(7):before {
     content: "Email: ";
   }
 }
 @media screen and (max-width: 1000px) {
-  .IconsHeaderUserList-container {
-    text-align: center;
-  }
-  .IconsUsers-container {
+  .HeaderUserList-icons {
     max-width: 55px;
     margin-right: 0.5em;
     display: inline-block;
+  }
+  .HeaderUserList-containerIcon {
+    text-align: center;
   }
 }
