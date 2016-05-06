@@ -57,7 +57,7 @@
   border: 1px solid #152836;
 }
 .ng-binding.sort-indicator {
-  color: #fafafa;
+  color: #f00;
 }
 @media only screen and (max-width: 760px), (min-width: 768px) and (max-width: 1024px) {
   .DrogTable-table,
