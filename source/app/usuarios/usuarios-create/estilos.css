@@ -33,19 +33,19 @@
   text-align: center;
   font-family: 'Open Sans';
   padding: 3em 0;
-  background-color: #3d9bff;
+  background-color: #fafafa;
 }
 .FormRegistro {
   background-color: #fffafa;
   display: inline-block;
   padding: 2em;
   border-radius: 0.5em;
-  box-shadow: 0.1em 0.1em #555;
+/** box-shadow 0.1em 0.1em  #555 **/
   width: 30em;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  color: Snow;
+/** color Snow **/
   text-align: center;
 }
 .FormRegistro-input {
