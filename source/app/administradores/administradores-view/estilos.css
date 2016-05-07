@@ -2,49 +2,22 @@
   background-color: #166ba2;
   height: 28em;
   padding-top: 3.6em;
-  margin-bottom: 5em;
 }
-.GearTeam {
+.HeaderAdminView-logo {
+  text-align: center;
+  padding-top: 1em;
+}
+.HeaderAdminView-logoImg {
+  width: 100%;
   border: solid 4px #f9f9f9;
   border-radius: 50%;
-  width: 15em;
   height: 15em;
+  width: 15em;
 }
-.Fotos {
-  width: 100%;
-  height: 30em;
-  margin: 0 auto 2em auto;
-  position: relative;
+.HeaderAdminView-icons {
+  padding: 1em 1.5em 1em 0;
 }
-.Fotos-figure {
-  width: 100%;
-  height: 100%;
-}
-.Fotos-figure-img {
-  width: 100%;
-  height: 100%;
-}
-.Fotos-figure-icon {
-  position: absolute;
-}
-.Fotos-figure-icon-1 {
-  top: 37%;
-  left: 36%;
-}
-.Fotos-figure-icon-2 {
-  top: 39%;
-  left: 50%;
-}
-.Fotos-figure-icon-3 {
-  top: 39%;
-  left: 64%;
-}
-.SectionPerfil {
-  text-align: center;
-  font-family: 'Open Sans';
-  background-color: #fafafa;
-}
-.FormPerfil {
+.FormPerfilAdmin {
   background-color: #fffafa;
   font-family: 'Open Sans';
   display: flex;
@@ -52,17 +25,16 @@
   padding: 2em;
   margin: auto;
   border-radius: 0.5em;
-  box-shadow: 0.1em 0.1em #555;
   max-width: 55em;
 }
-.FormPerfil-input {
+.FormPerfilAdmin-input {
   margin-bottom: 1em;
-  border-radius: 1em;
   font-family: 'Open Sans';
-  display: inline-block;
+  border-radius: 1em;
+  diplay: inline-block;
   width: 80%;
 }
-.FormPerfil-edit {
+.FormPerfilAdmin-edit {
   display: inline-block;
   font-family: 'Open Sans';
   width: 10%;
@@ -70,7 +42,7 @@
   cursor: pointer;
   padding-left: 1.5em;
 }
-.FormPerfil-tittle {
+.FormPerfilAdmin-tittle {
   color: #000;
   font-family: 'Open Sans';
   border: 1px solid #999;
@@ -78,28 +50,28 @@
   padding: 0.5em 0;
   box-shadow: 3px 2px 4px -3px #999;
 }
-.FormPerfil-img {
+.FormPerfilAdmin-img {
   width: 9em;
   height: 9em;
   border: 1px solid #999;
   box-shadow: 3px 3px 4px -3px #999;
 }
-.FormPerfil-info {
+.FormPerfilAdmin-info {
   width: 80%;
   display: inline-block;
 }
-.FormPerfil-label {
+.FormPerfilAdmin-label {
   box-sizing: border-box;
   padding: 2em;
   border: 1px solid #999;
   box-shadow: 3px 3px 4px -3px #999;
 }
 @media (max-width: 463px) {
-  .FormPerfil-edit {
+  .FormPerfilAdmin-edit {
     padding-left: 0.5em;
     font-size: 11px;
   }
-  .FormPerfil-label {
+  .FormPerfilAdmin-label {
     padding-left: 0.2em;
   }
 }
@@ -109,20 +81,30 @@
   }
 }
 @media (max-width: 800px) {
-  .FormPerfil {
+  .FormPerfilAdmin {
     flex-direction: column;
     align-items: center;
     width: 80%;
   }
-  .FormPerfil-img {
+  .FormPerfilAdmin-img {
     margin-bottom: 2em;
   }
-  .FormPerfil-info {
+  .FormPerfilAdmin-info {
     width: 100%;
   }
 }
 @media (max-width: 400px) {
-  .FormPerfil {
+  .FormPerfilAdmin {
     padding: 1em;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .HeaderAdminView-icons {
+    max-width: 55px;
+    margin-right: 0.5em;
+    display: inline-block;
+  }
+  .HeaderAdminView-containerIcon {
+    text-align: center;
   }
 }

@@ -2,42 +2,21 @@
   background-color #166ba2
   height 28em
   padding-top 3.6em
-  margin-bottom 5em
-
-.GearUser
-  border solid 4px #f9f9f9
-  border-radius 50%
-  width 17em
-  height 17em
-
-.Fotos
-  width: 100%
-  height: 30em
-  margin: 0 auto 2em auto;
-  position: relative;
-  &-figure
-    width: 100%
-    height: 100%
-    &-img
-      width: 100%
-      height: 100%
-    &-icon
-      position: absolute;
-      &-1
-        top: 37%
-        left: 36%
-      &-2
-        top: 39%
-        left: 50%
-      &-3
-        top 39%
-        left: 64%
-
-.SectionPerfil
+  &-logo
     text-align center
-    font-family 'Open Sans'
-    background-color #fafafa
-.FormPerfil
+    padding-top 1em
+  &-logoImg
+    width 100%
+    border solid 4px #f9f9f9
+    border-radius 50%
+    height 15em
+    width 15em
+  &-icons
+    padding 1em 1.5em 1em 0
+
+
+
+.FormPerfilUser
     background-color snow
     font-family 'Open Sans'
     display flex
@@ -45,7 +24,6 @@
     padding 2em
     margin auto
     border-radius 0.5em
-    box-shadow 0.1em 0.1em  #555
     max-width 55em
     &-input
       margin-bottom 1em
@@ -82,10 +60,10 @@
       box-shadow 3px 3px 4px -3px #999
 
 @media (max-width: 463px)
-  .FormPerfil-edit
+  .FormPerfilUser-edit
     padding-left 0.5em
     font-size 11px
-  .FormPerfil-label
+  .FormPerfilUser-label
     padding-left 0.2em
 
 @media (max-width: 422px)
@@ -93,7 +71,7 @@
     width 100%
 
 @media (max-width: 800px)
-  .FormPerfil
+  .FormPerfilUser
     flex-direction column
     align-items center
     width 80%
@@ -102,5 +80,13 @@
     &-info
       width 100%
 @media (max-width: 400px)
-  .FormPerfil
+  .FormPerfilUser
     padding 1em
+@media screen and (max-width: 1000px)
+  .HeaderUserView
+    &-icons
+      max-width 55px
+      margin-right 0.5em
+      display inline-block
+    &-containerIcon
+      text-align center

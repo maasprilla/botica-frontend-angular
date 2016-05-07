@@ -1,117 +1,118 @@
-.GearAdmin {
-  width: 15em;
-  height: 15em;
-}
 .HeaderAdminList {
-/** background-color #1D8FD5 **/
   background-color: #166ba2;
   height: 28em;
   padding-top: 3.6em;
 }
-.HeaderAdminList-content {
+.HeaderAdminList-logo {
   text-align: center;
   padding-top: 1em;
 }
-/**.UsersHeaderImage-container
-  max-width 15em
-  text-align center**/
-.AdminHeaderImage {
-  padding: 0.5em;
+.HeaderAdminList-logoImg {
+  width: 100%;
   border: solid 4px #f9f9f9;
   border-radius: 50%;
+  height: 15em;
+  width: 15em;
 }
-/**.UserHeaderList-content
-  max-width 15em**/
-.IconsHeaderAdminList-container {
-  padding: 2em 1.5em 1em 0;
+.HeaderAdminList-icons {
+  padding: 1em 1.5em 1em 0;
 }
-.Listreg {
-  padding: 6em 0;
+.AdminTable {
+  padding: 2em 0;
   font-family: 'Open Sans';
   text-align: center;
-  background-color: #3d9bff;
+  background-color: #fafafa;
 }
-.Listreg-title {
+.AdminTable-title {
   margin-top: 0;
-  color: #fff;
+  padding-bottom: 1em;
+  color: rgba(17,85,34,0.533) 3;
 }
-.Listreg-table {
-  background-color: #fff;
+.AdminTable-containerTable {
+  background-color: #fafafa;
+  padding: 0;
   padding-top: 3em;
 }
-.width200 {
+.AdminTable-table {
   width: 100%;
   margin: 0 0 50px 0;
 }
-.width200 th {
-  background: #d3d3d3;
-  color: #fff;
+.AdminTable-table th {
+  background: #152836;
+  color: #fafafa;
   font-weight: bold;
   padding: 5px;
   text-align: center;
 }
-.width200 td {
+.AdminTable-table td {
+  color: #337ab7;
   border-bottom: 1px solid #ccc;
   padding: 5px;
   text-align: center;
 }
-.width200 tr:last-child td {
+.AdminTable-table tr:last-child td {
   border-top: 1px solid #ccc;
 }
+.AdminTable-table tbody {
+  border: 1px solid #152836;
+}
+.ng-binding.sort-indicator {
+  color: #fafafa;
+}
 @media only screen and (max-width: 760px), (min-width: 768px) and (max-width: 1024px) {
-  .width200,
-  .width200 thead,
-  .width200 tbody,
-  .width200 th,
-  .width200 td,
-  .width200 tr {
+  .AdminTable-table,
+  .AdminTable-table thead,
+  .AdminTable-table tbody,
+  .AdminTable-table th,
+  .AdminTable-table td,
+  .AdminTable-table tr {
     display: block;
   }
-  .width200 thead tr {
+  .AdminTable-table thead tr {
     position: absolute;
     top: -9999px;
     left: -9999px;
   }
-  .width200 tr {
+  .AdminTable-table tr {
     border: 1px solid #ccc;
   }
-  .width200 td {
+  .AdminTable-table td {
     border: none;
     position: relative;
   }
-  .width200 td:before {
+  .AdminTable-table td:before {
     position: relative;
     font-weight: bold;
   }
-  .width200 td:nth-of-type(1):before {
+  .AdminTable-table td:nth-of-type(1):before {
     content: "Id: ";
   }
-  .width200 td:nth-of-type(2):before {
+  .AdminTable-table td:nth-of-type(2):before {
     content: "Nombres: ";
   }
-  .width200 td:nth-of-type(3):before {
+  .AdminTable-table td:nth-of-type(3):before {
     content: "Apellidos: ";
   }
-  .width200 td:nth-of-type(4):before {
+  .AdminTable-table td:nth-of-type(4):before {
     content: "Telefono: ";
   }
-  .width200 td:nth-of-type(5):before {
+  .AdminTable-table td:nth-of-type(5):before {
     content: "Direccion: ";
   }
-  .width200 td:nth-of-type(6):before {
+  .AdminTable-table td:nth-of-type(6):before {
     content: "Ciudad: ";
   }
-  .width200 td:nth-of-type(7):before {
+  .AdminTable-table td:nth-of-type(7):before {
     content: "Email: ";
   }
 }
 @media screen and (max-width: 1000px) {
-  .IconsHeaderAdminList-container {
-    text-align: center;
-  }
-  .IconsAdmin-container {
+  .HeaderAdminList-icons {
     max-width: 55px;
     margin-right: 0.5em;
     display: inline-block;
+  }
+  .HeaderAdminList-containerIcon {
+    text-align: center;
   }
 }
