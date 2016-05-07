@@ -1,3 +1,7 @@
+.GearDrog {
+  width: 15em;
+  height: 15em;
+}
 .HeaderDrogueriasList {
   background-color: #166ba2;
   height: 28em;
@@ -11,7 +15,6 @@
   max-width 15em
   text-align center**/
 .DrogueriasHeaderImage {
-  width: 100%;
   padding: 0.5em;
   border: solid 4px #f9f9f9;
   border-radius: 50%;

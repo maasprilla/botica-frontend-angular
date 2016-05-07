@@ -12,10 +12,10 @@
 
       $stateProvider
               .state('bienvenido',{
-                  url: 'bienvenido',
+                  url: '/bienvenido',
                   views:{
-                    'encabezado':{
-                       template: '<encabezado/>'
+                    'encabezadosimple':{
+                       template: '<encabezadosimple/>'
                     },
                     'bienvenido':{
                        template: '<bienvenido/>'

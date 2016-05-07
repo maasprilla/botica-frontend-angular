@@ -55,7 +55,7 @@
 .width200 tr:last-child td {
   border-top: 1px solid #ccc;
 }
-.ng-binding {
+.ng-binding.sort-indicator {
   color: #fafafa;
 }
 @media only screen and (max-width: 760px), (min-width: 768px) and (max-width: 1024px) {

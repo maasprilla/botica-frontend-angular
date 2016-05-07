@@ -87,6 +87,7 @@
 }
 .icon-follow {
   display: inline-block;
+  margin-left: 1em;
 }
 .icon-mail4:before {
   content: "\e900";
