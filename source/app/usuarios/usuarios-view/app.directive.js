@@ -5,6 +5,7 @@
 
     ]).directive('usuariosview', usuariosview);
 
+    usuariosview.$inject = [];
     function usuariosview(){
       return{
         scope:{},

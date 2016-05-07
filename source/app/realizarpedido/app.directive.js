@@ -5,6 +5,7 @@
 
   ]).directive('realizarpedido', realizarpedido);
 
+  realizarpedido.$inject = [];
   function realizarpedido(){
     return{
       scope:{},

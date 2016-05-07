@@ -1,3 +1,18 @@
+.HeaderRealizarPedido
+  background-color #166ba2
+  height 28em
+  padding-top 3.6em
+  &-logo
+    text-align center
+    padding-top 1em
+  &-logoImg
+    width 100%
+    border solid 4px #f9f9f9
+    border-radius 50%
+    padding 0.5em
+  &-icons
+    padding 1em 1.5em 1em 0
+
 .RealizarPedidoMajor-container
   background-color #fafafa
   background-repeat no-repeat
@@ -18,6 +33,10 @@
   display inline-block
   border-radius 0.5em
   box-shadow 0.1em 0.1em  #555
+
+.FormRealizarPedido-tittle
+  text-align center
+  padding-bottom 1em
 
 .FormRealizarPedido-input, .FormRealizarPedido-textarea
   border-style none
@@ -52,9 +71,16 @@
 .RealizarPedido-input>label
   color #4385f6
 
+// .RealizarPedido-input
+//   max-height 4.8em
+//   bottom 1.4em
+
 #select_value_label_2
   color #4385f6
   font-weight bold
+  text-align left
+  // top 0.5em
+  bottom 1.3em
 
 // .md-select-value.md-select-placeholder
 //   color #4385f6
@@ -66,3 +92,12 @@ a.md-button.md-default-theme.md-primary, a.md-button.md-primary, .md-button.md-d
 @media (max-width: 522px)
   .FormRealizarPedido
     width 100%
+
+@media screen and (max-width: 1000px)
+  .HeaderRealizarPedido
+    &-icons
+      max-width 55px
+      margin-right 0.5em
+      display inline-block
+    &-containerIcon
+      text-align center

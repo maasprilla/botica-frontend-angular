@@ -16,7 +16,7 @@
       }
     }
 
-    numbersonly.$inject
+    numbersonly.$inject = [];
     function numbersonly(){
       return {
         restrict: 'A',
