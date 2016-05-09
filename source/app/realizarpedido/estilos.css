@@ -75,7 +75,7 @@
 .RealizarPedido-input>label {
   color: #4385f6;
 }
-#select_value_label_2 {
+md-select-value.md-select-value.md-select-placeholder {
   color: #4385f6;
   font-weight: bold;
   text-align: left;
