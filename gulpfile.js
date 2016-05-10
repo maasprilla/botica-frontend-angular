@@ -139,10 +139,10 @@ gulp.task('copyHtml', function() {
 //Copia de Imagenes a Carpeta Producción
 gulp.task('copiarImg',function() {
         gulp.src([
-        './source/img/**/**.*'
+        './source/images/**/**.*'
     ])
     .pipe(imagemin())
-    .pipe(gulp.dest('./dist/img/'));
+    .pipe(gulp.dest('./dist/images/'));
 })
 
 gulp.task('eliminarCss', function() {
