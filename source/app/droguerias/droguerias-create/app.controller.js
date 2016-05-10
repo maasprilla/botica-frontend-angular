@@ -12,7 +12,7 @@
 
     vm.idciudades;
 
-    vm.create=function(){     
+    vm.create=function(){
         vm.usuario.idRol={idRol:'DROG'};
         Ususarios.save(vm.usuario , function() {
                 $location.path('/registrodroguerias');
@@ -20,6 +20,11 @@
                     $mdToast.simple()
                         .textContent('Se ha  guardado el Usuario...')
                         .position('bottom right'));
+                      },function (error) {
+                        $mdToast.show(
+                          $mdToast.simple()
+                          .textContent('el email ya se encuentra registrado')
+                          .position('bottom right'));
         });
     }
 
@@ -33,7 +38,7 @@
 
   }
 
-  
+
 
 
 
