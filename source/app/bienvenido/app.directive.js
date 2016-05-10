@@ -5,12 +5,12 @@
 
     ]).directive('bienvenido', bienvenido);
 
-    home.$inject = [];
+    bienvenido.$inject = [];
     function bienvenido(){
       return{
         scope:{},
         templateUrl:'app/bienvenido/bienvenido.html'
-      };
+      }
     }
 
 })();

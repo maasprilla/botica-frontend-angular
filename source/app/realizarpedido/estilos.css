@@ -1,21 +1,44 @@
-.SectionAdministrarPedido {
-  background-color: #3d9bff;
+.HeaderRealizarPedido {
+  background-color: #166ba2;
+  height: 28em;
+  padding-top: 3.6em;
+}
+.HeaderRealizarPedido-logo {
+  text-align: center;
+  padding-top: 1em;
+}
+.HeaderRealizarPedido-logoImg {
+  width: 100%;
+  border: solid 4px #f9f9f9;
+  border-radius: 50%;
+  padding: 0.5em;
+}
+.HeaderRealizarPedido-icons {
+  padding: 1em 1.5em 1em 0;
+}
+.RealizarPedidoMajor-container {
+  background-color: #fafafa;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   font-family: 'Open Sans';
   text-align: center;
-  padding: 0em 5em;
-  padding-top: 2em;
+  padding-top: 3em;
   padding-bottom: 5em;
 }
 .FormRealizarPedido {
   background-color: #fffafa;
-  padding: 3em;
+  padding: 2em;
   width: 30em;
   font-family: 'Open Sans';
   text-align: center;
   display: inline-block;
+  border-radius: 0.5em;
+  box-shadow: 0.1em 0.1em #555;
+}
+.FormRealizarPedido-tittle {
+  text-align: center;
+  padding-bottom: 1em;
 }
 .FormRealizarPedido-input,
 .FormRealizarPedido-textarea {
@@ -48,4 +71,34 @@
 .AgregarProd-input {
   display: inline-block;
   font-family: 'Open Sans';
+}
+.RealizarPedido-input>label {
+  color: #4385f6;
+}
+md-select-value.md-select-value.md-select-placeholder {
+  color: #4385f6;
+  font-weight: bold;
+  text-align: left;
+  bottom: 1.3em;
+}
+a.md-button.md-default-theme.md-primary,
+a.md-button.md-primary,
+.md-button.md-default-theme.md-primary,
+.md-button.md-primary {
+  color: #4385f6;
+}
+@media (max-width: 522px) {
+  .FormRealizarPedido {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .HeaderRealizarPedido-icons {
+    max-width: 55px;
+    margin-right: 0.5em;
+    display: inline-block;
+  }
+  .HeaderRealizarPedido-containerIcon {
+    text-align: center;
+  }
 }

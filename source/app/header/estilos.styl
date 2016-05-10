@@ -74,12 +74,11 @@ body
   width 15em
   padding 1em
 
-.MainMenu-scrolled   
+.MainMenu-scrolled
     transition all 0.6s ease-out
     background-color: #152836;
     opacity: 0.9;
     transition: background .5s ease-in-out, opacity .5s ease;
-
 
 
 #MainMenu-list>li>a:hover
@@ -89,6 +88,14 @@ body
 #MainMenu-list>li>a:focus
   background snow
   color #3D9BFF
+
+#LoginMovil
+  display none
+#PerfilMovil
+  display none
+#CerrarMovil
+  display none
+
 
 
 
@@ -102,14 +109,25 @@ body
     &-containerIndex
       padding-left 0
       padding-right 0
-  #MainMenu-list>li
+  .MainMenu-list>li
       display inline-block
       float none
 @media (max-width: 767px)
   .MainMenu
     padding-top 0
-  #MainMenu-list>li
-      display block
+  .MainMenu-list>li
+    display block
+  #LoginMovil
+    display block
+  #PerfilMovil
+    display block
+  #CerrarMovil
+    display block
+  #LoginDesktop
+    display none
+  #PerfilDesktop
+    display none
+
 @media (max-width: 695px)
   .Header
     height 28em
@@ -118,6 +136,7 @@ body
     background-repeat no-repeat
     &-content
       height 20em
+
 
 /**
   estilos para los demas headers

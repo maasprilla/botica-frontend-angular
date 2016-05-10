@@ -98,6 +98,15 @@ body {
   background: #fffafa;
   color: #3d9bff;
 }
+#LoginMovil {
+  display: none;
+}
+#PerfilMovil {
+  display: none;
+}
+#CerrarMovil {
+  display: none;
+}
 @media (max-width: 987px) {
   .MainMenu {
     padding-top: 3em;
@@ -111,7 +120,7 @@ body {
     padding-left: 0;
     padding-right: 0;
   }
-  #MainMenu-list>li {
+  .MainMenu-list>li {
     display: inline-block;
     float: none;
   }
@@ -120,8 +129,23 @@ body {
   .MainMenu {
     padding-top: 0;
   }
-  #MainMenu-list>li {
+  .MainMenu-list>li {
     display: block;
+  }
+  #LoginMovil {
+    display: block;
+  }
+  #PerfilMovil {
+    display: block;
+  }
+  #CerrarMovil {
+    display: block;
+  }
+  #LoginDesktop {
+    display: none;
+  }
+  #PerfilDesktop {
+    display: none;
   }
 }
 @media (max-width: 695px) {

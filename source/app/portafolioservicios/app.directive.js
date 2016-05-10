@@ -5,6 +5,7 @@
 
     ]).directive('portafolioservicios', portafolioservicios);
 
+    portafolioservicios.$inject = [];
     function portafolioservicios(){
       return{
         scope:{},

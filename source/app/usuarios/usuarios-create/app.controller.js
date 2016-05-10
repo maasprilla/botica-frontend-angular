@@ -46,6 +46,7 @@
 
   }
 
+  getIdCiudad.$inject = ['id'];
   function getIdCiudad(id){
     var array = id.split('-');
     return array;

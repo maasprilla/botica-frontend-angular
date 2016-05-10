@@ -6,6 +6,7 @@
     ]).directive('passrecover', passrecover)
     .directive('numbersonly', numbersonly);
 
+    passrecover.$inject = [];
     function passrecover(){
       return{
         scope:{},
@@ -15,6 +16,7 @@
       }
     }
 
+    numbersonly.$inject = [];
     function numbersonly(){
       return {
         restrict: 'A',

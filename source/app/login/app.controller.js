@@ -22,7 +22,7 @@
         .then(function(){
           vm.user = {};
           console.info('Sesion Iniciada...');
-          $location.url('/administrarpedido');
+          $location.url('/bienvenido');
           $mdToast.show(
               $mdToast.simple()
                   .textContent('Sesion Iniciada...')

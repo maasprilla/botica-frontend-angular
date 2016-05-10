@@ -1,124 +1,68 @@
-.Nosotros {
+.WelcomeHeader {
+  background-color: #152836;
+}
+.WelcomeMajor-container {
+  padding-top: 3.6em;
+  color: #fafafa;
   font-family: 'Open Sans';
-  background: #152836;
 }
-.Nosotros-container {
-  padding: 2.5em;
+.WelcomeInfo-container {
+  background-color: #152836;
 }
-.UsImage-container {
-  max-width: 27em;
-  padding-top: 1em;
+.SearchButton-container,
+.SearchIcon-container {
+  display: inline-block;
 }
-.UsImage {
-  width: 100%;
-}
-.UsInfo-container {
-  padding-top: 3em;
-  padding-bottom: 2em;
-  text-align: justify;
-}
-.MDHomeLink {
-  color: #f9f9f9;
-}
-.MDHomeLink:hover {
-  color: #000;
-  text-decoration: none;
-}
-.UsTitle,
-.UsText {
-  color: #fafafa;
-}
-.UsLink {
-  color: #fafafa;
-}
-.UsLink:hover {
+.WelcomeLink-buscarDrog {
+  font-family: 'Open Sans';
   color: #166ba2;
+  font-weight: 600;
+}
+.WelcomeLink-buscarDrog:hover {
   text-decoration: none;
+  color: #166ba2;
 }
-.Objetivos {
-/** background-color #3d9bff **/
-  font-family: 'Open Sans';
-}
-.Objetivos-container {
-  padding: 2.5em;
-}
-.ObjetivosInfo-container {
+.welcomesection {
   padding-top: 3em;
   padding-bottom: 2em;
-  text-align: justify;
-}
-.ObjetivosImage-container {
-  max-width: 30em;
-}
-.ObjTitle,
-.ObjText {
-  color: #152836;
-}
-.ObjetivosImage {
-  width: 100%;
-}
-.Beneficios {
+  text-align: center;
   font-family: 'Open Sans';
-  background: #152836;
+  background-color: #f6f6f6;
 }
-.Beneficios-container {
-  padding: 2.5em;
+.WelcomeDescription-image {
+  padding-bottom: 0.7em;
 }
-.BeneficiosImage-container {
-  max-width: 30em;
-  padding-top: 1em;
+.WelcomeDescription-text {
+  font-size: 16px;
+  text-align: justify;
+  padding: 0.5em 0.5em;
 }
-.BenTitle,
-.BenText {
-  color: #fafafa;
-}
-.BeneficiosImage {
-  width: 100%;
-}
-.BeneficiosInfo-container {
+.WelcomeOptions {
   padding-top: 2em;
-  padding-bottom: 2em;
-  text-align: justify;
-}
-.MedioAmbienteHome {
-/** background-color #3d9bff **/
+  padding-bottom: 3em;
+  text-align: center;
   font-family: 'Open Sans';
 }
-.MedioAmbienteHome-container {
-  padding: 2.5em;
+.WelcomeOpt-text {
+  font-size: 16px;
 }
-.MDHomeInfo-container {
-  padding-top: 3em;
-  padding-bottom: 2em;
-  text-align: justify;
+.WelcomeOpt-link {
+  font-size: 16px;
 }
-.MDHomeImage-container {
-  max-width: 30em;
+@media screen and (min-width: 992px) {
+  .WelcomeOpt-centerContainer {
+    border-left: 1px dashed #000;
+    border-right: 1px dashed #000;
+  }
 }
-.MDHomeTitle,
-.MDHomeText {
-  color: #152836;
-}
-.MDHomeLink {
-  color: #152836;
-}
-.MDHomeLink:hover {
-  color: #166ba2;
-  text-decoration: none;
-}
-.MDHomeImage {
-  width: 100%;
-}
-.UsTitle,
-.ObjTitle,
-.BenTitle,
-.MDHomeTitle {
-  font-size: 46px;
-}
-.UsText,
-.ObjText,
-.BenText,
-.MDHomeText {
-  font-size: 18px;
-  font-weight: 300;
+@media screen and (max-width: 991px) {
+  .WelcomeOpt-contentContainer {
+    padding: 1.5em 0;
+  }
+  .WelcomeOpt-centerContainer {
+    padding: 1.5em 5em;
+    border-top: 1px dashed #000;
+    border-bottom: 1px dashed #000;
+    display: inline-block;
+  }
 }
