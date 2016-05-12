@@ -31,17 +31,18 @@
                 page: 1,
                 count: 5
             }, {
-                total: vm.info.length, 
+                counts: [5,10,20,50,100],
+                total: vm.info.length,
                 getData: function ($defer, params) {
                     vm.data = vm.info.slice((params.page() - 1) * params.count(), params.page() * params.count());
                     $defer.resolve(vm.data);
                     console.log(vm.data);
                 }
             });
-          
+
         });
 
-      }  
+      }
 
 
 
