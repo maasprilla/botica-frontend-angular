@@ -9,6 +9,7 @@
         'ngMaterial',
         'satellizer',
         'ngTable',
+        'angularFileUpload',
         //'templates',
         'app.config',
         'app.footer',
