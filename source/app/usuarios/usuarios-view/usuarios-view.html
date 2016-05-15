@@ -36,6 +36,17 @@
         <div>Cambiar Foto de Perfil</div>
         <input type="file" value="Search" accept="image/png, image/jpg, image/jpeg," class="well my-drop-zone" nv-file-select=""  uploader="vm.uploader"/>
       </div>
+      <ul>
+
+        <ul>
+            <li ng-repeat="item in vm.uploader.queue">
+                Name: <span ng-bind="item.file.name"></span><br/>
+                <button ng-click="item.upload()">upload</button>
+                <button ng-click="vm.info()">upload</button>
+            </li>
+        </ul>
+            
+        </ul>
       <article class="FormPerfilUser-info">
             <h3 class="FormPerfilUser-tittle">Perfil De Usuario</h3>
 

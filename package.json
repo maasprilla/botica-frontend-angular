@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "express": "^4.13.4",
+    "nodemailer": "^2.4.1",
     "satellizer": "^0.14.0"
   }
 }
