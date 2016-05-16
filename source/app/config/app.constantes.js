@@ -6,6 +6,7 @@
   ]).constant('BASEURL',
 
 
+
     'http://localhost:43096/botica-backend-java/webresources')
 
 

@@ -29,14 +29,15 @@
   </div>
 </section>
     <article class="FormPerfilDrog">
-      <figure class="FormPerfilDrog-img">
-        <p>Imagen</p>
-      </figure>
+      <div  class="dropzone FormPerfilUser-img">
+        <div>Cambiar Foto de Perfil</div>
+        <input type="file" value="Search" accept="image/png, image/jpg, image/jpeg," class="well my-drop-zone" nv-file-select=""  uploader="vm.uploader"/>
+      </div>
       <article class="FormPerfilDrog-info">
             <h3 class="FormPerfilDrog-tittle">Perfil De Droguerías</h3>
 
           <div class="FormPerfilDrog-label">
-
+            <div>
             <md-input-container class=" FormPerfilDrog-input">
               <label>Nombre</label>
               <input md-maxlength="30" required md-no-asterisk name="nombre" ng-model="vm.usuario.nombre" ng-disabled="true">
@@ -45,10 +46,10 @@
                 <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
               </div>
             </md-input-container>
-            <label class="FormPerfilDrog-edit">Editar</label>
+            <label class="FormPerfilDrog-edit"  onclick="habilitarinput(this);">Editar</label>
+          </div>
 
-
-
+          <div>
             <md-input-container class=" FormPerfilDrog-input">
               <label>Apellido</label>
               <input md-maxlength="30" required md-no-asterisk name="apellido" ng-model="vm.usuario.apellido" ng-disabled="true">
@@ -57,19 +58,22 @@
                 <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
               </div>
             </md-input-container>
-            <label class="FormPerfilDrog-edit">Editar</label>
+            <label class="FormPerfilDrog-edit"  onclick="habilitarinput(this);">Editar</label>
+          </div>
 
+            <div>
             <md-input-container class=" FormPerfilDrog-input">
               <label>Cedula</label>
               <input md-maxlength="10" required md-no-asterisk name="cedula" ng-model="vm.usuario.dni" ng-disabled="true" numbersonly >
               <div ng-messages="FormRegistroUsuarios.cedula.$error">
                 <div ng-message="required">This is required.</div>
                 <div ng-message="md-maxlength">The name has to be less than 10 characters long.</div>
-
               </div>
             </md-input-container>
-            <label class="FormPerfilDrog-edit">Editar</label>
+            <label class="FormPerfilDrog-edit"  onclick="habilitarinput(this);">Editar</label>
+          </div>
 
+          <div>
             <md-input-container class=" FormPerfilDrog-input">
             <label>Email</label>
             <input required type="email" name="email" ng-model="vm.usuario.email"
@@ -80,8 +84,10 @@
               </div>
             </div>
             </md-input-container>
-            <label class="FormPerfilDrog-edit">Editar</label>
+            <label class="FormPerfilDrog-edit" onclick="habilitarinput(this);">Editar</label>
+          </div>
 
+          <div>
             <md-input-container class=" FormPerfilDrog-input">
               <label>Telefono</label>
               <input md-maxlength="10" required md-no-asterisk name="telefono" ng-model="vm.usuario.telefono" ng-disabled="true" numbersonly>
@@ -91,8 +97,10 @@
 
               </div>
             </md-input-container>
-            <label class="FormPerfilDrog-edit">Editar</label>
+            <label class="FormPerfilDrog-edit" onclick="habilitarinput(this);">Editar</label>
+          </div>
 
+          <div>
             <md-input-container class=" FormPerfilDrog-input">
               <label>Direccion</label>
               <input md-maxlength="30" required md-no-asterisk name="direccion" ng-model="vm.usuario.direccion" ng-disabled="true">
@@ -101,8 +109,10 @@
                 <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
               </div>
             </md-input-container>
-            <label class="FormPerfilDrog-edit">Editar</label>
+            <label class="FormPerfilDrog-edit"onclick="habilitarinput(this);">Editar</label>
+          </div>
 
+          <div>
             <md-input-container class=" FormPerfilDrog-input">
                 <label>Ciudad</label>
                 <input md-maxlength="30" required md-no-asterisk name="ciudad" ng-model="vm.usuario.ciudad" ng-disabled="true">
@@ -113,9 +123,9 @@
                     </md-option>
                 </md-select>-->
             </md-input-container>
-            <label class="FormPerfilDrog-edit">Editar</label>
+            <label class="FormPerfilDrog-edit" onclick="habilitarinput(this);">Editar</label>
 
-            <div>
+          </div>
 
       </article>
     </article>

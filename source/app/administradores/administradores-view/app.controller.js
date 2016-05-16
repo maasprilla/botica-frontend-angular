@@ -5,10 +5,12 @@
   ]).controller('administradoresViewCtrl', administradoresViewCtrl);
 
 
-  administradoresViewCtrl.$inject = ['$stateParams','$location', '$mdToast','Usuarios'];
-  function administradoresViewCtrl($stateParams, $location, $mdToast, Usuarios){
-         this.usuario = Usuarios.get({idUsuario: $stateParams.idUsuario });
-         console.log(this.usuario);
+  administradoresViewCtrl.$inject = ['$stateParams','$location', '$mdToast','Usuarios', 'FileUploader'];
+  function administradoresViewCtrl($stateParams, $location, $mdToast, Usuarios, FileUploader){
+        var vm=this;
+         vm.usuario = Usuarios.get({idUsuario: $stateParams.idUsuario });
+         console.log(vm.usuario);
+         vm.uploader = new FileUploader();
     }
 
 })();
