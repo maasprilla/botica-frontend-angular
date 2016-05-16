@@ -41,8 +41,8 @@
           <label>Nombre</label>
           <input md-maxlength="30" required md-no-asterisk name="nombre" ng-model="vm.usuario.nombre">
           <div ng-messages="FormRegistroDroguerias.nombre.$error">
-            <div ng-message="required">This is required.</div>
-            <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+            <div ng-message="required">Este campo no puede estar vacio.</div>
+            <div ng-message="md-maxlength">El Nombre no puede tener mas de 30 caracteres.</div>
           </div>
         </md-input-container>
 
@@ -53,7 +53,7 @@
                minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
         <div ng-messages="FormRegistroDroguerias.clientEmail.$error" role="alert">
           <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
-            Your email must be between 10 and 100 characters long and look like an e-mail address.
+            Su correo electrónico debe tener entre 10 y 100 caracteres de longitud y ser un formato de correo valido example@example.com.
           </div>
         </div>
         </md-input-container>
@@ -62,8 +62,8 @@
           <label>Telefono</label>
           <input md-maxlength="10" required md-no-asterisk name="telefono" ng-model="vm.usuario.telefono" numbersonly>
           <div ng-messages="FormRegistroDroguerias.telefono.$error">
-            <div ng-message="required">This is required.</div>
-            <div ng-message="md-maxlength">The name has to be less than 10 characters long.</div>
+            <div ng-message="required">Este campo no puede estar vacio.</div>
+            <div ng-message="md-maxlength">El Telefono no puede tener mas de 10 caracteres.</div>
 
           </div>
         </md-input-container>
@@ -72,8 +72,8 @@
           <label>Direccion</label>
           <input md-maxlength="30" required md-no-asterisk name="direccion" ng-model="vm.usuario.direccion">
           <div ng-messages="FormRegistroDroguerias.direccion.$error">
-            <div ng-message="required">This is required.</div>
-            <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+            <div ng-message="required">Este campo no puede estar vacio.</div>
+            <div ng-message="md-maxlength">La Direccion no puede tener mas de 30 caracteres.</div>
           </div>
         </md-input-container>
 
@@ -99,8 +99,8 @@
           <label>Nit</label>
           <input md-maxlength="30" required md-no-asterisk name="nit" ng-model="vm.usuario.nit">
           <div ng-messages="FormRegistroDroguerias.nit.$error">
-            <div ng-message="required">This is required.</div>
-            <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+            <div ng-message="required">Este campo no puede estar vacio.</div>
+            <div ng-message="md-maxlength">El Nit no puede tener mas de 30 caracteres.</div>
           </div>
         </md-input-container>
 
@@ -108,8 +108,8 @@
           <label>Camara de Comercio</label>
           <input md-maxlength="30" required md-no-asterisk name="camaracomercio" ng-model="vm.usuario.camaracomercio">
           <div ng-messages="FormRegistroDroguerias.camaracomercio.$error">
-            <div ng-message="required">This is required.</div>
-            <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+            <div ng-message="required">Este campo no puede estar vacio.</div>
+            <div ng-message="md-maxlength">La Camara y Comercio no puede tener mas de 30 caracteres.</div>
           </div>
         </md-input-container>
 
@@ -117,8 +117,8 @@
           <label>Invima</label>
           <input md-maxlength="30" required md-no-asterisk name="invima" ng-model="vm.usuario.invima">
           <div ng-messages="FormRegistroDroguerias.invima.$error">
-            <div ng-message="required">This is required.</div>
-            <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+            <div ng-message="required">Este campo no puede estar vacio.</div>
+            <div ng-message="md-maxlength">El Invima no puede tener mas de 30 caracteres.</div>
           </div>
         </md-input-container>
 
@@ -127,7 +127,7 @@
           <label>Password</label>
           <input required type="password" name="password" ng-model="vm.usuario.password">
           <div ng-messages="FormRegistroDroguerias.password.$error">
-            <div ng-message="required">This is required.</div>
+            <div ng-message="required">Este campo no puede estar vacio.</div>
           </div>
         </md-input-container>
 
