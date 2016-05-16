@@ -9,6 +9,7 @@
         'ngMaterial',
         'satellizer',
         'ngTable',
+        'angularFileUpload',
         //'templates',
         'app.config',
         'app.footer',
@@ -23,7 +24,8 @@
         'app.realizarpedido',
         'app.medioambiente',
         'app.portafolioservicios',
-        'app.bienvenido'
+        'app.bienvenido',
+        'app.password.recovery'
     ]);
 
 })();
