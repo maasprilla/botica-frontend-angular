@@ -10,8 +10,7 @@
 
     var vm=this;
 
-    vm.usuario = Usuarios.get({idUsuario: $stateParams.idUsuario });
-    console.log(vm.usuario);
+
 
     vm.enviar=function(){
 
@@ -24,7 +23,7 @@
                       },function (error) {
                         $mdToast.show(
                           $mdToast.simple()
-                          .textContent('el email ya se encuentra registrado')
+                          .textContent('Se Enviado Un email a tu correo Electronico...')
                           .position('bottom right'));
 
             });

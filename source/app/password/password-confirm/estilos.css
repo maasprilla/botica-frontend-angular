@@ -1,58 +1,46 @@
-.passrecovery {
+.passconfirm {
   background-color: #166ba2;
   height: 28em;
   padding-top: 3.6em;
 }
-.passrecovery-logo {
+.passconfirm-logo {
   text-align: center;
   padding-top: 1em;
 }
-.passrecovery-logoImg {
+.passconfirm-logoImg {
   width: 100%;
   border: solid 4px #f9f9f9;
   border-radius: 50%;
   height: 15em;
   width: 15em;
 }
-.passrecovery-icons {
+.passconfirm-icons {
   padding: 1em 1.5em 1em 0;
   display: inline-block;
 }
-.passrecoveryForm {
+.passconfirm-form {
   text-align: center;
-  padding-top: 5em;
-  padding-bottom: 5em;
 }
-.passrecoveryForm-form {
-  display: inline-block;
-  box-shadow: 0.1em 0.1em #555;
-  padding: 5em;
-  padding-top: 1.5em;
-  border-radius: 0.5em;
-}
-.passrecoveryForm-title {
-  margin-bottom: 2em;
-}
-/**.passrecovery-containerIcon
+/**.passconfirm-containerIcon
   display inline-block **/
 @media screen and (min-width: 201px) and (max-width: 1000px) {
-  .passrecovery-icons {
+  .passconfirm-icons {
     max-width: 55px;
     margin-right: 0.5em;
     display: inline-block;
   }
-  .passrecovery-containerIcon {
+  .passconfirm-containerIcon {
     text-align: center;
 /**display inline-block**/
   }
 }
 @media screen and (max-width: 200px) {
-  .passrecovery-icons {
+  .passconfirm-icons {
     max-width: 18px;
     margin-right: 0.5em;
     display: inline-block;
   }
-  .passrecovery-containerIcon {
+  .passconfirm-containerIcon {
     text-align: center;
   }
 }

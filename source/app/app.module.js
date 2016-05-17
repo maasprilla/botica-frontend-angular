@@ -25,7 +25,8 @@
         'app.medioambiente',
         'app.portafolioservicios',
         'app.bienvenido',
-        'app.password.recovery'
+        'app.password.recovery',
+        'app.password.confirm'
     ]);
 
 })();
