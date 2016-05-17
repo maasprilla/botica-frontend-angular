@@ -11,7 +11,17 @@
          vm.usuario = Usuarios.get({idUsuario: $stateParams.idUsuario });
          console.log(vm.usuario);
          vm.uploader = new FileUploader();
-         
+
+         vm.update = function() {
+             Usuarios.update(vm.usuario, function() {
+                 //$location.path('/categorias');
+                 $mdToast.show(
+                     $mdToast.simple()
+                         .textContent('Se ha  actualizado el usuario...')
+                         .position('bottom right'));
+             });
+         }
+
     }
 
 })();
