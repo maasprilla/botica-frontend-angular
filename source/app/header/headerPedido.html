@@ -10,11 +10,10 @@
         <span class="icon-bar" style="background: #fafafa"></span>
       </div>
       <a class="navbar-brand MainMenuSecundary-linkLogo" href="/" ><figure class="MainMenu-logo"><img src="./images/logo.png" /></figure></a>
-
     </div>
 
     <!-- view desktop -->
-    <div id="bs-example-navbar-collapse-1" class="navbar-collapse collapse MainMenu-container">
+    <!-- <div id="bs-example-navbar-collapse-1" class="navbar-collapse collapse MainMenu-container">
 
 
             <ul id="MainMenuSecundary-list" class="nav navbar-nav navbar-right MainMenuSecundary-list">
@@ -37,7 +36,37 @@
 
             </ul>
     </div>
+  </div> -->
+
+
+  <div id="bs-example-navbar-collapse-1" class="navbar-collapse collapse MainMenu-containerIndex">
+
+
+
+    <ul id="MainMenu-list" class="nav navbar-nav navbar-right MainMenu-list">
+
+      <!-- <li ng-show="vm.isAuthenticated()" class="MainMenu-item"><a href="" class="MainMenu-link">{{vm.getCurrentUser()}}</a></li>
+      <li id="PerfilMovil" ng-show="vm.isAuthenticated()" class="MainMenu-item"><a href="#/usuariosview/{{vm.getIdCurrentUser()}}" class="MainMenu-link">Ver Perfil</a></li> -->
+
+      <li id="PerfilDesktop"  class="MainMenu-item">
+         <li ng-show="vm.isAuthenticated()" class="MainMenu-item"><a href="" class="MainMenu-link">{{vm.getCurrentUser()}}</a></li>
+         <li class="MainMenu-item"><a  href="#/realizarpedido">Realizar Pedido</a></li>
+        <span class="glyphicon glyphicon-user" onclick="showOptions()" style="font-size:40px; top:0; background-color:#e7e7e7; padding:5px"></span>
+          <div id="Options" class="Options z-depth-1">
+            <div class="OptSelect">
+              <a href="#/usuariosview/{{vm.getIdCurrentUser()}}" class="ViewProfile" style="color:#3D9BFF">Ver perfil</a>
+            </div>
+            <div class="OptSelect2" style="border-top: 6px solid #e7e7e7">
+              <a href="" class="MainMenu-link MainMenu-linkLogOut"  ng-click="vm.logout()" style="color:#3D9BFF">Cerrar Sesion</a>
+            </div>
+
+      </li>
+    </ul>
+
+
   </div>
+</div>
+
 </div>
 
 
