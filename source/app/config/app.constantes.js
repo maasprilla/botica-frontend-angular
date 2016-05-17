@@ -6,7 +6,7 @@
   ]).constant('BASEURL',
 
 
-    'http://localhost:31409/botica/webresources')
+    'http://localhost:8080/botica_backend/webresources')
 
 
 

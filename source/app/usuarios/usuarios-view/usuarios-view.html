@@ -2,12 +2,12 @@
 <section class="HeaderUserView">
   <div class="container">
     <div class="row">
-      <div class="col-md-4">        
+      <div class="col-md-4">
       </div>
       <div class="col-md-4 HeaderUserView-logo">
           <img src="./images/k.png" alt="Usuarios" class="HeaderUserView-logoImg" style="max-width:15em">
       </div>
-      <div class="col-md-4">        
+      <div class="col-md-4">
       </div>
     </div>
   </div>
@@ -29,15 +29,31 @@
   </div>
 </section>
     <article class="FormPerfilUser">
-      <figure class="FormPerfilUser-img">
-        <p>Imagen</p>
-      </figure>
+
+
+
+      <div  class="dropzone FormPerfilUser-img">
+        <div>Cambiar Foto de Perfil</div>
+        <input type="file" value="Search" accept="image/png, image/jpg, image/jpeg," class="well my-drop-zone" nv-file-select=""  uploader="vm.uploader"/>
+      </div>
+      <ul>
+
+        <ul>
+            <li ng-repeat="item in vm.uploader.queue">
+                Name: <span ng-bind="item.file.name"></span><br/>
+                <button ng-click="item.upload()">upload</button>
+                <button ng-click="vm.info()">upload</button>
+            </li>
+        </ul>
+
+        </ul>
       <article class="FormPerfilUser-info">
             <h3 class="FormPerfilUser-tittle">Perfil De Usuario</h3>
 
           <div class="FormPerfilUser-label">
 
-            <md-input-container class=" FormPerfilUser-input">
+            <div>
+            <md-input-container class=" FormPerfilUser-input" >
               <label>Nombre</label>
               <input md-maxlength="30" required md-no-asterisk name="nombre" ng-model="vm.usuario.nombre" ng-disabled="true">
               <div ng-messages="FormRegistroUsuarios.nombre.$error">
@@ -45,10 +61,11 @@
                 <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
               </div>
             </md-input-container>
-            <label class="FormPerfilUser-edit">Editar</label>
+            <label class="FormPerfilUser-edit" onclick="habilitarinput(this);">Editar</label>
+          </div>
 
 
-
+          <div>
             <md-input-container class=" FormPerfilUser-input">
               <label>Apellido</label>
               <input md-maxlength="30" required md-no-asterisk name="apellido" ng-model="vm.usuario.apellido" ng-disabled="true">
@@ -57,19 +74,22 @@
                 <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
               </div>
             </md-input-container>
-            <label class="FormPerfilUser-edit">Editar</label>
+            <label class="FormPerfilUser-edit" onclick="habilitarinput(this);">Editar</label>
+          </div>
 
+          <div>
             <md-input-container class=" FormPerfilUser-input">
               <label>Cedula</label>
               <input md-maxlength="10" required md-no-asterisk name="cedula" ng-model="vm.usuario.dni" ng-disabled="true" numbersonly >
               <div ng-messages="FormRegistroUsuarios.cedula.$error">
                 <div ng-message="required">This is required.</div>
                 <div ng-message="md-maxlength">The name has to be less than 10 characters long.</div>
-
               </div>
             </md-input-container>
-            <label class="FormPerfilUser-edit">Editar</label>
+            <label class="FormPerfilUser-edit" onclick="habilitarinput(this);">Editar</label>
+          </div>
 
+          <div>
             <md-input-container class=" FormPerfilUser-input">
             <label>Email</label>
             <input required type="email" name="email" ng-model="vm.usuario.email"
@@ -80,8 +100,10 @@
               </div>
             </div>
             </md-input-container>
-            <label class="FormPerfilUser-edit">Editar</label>
+            <label class="FormPerfilUser-edit" onclick="habilitarinput(this);">Editar</label>
+          </div>
 
+          <div>
             <md-input-container class=" FormPerfilUser-input">
               <label>Telefono</label>
               <input md-maxlength="10" required md-no-asterisk name="telefono" ng-model="vm.usuario.telefono" ng-disabled="true" numbersonly>
@@ -91,8 +113,10 @@
 
               </div>
             </md-input-container>
-            <label class="FormPerfilUser-edit">Editar</label>
+            <label class="FormPerfilUser-edit" onclick="habilitarinput(this);">Editar</label>
+          </div>
 
+            <div>
             <md-input-container class=" FormPerfilUser-input">
               <label>Direccion</label>
               <input md-maxlength="30" required md-no-asterisk name="direccion" ng-model="vm.usuario.direccion" ng-disabled="true">
@@ -101,8 +125,10 @@
                 <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
               </div>
             </md-input-container>
-            <label class="FormPerfilUser-edit">Editar</label>
+            <label class="FormPerfilUser-edit" onclick="habilitarinput(this);">Editar</label>
+          </div>
 
+            <div>
             <md-input-container class=" FormPerfilUser-input">
                 <label>Ciudad</label>
                 <input md-maxlength="30" required md-no-asterisk name="ciudad" ng-model="vm.usuario.ciudad" ng-disabled="true">
@@ -113,9 +139,9 @@
                     </md-option>
                 </md-select>-->
             </md-input-container>
-            <label class="FormPerfilUser-edit">Editar</label>
+            <label class="FormPerfilUser-edit" onclick="habilitarinput(this);">Editar</label>
 
-            <div>
+          </div>
 
       </article>
     </article>
