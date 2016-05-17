@@ -10,8 +10,7 @@
 
     var vm=this;
 
-    vm.usuario = Usuarios.get({idUsuario: $stateParams.idUsuario });
-    console.log(vm.usuario);
+
 
     vm.enviar=function(){
 
