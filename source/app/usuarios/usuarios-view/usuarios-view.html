@@ -28,9 +28,9 @@
     </div>
   </div>
 </section>
-    <article class="FormPerfilUser">
+    <section >
 
-
+      <form  name="FormUsuariosView" class="FormPerfilUser"  ng-submit="vm.update()">
 
       <div  class="dropzone FormPerfilUser-img">
         <div>Cambiar Foto de Perfil</div>
@@ -62,7 +62,7 @@
               </div>
             </md-input-container>
             <label class="FormPerfilUser-edit" onclick="habilitarinput(this);">Editar</label>
-            <button class="FormPerfilUser-button">Guardar</button>
+            <button type="submit" class="FormPerfilUser-button" >Guardar</button>
           </div>
 
 
@@ -150,6 +150,8 @@
 
           </div>
 
+        </form>
+
       </article>
-    </article>
+    </section>
 </section>
