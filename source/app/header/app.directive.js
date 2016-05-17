@@ -6,7 +6,8 @@
   ]).directive('encabezado', encabezado)
   .directive('encabezadosimple', encabezadosimple)
   .directive('encabezadoportafolio', encabezadoportafolio)
-  .directive('encabezadoambiental', encabezadoambiental);
+  .directive('encabezadoambiental', encabezadoambiental)
+  .directive('encabezadopedido', encabezadopedido);
 
   encabezado.$inject = [];
   function encabezado(){
@@ -41,6 +42,14 @@ function encabezadoambiental(){
   return {
     scope:{},
     templateUrl: 'app/header/headerambiental.html'
+};
+}
+
+encabezadopedido.$inject = [];
+function encabezadopedido(){
+  return {
+    scope:{},
+    templateUrl: 'app/header/headerPedido.html'
 };
 }
 

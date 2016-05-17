@@ -10,6 +10,7 @@
         <span class="icon-bar" style="background: #fafafa"></span>
       </div>
       <a class="navbar-brand MainMenuSecundary-linkLogo" href="/" ><figure class="MainMenu-logo"><img src="./images/logo.png" /></figure></a>
+      <li ng-show="!vm.isAuthenticated()" class="MainMenu-item"><a href="#/regisdrog" class="MainMenu-link" >Registrar Droguerias</a></li>
     </div>
 
     <!-- view desktop -->
@@ -17,6 +18,7 @@
 
 
             <ul id="MainMenuSecundary-list" class="nav navbar-nav navbar-right MainMenuSecundary-list">
+              <li class="MainMenu-item"><a  href="#/realizarpedido">Realizar Pedido</a></li>
               <li id="LoginDesktop" ng-show="!vm.isAuthenticated()" class="MainMenu-item"><a href="" onclick="showLogin()" class="MainMenu-link">Iniciar Sesion▼</a>
                 <div id="PanelLogin" class="PanelLogin z-depth-1">
                   <form name="loginDespForm" class="PanelLogin-form" ng-submit="vm.signIn()">
