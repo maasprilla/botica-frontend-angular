@@ -1,0 +1,65 @@
+.passconfirm {
+  background-color: #166ba2;
+  height: 28em;
+  padding-top: 3.6em;
+}
+.passconfirm-logo {
+  text-align: center;
+  padding-top: 1em;
+}
+.passconfirm-logoImg {
+  width: 100%;
+  border: solid 4px #f9f9f9;
+  border-radius: 50%;
+  height: 15em;
+  width: 15em;
+}
+.passconfirm-icons {
+  padding: 1em 1.5em 1em 0;
+  display: inline-block;
+}
+.passconfirm-form {
+  text-align: center;
+}
+.passconfirmForm-form{
+  display: inline-block;
+  box-shadow: 0.1em 0.1em #555;
+  padding: 5em;
+  padding-top: 1.5em;
+  border-radius: 0.5em;
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+
+}
+.passconfirmForm{
+  text-align: center;
+  padding-top: 2em;
+  padding-bottom: 1em;
+}
+
+
+
+/**.passconfirm-containerIcon
+  display inline-block **/
+  @media screen and (min-width: 201px) and (max-width: 1000px) {
+    .passconfirm-icons {
+      max-width: 55px;
+      margin-right: 0.5em;
+      display: inline-block;
+    }
+    .passconfirm-containerIcon {
+      text-align: center;
+  /**display inline-block**/
+    }
+  }
+  @media screen and (max-width: 200px) {
+    .passconfirm-icons {
+      max-width: 18px;
+      margin-right: 0.5em;
+      display: inline-block;
+    }
+    .passconfirm-containerIcon {
+      text-align: center;
+    }
+  }

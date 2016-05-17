@@ -1,12 +1,12 @@
 (function(){
   'use strict';
 
-  angular.module('app.password.recovery.controller', [
-  ]).controller('passRecoveryCtrl', passRecoveryCtrl);
+  angular.module('app.password.confirm.controller', [
+  ]).controller('passConfirmCtrl', passConfirmCtrl);
 
 
-  passRecoveryCtrl.$inject = ['$location', '$mdToast', '$stateParams', 'RecoveryPass', 'Usuarios'];
-  function passRecoveryCtrl($location, $mdToast, $stateParams,RecoveryPass, Usuarios){
+  passConfirmCtrl.$inject = ['$location', '$mdToast', '$stateParams', 'ConfirmPass', 'Usuarios'];
+  function passConfirmCtrl($location, $mdToast, $stateParams,ConfirmPass, Usuarios){
 
     var vm=this;
 
@@ -15,16 +15,16 @@
 
     vm.enviar=function(){
 
-        RecoveryPass.save(vm.recovery, function() {
+        ConfirmPass.save(vm.confirm, function() {
                 $location.path('/');
                 $mdToast.show(
                     $mdToast.simple()
-                        .textContent('Se Enviado Un email a tu correo Electronico...')
+                        .textContent('Su contraseña ha sido cambiada')
                         .position('bottom right'));
                       },function (error) {
                         $mdToast.show(
                           $mdToast.simple()
-                          .textContent('Se Enviado Un email a tu correo Electronico...')
+                          .textContent('Su contraseña no ha sido cambiada')
                           .position('bottom right'));
 
             });

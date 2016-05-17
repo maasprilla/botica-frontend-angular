@@ -1,3 +1,16 @@
+.PortaHeaderMajor-container {
+  padding-top: 5em;
+  padding-bottom: 2em;
+}
+section.PortaHeaderMajor-container>div.container>div.jumbotron {
+  background: #152836;
+}
+div.jumbotron>h1.PortaHeader-title {
+  color: #fff;
+}
+.PortaHeader-text {
+  color: #fff;
+}
 div.PortafolioMainMenu {
   font-family: 'Open Sans';
   background-color: #4385f6;
@@ -13,13 +26,20 @@ div.navbar-collapse ul.nav li a:hover {
   color: #fff;
 }
 .IdentidadMajor-container {
-  padding: 2em 0.5em 2em 0.5em;
+  padding: 0 0.5em 2em 0.5em;
   background-color: #fff;
 }
 .Identidad-title {
-  padding-top: 2em;
-  padding-bottom: 1.5em;
+/**padding-top 2em**/
+  padding-bottom: 0.5em;
   font-family: 'Open Sans';
+}
+.TeamDescription-text {
+  font-family: 'Open Sans';
+  font-size: 16px;
+  font-weight: 300;
+  color: #252525;
+  padding-top: 1em;
 }
 div.IdentidadContainer ul.Identidad-item li {
   font-family: 'Open Sans';
@@ -105,26 +125,25 @@ div.ProductoContainer h2 {
   color: #252525;
   text-align: justify;
 }
-.Brand {
-  text-align: center;
-  background-color: #eaf3f8;
-}
-.Brand-logo {
-/** background-color #00aeef **/
-  background-color: #152836;
-  padding-top: 2em;
-  padding-bottom: 1em;
-  opacity: 0.7;
-/** border-bottom solid 1px black **/
-}
-.Brand-text {
-  margin-top: 0;
-  padding-top: 0.3em;
-  padding-bottom: 1em;
-  font-family: 'Open Sans';
-  font-weight: 500;
-  color: #000;
-}
+/**.Brand
+	text-align center
+	background-color #eaf3f8
+
+.Brand-logo
+	background-color #00aeef
+	background-color #152836
+	padding-top 2em
+	padding-bottom 1em
+	opacity 0.7
+	border-bottom solid 1px black
+
+.Brand-text
+	margin-top 0
+	padding-top 0.3em
+	padding-bottom 1em
+	font-family 'Open Sans'
+	font-weight 500
+	color black**/
 .PortafolioFooter {
 /** background-color #546d87 **/
   background-color: #152836;

@@ -16,6 +16,7 @@
 }
 .passrecovery-icons {
   padding: 1em 1.5em 1em 0;
+  display: inline-block;
 }
 .passrecoveryForm {
   text-align: center;
@@ -32,9 +33,22 @@
 .passrecoveryForm-title {
   margin-bottom: 2em;
 }
-@media screen and (max-width: 1000px) {
+/**.passrecovery-containerIcon
+  display inline-block **/
+@media screen and (min-width: 201px) and (max-width: 1000px) {
   .passrecovery-icons {
     max-width: 55px;
+    margin-right: 0.5em;
+    display: inline-block;
+  }
+  .passrecovery-containerIcon {
+    text-align: center;
+/**display inline-block**/
+  }
+}
+@media screen and (max-width: 200px) {
+  .passrecovery-icons {
+    max-width: 18px;
     margin-right: 0.5em;
     display: inline-block;
   }
