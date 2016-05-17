@@ -5,10 +5,13 @@
   ]).controller('passRecoveryCtrl', passRecoveryCtrl);
 
 
-  passRecoveryCtrl.$inject = ['$location', '$mdToast', 'RecoveryPass'];
-  function passRecoveryCtrl($location, $mdToast, RecoveryPass){
+  passRecoveryCtrl.$inject = ['$location', '$mdToast', '$stateParams', 'RecoveryPass', 'Usuarios'];
+  function passRecoveryCtrl($location, $mdToast, $stateParams,RecoveryPass, Usuarios){
 
     var vm=this;
+
+    vm.usuario = Usuarios.get({idUsuario: $stateParams.idUsuario });
+    console.log(vm.usuario);
 
     vm.enviar=function(){
 
