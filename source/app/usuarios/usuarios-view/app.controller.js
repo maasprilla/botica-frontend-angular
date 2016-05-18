@@ -9,8 +9,25 @@
   function usuariosViewCtrl($stateParams, $location, $mdToast, Usuarios, FileUploader){
     var vm=this;
          vm.usuario = Usuarios.get({idUsuario: $stateParams.idUsuario });
-         console.log(vm.usuario);
          vm.uploader = new FileUploader();
-    }
+
+         vm.info=function(){
+          console.log('info');
+          console.log(vm.uploader.queue);
+        }
+
+
+        vm.update = function() {
+            Usuarios.update(vm.usuario, function() {
+                //$location.path('/categorias');
+                $mdToast.show(
+                    $mdToast.simple()
+                        .textContent('Se ha  actualizado el usuario...')
+                        .position('bottom right'));
+            });
+        }
+
+  }
+
 
 })();

@@ -10,6 +10,7 @@
         'satellizer',
         'ngTable',
         'angularFileUpload',
+        'uiGmapgoogle-maps',
         //'templates',
         'app.config',
         'app.footer',
@@ -24,7 +25,10 @@
         'app.realizarpedido',
         'app.medioambiente',
         'app.portafolioservicios',
-        'app.bienvenido'
+        'app.bienvenido',
+        'app.password.recovery',
+        'app.password.confirm',
+        'app.geolocalizacion'
     ]);
 
 })();
