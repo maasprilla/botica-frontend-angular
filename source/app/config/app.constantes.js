@@ -10,8 +10,6 @@
 
 
 
-    'http://localhost:8080/botica_backend/webresources')
-
     .config(configure);
 
     configure.$inject = ['$authProvider', 'BASEURL'];

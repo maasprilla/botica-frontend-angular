@@ -66,6 +66,16 @@ function encabezadopedido(){
 };
 }
 
+encabezadouser.$inject = [];
+function encabezadouser(){
+  return {
+    scope:{},
+    templateUrl: 'app/header/headeruser.html',
+    controller:'LoginController',
+    controllerAs:'vm'
+};
+}
+
 
 
 

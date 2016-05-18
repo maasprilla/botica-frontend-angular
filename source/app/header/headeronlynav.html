@@ -10,7 +10,6 @@
         <span class="icon-bar" style="background: #fafafa"></span>
       </div>
       <a class="navbar-brand MainMenuSecundary-linkLogo" href="#/bienvenido" ><figure class="MainMenu-logo"><img src="./images/logo.png" /></figure></a>
-      <li ng-show="!vm.isAuthenticated()" class="MainMenu-item"><a href="#/regisdrog" class="MainMenu-link" >Registrar Droguerias</a></li>
     </div>
 
     <!-- view desktop -->
@@ -55,6 +54,9 @@
                     </div>
                     <div class="OptSelect2" style="border-top: 6px solid #e7e7e7">
                       <a href="" class="MainMenu-link MainMenu-linkLogOut"  ng-click="vm.logout()" style="color:#3D9BFF">Cerrar Sesion</a>
+                    </div>
+                    <div class="OptSelect2" style="border-top: 6px solid #e7e7e7">
+                      <a href="#/passrecovery" class="MainMenu-link MainMenu-linkLogOut"  style="color:#3D9BFF">Olvidaste tu contraseña</a>
                     </div>
               </li>
               <li id="PerfilMovil" ng-show="vm.isAuthenticated()" class="MainMenu-item"><a href="#/usuariosview/{{vm.getIdCurrentUser()}}" class="MainMenu-link">Ver Perfil</a></li>
