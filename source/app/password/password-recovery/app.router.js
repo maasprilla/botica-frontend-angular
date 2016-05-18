@@ -12,13 +12,13 @@
 
       $stateProvider
               .state('password-recovery',{
-                  url: '/passrecover',
+                  url: '/passrecovery',
                   views:{
                     'encabezadosimple':{
                        template: '<encabezadosimple/>'
                     },
-                    'passrecover':{
-                       template: '<passrecover/>'
+                    'passrecovery':{
+                       template: '<passrecovery/>'
                     },
                     'piedepagina':{
                        template: '<piedepagina/>'

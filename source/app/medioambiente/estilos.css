@@ -1,3 +1,16 @@
+.EnviromentHeaderMajor-container {
+  padding-top: 5em;
+  padding-bottom: 2em;
+}
+section.EnviromentHeaderMajor-container>div.container>div.jumbotron {
+  background: #007e33;
+}
+div.jumbotron>h1.EnviromentHeader-title {
+  color: #fff;
+}
+.EnviromentHeader-text {
+  color: #fff;
+}
 div.AmbientalMainMenu {
   background-color: #4385f6;
   font-family: 'Open Sans';
@@ -12,25 +25,24 @@ div.AmbientalMainMenu-container ul.AmbientalAmbientalMainMenu-list li.AmbientalM
 div.navbar-collapse ul.nav li a:hover {
   color: #fff;
 }
-.Brand {
-  text-align: center;
-  background-color: #eaf3f8;
-}
-.Brand-logoAmbiental {
-  background-color: #007e33;
-  padding-top: 2em;
-  padding-bottom: 1em;
-  opacity: 0.7;
-/** border-bottom solid 1px black **/
-}
-.Brand-text {
-  margin-top: 0;
-  padding-top: 0.3em;
-  padding-bottom: 1em;
-  font-family: 'Open Sans';
-  font-weight: 500;
-  color: #000;
-}
+/** .Brand
+	text-align center
+	background-color #eaf3f8
+
+.Brand-logoAmbiental
+	background-color #007e33
+	padding-top 2em
+	padding-bottom 1em
+	opacity 0.7
+	border-bottom solid 1px black
+
+.Brand-text
+	margin-top 0
+	padding-top 0.3em
+	padding-bottom 1em
+	font-family 'Open Sans'
+	font-weight 500
+	color black **/
 .EnviromentInfo-container {
   background-color: #fff;
   font-family: 'Open Sans';
@@ -119,6 +131,13 @@ div.Map-container {
   margin-bottom: 0;
   padding-top: 1em;
   padding-bottom: 1em;
+  font-familiy: 'Open Sans';
+  font-weight: 300;
+  color: #252525;
+}
+.LinkMoreInfo:hover {
+  color: #252525;
+  text-decoration: none;
 }
 @media (max-width: 735px) {
   .map-responsive {
