@@ -1,8 +1,8 @@
 (function(){
     'use strict';
 
-    angular.module('app.password.recovery.router', [
-      'app.password.recovery.controller'
+    angular.module('app.geolocalizacion.router', [
+      'app.geolocalizacion.controller'
     ]).config(configure);
 
     configure.$inject = ['$stateProvider', '$urlRouterProvider'];
@@ -11,14 +11,14 @@
       $urlRouterProvider.otherwise('/');
 
       $stateProvider
-              .state('password-recovery',{
-                  url: '/passrecovery',
+              .state('geolocalizacion',{
+                  url: '/geolocalizacion',
                   views:{
                     'encabezadosimple':{
                        template: '<encabezadosimple/>'
                     },
-                    'passrecovery':{
-                       template: '<passrecovery/>'
+                    'geolocalizacion':{
+                       template: '<geolocalizacion/>'
                     },
                     'piedepagina':{
                        template: '<piedepagina/>'

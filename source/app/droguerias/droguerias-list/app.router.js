@@ -14,8 +14,8 @@
               .state('drogueriaslist',{
                   url: '/drogueriaslist',
                   views:{
-                    'encabezadosimple':{
-                       template: '<encabezadosimple/>'
+                    'encabezadodrog':{
+                       template: '<encabezadodrog/>'
                     },
                     'listdroguerias':{
                        template: '<listdroguerias/>'
