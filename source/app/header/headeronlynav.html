@@ -17,7 +17,7 @@
 
 
             <ul id="MainMenuSecundary-list" class="nav navbar-nav navbar-right MainMenuSecundary-list">
-              <li ng-show="!vm.isAuthenticated()" class="MainMenu-item"><a href="" onclick="showLogin()" class="MainMenu-link">Iniciar Sesion▼</a>
+              <li id="LoginDesktop" ng-show="!vm.isAuthenticated()" class="MainMenu-item"><a href="" onclick="showLogin()" class="MainMenu-link">Iniciar Sesion▼</a>
                 <div id="PanelLogin" class="PanelLogin z-depth-1">
                   <form name="loginDespForm" class="PanelLogin-form" ng-submit="vm.signIn()">
                     <h2 class="PanelLogin-tittle">Iniciar Sesion</h2>
@@ -42,9 +42,10 @@
                   </form>
               </li>
               <li ng-show="vm.isAuthenticated()" class="MainMenu-item"><a href="" class="MainMenu-link">{{vm.getCurrentUser()}}</a></li>
+              <li id="LoginMovil" ng-show="!vm.isAuthenticated()" class="MainMenu-item "><a href="#/login" class="MainMenu-link" >Iniciar Sesion</a></li>
               <li ng-show="!vm.isAuthenticated()" class="MainMenu-item"><a href="#/regisuser" class="MainMenu-link" >Registrar Usuarios</a></li>
               <li ng-show="!vm.isAuthenticated()" class="MainMenu-item"><a href="#/regisdrog" class="MainMenu-link" >Registrar Droguerias</a></li>
-              <li ng-show="vm.isAuthenticated()" class="MainMenu-item">
+              <li id="PerfilDesktop" ng-show="vm.isAuthenticated()" class="MainMenu-item">
                 <span class="glyphicon glyphicon-user" onclick="showOptions()" style="font-size:40px; top:0; background-color:#e7e7e7; padding:5px"></span>
                   <div id="Options" class="Options z-depth-1">
                     <div class="OptSelect">
@@ -54,6 +55,9 @@
                       <a href="" class="MainMenu-link MainMenu-linkLogOut"  ng-click="vm.logout()" style="color:#3D9BFF">Cerrar Sesion</a>
                     </div>
               </li>
+              <li id="PerfilMovil" ng-show="vm.isAuthenticated()" class="MainMenu-item"><a href="#/usuariosview/{{vm.getIdCurrentUser()}}" class="MainMenu-link">Ver Perfil</a></li>
+              <li id="CerrarMovil" ng-show="vm.isAuthenticated()" class="MainMenu-item"><a ng-click="vm.logout()" class="MainMenu-link">Cerrar Session</a></li>
+
             </ul>
     </div>
   </div>

@@ -36,9 +36,11 @@
 .IconsAdminCreate-container {
   text-align: right;
 }
-.SectionRegistro {
+.AdminRegistro {
+  text-align: center;
   font-family: 'Open Sans';
   padding: 3em 0;
+  background-color: #fafafa;
 }
 .FormRegistro {
   font-family: 'Open Sans';

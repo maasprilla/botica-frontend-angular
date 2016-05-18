@@ -5,11 +5,13 @@
   ]).controller('usuariosCreateCtrl', usuariosCreateCtrl);
 
 
-  usuariosCreateCtrl.$inject = ['$location', '$mdToast','Usuarios', 'Ciudades'];
-  function usuariosCreateCtrl($location, $mdToast, Ususarios ,Ciudades){
+  usuariosCreateCtrl.$inject = ['$auth','$location', '$mdToast','Usuarios', 'Ciudades'];
+  function usuariosCreateCtrl($auth,$location, $mdToast, Ususarios ,Ciudades){
 
     var vm=this;
     vm.ciudades=Ciudades.query();
+
+
 
   //  vm.idciudades;
 
@@ -39,6 +41,8 @@
             nombre:nombre
         });
     }
+
+
 
 
 

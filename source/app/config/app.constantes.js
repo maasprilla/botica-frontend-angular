@@ -6,7 +6,7 @@
   ]).constant('BASEURL',
 
 
-    'http://boticabackend-startupcbi.rhcloud.com/botica-backend/webresources')
+    'http://localhost:8080/botica-backend-java/webresources')
 
 
 

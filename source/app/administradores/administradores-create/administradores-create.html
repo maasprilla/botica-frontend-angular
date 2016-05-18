@@ -32,7 +32,7 @@
   </div>
 </section>
 
-<section class="SectionRegistro">
+<section class="AdminRegistro">
 
     <form name="FormRegistroAdministradores" class="FormRegistro" ng-submit="vm.create()">
         <h1 class="FormRegistro-tittle">Registro Administradores</h1>
@@ -42,8 +42,8 @@
           <label>Nombre</label>
           <input md-maxlength="30" required md-no-asterisk name="nombre" ng-model="vm.administrador.nombre">
           <div ng-messages="FormRegistroAdministradores.nombre.$error">
-            <div ng-message="required">This is required.</div>
-            <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+            <div ng-message="required">Este campo no puede estar vacio.</div>
+            <div ng-message="md-maxlength">El Nombre no puede tener mas de 30 caracteres.</div>
           </div>
         </md-input-container>
 
@@ -51,19 +51,19 @@
           <label>Apellido</label>
           <input md-maxlength="30" required md-no-asterisk name="apellido" ng-model="vm.administrador.apellido">
           <div ng-messages="FormRegistroAdministradores.apellido.$error">
-            <div ng-message="required">This is required.</div>
-            <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+            <div ng-message="required">Este campo no puede estar vacio.</div>
+            <div ng-message="md-maxlength">El Apellido no puede tener mas de 30 caracteres.</div>
           </div>
         </md-input-container>
 
-        <md-input-container class="md-block AdminCreate-container">
-          <label>Cedula</label>
-          <input md-maxlength="10" required md-no-asterisk name="cedula" ng-model="vm.adminstrador.cedula" numbersonly>
-          <div ng-messages="FormRegistroAdministradores.cedula.$error">
-            <div ng-message="required">This is required.</div>
-            <div ng-message="md-maxlength">The name has to be less than 10 characters long.</div>
-
-          </div>
+        <md-input-container class="md-block UserCreate-container">
+        <label>Cedula</label>
+        <input md-maxlength="10" pattern=".{6,}" required md-no-asterisk name="cedula" ng-model="vm.usuario.dni">
+        <div ng-messages="FormRegistroUsuarios.cedula.$error">
+          <div ng-message="required">Este campo no puede estar vacio.</div>
+          <div ng-message="md-maxlength">La Cedula no puede tener mas de 10 caracteres.</div>
+          <div ng-message="pattern">la Cedula no puede tener menos de 6 caracteres.</div>
+        </div>
         </md-input-container>
 
         <md-input-container class="md-block AdminCreate-container">
@@ -72,7 +72,7 @@
                minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
         <div ng-messages="FormRegistroAdministradores.clientEmail.$error" role="alert">
           <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
-            Your email must be between 10 and 100 characters long and look like an e-mail address.
+            Su correo electrónico debe tener entre 10 y 100 caracteres de longitud y ser un formato de correo valido example@example.com.
           </div>
         </div>
         </md-input-container>
@@ -81,8 +81,8 @@
           <label>Telefono</label>
           <input md-maxlength="10" required md-no-asterisk name="telefono" ng-model="vm.administrador.telefono" numbersonly>
           <div ng-messages="FormRegistroAdminstradores.telefono.$error">
-            <div ng-message="required">This is required.</div>
-            <div ng-message="md-maxlength">The name has to be less than 10 characters long.</div>
+            <div ng-message="required">Este campo no puede estar vacio.</div>
+            <div ng-message="md-maxlength">El Telefono no puede tener mas de 10 caracteres.</div>
 
           </div>
         </md-input-container>
@@ -91,8 +91,8 @@
           <label>Direccion</label>
           <input md-maxlength="30" required md-no-asterisk name="direccion" ng-model="vm.administrador.direccion">
           <div ng-messages="FormRegistroAdministradores.direccion.$error">
-            <div ng-message="required">This is required.</div>
-            <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+            <div ng-message="required">Este campo no puede estar vacio.</div>
+            <div ng-message="md-maxlength">la Direccion no puede tener mas de 30 caracteres.</div>
           </div>
         </md-input-container>
 
@@ -118,7 +118,7 @@
           <label>Password</label>
           <input required type="password" name="password" ng-model="vm.administrador.password">
           <div ng-messages="FormRegistroAdministradores.password.$error">
-            <div ng-message="required">This is required.</div>
+            <div ng-message="required">Este campo no puede estar vacio.</div>
           </div>
         </md-input-container>
 

@@ -43,10 +43,11 @@
           </div>
         </li>
         <li ng-show="vm.isAuthenticated()" class="MainMenu-item"><a href="" class="MainMenu-link">{{vm.getCurrentUser()}}</a></li>
+        <li id="PerfilMovil" ng-show="vm.isAuthenticated()" class="MainMenu-item"><a href="#/usuariosview/{{vm.getIdCurrentUser()}}" class="MainMenu-link">Ver Perfil</a></li>
         <li id="LoginMovil" ng-show="!vm.isAuthenticated()" class="MainMenu-item "><a href="#/login" class="MainMenu-link" >Iniciar Sesion</a></li>
         <li ng-show="!vm.isAuthenticated()" class="MainMenu-item"><a href="#/regisuser" class="MainMenu-link" >Registrar Usuarios</a></li>
         <li ng-show="!vm.isAuthenticated()" class="MainMenu-item"><a href="#/regisdrog" class="MainMenu-link" >Registrar Droguerias</a></li>
-        <li ng-show="vm.isAuthenticated()" class="MainMenu-item">
+        <li id="PerfilDesktop" ng-show="vm.isAuthenticated()" class="MainMenu-item">
           <span class="glyphicon glyphicon-user" onclick="showOptions()" style="font-size:40px; top:0; background-color:#e7e7e7; padding:5px"></span>
             <div id="Options" class="Options z-depth-1">
               <div class="OptSelect">
@@ -62,7 +63,8 @@
       <li class="MainMenu-item"><a  href="">Nosotros</a></li>
       <li class="MainMenu-item"><a >Objetivos</a></li>
       <li class="MainMenu-item"><a >Beneficios</a></li>
-      <li class="MainMenu-item"><a  href="">Medio Ambiente</a></li>
+      <li class="MainMenu-item"><a  href="#/medioambiente">Medio Ambiente</a></li>
+      <li id="CerrarMovil" ng-show="vm.isAuthenticated()" class="MainMenu-item"><a ng-click="vm.logout()" class="MainMenu-link">Cerrar Session</a></li>
     </ul>
     </div>
   </div>
