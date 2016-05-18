@@ -5,10 +5,10 @@
   ]).controller('geolocalizacionCtrl', geolocalizacionCtrl);
 
 
-  geolocalizacionCtrl.$inject = ['$location', '$mdToast', '$stateParams'];
-  function geolocalizacionCtrl($location, $mdToast, $stateParams){
+  geolocalizacionCtrl.$inject = ['$scope', '$location', '$mdToast', '$stateParams'];
+  function geolocalizacionCtrl($scope, $location, $mdToast, $stateParams){
 
-    var vm=this;
+    $scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
 
 
 

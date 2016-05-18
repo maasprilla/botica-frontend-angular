@@ -1,8 +1,4 @@
-
-
-
-
-</header> 
+</header>
 <header class="HeaderSecundary">
   <div class="navbar navbar-default MainMenuSecundary MainMenu-scroll">
   <div class="container-fluid">
@@ -27,19 +23,23 @@
 
 
               </li>
-              <li ng-show="vm.isAuthenticated()" class="MainMenu-item"><a href="" class="MainMenu-link">{{vm.getCurrentUser()}}</a></li>
+
+              <li class="MainMenu-item"><a  class="MainMenu-link hvr-underline-from-center" href="#/bienvenido">Inicio</a></li>
+
+              <span class="glyphicon glyphicon-user" id="UserIconMovil" ng-show="vm.isAuthenticated()" style="font-size:21px; background-color:snow; padding:5px"></span>
+              <li ng-show="vm.isAuthenticated()" onclick="showOptions()" class="MainMenu-item"><a href="" class="MainMenu-link" style="font-size:14px">{{vm.getCurrentUser()}}</a></li>
               <li id="PerfilDesktop" ng-show="vm.isAuthenticated()" class="MainMenu-item">
-                <span class="glyphicon glyphicon-user" onclick="showOptions()" style="font-size:40px; top:0; background-color:#e7e7e7; padding:5px"></span>
+                <span class="glyphicon glyphicon-user" onclick="showOptions()" style="font-size:40px; top:0; right: 2px; background-color:snow; padding:5px; border-bottom: 1px solid #152836"></span>
                   <div id="Options" class="Options z-depth-1">
                     <div class="OptSelect">
-                      <a href="#/usuariosview/{{vm.getIdCurrentUser()}}" class="ViewProfile" style="color:#3D9BFF">Ver perfil</a>
+                      <a href="#/usuariosview/{{vm.getIdCurrentUser()}}" class="ViewProfile" style="color:#152836; text-decoration:none">Ver perfil</a>
                     </div>
-                    <div class="OptSelect2" style="border-top: 6px solid #e7e7e7">
-                      <a href="" class="MainMenu-link MainMenu-linkLogOut"  ng-click="vm.logout()" style="color:#3D9BFF">Cerrar Sesion</a>
+                    <div class="OptSelect2" style="border-top: 2px solid #152836">
+                      <a href="" class="MainMenu-link MainMenu-linkLogOut"  ng-click="vm.logout()" style="color:#152836; text-decoration:none">Cerrar Sesion</a>
                     </div>
               </li>
-              <li id="PerfilMovil" ng-show="vm.isAuthenticated()" class="MainMenu-item"><a href="#/usuariosview/{{vm.getIdCurrentUser()}}" class="MainMenu-link">Ver Perfil</a></li>
-              <li id="CerrarMovil" ng-show="vm.isAuthenticated()" class="MainMenu-item"><a ng-click="vm.logout()" class="MainMenu-link">Cerrar Session</a></li>
+              <li id="PerfilMovil" ng-show="vm.isAuthenticated()" class="MainMenu-item"><a href="#/usuariosview/{{vm.getIdCurrentUser()}}" class="MainMenu-link hvr-underline-from-center">Ver Perfil</a></li>
+              <li id="CerrarMovil" ng-show="vm.isAuthenticated()" class="MainMenu-item"><a ng-click="vm.logout()" class="MainMenu-link hvr-underline-from-center">Cerrar Session</a></li>
 
             </ul>
     </div>
