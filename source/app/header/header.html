@@ -60,6 +60,15 @@
                 <a href="" class="MainMenu-link MainMenu-linkLogOut"  ng-click="vm.logout()" style="color:#152836; text-decoration:none">Cerrar Sesion</a>
               </div>
         </li>
+        <li id="ConfigDesktop" ng-show="vm.isAuthenticated()" class="MainMenu-item" style="background:snow; padding:1.07em">
+          <!-- <div class="dropdown" style="font-family: 'Open Sans'; background-color:snow;"> -->
+            <span class="glyphicon glyphicon-cog" data-toggle="dropdown" style="font-size:16px; top:4px"></span>
+            <ul class="dropdown-menu MenuOptionsConfig" style="padding:0.5em 3em 1em 3em; right:-0.1em">
+              <li><h5 class="text-center" style="border-bottom: 1px solid #152836; padding-bottom:0.5em">Configuraciones</h5></li>
+              <li><a href="#/passrecovery" class="" style="color:#152836">Cambiar contraseña</a></li>
+            </ul>
+          <!-- </div> -->
+        </li>
       </ul>
 
       <ul id="MainMenu-list" class="nav navbar-nav navbar-left MainMenu-list">
@@ -71,6 +80,7 @@
       <span class="glyphicon glyphicon-user" id="UserIconMovil" ng-show="vm.isAuthenticated()" style="font-size:21px; background-color:snow; padding:5px"></span>
       <li id="PerfilMovil" ng-show="vm.isAuthenticated()" onclick="showOptions()" class="MainMenu-item"><a href="" class="MainMenu-link" style="font-size:14px">{{vm.getCurrentUser()}}</a></li>
       <li id="PerfilMovil" ng-show="vm.isAuthenticated()" class="MainMenu-item"><a href="#/usuariosview/{{vm.getIdCurrentUser()}}" class="MainMenu-link hvr-underline-from-center">Ver Perfil</a></li>
+      <li id="ConfigMovil" ng-show="vm.isAuthenticated()" class="MainMenu-item"><a href="#/configuraciones" class="MainMenu-link hvr-underline-from-center">Configuraciones</a></li>
       <li id="CerrarMovil" ng-show="vm.isAuthenticated()" class="MainMenu-item"><a ng-click="vm.logout()" class="MainMenu-link hvr-underline-from-center">Cerrar Session</a></li>
 
     </ul>

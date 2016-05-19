@@ -14,8 +14,8 @@
               .state('drogueriasview',{
                   url: '/drogueriasview/:idUsuario',
                   views:{
-                    'encabezadosimple':{
-                       template: '<encabezadosimple/>'
+                    'encabezadouser':{
+                       template: '<encabezadouser/>'
                     },
                     'drogueriasview':{
                        template: '<drogueriasview/>'
