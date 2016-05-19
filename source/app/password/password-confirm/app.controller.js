@@ -10,12 +10,19 @@
 
     var vm=this;
 
-    vm.usuario = Usuarios.get({idUsuario: $stateParams.idUsuario });
+    vm.usuario = Usuarios.findByIdAndCode({idUsuario: $stateParams.idUsuario, codigoRecuperacionPass: $stateParams.codigo });
     console.log(vm.usuario);
 
-    vm.enviar=function(){
+    vm.update=function(){
 
-        ConfirmPass.save(vm.confirm, function() {
+
+        console.log('1');
+        console.log(vm.password1);
+        console.log('2');
+        console.log(vm.password2);
+        if(vm.password1===vm.password2){
+          vm.usuario.camaracomercio=vm.password1;
+        Usuarios.updatePass(vm.usuario, function() {
                 $location.path('/');
                 $mdToast.show(
                     $mdToast.simple()
@@ -28,6 +35,12 @@
                           .position('bottom right'));
 
             });
+      }else{
+               $mdToast.show(
+                  $mdToast.simple()
+                    .textContent('las contraseñas no coinciden')
+                    .position('bottom right'));
+      }
     }
   }
 
