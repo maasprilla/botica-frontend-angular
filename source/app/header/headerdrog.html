@@ -32,6 +32,9 @@
                     <div class="OptSelect2" style="border-top: 2px solid #152836">
                       <a href="" class="MainMenu-link MainMenu-linkLogOut"  ng-click="vm.logout()" style="color:#152836; text-decoration:none">Cerrar Sesion</a>
                     </div>
+                    <div class="OptSelect2" style="border-top: 6px solid #e7e7e7">
+                      <a href="#/passrecovery" class="MainMenu-link MainMenu-linkLogOut"  style="color:#3D9BFF">Cambiar Contraseña</a>
+                    </div>
 
               </li>
               <li id="PerfilMovil" ng-show="vm.isAuthenticated()" class="MainMenu-item"><a href="#/usuariosview/{{vm.getIdCurrentUser()}}" class="MainMenu-link hvr-underline-from-center">Ver Perfil</a></li>

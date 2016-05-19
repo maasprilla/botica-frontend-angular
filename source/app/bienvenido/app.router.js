@@ -14,8 +14,8 @@
               .state('bienvenido',{
                   url: '/bienvenido',
                   views:{
-                    'encabezadosimple':{
-                       template: '<encabezadosimple/>'
+                    'encabezadoview':{
+                       template: '<encabezadoview/>'
                     },
                     'bienvenido':{
                        template: '<bienvenido/>'

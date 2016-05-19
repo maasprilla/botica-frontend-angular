@@ -14,8 +14,8 @@
               .state('administradoreslist',{
                   url: '/administradoreslist',
                   views:{
-                    'encabezadosimple':{
-                       template: '<encabezadosimple/>'
+                    'encabezadoadmin':{
+                       template: '<encabezadoadmin/>'
                     },
                     'listadministrador':{
                        template: '<listadministrador/>'
