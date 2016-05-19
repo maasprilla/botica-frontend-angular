@@ -20,17 +20,20 @@
   padding-top 5em
   padding-bottom 5em
   &-form
+    max-width 35em
     display inline-block
     box-shadow 0.1em 0.1em #555
-    padding 5em
-    padding-top: 1.5em
+    padding 3em
     border-radius: 0.5em
   &-title
-    margin-bottom: 2em
+    margin-bottom: 1em
 
 /**.passrecovery-containerIcon
   display inline-block **/
 
+@media (max-width: 522px)
+  .passrecoveryForm-form
+    width 100%
 
 @media screen and (min-width: 201px) and (max-width: 1000px)
   .passrecovery

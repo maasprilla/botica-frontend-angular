@@ -1,7 +1,17 @@
-<div>
-  <section class="SectionLogin">
+<section class="LoginHeaderMajor-container">
+	<div class="container LoginHeaderContent">
+		<div class="jumbotron">
+			<h1 class="text-center LoginHeader-title">Botica</h1>
+			<p class="text-center LoginHeader-text">"Salud al alcance de su mano"</p>
+			<div class="text-center LoginHeaderIcon-container">
+				<i class="material-icons" style="font-size:48px;color:white">tag_faces</i>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="SectionLogin">
                     <form class="FormLogin" ng-submit="vm.signIn()">
-                        <h1 class="FormLogin-tittle">Inicio de Sesion</h1>
+                        <h1 class="text-center FormLogin-tittle">Inicio de Sesión</h1>
                         <md-input-container class="md-block">
                           <label>Email*</label>
                           <input required type="email" name="clientEmail" ng-model="vm.user.email"
@@ -26,4 +36,3 @@
                         </button>-->
                     </form>
                 </section>
-</div>
