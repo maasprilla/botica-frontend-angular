@@ -13,8 +13,8 @@
               .state('administradoresview',{
                   url: '/administradoresview/:idUsuario',
                   views:{
-                    'encabezadosimple':{
-                       template: '<encabezadosimple/>'
+                    'encabezadoadmin':{
+                       template: '<encabezadoadmin/>'
                     },
                     'administradoresview':{
                        template: '<administradoresview/>'

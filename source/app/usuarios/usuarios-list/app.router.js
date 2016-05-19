@@ -14,8 +14,8 @@
               .state('usuarios-list',{
                   url: '/usuarioslist',
                   views:{
-                    'encabezadosimple':{
-                       template: '<encabezadosimple/>'
+                    'encabezadoadmin':{
+                       template: '<encabezadoadmin/>'
                     },
                     'listausuario':{
                        template: '<listausuario/>'
