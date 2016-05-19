@@ -14,8 +14,8 @@
               .state('password-recovery',{
                   url: '/passrecovery',
                   views:{
-                    'encabezadosimple':{
-                       template: '<encabezadosimple/>'
+                    'encabezadopass':{
+                       template: '<encabezadopass/>'
                     },
                     'passrecovery':{
                        template: '<passrecovery/>'

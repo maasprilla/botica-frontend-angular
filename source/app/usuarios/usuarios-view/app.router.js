@@ -14,8 +14,8 @@
               .state('usuariosview',{
                   url: '/usuariosview/:idUsuario',
                   views:{
-                    'encabezadouser':{
-                       template: '<encabezadouser/>'
+                    'encabezadoview':{
+                       template: '<encabezadoview/>'
                     },
                     'usuariosview':{
                        template: '<usuariosview/>'

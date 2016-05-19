@@ -14,8 +14,8 @@
               .state('password-confirm',{
                   url: '/passconfirm/:idUsuario',
                   views:{
-                    'encabezadosimple':{
-                       template: '<encabezadosimple/>'
+                    'encabezadopass':{
+                       template: '<encabezadopass/>'
                     },
                     'passconfirm':{
                        template: '<passconfirm/>'

@@ -18,10 +18,10 @@
   text-align: justify;
 }
 .MDHomeLink {
-  color: #f9f9f9;
+  color: #152836;
 }
 .MDHomeLink:hover {
-  color: #000;
+  color: #3d9bff;
   text-decoration: none;
 }
 .UsTitle,
@@ -98,13 +98,6 @@
 .MDHomeTitle,
 .MDHomeText {
   color: #152836;
-}
-.MDHomeLink {
-  color: #152836;
-}
-.MDHomeLink:hover {
-  color: #166ba2;
-  text-decoration: none;
 }
 .MDHomeImage {
   width: 100%;

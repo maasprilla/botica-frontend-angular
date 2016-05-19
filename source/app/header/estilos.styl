@@ -68,7 +68,11 @@ body
   background snow
   right 0em
   display none
-  border 6px solid #e7e7e7
+  border-right 2px solid #152836
+  border-bottom 2px solid #152836
+  border-left 2px solid #152836
+  border-bottom-right-radius 10px
+  border-bottom-left-radius 10px
 
 .OptSelect, .OptSelect2
   width 15em
@@ -82,11 +86,13 @@ body
 
 
 #MainMenu-list>li>a:hover
-  background snow
+  // background snow
+  // border-top 2px solid snow
   color #3D9BFF
 
 #MainMenu-list>li>a:focus
-  background snow
+  // background snow
+  // border-top 2px solid snow
   color #3D9BFF
 
 #LoginMovil
@@ -94,6 +100,8 @@ body
 #PerfilMovil
   display none
 #CerrarMovil
+  display none
+#UserIconMovil
   display none
 
 
@@ -119,11 +127,16 @@ body
     display block
   #LoginMovil
     display block
+  #UserIconMovil
+    display inline-block
+    margin-top 1em
   #PerfilMovil
     display block
   #CerrarMovil
     display block
   #LoginDesktop
+    display none
+  #NameDesktop
     display none
   #PerfilDesktop
     display none
@@ -156,11 +169,11 @@ body
   &-linkLogo
     padding 0
 #MainMenuSecundary-list>li>a:hover
-  background snow
+  // background snow
   color #3D9BFF
 
 #MainMenuSecundary-list>li>a:focus
-  background snow
+  // background snow
   color #3D9BFF
 
 
