@@ -8,7 +8,9 @@
   .directive('encabezadoportafolio', encabezadoportafolio)
   .directive('encabezadoambiental', encabezadoambiental)
   .directive('encabezadodrog', encabezadodrog)
-  .directive('encabezadopedido', encabezadopedido);
+  .directive('encabezadopedido', encabezadopedido)
+  .directive('encabezadoview', encabezadoview)
+  .directive('encabezadopass', encabezadopass);
 
   encabezado.$inject = [];
   function encabezado(){
@@ -66,7 +68,25 @@ function encabezadopedido(){
 };
 }
 
+encabezadoview.$inject = [];
+function encabezadoview(){
+  return {
+    scope:{},
+    templateUrl: 'app/header/headerview.html',
+    controller:'LoginController',
+    controllerAs:'vm'
+};
+}
 
+encabezadopass.$inject = [];
+function encabezadopass(){
+  return {
+    scope:{},
+    templateUrl: 'app/header/headerpass.html',
+    controller:'LoginController',
+    controllerAs:'vm'
+};
+}
 
 
 

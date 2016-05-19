@@ -39,7 +39,11 @@
                 </div>
               </md-input-container>
               <md-button type="submit" md-no-ink class="md-raised md-primary" ng-disabled="loginDespForm.$invalid">Login</md-button>
+              <div class="ForgotPass-formLogin" style="border-top: 6px solid #e7e7e7; margin-top:1em">
+                <a href="#/passrecovery" class="MainMenu-link MainMenu-linkLogOut"  style="color:#3D9BFF">¿Olvidaste tu contraseña?</a>
+              </div>
             </form>
+
           </div>
         </li>
         <li id="NameDesktop" ng-show="vm.isAuthenticated()" onclick="showOptions()" class="MainMenu-item"><a href="" class="MainMenu-link" style="font-size:14px">{{vm.getCurrentUser()}}</a></li>

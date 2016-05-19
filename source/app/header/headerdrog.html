@@ -19,8 +19,7 @@
 
 
             <ul id="MainMenuSecundary-list" class="nav navbar-nav navbar-right MainMenuSecundary-list">
-              <li class="MainMenu-item"><a  class="MainMenu-link hvr-underline-from-center" href="#/bienvenido">Inicio</a></li>
-
+              <li class="MainMenu-item"><a  href="#/realizarpedido" class="hvr-underline-from-center">Realizar Pedido</a></li>
 
               <span class="glyphicon glyphicon-user" id="UserIconMovil" ng-show="vm.isAuthenticated()" style="font-size:21px; background-color:snow; padding:5px"></span>
               <li ng-show="vm.isAuthenticated()" onclick="showOptions()" class="MainMenu-item"><a href="" class="MainMenu-link" style="font-size:14px">{{vm.getCurrentUser()}}</a></li>
@@ -33,6 +32,7 @@
                     <div class="OptSelect2" style="border-top: 2px solid #152836">
                       <a href="" class="MainMenu-link MainMenu-linkLogOut"  ng-click="vm.logout()" style="color:#152836; text-decoration:none">Cerrar Sesion</a>
                     </div>
+
               </li>
               <li id="PerfilMovil" ng-show="vm.isAuthenticated()" class="MainMenu-item"><a href="#/usuariosview/{{vm.getIdCurrentUser()}}" class="MainMenu-link hvr-underline-from-center">Ver Perfil</a></li>
               <li id="CerrarMovil" ng-show="vm.isAuthenticated()" class="MainMenu-item"><a ng-click="vm.logout()" class="MainMenu-link hvr-underline-from-center">Cerrar Session</a></li>
