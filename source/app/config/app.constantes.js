@@ -6,11 +6,7 @@
   ]).constant('BASEURL',
 
 
-<<<<<<< HEAD
-    'http://localhost:8080/botica-backend-java/webresources')
-=======
-    'http://localhost:43096/botica-backend-java/webresources')
->>>>>>> 48f30eeeff56a30e176ee830bef167138e8dcde4
+    'http://localhost:8080/botica_backend/webresources')
     .config(configure);
 
     configure.$inject = ['$authProvider', 'BASEURL'];

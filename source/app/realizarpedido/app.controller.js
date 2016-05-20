@@ -11,19 +11,40 @@
     var vm=this;
     vm.zonasenvios=ZonasEnvios.query();
 
-    vm.producto;
-    var productos=[];
+    vm.readonly=true;
 
+    vm.nombreproducto;
+    var productos=new Array();
+
+    vm.contenidopedido=[];
     vm.addProducto=function(){
+      
+
       var cantProductos=productos.length;
-      console.log(cantProductos);
-      productos[cantProductos]=vm.producto;
-      console.log(productos);
+      productos[cantProductos]=vm.nombreproducto;
+
+      
+      for (var i = 0; i<productos.length ; i++) {
+        vm.contenidopedido [i]= 
+            {nombre: productos[i]};        
+      }
+
+
+      var descripcionpedido='';
+      for (var i = 0; i<productos.length ; i++) {
+        descripcionpedido += productos[i]+'-';        
+      }
+      console.log('contenido');
+      vm.producto.descripcion=descripcionpedido;
+      console.log(vm.producto);
+
+
+      
     }
 
     vm.create=function(){
-        console.log(vm.pedidos);
-        Pedidos.save(vm.pedidos, function() {
+        console.log(vm.producto);
+        Pedidos.save(vm.producto, function() {
                 $location.path('/');
                 $mdToast.show(
                     $mdToast.simple()
