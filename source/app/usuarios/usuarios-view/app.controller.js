@@ -8,8 +8,15 @@
   usuariosViewCtrl.$inject = ['$stateParams','$location', '$mdToast','Usuarios','FileUploader'];
   function usuariosViewCtrl($stateParams, $location, $mdToast, Usuarios, FileUploader){
     var vm=this;
+
+         vm.usuario = {};
+         vm.loadFoto = loadFoto;
+
+
          vm.usuario = Usuarios.get({idUsuario: $stateParams.idUsuario });
          vm.uploader = new FileUploader();
+
+
 
          vm.info=function(){
           console.log('info');
@@ -27,7 +34,13 @@
             });
         }
 
+        function loadFoto($fileContent) {
+     vm.usuario.imgPerfil = $fileContent;
+   }
+
   }
+
+
 
 
 })();

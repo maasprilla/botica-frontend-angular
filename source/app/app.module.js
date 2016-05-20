@@ -28,7 +28,8 @@
         'app.bienvenido',
         'app.password.recovery',
         'app.password.confirm',
-        'app.geolocalizacion'
+        'app.geolocalizacion',
+        'app.imagenes'
     ]);
 
 })();
