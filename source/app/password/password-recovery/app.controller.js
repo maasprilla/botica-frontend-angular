@@ -15,7 +15,7 @@
     vm.enviar=function(){
 
         RecoveryPass.save(vm.recovery, function() {
-                $location.path('/');
+                $location.path('/bienvenido');
                 $mdToast.show(
                     $mdToast.simple()
                         .textContent('Se Enviado Un email a tu correo Electronico...')
@@ -23,7 +23,7 @@
                       },function (error) {
                         $mdToast.show(
                           $mdToast.simple()
-                          .textContent('el email ya se encuentra registrado')
+                          .textContent('Se Enviado Un email a tu correo Electronico...')
                           .position('bottom right'));
 
             });
