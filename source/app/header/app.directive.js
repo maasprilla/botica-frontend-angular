@@ -12,7 +12,8 @@
   .directive('encabezadoview', encabezadoview)
   .directive('encabezadoadmin', encabezadoadmin)
   .directive('encabezadouser', encabezadouser)
-  .directive('encabezadopass', encabezadopass);
+  .directive('encabezadopass', encabezadopass)
+  .directive('encabezadopassrecovery', encabezadopassrecovery);
 
   encabezado.$inject = [];
   function encabezado(){
@@ -85,6 +86,16 @@ function encabezadopass(){
   return {
     scope:{},
     templateUrl:'app/header/headerpassconfirm.html',
+    controller:'LoginController',
+    controllerAs:'vm'
+};
+}
+
+encabezadopassrecovery.$inject = [];
+function encabezadopassrecovery(){
+  return {
+    scope:{},
+    templateUrl: 'app/header/headerpassrecovery.html',
     controller:'LoginController',
     controllerAs:'vm'
 };
