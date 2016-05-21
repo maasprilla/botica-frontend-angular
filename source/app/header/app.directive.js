@@ -84,7 +84,7 @@ encabezadopass.$inject = [];
 function encabezadopass(){
   return {
     scope:{},
-    templateUrl: 'app/header/headerpassconfirm.html',
+    templateUrl:'app/header/headerpassconfirm.html',
     controller:'LoginController',
     controllerAs:'vm'
 };

@@ -112,6 +112,9 @@ body {
 #UserIconMovil {
   display: none;
 }
+#ConfigMovil {
+  display: none;
+}
 @media (max-width: 987px) {
   .MainMenu {
     padding-top: 3em;
@@ -158,6 +161,12 @@ body {
   }
   #PerfilDesktop {
     display: none;
+  }
+  #ConfigDesktop {
+    display: none;
+  }
+  #ConfigMovil {
+    display: block;
   }
 }
 @media (max-width: 695px) {

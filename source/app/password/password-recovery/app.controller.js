@@ -15,7 +15,7 @@
     vm.enviar=function(){
 
         RecoveryPass.save(vm.recovery, function() {
-                $location.path('/');
+                $location.path('/bienvenido');
                 $mdToast.show(
                     $mdToast.simple()
                         .textContent('Se Enviado Un email a tu correo Electronico...')

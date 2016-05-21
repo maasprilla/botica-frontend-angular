@@ -38,10 +38,10 @@
                   <div ng-message="required">This is required.</div>
                 </div>
               </md-input-container>
-              <div class="OptSelect2" style="border-top: 6px solid #e7e7e7">
-                <a href="#/passrecovery" class="MainMenu-link MainMenu-linkLogOut"  style="color:#3D9BFF">Olvidaste tu contraseña</a>
-              </div>
               <md-button type="submit" md-no-ink class="md-raised md-primary" ng-disabled="loginDespForm.$invalid">Login</md-button>
+              <div class="ForgotPass-formLogin" style="border-top: 6px solid #e7e7e7; margin-top:1em">
+                <a href="#/passrecovery" class="MainMenu-link MainMenu-linkLogOut"  style="color:#3D9BFF">¿Olvidaste tu contraseña?</a>
+              </div>
             </form>
 
           </div>
@@ -59,21 +59,28 @@
               <div class="OptSelect2" style="border-top: 2px solid #152836">
                 <a href="" class="MainMenu-link MainMenu-linkLogOut"  ng-click="vm.logout()" style="color:#152836; text-decoration:none">Cerrar Sesion</a>
               </div>
-              <div class="OptSelect2" style="border-top: 6px solid #e7e7e7">
-                <a href="#/passrecovery" class="MainMenu-link MainMenu-linkLogOut"  style="color:#3D9BFF">Olvidaste tu contraseña</a>
-              </div>
+        </li>
+        <li id="ConfigDesktop" ng-show="vm.isAuthenticated()" class="MainMenu-item" style="background:snow; padding:1.07em">
+          <!-- <div class="dropdown" style="font-family: 'Open Sans'; background-color:snow;"> -->
+            <span class="glyphicon glyphicon-cog" data-toggle="dropdown" style="font-size:16px; top:4px"></span>
+            <ul class="dropdown-menu MenuOptionsConfig" style="padding:0.5em 3em 1em 3em; right:-0.1em">
+              <li><h5 class="text-center" style="border-bottom: 1px solid #152836; padding-bottom:0.5em">Configuraciones</h5></li>
+              <li><a href="#/passrecovery" class="" style="color:#152836">Cambiar contraseña</a></li>
+            </ul>
+          <!-- </div> -->
         </li>
       </ul>
 
       <ul id="MainMenu-list" class="nav navbar-nav navbar-left MainMenu-list">
-      <li class="MainMenu-item hvr-underline-from-center"><a  href="">Nosotros</a></li>
-      <li class="MainMenu-item hvr-underline-from-center"><a >Objetivos</a></li>
-      <li class="MainMenu-item hvr-underline-from-center"><a >Beneficios</a></li>
-      <li class="MainMenu-item hvr-underline-from-center"><a  href="#/medioambiente">Medio Ambiente</a></li>
+      <li class="MainMenu-item hvr-underline-from-center"><a  href="" onclick="anclanosotros();">Nosotros</a></li>
+      <li class="MainMenu-item hvr-underline-from-center"><a  onclick="anclaobjetivos();">Objetivos</a></li>
+      <li class="MainMenu-item hvr-underline-from-center"><a  onclick="anclabeneficios();">Beneficios</a></li>
+      <li class="MainMenu-item hvr-underline-from-center"><a  href="" onclick="anclaambiental();">Medio Ambiente</a></li>
 
       <span class="glyphicon glyphicon-user" id="UserIconMovil" ng-show="vm.isAuthenticated()" style="font-size:21px; background-color:snow; padding:5px"></span>
       <li id="PerfilMovil" ng-show="vm.isAuthenticated()" onclick="showOptions()" class="MainMenu-item"><a href="" class="MainMenu-link" style="font-size:14px">{{vm.getCurrentUser()}}</a></li>
       <li id="PerfilMovil" ng-show="vm.isAuthenticated()" class="MainMenu-item"><a href="#/usuariosview/{{vm.getIdCurrentUser()}}" class="MainMenu-link hvr-underline-from-center">Ver Perfil</a></li>
+      <li id="ConfigMovil" ng-show="vm.isAuthenticated()" class="MainMenu-item"><a href="#/configuraciones" class="MainMenu-link hvr-underline-from-center">Configuraciones</a></li>
       <li id="CerrarMovil" ng-show="vm.isAuthenticated()" class="MainMenu-item"><a ng-click="vm.logout()" class="MainMenu-link hvr-underline-from-center">Cerrar Session</a></li>
 
     </ul>

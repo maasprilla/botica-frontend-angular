@@ -17,12 +17,25 @@
   &-form
     text-align center
 
+.passconfirmForm
+  text-align center
+  padding-top 5em
+  padding-bottom 5em
+  &-form
+    max-width 35em
+    display inline-block
+    box-shadow 0.1em 0.1em #555
+    padding 3em
+    border-radius: 0.5em
+  &-title
+    margin-bottom: 1em
 
-
-
-/**.passconfirm-containerIcon
-  display inline-block **/
-
+@media (max-width: 522px)
+  .passconfirmForm-form
+    width 100%
+  .passconfirmButton
+    width 100%
+    font-size 12px
 
 @media screen and (min-width: 201px) and (max-width: 1000px)
   .passconfirm

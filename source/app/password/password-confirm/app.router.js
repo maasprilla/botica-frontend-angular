@@ -12,10 +12,10 @@
 
       $stateProvider
               .state('password-confirm',{
-                  url: '/passconfirm/:idUsuario',
+                  url: '/passconfirm/:idUsuario/:codigo',
                   views:{
-                    'encabezadopass':{
-                       template: '<encabezadopass/>'
+                    'encabezadoview':{
+                       template: '<encabezadoview/>'
                     },
                     'passconfirm':{
                        template: '<passconfirm/>'
