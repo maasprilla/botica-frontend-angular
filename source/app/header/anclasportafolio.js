@@ -2,7 +2,7 @@
 
 
 
-function anclaempresa(){
+function anclaproducto(){
   $('html, body').stop().animate({
             scrollTop: jQuery('#empresa').offset().top
         }, 1500);
@@ -17,7 +17,7 @@ function anclaimpacto(){
 
 }
 
-function anclaproducto(){
+function anclabeneficios(){
   $('html, body').stop().animate({
             scrollTop: jQuery('#producto').offset().top
         }, 1500);
