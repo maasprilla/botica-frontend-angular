@@ -3,7 +3,6 @@
     "directory": "source/lib",
     "proxy" : "http://proxy2.sena.edu.co:80",
     "https-proxy":"http://proxy2.sena.edu.co:80"
-    "proxy": "http://proxy2.sena.edu.co:80",
-  "https-proxy": "https://proxy2.sena.edu.co:80"
+  
 
 }
