@@ -31,10 +31,10 @@
     </div>
   </div>
 </section>
-<section style="background:#fafafa">
-  <h2 class="AdminTable-title">Administrar Pedidos</h2>
-  <div class="container  AdminTable-containerTable">
-      <table id="table" class="table table-hover AdminTable-table"  ng-table="vm.usersTable">
+<section class="ListarPedidosTable" style="background:#fafafa">
+  <h2 class="ListarPedidos-title">Lista De Pedidos</h2>
+  <div class="container  ListarPedidosTable-containerTable">
+      <table id="table" class="table table-hover ListarPedidos-table"  ng-table="vm.usersTable">
           <tr ng-repeat="user in vm.data">
        <td data-tittle="'Nombre Producto'">
          {{user.nombre}}

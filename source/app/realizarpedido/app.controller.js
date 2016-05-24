@@ -18,28 +18,28 @@
 
     vm.contenidopedido=[];
     vm.addProducto=function(){
-      
+
 
       var cantProductos=productos.length;
       productos[cantProductos]=vm.nombreproducto;
 
-      
+
       for (var i = 0; i<productos.length ; i++) {
-        vm.contenidopedido [i]= 
-            {nombre: productos[i]};        
+        vm.contenidopedido [i]=
+            {nombre: productos[i]};
       }
 
 
       var descripcionpedido='';
       for (var i = 0; i<productos.length ; i++) {
-        descripcionpedido += productos[i]+'-';        
+        descripcionpedido += productos[i]+'-';
       }
       console.log('contenido');
       vm.producto.descripcion=descripcionpedido;
       console.log(vm.producto);
 
 
-      
+
     }
 
     vm.create=function(){
@@ -59,17 +59,6 @@
             });
     }
 
-
-
-
-
-
-
-
   }
-
-
-
-
 
 })();

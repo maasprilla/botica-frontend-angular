@@ -1,7 +1,7 @@
 (function(){
   'use strict';
 
-  angular.module('app.administrarpedido.router',[
+  angular.module('app.listpedido.router',[
 
   ]).config(configure);
 
@@ -9,14 +9,14 @@
   function configure($stateProvider, $urlRouterProvider){
     $urlRouterProvider.otherwise('/');
     $stateProvider.
-            state('administrarpedido',{
-              url:'/administrarpedido',
+            state('listpedido',{
+              url:'/listpedido',
               views:{
                 'encabezadosimple':{
                   template:'<encabezadosimple/>'
                 },
-                'administrarpedido':{
-                  template:'<administrarpedido/>'
+                'listpedido':{
+                  template:'<listpedido/>'
                 },
                 'piedepagina':{
                   template:'<piedepagina/>'
