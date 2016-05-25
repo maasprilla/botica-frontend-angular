@@ -5,13 +5,14 @@
 body
   min-height 100vh
 .Header
-  height 48em
+  height 60em /** antes 48em **/
   text-align center
   background-color #3D9BFF
   background-image url('/images/header.jpg')
-  background-size cover
+  background-size 100% 100%
   background-position center
   background-repeat no-repeat
+  padding-top 50px
   &-content
     height 40em
 .MainMenu
@@ -68,7 +69,11 @@ body
   background snow
   right 0em
   display none
-  border 6px solid #e7e7e7
+  border-right 2px solid #152836
+  border-bottom 2px solid #152836
+  border-left 2px solid #152836
+  border-bottom-right-radius 10px
+  border-bottom-left-radius 10px
 
 .OptSelect, .OptSelect2
   width 15em
@@ -82,11 +87,13 @@ body
 
 
 #MainMenu-list>li>a:hover
-  background snow
+  // background snow
+  // border-top 2px solid snow
   color #3D9BFF
 
 #MainMenu-list>li>a:focus
-  background snow
+  // background snow
+  // border-top 2px solid snow
   color #3D9BFF
 
 #LoginMovil
@@ -95,11 +102,15 @@ body
   display none
 #CerrarMovil
   display none
+#UserIconMovil
+  display none
+#ConfigMovil
+  display none
 
 
 
 
-@media (max-width: 987px)
+/** @media (max-width: 987px)
   .MainMenu
     padding-top 3em
     &-list
@@ -111,7 +122,15 @@ body
       padding-right 0
   .MainMenu-list>li
       display inline-block
-      float none
+      float none**/
+
+/** @media screen and (min-width: 768px) and (max-width: 987px)
+  .DisplayTablet-view
+    display block
+    float left
+  .MainMenu-containerIndex
+    display none **/
+
 @media (max-width: 767px)
   .MainMenu
     padding-top 0
@@ -119,14 +138,23 @@ body
     display block
   #LoginMovil
     display block
+  #UserIconMovil
+    display inline-block
+    margin-top 1em
   #PerfilMovil
     display block
   #CerrarMovil
     display block
   #LoginDesktop
     display none
+  #NameDesktop
+    display none
   #PerfilDesktop
     display none
+  #ConfigDesktop
+    display none
+  #ConfigMovil
+    display block
 
 @media (max-width: 695px)
   .Header
@@ -134,6 +162,7 @@ body
     background-image url('/images/header.jpg')
     background-size 100% 100%
     background-repeat no-repeat
+    padding-top 50px
     &-content
       height 20em
 
@@ -156,11 +185,11 @@ body
   &-linkLogo
     padding 0
 #MainMenuSecundary-list>li>a:hover
-  background snow
+  // background snow
   color #3D9BFF
 
 #MainMenuSecundary-list>li>a:focus
-  background snow
+  // background snow
   color #3D9BFF
 
 

@@ -5,15 +5,17 @@
   ]).controller('passRecoveryCtrl', passRecoveryCtrl);
 
 
-  passRecoveryCtrl.$inject = ['$location', '$mdToast', 'RecoveryPass'];
-  function passRecoveryCtrl($location, $mdToast, RecoveryPass){
+  passRecoveryCtrl.$inject = ['$location', '$mdToast', '$stateParams', 'RecoveryPass', 'Usuarios'];
+  function passRecoveryCtrl($location, $mdToast, $stateParams,RecoveryPass, Usuarios){
 
     var vm=this;
+
+
 
     vm.enviar=function(){
 
         RecoveryPass.save(vm.recovery, function() {
-                $location.path('/');
+                $location.path('/bienvenido');
                 $mdToast.show(
                     $mdToast.simple()
                         .textContent('Se Enviado Un email a tu correo Electronico...')
@@ -21,7 +23,7 @@
                       },function (error) {
                         $mdToast.show(
                           $mdToast.simple()
-                          .textContent('el email ya se encuentra registrado')
+                          .textContent('Se Enviado Un email a tu correo Electronico...')
                           .position('bottom right'));
 
             });

@@ -5,7 +5,7 @@
       <div class="col-md-4">
       </div>
       <div class="col-md-4 HeaderUserView-logo">
-          <img src="./images/k.png" alt="Usuarios" class="HeaderUserView-logoImg" style="max-width:15em">
+          <img src="./images/head.png" alt="Usuarios" class="HeaderUserView-logoImg" style="max-width:15em">
       </div>
       <div class="col-md-4">
       </div>
@@ -28,25 +28,17 @@
     </div>
   </div>
 </section>
-    <article class="FormPerfilUser">
+    <section >
 
-
+      <form  name="FormUsuariosView" class="FormPerfilUser"  ng-submit="vm.update()">
 
       <div  class="dropzone FormPerfilUser-img">
         <div>Cambiar Foto de Perfil</div>
-        <input type="file" value="Search" accept="image/png, image/jpg, image/jpeg," class="well my-drop-zone" nv-file-select=""  uploader="vm.uploader"/>
+        <input type="file" value="Search" accept="image/png, image/jpg, image/jpeg," class="well my-drop-zone"  uploader="vm.uploader" on-read-img="vm.loadFoto($fileContent)"/>
+        <img class="imagen" ng-if="vm.usuario.imgPerfil" ng-src="{{'data:image/png;base64,' + vm.usuario.imgPerfil}}" width="188%" />
       </div>
-      <ul>
 
-        <ul>
-            <li ng-repeat="item in vm.uploader.queue">
-                Name: <span ng-bind="item.file.name"></span><br/>
-                <button ng-click="item.upload()">upload</button>
-                <button ng-click="vm.info()">upload</button>
-            </li>
-        </ul>
 
-        </ul>
       <article class="FormPerfilUser-info">
             <h3 class="FormPerfilUser-tittle">Perfil De Usuario</h3>
 
@@ -62,6 +54,7 @@
               </div>
             </md-input-container>
             <label class="FormPerfilUser-edit" onclick="habilitarinput(this);">Editar</label>
+            <button type="submit" class="FormPerfilUser-button" onclick="desabilitarinput(this);">Guardar</button>
           </div>
 
 
@@ -75,6 +68,7 @@
               </div>
             </md-input-container>
             <label class="FormPerfilUser-edit" onclick="habilitarinput(this);">Editar</label>
+            <button class="FormPerfilUser-button" onclick="desabilitarinput(this);">Guardar</button>
           </div>
 
           <div>
@@ -87,6 +81,7 @@
               </div>
             </md-input-container>
             <label class="FormPerfilUser-edit" onclick="habilitarinput(this);">Editar</label>
+            <button class="FormPerfilUser-button" onclick="desabilitarinput(this);">Guardar</button>
           </div>
 
           <div>
@@ -101,6 +96,7 @@
             </div>
             </md-input-container>
             <label class="FormPerfilUser-edit" onclick="habilitarinput(this);">Editar</label>
+            <button class="FormPerfilUser-button"onclick="desabilitarinput(this);">Guardar</button>
           </div>
 
           <div>
@@ -114,6 +110,7 @@
               </div>
             </md-input-container>
             <label class="FormPerfilUser-edit" onclick="habilitarinput(this);">Editar</label>
+            <button class="FormPerfilUser-button"onclick="desabilitarinput(this);">Guardar</button>
           </div>
 
             <div>
@@ -126,6 +123,7 @@
               </div>
             </md-input-container>
             <label class="FormPerfilUser-edit" onclick="habilitarinput(this);">Editar</label>
+            <button class="FormPerfilUser-button"onclick="desabilitarinput(this);">Guardar</button>
           </div>
 
             <div>
@@ -140,9 +138,11 @@
                 </md-select>-->
             </md-input-container>
             <label class="FormPerfilUser-edit" onclick="habilitarinput(this);">Editar</label>
+            <button class="FormPerfilUser-button"onclick="desabilitarinput(this);">Guardar</button>
 
           </div>
 
       </article>
-    </article>
+       </form>
+    </section>
 </section>

@@ -1,0 +1,56 @@
+<header class="HeaderSecundary">
+  <div class="navbar navbar-default MainMenuSecundary MainMenu-scroll">
+  <div class="container-fluid">
+    <!-- responsive movil -->
+    <div class="navbar-header">
+        <div class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+        style="background: none; z-index: 3; border:none">
+        <span class="icon-bar" style="background: #fafafa"></span>
+        <span class="icon-bar" style="background: #fafafa"></span>
+        <span class="icon-bar" style="background: #fafafa"></span>
+      </div>
+      <a class="navbar-brand MainMenuSecundary-linkLogo"  href="#/bienvenido" ><figure class="MainMenu-logo"><img src="./images/logo.png" /></figure></a>
+
+    </div>
+
+    <!-- view desktop -->
+    <div id="bs-example-navbar-collapse-1" class="navbar-collapse collapse MainMenu-container">
+
+
+            <ul id="MainMenuSecundary-list" class="nav navbar-nav navbar-right MainMenuSecundary-list">
+              <li class="MainMenu-item"><a  href="#/administrarpedido">Pedidos</a></li>
+
+              <span class="glyphicon glyphicon-user" id="UserIconMovil" ng-show="vm.isAuthenticated()" style="font-size:21px; background-color:snow; padding:5px"></span>
+              <li ng-show="vm.isAuthenticated()" onclick="showOptions()" class="MainMenu-item"><a href="" class="MainMenu-link" style="font-size:14px">{{vm.getCurrentUser()}}</a></li>
+              <li id="PerfilDesktop" ng-show="vm.isAuthenticated()" class="MainMenu-item">
+                <span class="glyphicon glyphicon-user" onclick="showOptions()" style="font-size:40px; top:0; right: 2px; background-color:snow; padding:5px; border-bottom: 1px solid #152836"></span>
+                  <div id="Options" class="Options z-depth-1">
+                    <div class="OptSelect">
+                      <a href="#/usuariosview/{{vm.getIdCurrentUser()}}" class="ViewProfile" style="color:#152836; text-decoration:none">Ver perfil</a>
+                    </div>
+                    <div class="OptSelect2" style="border-top: 2px solid #152836">
+                      <a href="" class="MainMenu-link MainMenu-linkLogOut"  ng-click="vm.logout()" style="color:#152836; text-decoration:none">Cerrar Sesion</a>
+                    </div>
+
+              </li>
+              <li id="ConfigDesktop" ng-show="vm.isAuthenticated()" class="MainMenu-item" style="background:snow; padding:1.07em">
+                <!-- <div class="dropdown" style="font-family: 'Open Sans'; background-color:snow;"> -->
+                  <span class="glyphicon glyphicon-cog" data-toggle="dropdown" style="font-size:16px; top:4px"></span>
+                  <ul class="dropdown-menu MenuOptionsConfig" style="padding:0.5em 3em 1em 3em; right:-0.1em">
+                    <li><h5 class="text-center" style="border-bottom: 1px solid #152836; padding-bottom:0.5em">Configuraciones</h5></li>
+                    <li><a href="#/passrecovery" class="" style="color:#152836">Cambiar contraseña</a></li>
+                  </ul>
+                <!-- </div> -->
+              </li>
+              <li id="PerfilMovil" ng-show="vm.isAuthenticated()" class="MainMenu-item"><a href="#/usuariosview/{{vm.getIdCurrentUser()}}" class="MainMenu-link hvr-underline-from-center">Ver Perfil</a></li>
+              <li id="ConfigMovil" ng-show="vm.isAuthenticated()" class="MainMenu-item"><a href="#/configuraciones" class="MainMenu-link hvr-underline-from-center">Configuraciones</a></li>
+              <li id="CerrarMovil" ng-show="vm.isAuthenticated()" class="MainMenu-item"><a ng-click="vm.logout()" class="MainMenu-link hvr-underline-from-center">Cerrar Session</a></li>
+
+            </ul>
+    </div>
+  </div>
+</div>
+
+
+
+</header>

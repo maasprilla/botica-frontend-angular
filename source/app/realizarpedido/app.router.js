@@ -13,8 +13,8 @@
                   .state('realizarpedido',{
                   url: '/realizarpedido',
                   views:{
-                    'encabezadosimple':{
-                       template: '<encabezadosimple/>'
+                    'encabezadopedido':{
+                       template: '<encabezadopedido/>'
                     },
                     'realizarpedido':{
                       template: '<realizarpedido/>'

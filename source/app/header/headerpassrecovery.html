@@ -1,0 +1,88 @@
+<header class="HeaderSecundary">
+  <div class="navbar navbar-default MainMenuSecundary MainMenu-scroll">
+  <div class="container-fluid">
+    <!-- responsive movil -->
+    <div class="navbar-header">
+        <div class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+        style="background: none; z-index: 3; border:none">
+        <span class="icon-bar" style="background: #fafafa"></span>
+        <span class="icon-bar" style="background: #fafafa"></span>
+        <span class="icon-bar" style="background: #fafafa"></span>
+      </div>
+      <a class="navbar-brand MainMenuSecundary-linkLogo" href="#/bienvenido" ng-show="!vm.isAuthenticated()"><figure class="MainMenu-logo"><img src="./images/logo.png" /></figure></a>
+      <a class="navbar-brand MainMenuSecundary-linkLogo" href="#/" ng-show="vm.isAuthenticated()"><figure class="MainMenu-logo"><img src="./images/logo.png" /></figure></a>
+      <a class="navbar-brand MainMenuSecundary-linkLogo" href="#/" ng-show="!vm.isAuthenticated()"><figure class="MainMenu-logo"><img src="./images/logo.png" /></figure></a>
+      <a class="navbar-brand MainMenuSecundary-linkLogo" href="#/bienvenido" ng-show="vm.isAuthenticated()"><figure class="MainMenu-logo"><img src="./images/logo.png" /></figure></a>
+    </div>
+
+    <!-- view desktop -->
+    <div id="bs-example-navbar-collapse-1" class="navbar-collapse collapse MainMenu-container">
+
+
+            <ul id="MainMenuSecundary-list" class="nav navbar-nav navbar-right MainMenuSecundary-list">
+              <li class="MainMenu-item hvr-underline-from-center" ng-show="vm.isAuthenticated()"><a  href="#/drogueriaslist">Lista De Droguerias</a></li>
+              <li id="LoginDesktop" ng-show="!vm.isAuthenticated()" class="MainMenu-item"><a href="" onclick="showLogin()" class="MainMenu-link hvr-underline-from-center">Iniciar Sesion▼</a>
+                <div id="PanelLogin" class="PanelLogin z-depth-1">
+                  <form name="loginDespForm" class="PanelLogin-form" ng-submit="vm.signIn()">
+                    <h2 class="PanelLogin-tittle">Iniciar Sesion</h2>
+                    <md-input-container class="md-block">
+                      <label>Email*</label>
+                      <input required type="email" name="email"  ng-model="vm.user.email"
+                      minlength="5" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+                      <div ng-messages="loginDespForm.email.$error" role="alert">
+                        <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                          Your email must be between 5 and 100 characters long and look like an e-mail address.
+                        </div>
+                      </div>
+                    </md-input-container>
+                    <md-input-container class="md-block" >
+                      <label>Password*</label>
+                      <input  type="password" name="password" ng-model="vm.user.password" required>
+                      <div ng-messages="loginDespForm.password.$error">
+                        <div ng-message="required">This is required.</div>
+                      </div>
+                    </md-input-container>
+                    <md-button type="submit" md-no-ink class="md-raised md-primary" ng-disabled="loginDespForm.$invalid">Login</md-button>
+                    <div class="ForgotPass-formLogin" style="border-top: 6px solid #e7e7e7; margin-top:1em">
+                      <a href="#/passrecovery" class="MainMenu-link MainMenu-linkLogOut"  style="color:#3D9BFF">¿Olvidaste tu contraseña?</a>
+                    </div>
+                  </form>
+
+              </li>
+              <span class="glyphicon glyphicon-user" id="UserIconMovil" ng-show="vm.isAuthenticated()" style="font-size:21px; background-color:snow; padding:5px"></span>
+              <li ng-show="vm.isAuthenticated()" onclick="showOptions()" class="MainMenu-item"><a href="" class="MainMenu-link" style="font-size:14px">{{vm.getCurrentUser()}}</a></li>
+              <li id="LoginMovil" ng-show="!vm.isAuthenticated()" class="MainMenu-item "><a href="#/login" class="MainMenu-link hvr-underline-from-center" >Iniciar Sesion</a></li>
+              <li ng-show="!vm.isAuthenticated()" class="MainMenu-item"><a href="#/regisuser" class="MainMenu-link hvr-underline-from-center" >Registrar Usuarios</a></li>
+              <li ng-show="!vm.isAuthenticated()" class="MainMenu-item"><a href="#/regisdrog" class="MainMenu-link hvr-underline-from-center" >Registrar Droguerias</a></li>
+              <li id="PerfilDesktop" ng-show="vm.isAuthenticated()" class="MainMenu-item">
+                <span class="glyphicon glyphicon-user" onclick="showOptions()" style="font-size:40px; top:0; right: 2px; background-color:snow; padding:5px; border-bottom: 1px solid #152836"></span>
+                  <div id="Options" class="Options z-depth-1">
+                    <div class="OptSelect">
+                      <a href="#/usuariosview/{{vm.getIdCurrentUser()}}" class="ViewProfile" style="color:#152836; text-decoration:none">Ver perfil</a>
+                    </div>
+                    <div class="OptSelect2" style="border-top: 2px solid #152836">
+                      <a href="" class="MainMenu-link MainMenu-linkLogOut"  ng-click="vm.logout()" style="color:#152836; text-decoration:none">Cerrar Sesion</a>
+                    </div>
+
+              </li>
+              <li id="ConfigDesktop" ng-show="vm.isAuthenticated()" class="MainMenu-item" style="background:snow; padding:1.07em">
+                <!-- <div class="dropdown" style="font-family: 'Open Sans'; background-color:snow;"> -->
+                  <span class="glyphicon glyphicon-cog" data-toggle="dropdown" style="font-size:16px; top:4px"></span>
+                  <ul class="dropdown-menu MenuOptionsConfig" style="padding:0.5em 3em 1em 3em; right:-0.1em">
+                    <li><h5 class="text-center" style="border-bottom: 1px solid #152836; padding-bottom:0.5em">Configuraciones</h5></li>
+                    <li><a href="#/passrecovery" class="" style="color:#152836">Cambiar contraseña</a></li>
+                  </ul>
+                <!-- </div> -->
+              </li>
+              <li id="PerfilMovil" ng-show="vm.isAuthenticated()" class="MainMenu-item"><a href="#/usuariosview/{{vm.getIdCurrentUser()}}" class="MainMenu-link hvr-underline-from-center">Ver Perfil</a></li>
+              <li id="ConfigMovil" ng-show="vm.isAuthenticated()" class="MainMenu-item"><a href="#/configuraciones" class="MainMenu-link hvr-underline-from-center">Configuraciones</a></li>
+              <li id="CerrarMovil" ng-show="vm.isAuthenticated()" class="MainMenu-item"><a ng-click="vm.logout()" class="MainMenu-link hvr-underline-from-center">Cerrar Session</a></li>
+
+            </ul>
+    </div>
+  </div>
+</div>
+
+
+
+</header>

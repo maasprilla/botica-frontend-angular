@@ -1,59 +1,31 @@
-.Login {
-  position: absolute;
-  max-width: 20em;
-  background-color: #f8f8f8;
-  right: 10px;
-  padding: 2em;
-  border-bottom-left-radius: 0.5em;
-  border-bottom-right-radius: 0.5em;
-  border: 2px solid #d3d3d3;
-  border-top: none;
-  display: none;
-  z-index: 1;
+.LoginHeaderMajor-container {
+  padding-top: 5em;
+  padding-bottom: 1em;
 }
-.LoginForm-Input {
-  display: inline-block;
-  margin-bottom: 1em;
+section.LoginHeaderMajor-container>div.container>div.jumbotron {
+  background: #152836;
 }
-.LoginForm-botonLogin {
-  background-color: #00aecc;
+div.jumbotron>h1.LoginHeader-title {
   color: #fff;
-  font-family: 'Open Sans';
-  border: none;
 }
-.LoginForm-botonLogin:hover {
-  border: 1px solid;
-  border-color: #00aecc;
+.LoginHeader-text {
+  color: #fff;
 }
 .SectionLogin {
   background-color: #fafafa;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  text-align: center;
-  padding-top: 2em;
-  padding-bottom: 5em;
-  max-height: 70em;
   font-family: 'Open Sans';
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 3em;
 }
 .FormLogin {
-  background-color: #fffafa;
+  max-width: 35em;
   display: inline-block;
-  padding: 2em;
-  margin: 3em 0em;
-  border-radius: 0.5em;
+  background-color: #fffafa;
   box-shadow: 0.1em 0.1em #555;
-  background-image: url("../images/fondo.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  color: #fff;
-  font-family: 'Open Sans';
+  border-radius: 0.5em;
+  padding: 2em;
 }
 .FormLogin-tittle {
-  color: #000;
-  font-family: 'Open Sans';
-}
-.FormLogin-input {
   margin-bottom: 1em;
 }

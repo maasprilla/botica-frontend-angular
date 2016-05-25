@@ -1,3 +1,6 @@
+.MajorContainer-elements {
+  min-height: calc(80vh);
+}
 .HeaderDrogList {
   background-color: #166ba2;
   height: 28em;
