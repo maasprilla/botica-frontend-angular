@@ -88,25 +88,28 @@
     font-weight: bold;
   }
   .DrogTable-table td:nth-of-type(1):before {
-    content: "Id: ";
+    content: "Nombre: ";
   }
   .DrogTable-table td:nth-of-type(2):before {
-    content: "Nombres: ";
+    content: "Email: ";
   }
   .DrogTable-table td:nth-of-type(3):before {
-    content: "Apellidos: ";
-  }
-  .DrogTable-table td:nth-of-type(4):before {
     content: "Telefono: ";
   }
-  .DrogTable-table td:nth-of-type(5):before {
+  .DrogTable-table td:nth-of-type(4):before {
     content: "Direccion: ";
   }
-  .DrogTable-table td:nth-of-type(6):before {
+  .DrogTable-table td:nth-of-type(5):before {
     content: "Ciudad: ";
   }
+  .DrogTable-table td:nth-of-type(6):before {
+    content: "Nit: ";
+  }
   .DrogTable-table td:nth-of-type(7):before {
-    content: "Email: ";
+    content: "Camara de Comercio: ";
+  }
+  .DrogTable-table td:nth-of-type(8):before {
+    content: "Invima: ";
   }
 }
 @media screen and (max-width: 1000px) {

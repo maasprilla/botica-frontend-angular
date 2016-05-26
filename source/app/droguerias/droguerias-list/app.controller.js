@@ -4,8 +4,8 @@
   angular.module('app.droguerias.list.controller', [
   ]).controller('drogueriaListCtrl', drogueriaListCtrl);
 
-  drogueriaListCtrl.$inject = ['$q', '$location', '$mdToast','Droguerias', 'NgTableParams'];
-  function drogueriaListCtrl($q, $location, $mdToast, Droguerias, NgTableParams){
+  drogueriaListCtrl.$inject = ['$q', '$location', '$mdToast','Usuarios', 'NgTableParams'];
+  function drogueriaListCtrl($q, $location, $mdToast, Usuarios, NgTableParams){
 
         var vm=this;
 
@@ -20,7 +20,7 @@
 
           function getDroguerias() {
 
-       return Droguerias.query(
+       return Usuarios.findById({idRol:'DROG'}
         ).$promise.then(function(data) {
           console.log('data');
           console.log(data);

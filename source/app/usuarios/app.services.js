@@ -27,6 +27,14 @@
                     params: {
                         idUsuario:'@idUsuario'
                     }
+                },
+                findById: {
+                    url: BASEURL + '/usuarios/roles/:idRol',
+                    method: 'GET',
+                    isArray: true,
+                    params: {
+                        idRol:'@idRol'
+                    }
                 }
             })
         }

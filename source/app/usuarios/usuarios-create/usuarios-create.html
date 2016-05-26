@@ -60,10 +60,10 @@
 
         <md-input-container class="md-block UserCreate-container">
         <label>Cedula</label>
-        <input md-maxlength="10" pattern=".{6,}" required md-no-asterisk name="cedula" ng-model="vm.usuario.dni">
+        <input type="number" maxlength="10" pattern=".{6,}" required md-no-asterisk name="cedula" ng-model="vm.usuario.dni">
         <div ng-messages="FormRegistroUsuarios.cedula.$error">
           <div ng-message="required">Este campo no puede estar vacio.</div>
-          <div ng-message="md-maxlength">La Cedula no puede tener mas de 10 caracteres.</div>
+          <div ng-message="maxlength">La Cedula no puede tener mas de 10 caracteres.</div>
           <div ng-message="pattern">la Cedula no puede tener menos de 6 caracteres.</div>
         </div>
       </md-input-container>
@@ -81,15 +81,21 @@
         </div>
       </md-input-container>
 
-        <md-input-container class="md-block UserCreate-container">
-          <label>Telefono</label>
-          <input md-maxlength="10" required md-no-asterisk name="telefono" ng-model="vm.usuario.telefono" numbersonly>
-          <div ng-messages="FormRegistroUsuarios.telefono.$error">
-            <div ng-message="required">Este campo no puede estar vacio.</div>
-            <div ng-message="md-maxlength">El Telefono no puede tener mas de 10 caracteres.</div>
+      <md-input-container class="md-block UserCreate-container">
+        <label>Fecha de Nacimiento</label>
+        <datepicker  date-format="yyyy-MM-dd">
+          <input ng-model="vm.usuario.fechaNac"/>
+        </datepicker>
+      </md-input-container>
 
-          </div>
-        </md-input-container>
+      <md-input-container class="md-block UserCreate-container">
+      <label>Telefono</label>
+      <input type="number" maxlength="10"  required md-no-asterisk name="telefono" ng-model="vm.usuario.telefono">
+      <div ng-messages="FormRegistroUsuarios.telefono.$error">
+        <div ng-message="required">Este campo no puede estar vacio.</div>
+        <div ng-message="maxlength">El telefono no puede tener mas de 10 caracteres.</div>
+      </div>
+    </md-input-container>
 
         <md-input-container class="md-block UserCreate-container">
           <label>Direccion</label>

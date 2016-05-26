@@ -83,24 +83,21 @@
     font-weight: bold;
   }
   .UserTable-table td:nth-of-type(1):before {
-    content: "Id: ";
-  }
-  .UserTable-table td:nth-of-type(2):before {
     content: "Nombres: ";
   }
-  .UserTable-table td:nth-of-type(3):before {
+  .UserTable-table td:nth-of-type(2):before {
     content: "Apellidos: ";
   }
-  .UserTable-table td:nth-of-type(4):before {
+  .UserTable-table td:nth-of-type(3):before {
     content: "Telefono: ";
   }
-  .UserTable-table td:nth-of-type(5):before {
+  .UserTable-table td:nth-of-type(4):before {
     content: "Direccion: ";
   }
-  .UserTable-table td:nth-of-type(6):before {
+  .UserTable-table td:nth-of-type(5):before {
     content: "Ciudad: ";
   }
-  .UserTable-table td:nth-of-type(7):before {
+  .UserTable-table td:nth-of-type(6):before {
     content: "Email: ";
   }
 }

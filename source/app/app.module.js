@@ -11,6 +11,7 @@
         'ngTable',
         'angularFileUpload',
         'uiGmapgoogle-maps',
+        '720kb.datepicker',
         //'templates',
         'app.config',
         'app.footer',

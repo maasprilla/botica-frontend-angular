@@ -53,31 +53,8 @@
 
             </div>
 
-            <div>
-              <md-input-container class=" FormPerfilDrog-input">
-                <label>Apellido</label>
-                <input md-maxlength="30" required md-no-asterisk name="apellido" ng-model="vm.usuario.apellido" ng-disabled="true">
-                <div ng-messages="FormRegistroUsuarios.apellido.$error">
-                  <div ng-message="required">This is required.</div>
-                  <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
-                </div>
-              </md-input-container>
-              <label class="FormPerfilDrog-edit"  onclick="habilitarinput(this);">Editar</label>
-              <button class="FormPerfilUser-button"onclick="desabilitarinput(this);">Guardar</button>
-            </div>
 
-              <div>
-              <md-input-container class=" FormPerfilDrog-input">
-                <label>Cedula</label>
-                <input md-maxlength="10" required md-no-asterisk name="cedula" ng-model="vm.usuario.dni" ng-disabled="true" numbersonly >
-                <div ng-messages="FormRegistroUsuarios.cedula.$error">
-                  <div ng-message="required">This is required.</div>
-                  <div ng-message="md-maxlength">The name has to be less than 10 characters long.</div>
-                </div>
-              </md-input-container>
-              <label class="FormPerfilDrog-edit"  onclick="habilitarinput(this);">Editar</label>
-              <button class="FormPerfilUser-button"onclick="desabilitarinput(this);">Guardar</button>
-            </div>
+
 
             <div>
               <md-input-container class=" FormPerfilDrog-input">
@@ -124,7 +101,7 @@
             <div>
               <md-input-container class=" FormPerfilDrog-input">
                   <label>Ciudad</label>
-                  <input md-maxlength="30" required md-no-asterisk name="ciudad" ng-model="vm.usuario.ciudad" ng-disabled="true">
+                  <input md-maxlength="30" required md-no-asterisk name="ciudad" ng-model="vm.usuario.ciudad.nombre" ng-disabled="true">
                   <!--<md-select ng-model="vm.ciudad">
                       <md-option ng-repeat="ciudad in vm.ciudades"  value="{{ciudad.ciudadPK.idCiudad}}-{{ciudad.ciudadPK.iddepartamento}}">
                          {{ciudad.ciudadPK.idCiudad}} -
@@ -136,6 +113,50 @@
               <button class="FormPerfilUser-button"onclick="desabilitarinput(this);">Guardar</button>
 
             </div>
+
+            <div>
+            <md-input-container class="FormPerfilDrog-input">
+              <label>Nit</label>
+              <input md-maxlength="30" required md-no-asterisk name="nit" ng-model="vm.usuario.nit" ng-disabled="true">
+              <div ng-messages="FormRegistroDroguerias.nit.$error">
+                <div ng-message="required">Este campo no puede estar vacio.</div>
+                <div ng-message="md-maxlength">El Nit no puede tener mas de 30 caracteres.</div>
+              </div>
+            </md-input-container>
+            <label class="FormPerfilDrog-edit" onclick="habilitarinput(this);">Editar</label>
+            <button class="FormPerfilUser-button"onclick="desabilitarinput(this);">Guardar</button>
+
+            </div>
+
+            <div>
+
+            <md-input-container class="FormPerfilDrog-input">
+              <label>Camara de Comercio</label>
+              <input md-maxlength="30" required md-no-asterisk name="camaracomercio" ng-model="vm.usuario.camaracomercio" ng-disabled="true">
+              <div ng-messages="FormRegistroDroguerias.camaracomercio.$error">
+                <div ng-message="required">Este campo no puede estar vacio.</div>
+                <div ng-message="md-maxlength">La Camara y Comercio no puede tener mas de 30 caracteres.</div>
+              </div>
+            </md-input-container>
+            <label class="FormPerfilDrog-edit" onclick="habilitarinput(this);">Editar</label>
+            <button class="FormPerfilUser-button"onclick="desabilitarinput(this);">Guardar</button>
+
+          </div>
+
+          <div>
+
+            <md-input-container class="FormPerfilDrog-input">
+              <label>Invima</label>
+              <input md-maxlength="30" required md-no-asterisk name="invima" ng-model="vm.usuario.invima" ng-disabled="true">
+              <div ng-messages="FormRegistroDroguerias.invima.$error">
+                <div ng-message="required">Este campo no puede estar vacio.</div>
+                <div ng-message="md-maxlength">El Invima no puede tener mas de 30 caracteres.</div>
+              </div>
+            </md-input-container>
+            <label class="FormPerfilDrog-edit" onclick="habilitarinput(this);">Editar</label>
+            <button class="FormPerfilUser-button"onclick="desabilitarinput(this);">Guardar</button>
+
+          </div>
 
         </article>
       </form>
