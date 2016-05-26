@@ -50,7 +50,8 @@
     }
 
     vm.create=function(){
-
+        //vm.producto.medicamentoList=vm.contenidopedido;
+        vm.producto.medicamentoList=productos;
         console.log(vm.producto);
         Pedidos.save(vm.producto, function() {
                 $location.path('/bienvenido');
