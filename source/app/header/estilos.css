@@ -116,6 +116,18 @@ body {
 #ConfigMovil {
   display: none;
 }
+#UsMovil {
+  display: none;
+}
+#ObjMovil {
+  display: none;
+}
+#BenMovil {
+  display: none;
+}
+#EnvMovil {
+  display: none;
+}
 /** @media (max-width: 987px)
   .MainMenu
     padding-top 3em
@@ -135,6 +147,9 @@ body {
     float left
   .MainMenu-containerIndex
     display none **/
+/** @media (max-width: 1323px)
+  .MainMenu-logo
+    float left **/
 @media (max-width: 767px) {
   .MainMenu {
     padding-top: 0;
@@ -169,6 +184,30 @@ body {
   }
   #ConfigMovil {
     display: block;
+  }
+  #UsMovil {
+    display: block;
+  }
+  #ObjMovil {
+    display: block;
+  }
+  #BenMovil {
+    display: block;
+  }
+  #EnvMovil {
+    display: block;
+  }
+  #UsDesktop {
+    display: none;
+  }
+  #ObjDesktop {
+    display: none;
+  }
+  #BenDesktop {
+    display: none;
+  }
+  #EnvDesktop {
+    display: none;
   }
 }
 @media (max-width: 695px) {
