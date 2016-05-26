@@ -5,13 +5,14 @@ body {
   min-height: 100vh;
 }
 .Header {
-  height: 48em;
+  height: 60em /** antes 48em **/;
   text-align: center;
   background-color: #3d9bff;
   background-image: url("/images/header.jpg");
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
+  padding-top: 50px;
 }
 .Header-content {
   height: 40em;
@@ -115,24 +116,25 @@ body {
 #ConfigMovil {
   display: none;
 }
-@media (max-width: 987px) {
-  .MainMenu {
-    padding-top: 3em;
-  }
-  .MainMenu-list {
-    width: 100%;
-    text-align: center;
-    padding-left: 0;
-  }
-  .MainMenu-containerIndex {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .MainMenu-list>li {
-    display: inline-block;
-    float: none;
-  }
-}
+/** @media (max-width: 987px)
+  .MainMenu
+    padding-top 3em
+    &-list
+      width 100%
+      text-align center
+      padding-left 0
+    &-containerIndex
+      padding-left 0
+      padding-right 0
+  .MainMenu-list>li
+      display inline-block
+      float none**/
+/** @media screen and (min-width: 768px) and (max-width: 987px)
+  .DisplayTablet-view
+    display block
+    float left
+  .MainMenu-containerIndex
+    display none **/
 @media (max-width: 767px) {
   .MainMenu {
     padding-top: 0;
@@ -175,6 +177,7 @@ body {
     background-image: url("/images/header.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    padding-top: 50px;
   }
   .Header-content {
     height: 20em;

@@ -1,6 +1,8 @@
-.angular-google-map-container {
-  height: 400px;
+.MajorContainer-elements {
+  min-heigh: calc(80vh);
 }
+/** .angular-google-map-container
+  height 400px **/
 .geolocalizacion-section {
-  margin-top: 3.5em;
+  padding-top: 5em;
 }

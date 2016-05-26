@@ -31,12 +31,10 @@
     "gulp-useref": "^3.0.6",
     "jshint": "^2.9.1",
     "nib": "^1.1.0",
-    "satellizer": "^0.14.0",
     "wiredep": "^3.0.0"
   },
   "dependencies": {
     "express": "^4.13.4",
-    "nodemailer": "^2.4.1",
-    "satellizer": "^0.14.0"
+    "nodemailer": "^2.4.1"
   }
 }

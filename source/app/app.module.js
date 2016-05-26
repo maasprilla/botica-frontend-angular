@@ -23,6 +23,7 @@
         'app.administradores',
         'app.administrarpedido',
         'app.realizarpedido',
+        'app.listarpedidos',
         'app.medioambiente',
         'app.portafolioservicios',
         'app.bienvenido',
