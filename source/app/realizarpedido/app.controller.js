@@ -5,11 +5,19 @@
   ]).controller('realizarPedidoCreateCtrl', realizarPedidoCreateCtrl);
 
 
-  realizarPedidoCreateCtrl.$inject = ['$location', '$mdToast','ZonasEnvios','Pedidos'];
-  function realizarPedidoCreateCtrl($location, $mdToast, ZonasEnvios, Pedidos ){
+  realizarPedidoCreateCtrl.$inject = ['$stateParams','$location', '$mdToast','ZonasEnvios','Pedidos', 'Ciudades', 'Medicamentos'];
+  function realizarPedidoCreateCtrl($stateParams, $location, $mdToast, ZonasEnvios, Pedidos, Ciudades, Medicamentos ){
 
     var vm=this;
+
+    vm.currentuser=$stateParams.idUsuario;
+
+    vm.producto={idusuario:{idUsuario:vm.currentuser}};
+
+
     vm.zonasenvios=ZonasEnvios.query();
+
+    vm.ciudades=Ciudades.query();
 
     vm.readonly=true;
 
@@ -35,17 +43,17 @@
         descripcionpedido += productos[i]+'-';
       }
       console.log('contenido');
-      vm.producto.descripcion=descripcionpedido;
-      console.log(vm.producto);
+      //vm.producto.descripcion=descripcionpedido;
 
 
 
     }
 
     vm.create=function(){
+
         console.log(vm.producto);
         Pedidos.save(vm.producto, function() {
-                $location.path('/');
+                $location.path('/bienvenido');
                 $mdToast.show(
                     $mdToast.simple()
                         .textContent('Se ha  guardado el Pedido...')
@@ -58,6 +66,18 @@
 
             });
     }
+
+    vm.foundCiudadesByNombre= function(nombre){
+        return Ciudades.foundByNombre({
+            nombre:nombre
+        });
+      }
+
+      vm.foundMedicamentosByNombre= function(nombre){
+          return Medicamentos.foundByNombre({
+              nombre:nombre
+          });
+        }
 
   }
 

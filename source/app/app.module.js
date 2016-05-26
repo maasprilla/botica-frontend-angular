@@ -31,7 +31,8 @@
         'app.password.recovery',
         'app.password.confirm',
         'app.geolocalizacion',
-        'app.imagenes'
+        'app.imagenes',
+        'app.medicamentos'
     ]);
 
 })();

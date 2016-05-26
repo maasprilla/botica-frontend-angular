@@ -40,18 +40,26 @@
       </div>
     </md-input-container>
 
-    <md-input-container class="md-block RealizarPedido-input">
-      <label>Ciudad</label>
-      <input md-maxlength="30" required md-no-asterisk name="ciudad" ng-model="vm.producto.ciudad">
-      <div ng-messages="projectForm.ciudad.$error">
-        <div ng-message="required">This is required.</div>
-        <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
-      </div>
-    </md-input-container>
+    <md-autocomplete required
+      md-selected-item="vm.producto.ciudad"
+      md-search-text="vm.searchTextCiudades"
+      md-items="item in vm.foundCiudadesByNombre(vm.searchTextCiudades)"
+      md-item-text="item.nombre"
+      md-min-length="1"
+      md-floating-label="Ciudad de Domicilio"
+      class="FormRegistro-input">
+    <md-item-template>
+      <span md-highlight-text="vm.searchTextCiudades" md-highlight-flags="^i">
+        {{item.nombre}}</span>
+    </md-item-template>
+    <md-not-found>
+      La ciudad "{{vm.searchTextCiudades}}" no se encuentra.
+    </md-not-found>
+  </md-autocomplete>
 
     <md-input-container class="md-block RealizarPedido-input">
       <label>Zona de Envio</label>
-      <md-select ng-model="vm.zonaenvio">
+      <md-select ng-model="vm.producto.idZonaEnvio.idZonaEnvio">
         <md-option ng-repeat="zonaenvio in vm.zonasenvios"  value="{{zonaenvio.idZonaEnvio}}">
           {{zonaenvio.descripcionZona}}
         </md-option>
@@ -59,20 +67,29 @@
     </md-input-container>
 
     <div class="AgregarProd">
-      <md-input-container class="md-block RealizarPedido-input" class="AgregarProd-input">
-        <label>Pedido</label>
-        <input md-maxlength="30" required md-no-asterisk name="pedido" ng-model="vm.nombreproducto">
-        <div ng-messages="projectForm.pedido.$error">
-          <div ng-message="required">This is required.</div>
-          <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
-        </div>
-      </md-input-container>
+
+      <md-autocomplete required
+        md-selected-item="vm.nombreproducto"
+        md-search-text="vm.searchTextMedicamentos"
+        md-items="item in vm.foundMedicamentosByNombre(vm.searchTextMedicamentos)"
+        md-item-text="item.nombre"
+        md-min-length="1"
+        md-floating-label="Medicamento"
+        class="RealizarPedido-input">
+      <md-item-template>
+        <span md-highlight-text="vm.searchTextMedicamentos" md-highlight-flags="^i">
+          {{item.nombre}}</span>
+      </md-item-template>
+      <md-not-found>
+        El Medicamento "{{vm.searchTextMedicamentos}}" no se encuentra.
+      </md-not-found>
+    </md-autocomplete>
       <md-button md-no-ink class="md-primary" ng-click="vm.addProducto()"><i class="material-icons" style="padding-right:0.5em; padding-top:0.5em" ng-disabled="FormRealizarPedido.$invalid">add_shopping_cart</i>Agregar</md-button>
 
       <div repeat="item in vm.contenidopedido">
         <md-chips ng-model="vm.contenidopedido" name="fruitName" readonly="vm.readonly" md-max-chips="5">
         <md-chip-template>
-          <strong>{{$chip.nombre}}</strong>
+          <strong>{{$chip.nombre.nombre}}</strong>
         </md-chip-template>
        </md-chips>
 
