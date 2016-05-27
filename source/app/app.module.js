@@ -31,6 +31,7 @@
         'app.password.recovery',
         'app.password.confirm',
         'app.geolocalizacion',
+        'app.geolocalizacion-drogueriaview',
         'app.imagenes',
         'app.medicamentos'
     ]);

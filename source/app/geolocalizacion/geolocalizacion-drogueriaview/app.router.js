@@ -1,8 +1,8 @@
 (function(){
     'use strict';
 
-    angular.module('app.bienvenido.router', [
-        'app.bienvenido.controller'
+    angular.module('app.geolocalizacion-drogueriaview.router', [
+      'app.geolocalizacion-drogueriaview.controller'
     ]).config(configure);
 
     configure.$inject = ['$stateProvider', '$urlRouterProvider'];
@@ -11,14 +11,14 @@
       $urlRouterProvider.otherwise('/');
 
       $stateProvider
-              .state('bienvenido',{
-                  url: '/bienvenido',
+              .state('geolocalizacion-drogueriasview',{
+                  url: '/geolocalizaciondrogueriasview/:idUsuario',
                   views:{
-                    'encabezadoview':{
-                       template: '<encabezadoview/>'
+                    'encabezadosimple':{
+                       template: '<encabezadosimple/>'
                     },
-                    'bienvenido':{
-                       template: '<bienvenido/>'
+                    'geolocalizaciondrogueriaview':{
+                       template: '<geolocalizaciondrogueriaview/>'
                     },
                     'piedepagina':{
                        template: '<piedepagina/>'

@@ -1,17 +1,15 @@
 (function(){
   'use strict';
 
-  angular.module('app.geolocalizacion.controller', [
-  ]).controller('geolocalizacionCtrl', geolocalizacionCtrl);
+  angular.module('app.geolocalizacion-drogueriaview.controller', [
+  ]).controller('geolocalizacionDrogueriaViewCtrl', geolocalizacionDrogueriaViewCtrl);
 
 
-  geolocalizacionCtrl.$inject = ['$scope', '$timeout', 'uiGmapLogger', '$http','uiGmapGoogleMapApi', '$stateParams','$mdToast', 'Usuarios'];
-  function geolocalizacionCtrl($scope, $timeout, $log, $http, GoogleMapApi, $stateParams, $mdToast, Usuarios){
+  geolocalizacionDrogueriaViewCtrl.$inject = ['$scope', '$timeout', 'uiGmapLogger', '$http','uiGmapGoogleMapApi', '$stateParams','$mdToast', 'Usuarios', '$q'];
+  function geolocalizacionDrogueriaViewCtrl($scope, $timeout, $log, $http, GoogleMapApi, $stateParams, $mdToast, Usuarios, $q){
     var vm = this;
     console.log('user');
-    console.log($stateParams.idUsuario);
-    vm.usuario = Usuarios.get({idUsuario: $stateParams.idUsuario });
-    console.log(vm.usuario);
+    activate();
     $log.doLog = true;
     var places={};
     var newMarkers={};
@@ -155,19 +153,31 @@
       }
     });
 
+    function activate() {
+        var promises = [getUsuarios()];
+        return $q.all(promises).then(function() {
 
-    vm.update = function() {
-        vm.usuario.latitud=$scope.map.center.latitude;
-        vm.usuario.longitud=$scope.map.center.longitude;
-        console.log(vm.usuario);
-        Usuarios.update(vm.usuario, function() {
-            //$location.path('/categorias');
-            $mdToast.show(
-                $mdToast.simple()
-                    .textContent('Se ha  actualizado el usuario...')
-                    .position('bottom right'));
         });
     }
+
+    function getUsuarios() {
+
+  return Usuarios.get(
+    {idUsuario: $stateParams.idUsuario }
+  ).$promise.then(function(data) {
+    console.log('data');
+    console.log(data);
+    $scope.map.center.latitude=data.latitud;
+    $scope.map.center.longitude=data.longitud;
+    $scope.map.zoom=18;
+
+
+  });
+
+}
+
+
+
   }
 
 })();

@@ -56,6 +56,8 @@
   }
 }
 
+
+
     isAuthenticated.$inject = [];
     function isAuthenticated() {
       return $auth.isAuthenticated();

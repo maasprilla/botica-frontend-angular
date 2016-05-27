@@ -12,7 +12,7 @@
 
       $stateProvider
               .state('geolocalizacion',{
-                  url: '/geolocalizacion',
+                  url: '/geolocalizacion/:idUsuario',
                   views:{
                     'encabezadosimple':{
                        template: '<encabezadosimple/>'

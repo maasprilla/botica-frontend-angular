@@ -1,5 +1,5 @@
 
-angular.module('app.geolocalizacion.services', ['uiGmapgoogle-maps']).config(
+angular.module('app.geolocalizacion-drogueriaview.services', ['uiGmapgoogle-maps']).config(
     ['uiGmapGoogleMapApiProvider', function(GoogleMapApiProviders) {
         GoogleMapApiProviders.configure({
           //  key: 'your api key',
