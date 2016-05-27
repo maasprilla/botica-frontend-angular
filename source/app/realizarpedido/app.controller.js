@@ -44,6 +44,7 @@
       }
       console.log('contenido');
       //vm.producto.descripcion=descripcionpedido;
+      vm.nombreproducto=" ";
 
 
 

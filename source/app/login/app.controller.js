@@ -82,6 +82,7 @@
 isAdmin.$inject = [];
 function isAdmin() {
   if (isAuthenticated()){
+
     return $auth.getPayload().roles.indexOf('ADMIN') !== -1;
   }else{
     return false;
