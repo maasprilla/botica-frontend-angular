@@ -11,6 +11,7 @@
         'ngTable',
         'angularFileUpload',
         'uiGmapgoogle-maps',
+        '720kb.datepicker',
         //'templates',
         'app.config',
         'app.footer',
@@ -30,7 +31,8 @@
         'app.password.recovery',
         'app.password.confirm',
         'app.geolocalizacion',
-        'app.imagenes'
+        'app.imagenes',
+        'app.medicamentos'
     ]);
 
 })();

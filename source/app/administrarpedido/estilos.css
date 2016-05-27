@@ -5,8 +5,106 @@
   padding-top: 2em;
   padding-bottom: 3em;
 }
-.AdminTable-title {
+.AdminPedidoTable-title {
   text-align: center;
   margin-top: 0;
   padding-top: 1em;
+}
+.AdminPedidoTable {
+  padding: 2em 0;
+  font-family: 'Open Sans';
+  text-align: center;
+  background-color: #fafafa;
+/** @media only screen and (max-width: 760px), (min-width: 768px) and (max-width: 1024px) **/
+}
+.AdminPedidoTable-title {
+  margin-top: 0;
+  padding-bottom: 1em;
+  color: rgba(17,85,34,0.533) 3;
+}
+.AdminPedidoTable-containerTable {
+  background-color: #fafafa;
+  padding: 0;
+  padding-top: 3em;
+}
+.AdminPedidoTable-table {
+  width: 100%;
+  margin: 0 0 50px 0;
+}
+.AdminPedidoTable-table th {
+  background: #152836;
+  color: #fafafa;
+  font-weight: bold;
+  padding: 5px;
+  text-align: center;
+}
+.AdminPedidoTable-table td {
+  color: #337ab7;
+  border-bottom: 1px solid #ccc;
+  padding: 5px;
+  text-align: center;
+}
+.AdminPedidoTable-table tr:last-child td {
+  border-top: 1px solid #ccc;
+}
+.AdminPedidoTable-table tbody {
+  border: 1px solid #152836;
+}
+@media screen and (max-width: 768px) {
+  .AdminPedidoTable .AdminPedidoTable-table,
+  .AdminPedidoTable .AdminPedidoTable-table thead,
+  .AdminPedidoTable .AdminPedidoTable-table tbody,
+  .AdminPedidoTable .AdminPedidoTable-table th,
+  .AdminPedidoTable .AdminPedidoTable-table td,
+  .AdminPedidoTable .AdminPedidoTable-table tr {
+    display: block;
+  }
+  .AdminPedidoTable .AdminPedidoTable-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  .AdminPedidoTable .AdminPedidoTable-table tr {
+    border: 1px solid #ccc;
+  }
+  .AdminPedidoTable .AdminPedidoTable-table td {
+    border: none;
+    position: relative;
+  }
+  .AdminPedidoTable .AdminPedidoTable-table td:before {
+    position: relative;
+    font-weight: bold;
+  }
+  .AdminPedidoTable .AdminPedidoTable-table td:nth-of-type(1):before {
+    content: "Dirección: ";
+  }
+  .AdminPedidoTable .AdminPedidoTable-table td:nth-of-type(2):before {
+    content: "Descripción: ";
+  }
+  .AdminPedidoTable .AdminPedidoTable-table td:nth-of-type(3):before {
+    content: "Ciudad: ";
+  }
+  .AdminPedidoTable .AdminPedidoTable-table td:nth-of-type(4):before {
+    content: "Zona de Envio: ";
+  }
+  .AdminPedidoTable .AdminPedidoTable-table td:nth-of-type(5):before {
+    content: "Ciudad: ";
+  }
+  .AdminPedidoTable .AdminPedidoTable-table td:nth-of-type(6):before {
+    content: "Fecha: ";
+  }
+}
+@media screen and (max-width: 1001px) {
+  .AdminPedidoList-Content {
+    text-align: center;
+  }
+  .AdminPedidoListIcon-container {
+    text-align: center;
+    display: inline-block;
+  }
+  .IconsAdminPedidoList {
+    max-width: 55px;
+    margin-right: 0.5em;
+    display: inline-block;
+  }
 }

@@ -57,7 +57,8 @@
 .ng-binding.sort-indicator {
   color: #fafafa;
 }
-@media only screen and (max-width: 760px), (min-width: 768px) and (max-width: 1024px) {
+/**@media only screen and (max-width: 760px), (min-width: 768px) and (max-width: 1024px) **/
+@media (max-width: 768px) {
   .UserTable-table,
   .UserTable-table thead,
   .UserTable-table tbody,
@@ -83,28 +84,28 @@
     font-weight: bold;
   }
   .UserTable-table td:nth-of-type(1):before {
-    content: "Id: ";
-  }
-  .UserTable-table td:nth-of-type(2):before {
     content: "Nombres: ";
   }
-  .UserTable-table td:nth-of-type(3):before {
+  .UserTable-table td:nth-of-type(2):before {
     content: "Apellidos: ";
   }
-  .UserTable-table td:nth-of-type(4):before {
+  .UserTable-table td:nth-of-type(3):before {
     content: "Telefono: ";
   }
-  .UserTable-table td:nth-of-type(5):before {
+  .UserTable-table td:nth-of-type(4):before {
     content: "Direccion: ";
   }
-  .UserTable-table td:nth-of-type(6):before {
+  .UserTable-table td:nth-of-type(5):before {
     content: "Ciudad: ";
   }
-  .UserTable-table td:nth-of-type(7):before {
+  .UserTable-table td:nth-of-type(6):before {
     content: "Email: ";
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1001px) {
+  .HeaderUserList-Content {
+    text-align: center;
+  }
   .HeaderUserList-icons {
     max-width: 55px;
     margin-right: 0.5em;
@@ -112,5 +113,6 @@
   }
   .HeaderUserList-containerIcon {
     text-align: center;
+    display: inline-block;
   }
 }

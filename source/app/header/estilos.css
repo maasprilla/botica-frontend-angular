@@ -116,6 +116,18 @@ body {
 #ConfigMovil {
   display: none;
 }
+#UsMovil {
+  display: none;
+}
+#ObjMovil {
+  display: none;
+}
+#BenMovil {
+  display: none;
+}
+#EnvMovil {
+  display: none;
+}
 /** @media (max-width: 987px)
   .MainMenu
     padding-top 3em
@@ -135,12 +147,38 @@ body {
     float left
   .MainMenu-containerIndex
     display none **/
+/** @media (max-width: 1323px)
+  .MainMenu-logo
+    float left **/
+/**.MainMenu-list
+  display none **/
+/** --- CON ESTO SE SUPONÍA SE ORGANIZABA LA NAV ---
+
+@media (min-width: 768px) and (max-width: 992px)
+  .navbar-collapse.collapse
+    display none !important
+  .navbar-collapse.collapse.in
+    display block !important
+  .navbar-header .collapse, .navbar-toggle
+    display block !important
+  .navbar-header
+    float none
+  .MainMenu-list>li
+    display block
+  .nav>li
+    display block
+
+---- SE PONE SIMILAR CUANDO SE ESTÁ LOGUEADO >:( ----- **/
 @media (max-width: 767px) {
   .MainMenu {
     padding-top: 0;
   }
   .MainMenu-list>li {
     display: block;
+  }
+  #MainMenu-list {
+    display: block;
+    margin: 1em 0 0.5em 0;
   }
   #LoginMovil {
     display: block;
@@ -169,6 +207,30 @@ body {
   }
   #ConfigMovil {
     display: block;
+  }
+  #UsMovil {
+    display: block;
+  }
+  #ObjMovil {
+    display: block;
+  }
+  #BenMovil {
+    display: block;
+  }
+  #EnvMovil {
+    display: block;
+  }
+  #UsDesktop {
+    display: none;
+  }
+  #ObjDesktop {
+    display: none;
+  }
+  #BenDesktop {
+    display: none;
+  }
+  #EnvDesktop {
+    display: none;
   }
 }
 @media (max-width: 695px) {

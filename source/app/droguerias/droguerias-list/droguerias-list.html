@@ -11,7 +11,7 @@
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container HeaderDrogList-Content">
       <div class="row HeaderDrogList-containerIcon">
         <div class="col-md-3 text-center HeaderDrogList-icons">
           <i class="material-icons" style="font-size:48px;color:#f9f9f9">account_circle</i>
@@ -36,8 +36,8 @@
          <td data-title="'Nombre'" >
              {{user.nombre}}
          </td>
-         <td data-title="'Apellido'" >
-             {{user.apellido}}
+         <td data-title="'Email'" >
+             {{user.email}}
          </td>
          <td data-title="'Telefono'" >
              {{user.telefono}}
@@ -46,10 +46,16 @@
              {{user.direccion}}
          </td>
          <td data-title="'Ciudad'">
-             {{user.idciudades}}
+             {{user.ciudad.nombre}}
          </td>
-         <td data-title="'Email'" >
-             {{user.email}}
+         <td data-title="'Nit'" >
+             {{user.nit}}
+         </td>
+         <td data-title="'Camara de Comercio'" >
+             {{user.camaracomercio}}
+         </td>
+         <td data-title="'Invima'" >
+             {{user.invima}}
          </td>
      </tr>
         </table>

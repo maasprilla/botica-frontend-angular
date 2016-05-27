@@ -75,18 +75,17 @@
     font-size: 22px;
   }
 }
-@media screen and (max-width: 760px) {
-  .IconsHeaderUserCreate-container {
-    padding: 1em 1.5em 1em 0;
-  }
-}
-@media screen and (max-width: 1000px) {
-  .IconsHeaderUserCreate-container {
+@media screen and (max-width: 1001px) {
+  .HeaderUserCreate-Content {
     text-align: center;
   }
   .IconsUser-container {
     max-width: 55px;
     margin-right: 0.5em;
+    display: inline-block;
+  }
+  .IconsHeaderUserCreate-container {
+    text-align: center;
     display: inline-block;
   }
 }

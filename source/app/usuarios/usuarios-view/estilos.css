@@ -159,7 +159,10 @@
     padding: 1em;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1001px) {
+  .HeaderUserView-Content {
+    text-align: center;
+  }
   .HeaderUserView-icons {
     max-width: 55px;
     margin-right: 0.5em;
@@ -167,5 +170,6 @@
   }
   .HeaderUserView-containerIcon {
     text-align: center;
+    display: inline-block;
   }
 }

@@ -21,7 +21,7 @@
 
           function getUsuarios() {
 
-        return Usuarios.query(
+        return Usuarios.findById({idRol:'USER'}
         ).$promise.then(function(data) {
           console.log('data');
           console.log(data);
