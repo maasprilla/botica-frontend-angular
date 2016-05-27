@@ -33,7 +33,7 @@
           <form name="FormUsuarios" class="FormPerfilDrog" ng-submit="vm.update()">
         <div class="dropzone FormPerfilUser-img">
           <div>Cambiar Foto de Perfil</div>
-          <input type="file" value="Search" accept="image/png, image/jpg, image/jpeg," class="well my-drop-zone" nv-file-select=""  uploader="vm.uploader"/>
+          <input type="file" value="Search" accept="image/png, image/jpg, image/jpeg," class="well my-drop-zone" />
         </div>
         <article class="FormPerfilDrog-info">
               <h3 class="FormPerfilDrog-tittle">Perfil De Droguerías</h3>
@@ -160,7 +160,8 @@
 
         </article>
       </form>
-      <a href="#/geolocalizacion/{{vm.usuario.idUsuario}}">establcer ubicacion en el mapa</a>
+      <a href="#/geolocalizacion/{{vm.usuario.idUsuario}}">Establcer Ubicacion en el Mapa</a>
+      <a href="#/geolocalizaciondrogueriasview/{{vm.usuario.idUsuario}}/" >{{vm.isLocation}}Ver mi Ubicacion</a>
       </section>
   </section>
 </div>
