@@ -20,7 +20,17 @@
 
         function Pedidos($resource, BASEURL) {
             return $resource(BASEURL + '/pedidos/:idPedido',
-            { idPedido: '@idPedido' }
+            { idPedido: '@idPedido' },
+            { 'update': {method: 'PUT'},
+                findByidEstadoPedido: {
+                    url: BASEURL + '/pedidos/estadoPedido/:idEstadoPedido',
+                    method: 'GET',
+                    isArray: true,
+                    params: {
+                        idEstadoPedido:'@idEstadoPedido'
+                  }
+            }
+          }
           )
         }
 

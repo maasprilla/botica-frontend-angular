@@ -1,137 +1,139 @@
-<section class="HeaderDrogCreate">
-  <div class="container DrogCreateHeader-container">
-    <div class="row">
-      <div class="col-md-4 IconsDrogTop-container">
-        <div class="DrogHeaderCreate-content"></div>
-      </div>
-      <div class="col-md-4 HeaderDrogCreate-content">
-
-          <img src="./images/regisdrog2.png" alt="Droguerias" class="DrogHeaderImage Gear1" style="max-width:17em">
-
-      </div>
-      <div class="col-md-4 IconsDrogTop-container">
-        <div class="DrogHeaderCreate-content"></div>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row IconsHeaderDrogCreate-container">
-      <div class="col-md-3 text-center IconsDrog-container">
-        <i class="material-icons" style="font-size:48px;color:#f9f9f9">supervisor_account</i>
-      </div>
-      <div class="col-md-3 text-center IconsDrog-container">
-        <i class="material-icons" style="font-size:48px;color:#f9f9f9">verified_user</i>
-      </div>
-      <div class="col-md-3 text-center IconsDrog-container">
-        <i class="material-icons" style="font-size:48px;color:#f9f9f9">store</i>
-      </div>
-      <div class="col-md-3 text-center IconsDrog-container">
-        <i class="material-icons" style="font-size:48px;color:#f9f9f9">add_shopping_cart</i>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="Registro">
-
-    <form name="FormRegistroDroguerias" class="FormRegistro" ng-submit="vm.create()">
-        <h1 class="FormRegistro-tittle">Registro Droguerias</h1>
-
-
-        <md-input-container class="md-block DrogCreate-container">
-          <label>Nombre</label>
-          <input md-maxlength="30" required md-no-asterisk name="nombre" ng-model="vm.usuario.nombre">
-          <div ng-messages="FormRegistroDroguerias.nombre.$error">
-            <div ng-message="required">Este campo no puede estar vacio.</div>
-            <div ng-message="md-maxlength">El Nombre no puede tener mas de 30 caracteres.</div>
-          </div>
-        </md-input-container>
-
-
-        <md-input-container class="md-block DrogCreate-container">
-        <label>Email</label>
-        <input required type="email" name="email" ng-model="vm.usuario.email"
-               minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
-        <div ng-messages="FormRegistroDroguerias.clientEmail.$error" role="alert">
-          <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
-            Su correo electrónico debe tener entre 10 y 100 caracteres de longitud y ser un formato de correo valido example@example.com.
-          </div>
+<div class="MajorContainer-elements">
+  <section class="HeaderDrogCreate">
+    <div class="container DrogCreateHeader-container">
+      <div class="row">
+        <div class="col-md-4 IconsDrogTop-container">
+          <div class="DrogHeaderCreate-content"></div>
         </div>
-        </md-input-container>
+        <div class="col-md-4 HeaderDrogCreate-content">
 
-        <md-input-container class="md-block DrogCreate-container">
-          <label>Telefono</label>
-          <input md-maxlength="10" required md-no-asterisk name="telefono" ng-model="vm.usuario.telefono" numbersonly>
-          <div ng-messages="FormRegistroDroguerias.telefono.$error">
-            <div ng-message="required">Este campo no puede estar vacio.</div>
-            <div ng-message="md-maxlength">El Telefono no puede tener mas de 10 caracteres.</div>
+            <img src="./images/regisdrog2.png" alt="Droguerias" class="DrogHeaderImage Gear1" style="max-width:17em">
 
+        </div>
+        <div class="col-md-4 IconsDrogTop-container">
+          <div class="DrogHeaderCreate-content"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container HeaderDrogCreate-Cont">
+      <div class="row IconsHeaderDrogCreate-container">
+        <div class="col-md-3 text-center IconsDrog-container">
+          <i class="material-icons" style="font-size:48px;color:#f9f9f9">supervisor_account</i>
+        </div>
+        <div class="col-md-3 text-center IconsDrog-container">
+          <i class="material-icons" style="font-size:48px;color:#f9f9f9">verified_user</i>
+        </div>
+        <div class="col-md-3 text-center IconsDrog-container">
+          <i class="material-icons" style="font-size:48px;color:#f9f9f9">store</i>
+        </div>
+        <div class="col-md-3 text-center IconsDrog-container">
+          <i class="material-icons" style="font-size:48px;color:#f9f9f9">add_shopping_cart</i>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="Registro">
+
+      <form name="FormRegistroDroguerias" class="FormRegistro" ng-submit="vm.create()">
+          <h1 class="FormRegistro-tittle">Registro Droguerias</h1>
+
+
+          <md-input-container class="md-block DrogCreate-container">
+            <label>Nombre</label>
+            <input md-maxlength="30" required md-no-asterisk name="nombre" ng-model="vm.usuario.nombre">
+            <div ng-messages="FormRegistroDroguerias.nombre.$error">
+              <div ng-message="required">Este campo no puede estar vacio.</div>
+              <div ng-message="md-maxlength">El Nombre no puede tener mas de 30 caracteres.</div>
+            </div>
+          </md-input-container>
+
+
+          <md-input-container class="md-block DrogCreate-container">
+          <label>Email</label>
+          <input required type="email" name="email" ng-model="vm.usuario.email"
+                 minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+          <div ng-messages="FormRegistroDroguerias.clientEmail.$error" role="alert">
+            <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+              Su correo electrónico debe tener entre 10 y 100 caracteres de longitud y ser un formato de correo valido example@example.com.
+            </div>
           </div>
-        </md-input-container>
+          </md-input-container>
 
-        <md-input-container class="md-block DrogCreate-container">
-          <label>Direccion</label>
-          <input md-maxlength="30" required md-no-asterisk name="direccion" ng-model="vm.usuario.direccion">
-          <div ng-messages="FormRegistroDroguerias.direccion.$error">
-            <div ng-message="required">Este campo no puede estar vacio.</div>
-            <div ng-message="md-maxlength">La Direccion no puede tener mas de 30 caracteres.</div>
-          </div>
-        </md-input-container>
+          <md-input-container class="md-block DrogCreate-container">
+            <label>Telefono</label>
+            <input md-maxlength="10" required md-no-asterisk name="telefono" ng-model="vm.usuario.telefono" numbersonly>
+            <div ng-messages="FormRegistroDroguerias.telefono.$error">
+              <div ng-message="required">Este campo no puede estar vacio.</div>
+              <div ng-message="md-maxlength">El Telefono no puede tener mas de 10 caracteres.</div>
 
-        <md-autocomplete required
-          md-selected-item="vm.usuario.ciudad"
-          md-search-text="vm.searchTextCiudades"
-          md-items="item in vm.foundCiudadesByNombre(vm.searchTextCiudades)"
-          md-item-text="item.nombre"
-          md-min-length="1"
-          md-floating-label="Ciudad de Domicilio"
-          class="FormRegistro-input">
-        <md-item-template>
-          <span md-highlight-text="vm.searchTextCiudades" md-highlight-flags="^i">
-            {{item.nombre}}</span>
-        </md-item-template>
-        <md-not-found>
-          La ciudad "{{vm.searchTextCiudades}}" no se encuentra.
-        </md-not-found>
-      </md-autocomplete>
+            </div>
+          </md-input-container>
 
+          <md-input-container class="md-block DrogCreate-container">
+            <label>Direccion</label>
+            <input md-maxlength="30" required md-no-asterisk name="direccion" ng-model="vm.usuario.direccion">
+            <div ng-messages="FormRegistroDroguerias.direccion.$error">
+              <div ng-message="required">Este campo no puede estar vacio.</div>
+              <div ng-message="md-maxlength">La Direccion no puede tener mas de 30 caracteres.</div>
+            </div>
+          </md-input-container>
 
-        <md-input-container class="md-block DrogCreate-container">
-          <label>Nit</label>
-          <input md-maxlength="30" required md-no-asterisk name="nit" ng-model="vm.usuario.nit">
-          <div ng-messages="FormRegistroDroguerias.nit.$error">
-            <div ng-message="required">Este campo no puede estar vacio.</div>
-            <div ng-message="md-maxlength">El Nit no puede tener mas de 30 caracteres.</div>
-          </div>
-        </md-input-container>
-
-        <md-input-container class="md-block DrogCreate-container">
-          <label>Camara de Comercio</label>
-          <input md-maxlength="30" required md-no-asterisk name="camaracomercio" ng-model="vm.usuario.camaracomercio">
-          <div ng-messages="FormRegistroDroguerias.camaracomercio.$error">
-            <div ng-message="required">Este campo no puede estar vacio.</div>
-            <div ng-message="md-maxlength">La Camara y Comercio no puede tener mas de 30 caracteres.</div>
-          </div>
-        </md-input-container>
-
-        <md-input-container class="md-block DrogCreate-container">
-          <label>Invima</label>
-          <input md-maxlength="30" required md-no-asterisk name="invima" ng-model="vm.usuario.invima">
-          <div ng-messages="FormRegistroDroguerias.invima.$error">
-            <div ng-message="required">Este campo no puede estar vacio.</div>
-            <div ng-message="md-maxlength">El Invima no puede tener mas de 30 caracteres.</div>
-          </div>
-        </md-input-container>
+          <md-autocomplete required
+            md-selected-item="vm.usuario.ciudad"
+            md-search-text="vm.searchTextCiudades"
+            md-items="item in vm.foundCiudadesByNombre(vm.searchTextCiudades)"
+            md-item-text="item.nombre"
+            md-min-length="1"
+            md-floating-label="Ciudad de Domicilio"
+            class="FormRegistro-input">
+          <md-item-template>
+            <span md-highlight-text="vm.searchTextCiudades" md-highlight-flags="^i">
+              {{item.nombre}}</span>
+          </md-item-template>
+          <md-not-found>
+            La ciudad "{{vm.searchTextCiudades}}" no se encuentra.
+          </md-not-found>
+        </md-autocomplete>
 
 
-        <md-input-container class="md-block DrogCreate-container">
-          <label>Password</label>
-          <input required type="password" name="password" ng-model="vm.usuario.password">
-          <div ng-messages="FormRegistroDroguerias.password.$error">
-            <div ng-message="required">Este campo no puede estar vacio.</div>
-          </div>
-        </md-input-container>
+          <md-input-container class="md-block DrogCreate-container">
+            <label>Nit</label>
+            <input md-maxlength="30" required md-no-asterisk name="nit" ng-model="vm.usuario.nit">
+            <div ng-messages="FormRegistroDroguerias.nit.$error">
+              <div ng-message="required">Este campo no puede estar vacio.</div>
+              <div ng-message="md-maxlength">El Nit no puede tener mas de 30 caracteres.</div>
+            </div>
+          </md-input-container>
+
+          <md-input-container class="md-block DrogCreate-container">
+            <label>Camara de Comercio</label>
+            <input md-maxlength="30" required md-no-asterisk name="camaracomercio" ng-model="vm.usuario.camaracomercio">
+            <div ng-messages="FormRegistroDroguerias.camaracomercio.$error">
+              <div ng-message="required">Este campo no puede estar vacio.</div>
+              <div ng-message="md-maxlength">La Camara y Comercio no puede tener mas de 30 caracteres.</div>
+            </div>
+          </md-input-container>
+
+          <md-input-container class="md-block DrogCreate-container">
+            <label>Invima</label>
+            <input md-maxlength="30" required md-no-asterisk name="invima" ng-model="vm.usuario.invima">
+            <div ng-messages="FormRegistroDroguerias.invima.$error">
+              <div ng-message="required">Este campo no puede estar vacio.</div>
+              <div ng-message="md-maxlength">El Invima no puede tener mas de 30 caracteres.</div>
+            </div>
+          </md-input-container>
 
 
-        <md-button type="submit" class="md-raised md-primary">Guardar</md-button>
-    </form>
-</section>
+          <md-input-container class="md-block DrogCreate-container">
+            <label>Password</label>
+            <input required type="password" name="password" ng-model="vm.usuario.password">
+            <div ng-messages="FormRegistroDroguerias.password.$error">
+              <div ng-message="required">Este campo no puede estar vacio.</div>
+            </div>
+          </md-input-container>
+
+
+          <md-button type="submit" class="md-raised md-primary">Guardar</md-button>
+      </form>
+  </section>
+</div>

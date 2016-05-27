@@ -1,3 +1,6 @@
+.MajorContainer-elements
+  min-height calc(80vh)
+
 .HeaderDrogList
   background-color #166ba2
   height 28em
@@ -49,7 +52,9 @@
 .ng-binding.sort-indicator
   color #fafafa
 
-@media only screen and (max-width: 760px), (min-width: 768px) and (max-width: 1024px)
+/**@media only screen and (max-width: 760px), (min-width: 768px) and (max-width: 1024px) **/
+
+@media screen and (max-width: 768px)
   .DrogTable
     &-table, &-table thead, &-table tbody, &-table th, &-table td, &-table tr
       display block
@@ -66,25 +71,30 @@
       position relative
       font-weight bold
     &-table td:nth-of-type(1):before
-      content "Id: "
+      content "Nombre: "
     &-table td:nth-of-type(2):before
-      content "Nombres: "
-    &-table td:nth-of-type(3):before
-      content "Apellidos: "
-    &-table td:nth-of-type(4):before
-      content "Telefono: "
-    &-table td:nth-of-type(5):before
-      content "Direccion: "
-    &-table td:nth-of-type(6):before
-      content "Ciudad: "
-    &-table td:nth-of-type(7):before
       content "Email: "
+    &-table td:nth-of-type(3):before
+      content "Telefono: "
+    &-table td:nth-of-type(4):before
+      content "Direccion: "
+    &-table td:nth-of-type(5):before
+      content "Ciudad: "
+    &-table td:nth-of-type(6):before
+      content "Nit: "
+    &-table td:nth-of-type(7):before
+      content "Camara de Comercio: "
+    &-table td:nth-of-type(8):before
+      content "Invima: "
 
 @media screen and (max-width: 1000px)
   .HeaderDrogList
+    &-Content
+      text-align center
     &-icons
       max-width 55px
       margin-right 0.5em
       display inline-block
     &-containerIcon
       text-align center
+      display inline-block

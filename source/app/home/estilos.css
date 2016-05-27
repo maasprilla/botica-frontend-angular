@@ -1,3 +1,6 @@
+.MajorContainer-elements {
+  min-height: calc(80vh);
+}
 .Nosotros {
   font-family: 'Open Sans';
   background: #152836;
@@ -8,6 +11,7 @@
 .UsImage-container {
   max-width: 27em;
   padding-top: 1em;
+  display: inline-block;
 }
 .UsImage {
   width: 100%;
@@ -49,6 +53,7 @@
 }
 .ObjetivosImage-container {
   max-width: 30em;
+  display: inline-block;
 }
 .ObjTitle,
 .ObjText {
@@ -67,6 +72,7 @@
 .BeneficiosImage-container {
   max-width: 30em;
   padding-top: 1em;
+  display: inline-block;
 }
 .BenTitle,
 .BenText {
@@ -94,6 +100,7 @@
 }
 .MDHomeImage-container {
   max-width: 30em;
+  display: inline-block;
 }
 .MDHomeTitle,
 .MDHomeText {

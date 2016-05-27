@@ -1,59 +1,67 @@
-<section class="HeaderDrogList">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">        
-      </div>
-      <div class="col-md-4 HeaderDrogList-logo">
-          <img src="./images/droglist.png" alt="Usuarios" class="HeaderDrogList-logoImg" style="max-width:15em">
-      </div>
-      <div class="col-md-4">        
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row HeaderDrogList-containerIcon">
-      <div class="col-md-3 text-center HeaderDrogList-icons">
-        <i class="material-icons" style="font-size:48px;color:#f9f9f9">account_circle</i>
-      </div>
-      <div class="col-md-3 text-center HeaderDrogList-icons">
-        <i class="material-icons" style="font-size:48px;color:#f9f9f9">list</i>
-      </div>
-      <div class="col-md-3 text-center HeaderDrogList-icons">
-        <i class="material-icons" style="font-size:48px;color:#f9f9f9">desktop_windows</i>
-      </div>
-      <div class="col-md-3 text-center HeaderDrogList-icons">
-        <i class="material-icons" style="font-size:48px;color:#f9f9f9">remove_red_eye</i>
+<div class="MajorContainer-elements">
+  <section class="HeaderDrogList">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4 HeaderDrogList-logo">
+            <img src="./images/droglist.png" alt="Usuarios" class="HeaderDrogList-logoImg" style="max-width:15em">
+        </div>
+        <div class="col-md-4">
+        </div>
       </div>
     </div>
-  </div>
-</section>
-<section class="DrogTable">
-  <h2 class="DrogTable-title">Lista de Droguerias</h2>
-  <div class="container  DrogTable-containerTable">
-      <table id="table" class="table table-hover DrogTable-table" ng-table="vm.usersTable">
-          <tr ng-repeat="user in vm.data">
-       <td data-title="'Nombre'" >
-           {{user.nombre}}
-       </td>
-       <td data-title="'Apellido'" >
-           {{user.apellido}}
-       </td>
-       <td data-title="'Telefono'" >
-           {{user.telefono}}
-       </td>    
-       <td data-title="'Direccion'" >
-           {{user.direccion}}
-       </td>    
-       <td data-title="'Ciudad'">
-           {{user.idciudades}}
-       </td>    
-       <td data-title="'Email'" >
-           {{user.email}}
-       </td>    
-   </tr>
-      </table>      
-  </div>
+    <div class="container HeaderDrogList-Content">
+      <div class="row HeaderDrogList-containerIcon">
+        <div class="col-md-3 text-center HeaderDrogList-icons">
+          <i class="material-icons" style="font-size:48px;color:#f9f9f9">account_circle</i>
+        </div>
+        <div class="col-md-3 text-center HeaderDrogList-icons">
+          <i class="material-icons" style="font-size:48px;color:#f9f9f9">list</i>
+        </div>
+        <div class="col-md-3 text-center HeaderDrogList-icons">
+          <i class="material-icons" style="font-size:48px;color:#f9f9f9">desktop_windows</i>
+        </div>
+        <div class="col-md-3 text-center HeaderDrogList-icons">
+          <i class="material-icons" style="font-size:48px;color:#f9f9f9">remove_red_eye</i>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="DrogTable">
+    <h2 class="DrogTable-title">Lista de Droguerias</h2>
+    <div class="container  DrogTable-containerTable">
+        <table id="table" class="table table-hover DrogTable-table" ng-table="vm.usersTable">
+            <tr ng-repeat="user in vm.data">
+         <td data-title="'Nombre'" >
+             {{user.nombre}}
+         </td>
+         <td data-title="'Email'" >
+             {{user.email}}
+         </td>
+         <td data-title="'Telefono'" >
+             {{user.telefono}}
+         </td>
+         <td data-title="'Direccion'" >
+             {{user.direccion}}
+         </td>
+         <td data-title="'Ciudad'">
+             {{user.ciudad.nombre}}
+         </td>
+         <td data-title="'Nit'" >
+             {{user.nit}}
+         </td>
+         <td data-title="'Camara de Comercio'" >
+             {{user.camaracomercio}}
+         </td>
+         <td data-title="'Invima'" >
+             {{user.invima}}
+         </td>
+     </tr>
+        </table>
+    </div>
 
 
 
-</section>
+  </section>
+</div>

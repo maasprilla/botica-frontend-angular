@@ -2,7 +2,7 @@
     'use strict';
 
     angular.module('app.bienvenido.router', [
-
+        'app.bienvenido.controller'
     ]).config(configure);
 
     configure.$inject = ['$stateProvider', '$urlRouterProvider'];

@@ -2,7 +2,9 @@
 angular.module('app.geolocalizacion.services', ['uiGmapgoogle-maps']).config(
     ['uiGmapGoogleMapApiProvider', function(GoogleMapApiProviders) {
         GoogleMapApiProviders.configure({
-            china: true
+          //  key: 'your api key',
+    v: '3.20',
+    libraries: 'places'
         });
     }]
 );

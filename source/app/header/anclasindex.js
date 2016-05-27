@@ -12,7 +12,7 @@ function anclaobjetivos(){
 
 }
 
-function anclabeneficios(){
+function anclabeneficioss(){
   $('html, body').stop().animate({
             scrollTop: jQuery('#beneficios').offset().top
         }, 1500);

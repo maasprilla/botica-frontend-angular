@@ -1,3 +1,6 @@
+.MajorContainer-elements {
+  min-height: calc(80vh);
+}
 .HeaderAdminView {
   background-color: #166ba2;
   height: 28em;
@@ -144,7 +147,10 @@
     padding: 1em;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1001px) {
+  .HeaderAdminView-Content {
+    text-align: center;
+  }
   .HeaderAdminView-icons {
     max-width: 55px;
     margin-right: 0.5em;
@@ -152,5 +158,6 @@
   }
   .HeaderAdminView-containerIcon {
     text-align: center;
+    display: inline-block;
   }
 }

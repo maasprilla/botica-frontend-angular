@@ -1,134 +1,136 @@
-<section class="HeaderUserCreate">
-  <div class="container UserCreateHeader-container">
-    <div class="row">
-      <div class="col-md-4 IconsUserTop-container">
-        <div class="UserHeaderCreate-content"></div>
-      </div>
-      <div class="col-md-4 HeaderUserCreate-content">
+<div class="MajorContainer-elements">
+  <section class="HeaderUserCreate">
+    <div class="container UserCreateHeader-container">
+      <div class="row">
+        <div class="col-md-4 IconsUserTop-container">
+          <div class="UserHeaderCreate-content"></div>
+        </div>
+        <div class="col-md-4 HeaderUserCreate-content">
 
-          <img src="./images/equipo.png" alt="Usuarios" class="UserHeaderImage Gear" style="max-width:17em">
+            <img src="./images/equipo.png" alt="Usuarios" class="UserHeaderImage Gear" style="max-width:17em">
 
-      </div>
-      <div class="col-md-4 IconsUserTop-container">
-        <div class="UserHeaderCreate-content"></div>
+        </div>
+        <div class="col-md-4 IconsUserTop-container">
+          <div class="UserHeaderCreate-content"></div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="container">
-    <div class="row IconsHeaderUserCreate-container">
-      <div class="col-md-3 text-center IconsUser-container">
-        <i class="material-icons" style="font-size:48px;color:#f9f9f9">accessibility</i>
-      </div>
-      <div class="col-md-3 text-center IconsUser-container">
-        <i class="material-icons" style="font-size:48px;color:#f9f9f9">settings</i>
-      </div>
-      <div class="col-md-3 text-center IconsUser-container">
-        <i class="material-icons" style="font-size:48px;color:#f9f9f9">build</i>
-      </div>
-      <div class="col-md-3 text-center IconsUser-container">
-        <i class="material-icons" style="font-size:48px;color:#f9f9f9">bug_report</i>
+    <div class="container HeaderUserCreate-Content">
+      <div class="row IconsHeaderUserCreate-container">
+        <div class="col-md-3 text-center IconsUser-container">
+          <i class="material-icons" style="font-size:48px;color:#f9f9f9">accessibility</i>
+        </div>
+        <div class="col-md-3 text-center IconsUser-container">
+          <i class="material-icons" style="font-size:48px;color:#f9f9f9">settings</i>
+        </div>
+        <div class="col-md-3 text-center IconsUser-container">
+          <i class="material-icons" style="font-size:48px;color:#f9f9f9">build</i>
+        </div>
+        <div class="col-md-3 text-center IconsUser-container">
+          <i class="material-icons" style="font-size:48px;color:#f9f9f9">bug_report</i>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="AdminRegistro">
+  <section class="AdminRegistro">
 
-    <form name="FormRegistroAdministradores" class="FormRegistro" ng-submit="vm.create()">
-        <h1 class="FormRegistro-tittle">Registro Administradores</h1>
+      <form name="FormRegistroAdministradores" class="FormRegistro" ng-submit="vm.create()">
+          <h1 class="FormRegistro-tittle">Registro Administradores</h1>
 
 
-        <md-input-container class="md-block AdminCreate-container">
-          <label>Nombre</label>
-          <input md-maxlength="30" required md-no-asterisk name="nombre" ng-model="vm.administrador.nombre">
-          <div ng-messages="FormRegistroAdministradores.nombre.$error">
+          <md-input-container class="md-block AdminCreate-container">
+            <label>Nombre</label>
+            <input md-maxlength="30" required md-no-asterisk name="nombre" ng-model="vm.administrador.nombre">
+            <div ng-messages="FormRegistroAdministradores.nombre.$error">
+              <div ng-message="required">Este campo no puede estar vacio.</div>
+              <div ng-message="md-maxlength">El Nombre no puede tener mas de 30 caracteres.</div>
+            </div>
+          </md-input-container>
+
+          <md-input-container class="md-block AdminCreate-container">
+            <label>Apellido</label>
+            <input md-maxlength="30" required md-no-asterisk name="apellido" ng-model="vm.administrador.apellido">
+            <div ng-messages="FormRegistroAdministradores.apellido.$error">
+              <div ng-message="required">Este campo no puede estar vacio.</div>
+              <div ng-message="md-maxlength">El Apellido no puede tener mas de 30 caracteres.</div>
+            </div>
+          </md-input-container>
+
+          <md-input-container class="md-block UserCreate-container">
+          <label>Cedula</label>
+          <input md-maxlength="10" pattern=".{6,}" required md-no-asterisk name="cedula" ng-model="vm.usuario.dni">
+          <div ng-messages="FormRegistroUsuarios.cedula.$error">
             <div ng-message="required">Este campo no puede estar vacio.</div>
-            <div ng-message="md-maxlength">El Nombre no puede tener mas de 30 caracteres.</div>
+            <div ng-message="md-maxlength">La Cedula no puede tener mas de 10 caracteres.</div>
+            <div ng-message="pattern">la Cedula no puede tener menos de 6 caracteres.</div>
           </div>
-        </md-input-container>
+          </md-input-container>
 
-        <md-input-container class="md-block AdminCreate-container">
-          <label>Apellido</label>
-          <input md-maxlength="30" required md-no-asterisk name="apellido" ng-model="vm.administrador.apellido">
-          <div ng-messages="FormRegistroAdministradores.apellido.$error">
-            <div ng-message="required">Este campo no puede estar vacio.</div>
-            <div ng-message="md-maxlength">El Apellido no puede tener mas de 30 caracteres.</div>
+          <md-input-container class="md-block AdminCreate-container">
+          <label>Email</label>
+          <input required type="email" name="email" ng-model="vm.administrador.email"
+                 minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+          <div ng-messages="FormRegistroAdministradores.clientEmail.$error" role="alert">
+            <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+              Su correo electrónico debe tener entre 10 y 100 caracteres de longitud y ser un formato de correo valido example@example.com.
+            </div>
           </div>
-        </md-input-container>
+          </md-input-container>
 
-        <md-input-container class="md-block UserCreate-container">
-        <label>Cedula</label>
-        <input md-maxlength="10" pattern=".{6,}" required md-no-asterisk name="cedula" ng-model="vm.usuario.dni">
-        <div ng-messages="FormRegistroUsuarios.cedula.$error">
-          <div ng-message="required">Este campo no puede estar vacio.</div>
-          <div ng-message="md-maxlength">La Cedula no puede tener mas de 10 caracteres.</div>
-          <div ng-message="pattern">la Cedula no puede tener menos de 6 caracteres.</div>
-        </div>
-        </md-input-container>
+          <md-input-container class="md-block AdminCreate-container">
+            <label>Telefono</label>
+            <input md-maxlength="10" required md-no-asterisk name="telefono" ng-model="vm.administrador.telefono" numbersonly>
+            <div ng-messages="FormRegistroAdminstradores.telefono.$error">
+              <div ng-message="required">Este campo no puede estar vacio.</div>
+              <div ng-message="md-maxlength">El Telefono no puede tener mas de 10 caracteres.</div>
 
-        <md-input-container class="md-block AdminCreate-container">
-        <label>Email</label>
-        <input required type="email" name="email" ng-model="vm.administrador.email"
-               minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
-        <div ng-messages="FormRegistroAdministradores.clientEmail.$error" role="alert">
-          <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
-            Su correo electrónico debe tener entre 10 y 100 caracteres de longitud y ser un formato de correo valido example@example.com.
-          </div>
-        </div>
-        </md-input-container>
+            </div>
+          </md-input-container>
 
-        <md-input-container class="md-block AdminCreate-container">
-          <label>Telefono</label>
-          <input md-maxlength="10" required md-no-asterisk name="telefono" ng-model="vm.administrador.telefono" numbersonly>
-          <div ng-messages="FormRegistroAdminstradores.telefono.$error">
-            <div ng-message="required">Este campo no puede estar vacio.</div>
-            <div ng-message="md-maxlength">El Telefono no puede tener mas de 10 caracteres.</div>
+          <md-input-container class="md-block AdminCreate-container">
+            <label>Direccion</label>
+            <input md-maxlength="30" required md-no-asterisk name="direccion" ng-model="vm.administrador.direccion">
+            <div ng-messages="FormRegistroAdministradores.direccion.$error">
+              <div ng-message="required">Este campo no puede estar vacio.</div>
+              <div ng-message="md-maxlength">la Direccion no puede tener mas de 30 caracteres.</div>
+            </div>
+          </md-input-container>
 
-          </div>
-        </md-input-container>
-
-        <md-input-container class="md-block AdminCreate-container">
-          <label>Direccion</label>
-          <input md-maxlength="30" required md-no-asterisk name="direccion" ng-model="vm.administrador.direccion">
-          <div ng-messages="FormRegistroAdministradores.direccion.$error">
-            <div ng-message="required">Este campo no puede estar vacio.</div>
-            <div ng-message="md-maxlength">la Direccion no puede tener mas de 30 caracteres.</div>
-          </div>
-        </md-input-container>
-
-        <md-autocomplete required
-          md-selected-item="vm.administrador.ciudad"
-          md-search-text="vm.searchTextCiudades"
-          md-items="item in vm.foundCiudadesByNombre(vm.searchTextCiudades)"
-          md-item-text="item.nombre"
-          md-min-length="1"
-          md-floating-label="Ciudad de Domicilio" style="color: black"
-          class="FormRegistro-input AdminCreate-AutoCompleteContainer">
-        <md-item-template>
-          <span md-highlight-text="vm.searchTextCiudades" md-highlight-flags="^i">
-            {{item.nombre}}</span>
-        </md-item-template>
-        <md-not-found>
-          La ciudad "{{vm.searchTextCiudades}}" no se encuentra.
-        </md-not-found>
-      </md-autocomplete>
+          <md-autocomplete required
+            md-selected-item="vm.administrador.ciudad"
+            md-search-text="vm.searchTextCiudades"
+            md-items="item in vm.foundCiudadesByNombre(vm.searchTextCiudades)"
+            md-item-text="item.nombre"
+            md-min-length="1"
+            md-floating-label="Ciudad de Domicilio" style="color: black"
+            class="FormRegistro-input AdminCreate-AutoCompleteContainer">
+          <md-item-template>
+            <span md-highlight-text="vm.searchTextCiudades" md-highlight-flags="^i">
+              {{item.nombre}}</span>
+          </md-item-template>
+          <md-not-found>
+            La ciudad "{{vm.searchTextCiudades}}" no se encuentra.
+          </md-not-found>
+        </md-autocomplete>
 
 
-        <md-input-container class="md-block AdminCreate-container">
-          <label>Password</label>
-          <input required type="password" name="password" ng-model="vm.administrador.password">
-          <div ng-messages="FormRegistroAdministradores.password.$error">
-            <div ng-message="required">Este campo no puede estar vacio.</div>
-          </div>
-        </md-input-container>
+          <md-input-container class="md-block AdminCreate-container">
+            <label>Password</label>
+            <input required type="password" name="password" ng-model="vm.administrador.password">
+            <div ng-messages="FormRegistroAdministradores.password.$error">
+              <div ng-message="required">Este campo no puede estar vacio.</div>
+            </div>
+          </md-input-container>
 
 
-        <md-button type="submit" class="md-raised md-primary FormRegistroAdministradores-Button">Guardar</md-button>
-    </form>
+          <md-button type="submit" class="md-raised md-primary FormRegistroAdministradores-Button">Guardar</md-button>
+      </form>
 
 
 
 
 
 
-</section>
+  </section>
+</div>

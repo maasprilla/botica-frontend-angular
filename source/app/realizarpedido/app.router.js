@@ -11,7 +11,7 @@
 
     $stateProvider
                   .state('realizarpedido',{
-                  url: '/realizarpedido',
+                  url: '/realizarpedido/:idUsuario',
                   views:{
                     'encabezadopedido':{
                        template: '<encabezadopedido/>'

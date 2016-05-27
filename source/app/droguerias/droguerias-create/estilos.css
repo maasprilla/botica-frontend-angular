@@ -1,3 +1,6 @@
+.MajorContainer-elements {
+  min-height: calc(80vh);
+}
 .Gear1 {
   border: solid 4px #f9f9f9;
   border-radius: 50%;
@@ -76,18 +79,17 @@
     font-size: 22px;
   }
 }
-@media screen and (max-width: 760px) {
-  .IconsHeaderDrogCreate-container {
-    padding: 1em 1.5em 1em 0;
-  }
-}
-@media screen and (max-width: 1000px) {
-  .IconsHeaderDrogCreate-container {
+@media screen and (max-width: 1001px) {
+  .HeaderDrogCreate-Cont {
     text-align: center;
   }
   .IconsDrog-container {
     max-width: 55px;
     margin-right: 0.5em;
+    display: inline-block;
+  }
+  .IconsHeaderDrogCreate-container {
+    text-align: center;
     display: inline-block;
   }
 }

@@ -12,7 +12,7 @@
     height 15em
     width 15em
   &-icons
-    padding 1em 1.5em 1em 0
+    // padding 1em 1.5em 1em 0
     display inline-block
 
 .passrecoveryForm
@@ -35,21 +35,14 @@
   .passrecoveryForm-form
     width 100%
 
-@media screen and (min-width: 201px) and (max-width: 1000px)
+@media screen and (max-width: 1001px)
   .passrecovery
+    &-content
+      text-align center
     &-icons
       max-width 55px
       margin-right 0.5em
       display inline-block
     &-containerIcon
       text-align center
-      /**display inline-block**/
-
-@media screen and (max-width: 200px)
-  .passrecovery
-    &-icons
-      max-width 18px
-      margin-right 0.5em
       display inline-block
-    &-containerIcon
-      text-align center

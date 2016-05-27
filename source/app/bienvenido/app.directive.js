@@ -9,7 +9,9 @@
     function bienvenido(){
       return{
         scope:{},
-        templateUrl:'app/bienvenido/bienvenido.html'
+        templateUrl:'app/bienvenido/bienvenido.html',
+        controller: 'bienvenidoCtrl',
+        controllerAs: 'vm'
       }
     }
 

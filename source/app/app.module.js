@@ -11,6 +11,7 @@
         'ngTable',
         'angularFileUpload',
         'uiGmapgoogle-maps',
+        '720kb.datepicker',
         //'templates',
         'app.config',
         'app.footer',
@@ -23,13 +24,16 @@
         'app.administradores',
         'app.administrarpedido',
         'app.realizarpedido',
+        'app.listarpedidos',
         'app.medioambiente',
         'app.portafolioservicios',
         'app.bienvenido',
         'app.password.recovery',
         'app.password.confirm',
         'app.geolocalizacion',
-        'app.imagenes'
+        'app.geolocalizacion-drogueriaview',
+        'app.imagenes',
+        'app.medicamentos'
     ]);
 
 })();

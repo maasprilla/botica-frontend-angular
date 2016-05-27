@@ -1,9 +1,9 @@
 {
-  "name": "inmobiliariafrontend",
-  "description": "Frontend para el software de gestión de Inmobiliarias",
+  "name": "botica",
+  "description": "Frontend para el software de gestión de medicamentos",
   "main": "server.js",
   "authors": [
-    "Ruber Rodríguez V"
+    "Botica"
   ],
   "license": "UNLICENSED",
   "moduleType": [],
@@ -41,7 +41,8 @@
     "ng-table": "^0.8.3",
     "angular-file-upload": "^2.3.1",
     "ng-file-upload-shim": "^12.0.4",
-    "angular-google-maps": "^2.3.3"
+    "angular-google-maps": "^2.3.3",
+    "angularjs-datepicker": "^2.1.3"
   },
   "devDependencies": {
     "satellizer": "^0.14.0"

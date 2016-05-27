@@ -1,16 +1,16 @@
 <section class="HeaderUserList">
   <div class="container">
     <div class="row">
-      <div class="col-md-4">        
+      <div class="col-md-4">
       </div>
       <div class="col-md-4 HeaderUserList-logo">
           <img src="./images/users1.png" alt="Usuarios" class="HeaderUserList-logoImg" style="max-width:15em">
       </div>
-      <div class="col-md-4">        
+      <div class="col-md-4">
       </div>
     </div>
   </div>
-  <div class="container">
+  <div class="container HeaderUserList-Content">
     <div class="row HeaderUserList-containerIcon">
       <div class="col-md-3 text-center HeaderUserList-icons">
         <i class="material-icons" style="font-size:48px;color:#f9f9f9">account_circle</i>
@@ -40,18 +40,18 @@
        </td>
        <td data-title="'Telefono'" >
            {{user.telefono}}
-       </td>    
+       </td>
        <td data-title="'Direccion'" >
            {{user.direccion}}
-       </td>    
+       </td>
        <td data-title="'Ciudad'">
-           {{user.idciudades}}
-       </td>    
+           {{user.ciudad.nombre}}
+       </td>
        <td data-title="'Email'" >
            {{user.email}}
-       </td>    
+       </td>
    </tr>
-      </table>      
+      </table>
   </div>
 
 
