@@ -5,8 +5,8 @@
   ]).controller('geolocalizacionCtrl', geolocalizacionCtrl);
 
 
-  geolocalizacionCtrl.$inject = ['$scope', '$timeout', 'uiGmapLogger', '$http','uiGmapGoogleMapApi', '$stateParams','$mdToast', 'Usuarios'];
-  function geolocalizacionCtrl($scope, $timeout, $log, $http, GoogleMapApi, $stateParams, $mdToast, Usuarios){
+  geolocalizacionCtrl.$inject = ['$scope', '$timeout', 'uiGmapLogger', '$http','uiGmapGoogleMapApi', '$stateParams','$mdToast', 'Usuarios', '$location'];
+  function geolocalizacionCtrl($scope, $timeout, $log, $http, GoogleMapApi, $stateParams, $mdToast, Usuarios, $location){
     var vm = this;
     console.log('user');
     console.log($stateParams.idUsuario);
@@ -161,7 +161,7 @@
         vm.usuario.longitud=$scope.map.center.longitude;
         console.log(vm.usuario);
         Usuarios.update(vm.usuario, function() {
-            //$location.path('/categorias');
+            $location.path('/bienvenido');
             $mdToast.show(
                 $mdToast.simple()
                     .textContent('Se ha  actualizado el usuario...')

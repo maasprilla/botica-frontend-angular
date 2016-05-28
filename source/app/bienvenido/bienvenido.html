@@ -34,13 +34,13 @@
       </div>
     </div>
   </section>
-  <section class="WelcomeOptions" ng-controller="LoginController">
+  <section class="WelcomeOptions" ng-controller="LoginController as login">
     <div class="container WelcomeOpt-container">
       <div class="row WelcomeOptInfo-container">
         <div class="col-md-4 WelcomeOpt-contentContainer">
           <i class="material-icons" style="font-size:48px">add_shopping_cart</i>
           <p class="WelcomeOpt-text">Ordena uno o varios productos a través de nuestro formulario</p>
-          <a href="#/realizarpedido/" class="WelcomeOpt-link"><strong>Realiza tu pedido</strong></a>
+          <a href="#/realizarpedido/{{login.getIdCurrentUser()}}" class="WelcomeOpt-link"><strong>Realiza tu pedido</strong></a>
         </div>
         <div class="col-md-4 WelcomeOpt-centerContainer">
           <i class="material-icons" style="font-size:48px">attach_money</i>

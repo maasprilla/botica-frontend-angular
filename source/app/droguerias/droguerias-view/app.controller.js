@@ -8,6 +8,11 @@
   drogueriasViewCtrl.$inject = ['$stateParams','$location', '$mdToast','Usuarios', '$q'];
   function drogueriasViewCtrl($stateParams, $location, $mdToast, Usuarios, $q){
           var vm=this;
+
+          vm.usuario = {};
+           vm.loadFoto = loadFoto;
+
+
          vm.usuario = Usuarios.get({idUsuario: $stateParams.idUsuario });
 
          console.log(vm.usuario);
@@ -38,7 +43,7 @@
 
        }
 
-    
+
 
 
          vm.update = function() {
@@ -50,6 +55,10 @@
                          .position('bottom right'));
              });
          }
+
+         function loadFoto($fileContent) {
+      vm.usuario.imgPerfil = $fileContent;
+    }
 
     }
 

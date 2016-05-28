@@ -13,6 +13,7 @@
     vm.logout = logout;
     vm.isAdmin = isAdmin;
     vm.isUser = isUser;
+    vm.isDrog = isDrog;
     vm.getIdCurrentUser=getIdCurrentUser;
 
 
@@ -94,6 +95,16 @@ isUser.$inject = [];
 function isUser() {
   if (isAuthenticated()){
     return $auth.getPayload().roles.indexOf('USER') !== -1;
+  }else{
+    return false;
+  }
+
+}
+
+isDrog.$inject = [];
+function isDrog() {
+  if (isAuthenticated()){
+    return $auth.getPayload().roles.indexOf('DROG') !== -1;
   }else{
     return false;
   }
