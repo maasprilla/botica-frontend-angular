@@ -36,21 +36,19 @@
     <h2 class="AdminPedidoTable-title">Administrar Pedidos</h2>
     <div class="container  AdminPedidoTable-containerTable">
         <table id="table" class="table table-hover AdminPedidoTable-table"  ng-table="vm.usersTable">
-            <tr ng-repeat="user in vm.data">
-         <td data-tittle="'Nombre Producto'">
-           {{user.nombre}}
-         </td>
+            <tr ng-repeat="pedido in vm.pedidos">
+
          <td data-title="'Direccion'" >
-             {{user.nombre}}
+             {{pedido.direccion}}
          </td>
          <td data-title="'Descripcion'" >
-             {{user.apellido}}
+             {{pedido.descripcion}}
          </td>
          <td data-title="'Ciudad'" >
-             {{user.telefono}}
+             {{pedido.ciudad.nombre}}
          </td>
          <td data-title="'Zona de Envio'">
-             {{user.idciudades}}
+             {{pedido.idZonaEnvio.descripcionZona}}
          </td>
          <td data-title="'Fecha'" >
              {{user.email}}
