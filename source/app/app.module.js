@@ -12,6 +12,7 @@
         'angularFileUpload',
         'uiGmapgoogle-maps',
         '720kb.datepicker',
+        '720kb.tooltips',
         //'templates',
         'app.config',
         'app.footer',
