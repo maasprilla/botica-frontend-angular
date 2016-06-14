@@ -9,7 +9,9 @@
   function administrarpedido(){
     return {
       scope:{},
-      templateUrl:'app/administrarpedido/administrarpedido.html'
+      templateUrl:'app/administrarpedido/administrarpedido.html',
+      controller: 'administrarPedidoListoCtrl',
+      controllerAs: 'vm'
   };
   }
 

@@ -232,6 +232,89 @@ body
       height 20em
 
 
+/** Estilos animaciones header **/
+@media (min-width: 768px)
+  .Header
+    &-container
+      width 27em
+      height 5em
+      display flex
+      border 1px solid red
+      color red
+      font-size 25px
+      line-height 25px
+      position absolute
+      top 10em
+      right 0
+      bottom 0
+      left 0
+      margin auto
+      overflow hidden
+    &-container>ul
+      list-style none
+      padding-left 10px
+      margin 0
+      // -webkit-animation-play-state 7s paused
+    &-container>p
+      margin 0
+      font-family 'Open Sans'
+    &-paragraph1
+      animation changetext1 20.2s ease-in-out infinite
+    &-paragraph2
+      animation changetext2 20.2s ease-in-out infinite
+    &-paragraph3
+      animation changetext3 20.2s ease-in-out infinite
+    @-webkit-keyframes changetext1
+      0% {opacity: 0; animation-timing-function: ease-in-out; -webkit-transform: translateY(100%)}
+      9% {opacity: 1; animation-timing-function: ease-in-out; -webkit-transform: translateY(0%)}
+      23% {opacity: 1;}
+      24% {opacity: 0;}
+      85% {opacity: 0; animation-timing-function: ease-in-out; -webkit-transform: translateY(0%)}
+      100% {opacity: 0; animation-timing-function: ease-in-out; -webkit-transform: translateY(0%)}
+    @-webkit-keyframes changetext2
+      25% {opacity: 0; animation-timing-function: ease-in-out; -webkit-transform: translateY(0%)}
+      34% {opacity: 1; animation-timing-function: ease-in-out; -webkit-transform: translateY(-5.5em)}
+      53% {opacity: 1; animation-timing-function: ease-in-out; -webkit-transform: translateY(-5.5em)}
+      54% {opacity: 0;}
+      85% {opacity: 0;}
+      100% {opacity: 1;}
+    @-webkit-keyframes changetext3
+      0% {opacity: 0; animation-timing-function: ease-in-out; -webkit-transform: translateY(0%)}
+      20% {opacity: 1; animation-timing-function: ease-in-out; -webkit-transform: translateY(0%)}
+      22% {opacity: 0;}
+      25% {opacity: 0; animation-timing-function: ease-in-out; -webkit-transform: translateY(0%)}
+      50% {opacity: 1; animation-timing-function: ease-in-out; -webkit-transform: translateY(-5.5em)}
+      55% {opacity: 1; animation-timing-function: ease-in-out; -webkit-transform: translateY(-5.5em)}
+      64% {opacity: 1; animation-timing-function: ease-in-out; -webkit-transform: translateY(-10.85em)}
+      84% {opacity: 1; animation-timing-function: ease-in-out; -webkit-transform: translateY(-10.85em)}
+      85% {opacity: 0;}
+      100% {opacity: 0;}
+
+
+      // 0% {opacity: 0; animation-timing-function: ease-in-out; -webkit-transform: translateY(0)}
+      // 20% {opacity: 1; animation-timing-function: ease-in-out; -webkit-transform: translateY(0)}
+      //
+      // 25% {opacity: 0; animation-timing-function: ease-in-out; -webkit-transform: translateY(-4.5em)}
+      // 50% {opacity: 1; animation-timing-function: ease-in-out; -webkit-transform: translateY(-4.5em)}
+      //
+      // 55% {opacity: 0; animation-timing-function: ease-in-out; -webkit-transform: translateY(-9em)}
+      // 80% {opacity: 1; animation-timing-function: ease-in-out; -webkit-transform: translateY(-9em)}
+      //
+      // 85% {opacity: 0; animation-timing-function: ease-in-out; -webkit-transform: translateY(0)}
+      // 100% {opacity: 1; animation-timing-function: ease-in-out; -webkit-transform: translateY(0)}
+      // 0% {opacity: 0; margin-top: 0;}
+      // 20% {opacity: 1; margin-top: 0;}
+      //
+      // 25% {opacity: 0; margin-top: -4.5em;}
+      // 50% {opacity: 1; margin-top: -4.5em;}
+      //
+      // 55% {opacity: 0; margin-top: -9em;}
+      // 80% {opacity: 1; margin-top: -9em;}
+      //
+      // 85% {opacity: 0; margin-top: 0;}
+      // 100% {opacity: 1; margin-top: 0;}
+
+
 /**
   estilos para los demas headers
 */

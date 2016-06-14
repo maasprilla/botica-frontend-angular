@@ -4,6 +4,7 @@
   angular.module('app.administrarpedido', [
                 'app.administrarpedido.directive',
                 'app.administrarpedido.router',
-                'app.administrarpedido-usuario'
+                'app.administrarpedido-usuario',
+                'app.administrarpedido.list.controller'
   ]);
 })();

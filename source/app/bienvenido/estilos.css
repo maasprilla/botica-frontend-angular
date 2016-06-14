@@ -68,4 +68,8 @@
     border-bottom: 1px dashed #000;
     display: inline-block;
   }
+  .WelcomeOptInfo-container {
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+  }
 }
