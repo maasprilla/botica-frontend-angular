@@ -269,21 +269,22 @@ body {
     list-style: none;
     padding-left: 10px;
     margin: 0;
+    text-align: center;
   }
   .Header-container>p {
     margin: 0;
     font-family: 'Open Sans';
   }
   .Header-paragraph1 {
-    animation: changetext1 20.2s ease-in-out infinite;
+    animation: changetext1 25.2s ease-in-out infinite;
     text-transform: capitalize;
   }
   .Header-paragraph2 {
-    animation: changetext2 20.2s ease-in-out infinite;
+    animation: changetext2 25.2s ease-in-out infinite;
     text-transform: capitalize;
   }
   .Header-paragraph3 {
-    animation: changetext3 20.2s ease-in-out infinite;
+    animation: changetext3 25.2s ease-in-out infinite;
     text-transform: capitalize;
   }
 @-webkit-keyframes changetext1 {
