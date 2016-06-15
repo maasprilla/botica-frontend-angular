@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('app.administrarpedido.router',[
-
+      'app.administrarpedido.list.controller'
   ]).config(configure);
 
   configure.$inject = ['$stateProvider', '$urlRouterProvider'];

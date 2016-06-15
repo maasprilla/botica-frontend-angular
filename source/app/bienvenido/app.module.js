@@ -3,6 +3,7 @@
 
     angular.module('app.bienvenido', [
             'app.bienvenido.directive',
-            'app.bienvenido.router'
+            'app.bienvenido.router',
+            'app.bienvenido.controller'
     ]);
 })();

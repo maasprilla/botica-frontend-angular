@@ -15,6 +15,7 @@
   font-family: 'Open Sans';
   text-align: center;
   background-color: #fafafa;
+/** @media only screen and (max-width: 760px), (min-width: 768px) and (max-width: 1024px) **/
 }
 .AdminPedidoTable-title {
   margin-top: 0;
@@ -49,7 +50,7 @@
 .AdminPedidoTable-table tbody {
   border: 1px solid #152836;
 }
-@media only screen and (max-width: 760px), (min-width: 768px) and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
   .AdminPedidoTable .AdminPedidoTable-table,
   .AdminPedidoTable .AdminPedidoTable-table thead,
   .AdminPedidoTable .AdminPedidoTable-table tbody,
@@ -91,5 +92,19 @@
   }
   .AdminPedidoTable .AdminPedidoTable-table td:nth-of-type(6):before {
     content: "Fecha: ";
+  }
+}
+@media screen and (max-width: 1001px) {
+  .AdminPedidoList-Content {
+    text-align: center;
+  }
+  .AdminPedidoListIcon-container {
+    text-align: center;
+    display: inline-block;
+  }
+  .IconsAdminPedidoList {
+    max-width: 55px;
+    margin-right: 0.5em;
+    display: inline-block;
   }
 }

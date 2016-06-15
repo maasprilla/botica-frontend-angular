@@ -12,7 +12,7 @@
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container HeaderDrogView-Content">
       <div class="row HeaderDrogView-containerIcon">
         <div class="col-md-3 text-center HeaderDrogView-icons">
           <i class="material-icons" style="font-size:48px;color:#f9f9f9">account_circle</i>
@@ -31,10 +31,14 @@
   </section>
       <section>
           <form name="FormUsuarios" class="FormPerfilDrog" ng-submit="vm.update()">
+        <div>
         <div class="dropzone FormPerfilUser-img">
           <div>Cambiar Foto de Perfil</div>
-          <input type="file" value="Search" accept="image/png, image/jpg, image/jpeg," class="well my-drop-zone" nv-file-select=""  uploader="vm.uploader"/>
+          <input type="file" value="Search" accept="image/png, image/jpg, image/jpeg," class="well my-drop-zone"  uploader="vm.uploader" on-read-img="vm.loadFoto($fileContent)"/>
+          <img class="imagen" ng-if="vm.usuario.imgPerfil" ng-src="{{'data:image/png;base64,' + vm.usuario.imgPerfil}}" width="188%" />
         </div>
+        <button type="submit" class="FormPerfilUser-buttonimg">Guardar</button>
+      </div>
         <article class="FormPerfilDrog-info">
               <h3 class="FormPerfilDrog-tittle">Perfil De Droguerías</h3>
 
@@ -160,6 +164,8 @@
 
         </article>
       </form>
+      <a href="#/geolocalizacion/{{vm.usuario.idUsuario}}">Establcer Ubicacion en el Mapa</a>
+      <a href="#/geolocalizaciondrogueriasview/{{vm.usuario.idUsuario}}" >{{vm.isLocation}}Ver mi Ubicacion</a>
       </section>
   </section>
 </div>

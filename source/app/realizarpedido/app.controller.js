@@ -12,7 +12,7 @@
 
     vm.currentuser=$stateParams.idUsuario;
 
-    vm.producto={idusuario:{idUsuario:vm.currentuser}};
+    vm.producto={idusuario:{idUsuario:vm.currentuser}, idEstadoPedido:{idEstadoPedido:1}};
 
 
     vm.zonasenvios=ZonasEnvios.query();
@@ -44,6 +44,7 @@
       }
       console.log('contenido');
       //vm.producto.descripcion=descripcionpedido;
+      vm.nombreproducto=" ";
 
 
 
@@ -54,7 +55,7 @@
         vm.producto.medicamentoList=productos;
         console.log(vm.producto);
         Pedidos.save(vm.producto, function() {
-                $location.path('/bienvenido');
+                $location.path('/administrarpedido/usuario');
                 $mdToast.show(
                     $mdToast.simple()
                         .textContent('Se ha  guardado el Pedido...')

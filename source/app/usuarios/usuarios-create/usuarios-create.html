@@ -15,7 +15,7 @@
       </div>
     </div>
   </div>
-  <div class="container">
+  <div class="container HeaderUserCreate-Content">
     <div class="row IconsHeaderUserCreate-container">
       <div class="col-md-3 text-center IconsUser-container">
         <i class="material-icons" style="font-size:48px;color:#f9f9f9">account_circle</i>
@@ -38,14 +38,26 @@
         <h1 class="FormRegistro-tittle">Registro Usuarios</h1>
 
 
-        <md-input-container class="md-block UserCreate-container">
+        <md-input-container class="md-block UserCreate-container has-warning ">
           <label>Nombre</label>
-          <input md-maxlength="30" required md-no-asterisk name="nombre" ng-model="vm.usuario.nombre">
+          <input  md-maxlength="30"  required md-no-asterisk name="nombre" ng-model="vm.usuario.nombre">
+          <span class="glyphicon glyphicon-info-sign form-control-feedback" aria-hidden="true" >
+          </span>
+          <!-- <a href="#" tooltips tooltip-template="tooltip" class="form-control-feedback prueba">
+            <span class="glyphicon glyphicon-info-sign form-control-feedback" aria-hidden="true" >
+            </span>
+          </a> -->
+
           <div ng-messages="FormRegistroUsuarios.nombre.$error">
             <div ng-message="required">Este campo no puede estar vacio.</div>
             <div ng-message="md-maxlength">El Nombre no puede tener mas de 30 caracteres.</div>
           </div>
         </md-input-container>
+
+
+
+
+
 
         <md-input-container class="md-block UserCreate-container">
           <label>Apellido</label>
@@ -114,7 +126,7 @@
           md-item-text="item.nombre"
           md-min-length="1"
           md-floating-label="Ciudad de Domicilio"
-          class="FormRegistro-input">
+          class="FormRegistro-autocomplete">
         <md-item-template>
           <span md-highlight-text="vm.searchTextCiudades" md-highlight-flags="^i">
             {{item.nombre}}</span>

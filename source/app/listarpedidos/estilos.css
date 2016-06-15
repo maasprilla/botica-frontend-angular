@@ -1,4 +1,4 @@
-.ListarPedidosTable-containerTable {
+.ListarPedidos-containerTable {
   padding-top: 2em;
   padding-bottom: 3em;
 }
@@ -7,13 +7,13 @@
   margin-top: 0;
   padding-top: 1em;
 }
-.ListarPedidosTable {
+.ListarPedidos {
   padding: 2em 0;
   font-family: 'Open Sans';
   text-align: center;
   background-color: #fafafa;
 }
-.ListarPedidosTable-containerTable {
+.ListarPedidos-containerTable {
   background-color: #fafafa;
   padding: 0;
   padding-top: 3em;
@@ -45,4 +45,62 @@
 }
 .ListarPedidos-table tbody {
   border: 1px solid #152836;
+}
+@media screen and (max-width: 768px) {
+  .ListarPedidos-table,
+  .ListarPedidos-table thead,
+  .ListarPedidos-table tbody,
+  .ListarPedidos-table th,
+  .ListarPedidos-table td,
+  .ListarPedidos-table tr {
+    display: block;
+  }
+  .ListarPedidos-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  .ListarPedidos-table tr {
+    border: 1px solid #ccc;
+  }
+  .ListarPedidos-table td {
+    border: none;
+    position: relative;
+  }
+  .ListarPedidos-table td:before {
+    position: relative;
+    font-weight: bold;
+  }
+  .ListarPedidos-table td:nth-of-type(1):before {
+    content: "Nombre Producto: ";
+  }
+  .ListarPedidos-table td:nth-of-type(2):before {
+    content: "Dirección: ";
+  }
+  .ListarPedidos-table td:nth-of-type(3):before {
+    content: "Descripción: ";
+  }
+  .ListarPedidos-table td:nth-of-type(4):before {
+    content: "Ciudad: ";
+  }
+  .ListarPedidos-table td:nth-of-type(5):before {
+    content: "Zona de Envio: ";
+  }
+  .ListarPedidos-table td:nth-of-type(6):before {
+    content: "Fecha: ";
+  }
+}
+@media screen and (max-width: 1001px) {
+  .PedidoList-Content {
+    text-align: center;
+  }
+  .IconsPedidoList {
+    max-width: 55px;
+    margin-right: 0.5em;
+    display: inline-block;
+  }
+  .IconsPedidoList-container {
+    text-align: center;
+    display: inline-block;
+  }
 }

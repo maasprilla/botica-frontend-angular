@@ -12,6 +12,7 @@
         'angularFileUpload',
         'uiGmapgoogle-maps',
         '720kb.datepicker',
+        '720kb.tooltips',
         //'templates',
         'app.config',
         'app.footer',
@@ -31,6 +32,7 @@
         'app.password.recovery',
         'app.password.confirm',
         'app.geolocalizacion',
+        'app.geolocalizacion-drogueriaview',
         'app.imagenes',
         'app.medicamentos'
     ]);

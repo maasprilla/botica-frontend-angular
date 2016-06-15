@@ -92,7 +92,10 @@ a.md-button.md-primary,
     width: 100%;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1001px) {
+  .HeaderRealizarPedido-content {
+    text-align: center;
+  }
   .HeaderRealizarPedido-icons {
     max-width: 55px;
     margin-right: 0.5em;
@@ -100,5 +103,6 @@ a.md-button.md-primary,
   }
   .HeaderRealizarPedido-containerIcon {
     text-align: center;
+    display: inline-block;
   }
 }

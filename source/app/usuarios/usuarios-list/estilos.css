@@ -57,7 +57,8 @@
 .ng-binding.sort-indicator {
   color: #fafafa;
 }
-@media only screen and (max-width: 760px), (min-width: 768px) and (max-width: 1024px) {
+/**@media only screen and (max-width: 760px), (min-width: 768px) and (max-width: 1024px) **/
+@media (max-width: 768px) {
   .UserTable-table,
   .UserTable-table thead,
   .UserTable-table tbody,
@@ -101,7 +102,10 @@
     content: "Email: ";
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1001px) {
+  .HeaderUserList-Content {
+    text-align: center;
+  }
   .HeaderUserList-icons {
     max-width: 55px;
     margin-right: 0.5em;
@@ -109,5 +113,6 @@
   }
   .HeaderUserList-containerIcon {
     text-align: center;
+    display: inline-block;
   }
 }

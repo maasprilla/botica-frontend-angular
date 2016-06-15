@@ -10,7 +10,7 @@
       </div>
     </div>
   </div>
-  <div class="container">
+  <div class="container HeaderRealizarPedido-content">
     <div class="row HeaderRealizarPedido-containerIcon">
       <div class="col-md-3 text-center HeaderRealizarPedido-icons">
         <i class="material-icons" style="font-size:48px;color:#f9f9f9">desktop_windows</i>
@@ -64,6 +64,15 @@
           {{zonaenvio.descripcionZona}}
         </md-option>
       </md-select>
+    </md-input-container>
+
+    <md-input-container class="md-block RealizarPedido-input">
+      <label>Descripcion</label>
+      <input md-maxlength="200" required md-no-asterisk name="descripcion" ng-model="vm.producto.descripcion">
+      <div ng-messages="FormRealizarPedido.descripcion.$error">
+        <div ng-message="required">This is required.</div>
+        <div ng-message="md-maxlength">The name has to be less than 200 characters long.</div>
+      </div>
     </md-input-container>
 
     <div class="AgregarProd">

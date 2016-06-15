@@ -12,7 +12,7 @@
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container HeaderAdminView-Content">
       <div class="row HeaderAdminView-containerIcon">
         <div class="col-md-3 text-center HeaderAdminView-icons">
           <i class="material-icons" style="font-size:48px;color:#f9f9f9">account_circle</i>
@@ -33,10 +33,15 @@
       <section>
         <form name="FormUsuarios" class="FormPerfilAdmin" ng-submit="vm.update()">
 
+        <div>
         <div  class="dropzone FormPerfilUser-img">
           <div>Cambiar Foto de Perfil</div>
-          <input type="file" value="Search" accept="image/png, image/jpg, image/jpeg," class="well my-drop-zone" nv-file-select=""  uploader="vm.uploader"/>
+          <input type="file" value="Search" accept="image/png, image/jpg, image/jpeg," class="well my-drop-zone"  uploader="vm.uploader" on-read-img="vm.loadFoto($fileContent)"/>
+          <img class="imagen" ng-if="vm.usuario.imgPerfil" ng-src="{{'data:image/png;base64,' + vm.usuario.imgPerfil}}" width="188%" />
         </div>
+        <button type="submit" class="FormPerfilUser-buttonimg">Guardar</button>
+      </div>
+
         <article class="FormPerfilAdmin-info">
               <h3 class="FormPerfilAdmin-tittle">Perfil De Administradores</h3>
 
@@ -126,7 +131,7 @@
               <div>
               <md-input-container class=" FormPerfilAdmin-input">
                   <label>Ciudad</label>
-                  <input md-maxlength="30" required md-no-asterisk name="ciudad" ng-model="vm.usuario.ciudad" ng-disabled="true">
+                  <input md-maxlength="30" required md-no-asterisk name="ciudad" ng-model="vm.usuario.ciudad.nombre" ng-disabled="true">
                   <!--<md-select ng-model="vm.ciudad">
                       <md-option ng-repeat="ciudad in vm.ciudades"  value="{{ciudad.ciudadPK.idCiudad}}-{{ciudad.ciudadPK.iddepartamento}}">
                          {{ciudad.ciudadPK.idCiudad}} -

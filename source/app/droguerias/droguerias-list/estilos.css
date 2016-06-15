@@ -62,7 +62,8 @@
 .ng-binding.sort-indicator {
   color: #fafafa;
 }
-@media only screen and (max-width: 760px), (min-width: 768px) and (max-width: 1024px) {
+/**@media only screen and (max-width: 760px), (min-width: 768px) and (max-width: 1024px) **/
+@media screen and (max-width: 768px) {
   .DrogTable-table,
   .DrogTable-table thead,
   .DrogTable-table tbody,
@@ -113,6 +114,9 @@
   }
 }
 @media screen and (max-width: 1000px) {
+  .HeaderDrogList-Content {
+    text-align: center;
+  }
   .HeaderDrogList-icons {
     max-width: 55px;
     margin-right: 0.5em;
@@ -120,5 +124,6 @@
   }
   .HeaderDrogList-containerIcon {
     text-align: center;
+    display: inline-block;
   }
 }

@@ -17,7 +17,7 @@ function anclaimpacto(){
 
 }
 
-function anclabeneficios(){
+function anclabenefits(){
   $('html, body').stop().animate({
             scrollTop: jQuery('#producto').offset().top
         }, 1500);

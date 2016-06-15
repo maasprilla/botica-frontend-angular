@@ -51,6 +51,15 @@
       cursor pointer
       padding-left 1.5em
       font-weight: bold;
+    &-buttonimg
+      border: none;
+      background-color: rgba(255,255,255,0);
+      font-family 'Open Sans'
+      width 10%
+      color #166ba2
+      cursor pointer
+      padding-left 1.5em
+      font-weight: bold;
     &-tittle
       color black
       font-family 'Open Sans'
@@ -151,11 +160,15 @@
 @media (max-width: 400px)
   .FormPerfilUser
     padding 1em
-@media screen and (max-width: 1000px)
+
+@media screen and (max-width: 1001px)
   .HeaderUserView
+    &-Content
+      text-align center
     &-icons
       max-width 55px
       margin-right 0.5em
       display inline-block
     &-containerIcon
       text-align center
+      display inline-block

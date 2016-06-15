@@ -56,6 +56,16 @@
   padding-left: 1.5em;
   font-weight: bold;
 }
+.FormPerfilUser-buttonimg {
+  border: none;
+  background-color: rgba(255,255,255,0);
+  font-family: 'Open Sans';
+  width: 10%;
+  color: #166ba2;
+  cursor: pointer;
+  padding-left: 1.5em;
+  font-weight: bold;
+}
 .FormPerfilUser-tittle {
   color: #000;
   font-family: 'Open Sans';
@@ -159,7 +169,10 @@
     padding: 1em;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1001px) {
+  .HeaderUserView-Content {
+    text-align: center;
+  }
   .HeaderUserView-icons {
     max-width: 55px;
     margin-right: 0.5em;
@@ -167,5 +180,6 @@
   }
   .HeaderUserView-containerIcon {
     text-align: center;
+    display: inline-block;
   }
 }

@@ -47,7 +47,9 @@
 .ng-binding.sort-indicator
   color #fafafa
 
-@media only screen and (max-width: 760px), (min-width: 768px) and (max-width: 1024px)
+/**@media only screen and (max-width: 760px), (min-width: 768px) and (max-width: 1024px) **/
+
+@media (max-width: 768px)
   .UserTable
     &-table, &-table thead, &-table tbody, &-table th, &-table td, &-table tr
       display block
@@ -76,11 +78,14 @@
     &-table td:nth-of-type(6):before
       content "Email: "
 
-@media screen and (max-width: 1000px)
+@media screen and (max-width: 1001px)
   .HeaderUserList
+    &-Content
+      text-align center
     &-icons
       max-width 55px
       margin-right 0.5em
       display inline-block
     &-containerIcon
       text-align center
+      display inline-block
