@@ -3,6 +3,7 @@
 
     angular.module('app.home', [
             'app.home.directive',
-            'app.home.router'
+            'app.home.router',
+            'app.home.controller'
     ]);
 })();

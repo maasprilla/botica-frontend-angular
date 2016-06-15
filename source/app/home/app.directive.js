@@ -9,7 +9,9 @@
     function home(){
       return{
         scope:{},
-        templateUrl:'app/home/home.html'
+        templateUrl:'app/home/home.html',
+        controller: 'homeCtrl',
+        controllerAs: 'vm'
       };
     }
 
