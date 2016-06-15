@@ -1,6 +1,6 @@
-$("#myBtn").click(function(){
-        $("#myModal").modal("hide");
-    });
+// $("#myBtn").click(function(){
+//         $("#myModal").modal("hide");
+//     });
 
 // function modal() {
 //   $('#myLink').hide();
