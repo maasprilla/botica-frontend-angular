@@ -1,9 +1,14 @@
 .PortaHeaderMajor-container {
-  padding-top: 5em;
+  padding-top: 4em;
   padding-bottom: 2em;
+  background-color: #152836;
+  opacity: 0.9;
 }
 section.PortaHeaderMajor-container>div.container>div.jumbotron {
   background: #152836;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-family: 'Open Sans';
 }
 div.jumbotron>h1.PortaHeader-title {
   color: #fff;
@@ -26,20 +31,36 @@ div.navbar-collapse ul.nav li a:hover {
   color: #fff;
 }
 .IdentidadMajor-container {
-  padding: 0 0.5em 2em 0.5em;
+  padding: 0 0.5em 5em 0.5em;
   background-color: #fff;
 }
 .IdentityContent2 {
   padding-top: 2em;
 }
+.Identidad-titleP {
+  margin-bottom: 1.3em;
+  padding-bottom: 0.3em;
+  font-family: 'Open Sans';
+  border-bottom: 1px solid;
+  display: inline-block;
+}
 .Identidad-title {
 /**padding-top 2em**/
   padding-bottom: 1em;
   font-family: 'Open Sans';
+  font-size: initial;
+}
+.Identidad-text {
+  font-size: 15px;
+  text-align: justify;
+}
+.TeamDescription-container {
+  max-width: 20em;
+  display: inline-block;
 }
 .TeamDescription-text {
   font-family: 'Open Sans';
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 300;
   color: #252525;
   padding-top: 1em;
@@ -57,16 +78,17 @@ div.IdentidadContainer ul.Identidad-item li a {
 }
 .Identidad-text {
   font-family: 'Open Sans';
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 300;
   color: #252525;
 }
 .IdentidadCorp-title {
   font-family: 'Open Sans';
-  font-size: 18px;
+  font-size: initial;
   font-weight: 700;
   color: #252525;
   padding-bottom: 0.5em;
+  text-align: initial;
 }
 .IdentidadCorp-imageContainer {
   text-align: center;
@@ -83,22 +105,27 @@ div.ImpactoContainer h2 {
 }
 div.ImpactoInfo-container h4 {
   font-family: 'Open Sans';
-  font-size: 22px;
   color: #252525;
 }
 .ImpactoMajor-container {
   padding-top: 2em;
   padding-bottom: 2em;
 /** background-color #3D9BFF **/
-  background-color: #fff;
+  background-color: #fafafa;
+  border: 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
 }
-.Impacto-image {
-  width: 304px;
-  height: 236px;
+.ImpactMain-title {
+  margin-bottom: 1.3em;
+  padding-bottom: 0.3em;
+  font-family: 'Open Sans';
+  border-bottom: 1px solid;
+  display: inline-block;
 }
 .Impacto-text {
   font-family: 'Open Sans';
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 300;
   color: #252525;
 }
@@ -106,7 +133,13 @@ div.ImpactoInfo-container h4 {
   padding-top: 2em;
   padding-bottom: 2em;
 /** background-color #3D9BFF **/
-  background-color: #eaf3f8;
+}
+.BenMain-title {
+  margin-bottom: 1.3em;
+  padding-bottom: 0.3em;
+  font-family: 'Open Sans';
+  border-bottom: 1px solid;
+  display: inline-block;
 }
 div.ProductoContainer h2 {
   font-family: 'Open Sans';
@@ -119,11 +152,11 @@ div.ProductoContainer h2 {
 .Producto-title {
   font-family: 'Open Sans';
   color: #252525;
-  font-size: 18px;
+  margin-top: 0.5em;
 }
 .Producto-text {
   font-family: 'Open Sans';
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 300;
   color: #252525;
   text-align: justify;
@@ -186,4 +219,33 @@ md-tab-item.md-tab.ng-scope.ng-isolate-scope.md-ink-ripple.md-active {
 -tittle>a {
   color: #fffafa;
   text-decoration: none;
+}
+@media (max-width: 900px) and (min-width: 768px) {
+  .IdentityContent-responsive {
+    margin-left: 3em;
+    margin-right: 3em;
+  }
+}
+@media screen and (min-width: 901px) {
+  .IdentityContent-responsive {
+    margin-left: 5.5em;
+    margin-right: 5.5em;
+  }
+}
+@media screen and (max-width: 767px) {
+  .ProductCont-infoContent {
+    max-width: 28em;
+  }
+}
+@media screen and (min-width: 767px) {
+  .ImpactContent-container {
+    max-width: 28em;
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 767px) {
+  .ImpactContent-container {
+    max-width: 23em;
+    display: inline-block;
+  }
 }
