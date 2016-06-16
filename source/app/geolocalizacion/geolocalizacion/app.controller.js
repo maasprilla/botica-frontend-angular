@@ -93,6 +93,7 @@
         //parentdiv:'searchBoxParent',
         events: {
           places_changed: function (searchBox) {
+            console.log('searchBox');
 
             places = searchBox.getPlaces()
             console.log(places);
@@ -113,6 +114,9 @@
             newMarkers = [];
             var bounds = new google.maps.LatLngBounds();
             for (var i = 0, place; place = places[i]; i++) {
+              console.log('for');
+              console.log(place);
+              console.log(place.geometry.location.lat());
               // Create a marker for each place.
               var marker = {
                 idKey:i,
@@ -122,6 +126,16 @@
                 longitude: place.geometry.location.lng(),
                 templateurl:'window.tpl.html',
                 templateparameter: place,
+                showWindow:true,
+                options:{
+                  labelAnchor:'22 0'
+                },
+                show:true,
+                icon:'images/clientes1.jpg',
+                coords:{
+                  latitude:place.geometry.location.lat(),
+                  longitude:place.geometry.location.lng()
+                },
                 events: {
                   click: function (marker) {
                     $scope.window.coords = {
@@ -134,6 +148,8 @@
                   }
                 }
               };
+              console.log('marker');
+              console.log(marker);
               newMarkers.push(marker);
               bounds.extend(place.geometry.location);
             }
@@ -150,6 +166,8 @@
             }
 
             $scope.map.markers = newMarkers;
+            console.log('mmmm');
+            console.log($scope.map);
           }
         }
       }

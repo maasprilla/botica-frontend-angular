@@ -2,7 +2,99 @@
   'use strict';
 
   angular.module('app.geolocalizacion-drogueriaview.controller', [
-  ]).controller('geolocalizacionDrogueriaViewCtrl', geolocalizacionDrogueriaViewCtrl);
+  ]).controller('geolocalizacionDrogueriaViewCtrl', geolocalizacionDrogueriaViewCtrl)
+  .controller('geoCtrl', geoCtrl);
+
+  function geoCtrl($scope, Usuarios, $stateParams) {
+      var vm=this;
+
+      vm.mapOptions = {
+          zoom: 4,
+          center: new google.maps.LatLng(40.0000, -98.0000),
+          mapTypeId: google.maps.MapTypeId.TERRAIN
+      }
+
+      $scope.map = new google.maps.Map(document.getElementById('map'), vm.mapOptions);
+      $scope.markers = [];
+      console.log('map');
+      console.log( $scope.map);
+
+      var infoWindow = new google.maps.InfoWindow();
+
+      vm.createMarker = function(info) {
+
+          var marker = new google.maps.Marker({
+              map: $scope.map,
+              position: new google.maps.LatLng(info.lat, info.long),
+              title: info.city
+          });
+          marker.content = '<div class="infoWindowContent">' + info.desc + '</div>';
+
+          google.maps.event.addListener(marker, 'click', function() {
+              infoWindow.setContent('<h2>' + marker.title + '</h2>' + marker.content);
+              infoWindow.open($scope.map, marker);
+          });
+
+          $scope.markers.push(marker);
+
+      }
+
+      // for (var i = 0; i < cities.length; i++) {
+      //   createMarker(cities[i]);
+      // }
+
+      // vm.createMarker({
+      //     city: 'Los Angeles',
+      //     desc: 'This city is live!',
+      //     lat: 34.0500,
+      //     long: -118.2500
+      // });
+
+
+
+
+
+      $scope.openInfoWindow = function(e, selectedMarker) {
+          e.preventDefault();
+          google.maps.event.trigger(selectedMarker, 'click');
+      }
+      getUsuarios();
+
+
+      function getUsuarios() {
+
+          return Usuarios.get({
+              idUsuario: $stateParams.idUsuario
+          }).$promise.then(function(data) {
+              console.log('data');
+              console.log(data);
+              data.latitud;
+              data.longitud;
+              if(data.latitud!=null && data.latitud!=null){
+              vm.mapOptions = {
+                  zoom: 18,
+                  center: new google.maps.LatLng(data.latitud, data.longitud),
+                  mapTypeId: google.maps.MapTypeId.TERRAIN
+              }
+              $scope.map = new google.maps.Map(document.getElementById('map'), vm.mapOptions);
+              console.log('aaa');
+              console.log(vm.mapOptions.center.lat());
+              //map.center.latitude = places[0].geometry.location.lat()
+              vm.createMarker({
+                  city: data.nombre,
+                  desc: data.direccion,
+                  lat: data.latitud,
+                  long: data.longitud
+              })
+            }
+
+
+          });
+
+      }
+
+
+  }
 
 
   geolocalizacionDrogueriaViewCtrl.$inject = ['$scope', '$timeout', 'uiGmapLogger', '$http','uiGmapGoogleMapApi', '$stateParams','$mdToast', 'Usuarios', '$q'];
