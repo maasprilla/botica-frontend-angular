@@ -162,10 +162,22 @@
 
           </div>
 
+          <div class="ButtosMajor-container">
+            <div class="GeoDrogView-buttonsContainer">
+              <div class="GeoDrogView-buttonContainer1">
+                <a href="#/geolocalizacion/{{vm.usuario.idUsuario}}" class="GeoDrogView-button1 btn btn-primary">Establcer Ubicacion en el Mapa</a>
+              </div>
+              <div class="GeoDrogView-buttonContainer2">
+                <a href="#/geolocalizaciondrogueriasview/{{vm.usuario.idUsuario}}" class="GeoDrogView-button2 btn btn-primary">{{vm.isLocation}}Ver mi Ubicacion</a>
+              </div>
+            </div>
+          </div>
+
+
+
         </article>
+
       </form>
-      <a href="#/geolocalizacion/{{vm.usuario.idUsuario}}">Establcer Ubicacion en el Mapa</a>
-      <a href="#/geolocalizaciondrogueriasview/{{vm.usuario.idUsuario}}" >{{vm.isLocation}}Ver mi Ubicacion</a>
       </section>
   </section>
 </div>

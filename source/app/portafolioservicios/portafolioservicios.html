@@ -10,10 +10,10 @@
 	</div>
 </section>
 <section id="identidad" ng-init="tab = mision" class="IdentidadMajor-container">
-			<div class="container IdentidadContainer">
-				<div class="IdentityContent2" id="empresa">
-					<h2 class="text-center Identidad-title">PRODUCTO</h2>
-					<div ng-cloak>
+			<div class="container-fluid IdentidadContainer">
+				<div class="row IdentityContent2" id="empresa" style="text-align:center;">
+					<h2 class="text-center Identidad-titleP">PRODUCTO</h2>
+					<div ng-cloak class="IdentityContent-responsive">
 						<md-content style="font-family: 'Open Sans'">
 							<md-tabs md-dynamic-height md-border-bottom>
 								<md-tab label="Misión">
@@ -58,28 +58,28 @@
 										<!-- <h1 class="md-display-2">Tab Three</h1> -->
 										<div class="TeamMajor-container">
 											<div class="container-fluid TeamContent">
-												<div class="row TeamInfo-container">
-													<div class="col-md-4 wrapper">
+												<div class="row TeamInfo-container" style="text-align:center;">
+													<div class="col-sm-4 col-md-4 wrapper">
 														<div class="thumbnail hvr-glow hvr-round-corners">
-															<h3 class="Identidad-title">Ingrid Yazmin Aguirre Salas</h3>
+															<h3 class="text-center Identidad-title">Ingrid Yazmin Aguirre Salas</h3>
 															<div class="TeamDescription-container">
 																<img src="./images/ingrid.jpg" class="Team-image img-responsive img-circle img-thumbnail hvr-round-corners">
 																<p class="TeamDescription-text">18 años, tecnóloga en análisis y desarrollo de sistemas de información. En la compañía se desempeña como diseñadora web.</p>
 															</div>
 														</div>
 													</div>
-													<div class="col-md-4 wrapper">
+													<div class="col-sm-4 col-md-4 wrapper">
 														<div class="thumbnail hvr-glow hvr-round-corners">
-															<h3 class="Identidad-title">David Julián Aranzazu Navas</h3>
+															<h3 class="text-center Identidad-title">David Julián Aranzazu Navas</h3>
 															<div class="TeamDescription-container">
 																<img src="./images/julian.jpg" class="Team-image img-responsive img-circle img-thumbnail hvr-round-corners">
 																<p class="TeamDescription-text">23 años, tecnólogo en análisis y desarrollo de sistemas de información. Está encargado del área de diseño web en la compañía.</p>
 															</div>
 														</div>
 													</div>
-													<div class="col-md-4 wrapper">
+													<div class="col-sm-4 col-md-4 wrapper">
 														<div class="thumbnail hvr-glow hvr-round-corners">
-															<h3 class="Identidad-title">Miguel Ángel Asprilla Varela</h3>
+															<h3 class="text-center Identidad-title">Miguel Ángel Asprilla Varela</h3>
 															<div class="TeamDescription-container">
 																<img src="./images/miguel.jpg" class="Team-image img-responsive img-circle img-thumbnail hvr-round-corners">
 																<p class="TeamDescription-text">21 años, Ingeniero en sistemas. En la compañía se desempeña como analísta.</p>
@@ -87,28 +87,28 @@
 														</div>
 													</div>
 												</div>
-												<div class="row TeamInfo-container">
-													<div class="col-md-4 wrapper">
+												<div class="row TeamInfo-container" style="text-align:center;">
+													<div class="col-sm-4 col-md-4 wrapper">
 														<div class="thumbnail hvr-glow hvr-round-corners">
-															<h3 class="Identidad-title">Aymer Esteban López Gómez</h3>
+															<h3 class="text-center Identidad-title">Aymer Esteban López Gómez</h3>
 															<div class="TeamDescription-container">
 																<img src="./images/esteba2.jpg" class="Team-image img-responsive img-circle img-thumbnail hvr-round-corners">
-																<p class="TeamDescription-text">18 años, tecnólogo en análisis y desarrollo de sistemas de información. Su rol dentro de la compañía es el de la programación.</p>
+																<p class="TeamDescription-text">19 años, tecnólogo en análisis y desarrollo de sistemas de información. Su rol dentro de la compañía es el de la programación.</p>
 															</div>
 														</div>
 													</div>
-													<div class="col-md-4 wrapper">
+													<div class="col-sm-4 col-md-4 wrapper">
 														<div class="thumbnail hvr-glow hvr-round-corners">
-															<h3 class="Identidad-title">Humberto José Henao Gonzalez</h3>
+															<h3 class="text-center Identidad-title">Humberto José Henao Gonzalez</h3>
 															<div class="TeamDescription-container">
 																<img src="./images/berto.jpg" class="Team-image img-responsive img-circle img-thumbnail hvr-round-corners">
 																<p class="TeamDescription-text">25 años, tecnólogo en análisis y desarrollo de sistemas de información. Se desempeña como administrador de base de datos en la compañía.</p>
 															</div>
 														</div>
 													</div>
-													<div class="col-md-4 wrapper">
+													<div class="col-sm-4 col-md-4 wrapper">
 														<div class="thumbnail hvr-glow hvr-round-corners">
-															<h3 class="Identidad-title">Juan Camilo Polanco Trujillo</h3>
+															<h3 class="text-center Identidad-title">Juan Camilo Polanco Trujillo</h3>
 															<div class="TeamDescription-container">
 																<img src="./images/polanco.jpg" class="Team-image img-responsive img-circle img-thumbnail hvr-round-corners">
 																<p class="TeamDescription-text">19 años, tecnólogo en análisis y desarrollo de sistemas de información. Está encargado del área de base de datos de la compañía.</p>
@@ -124,100 +124,6 @@
 						</md-content>
 					</div>
 				</div>
-
-					<!-- <ul class="nav nav-tabs Identidad-item" role="tablist">
-						<li role="presentation" class="Identidad-list active"><a href="" ng-click="tab = mision" aria-controls="mision" class="Identidad-link" role="tab" data-toggle="tab">Misión</a></li>
-						<li role="presentation" class="Identidad-list"><a href="" ng-click="tab = 2" aria-controls="vision" class="Identidad-link" role="tab" data-toggle="tab">Visión</a></li>
-						<li role="presentation" class="Identidad-list"><a href="" ng-click="tab = 3" aria-controls="objetivo" class="Identidad-link" role="tab" data-toggle="tab">Objetivo</a></li>
-						<li role="presentation" class="Identidad-list"><a href="" ng-click="tab = 4" aria-controls="identidadcorp" class="Identidad-link" role="tab" data-toggle="tab">Valores</a></li>
-						<li role="presentation" class="Identidad-list"><a href="" ng-click="tab = 5" aria-controls="equipo" class="Identidad-link" role="tab" data-toggle="tab">Equipo</a></li>
-					</ul>
-					<div class="tab-content IdentidadDescription-container">
-						<div role="tabpanel" class="tab-pane fade in active" id="mision" ng-show="tab === mision">
-							<br>
-							<p class="Identidad-text">Botica es un proyecto emprendedor que busca a través de la innovación y el desarrollo de software, una unión que ofrecezca soluciones y oportunidades asociadas al sector de la salud y así optimizar este mercado y posicionarse en él.</p>
-						</div>
-						<div role="tabpanel" class="tab-pane fade in active" ng-show="tab === 2">
-							<br>
-							<p class="Identidad-text">Para el 2025, Botica habrá alcanzado un alto reconocimiento a nivel nacional y empezará su proyecto de internacionalización.</p>
-						</div>
-						<div role="tabpanel" class="tab-pane fade in active" ng-show="tab === 3">
-							<br>
-							<p class="Identidad-text">Suplir la necesidad que poseen las personas a la hora de adquirir un medicamento acercando las droguerías y brindando la capacidad de ejecutar los pedidos virtualmente, ya que en ocasiones resulta tediosa la búsqueda de productos en distintas droguerías de forma física.</p>
-						</div>
-						<div role="tabpanel" class="tab-pane fade in active" ng-show="tab === 4">
-							<br>
-							<h3 class="IdentidadCorp-title">Compromiso</h3>
-							<p class="Identidad-text">Permite brindar a nuestros clientes y usuarios satisfacción a través del uso de nuestra herramienta tecnológica y a su vez adquirimos reconocimiento por nuestra labor.</p>
-							<br>
-              <h3 class="IdentidadCorp-title">Trabajo en equipo</h3>
-							<p class="Identidad-text">Fortalece las relaciones interpersonales de los grupos de trabajo y permite la ejecución de un producto y servicio eficiente, el cual brinde ventajas y satisfacción a clientes y usuarios.</p>
-              <br>
-              <h3 class="IdentidadCorp-title">Lealtad</h3>
-              <p class="Identidad-text">Buscamos el desarrollo de nuestra aplicación y nuestro talento humano bajo términos de respeto y solidaridad, el cual transmitimos a través de nuestros servicios a clientes y usuarios.</p>
-              <br>
-              <h3 class="IdentidadCorp-title">Responsabilidad</h3>
-              <p class="Identidad-text">Actuamos conforme a nuestros compromisos y en consecuencia a los deberes con los clientes y usuarios para brindarles un producto el cual genere un impacto positivo.</p>
-              <br>
-              <h3 class="IdentidadCorp-title">Equidad</h3>
-              <p class="Identidad-text">Facilita el progreso y desarrollo integral de nuestros grupos de trabajo mediante la distribución justa de cargas laborales y beneficios económicos, permitiendo a su vez el avance y establecimiento de nuestro producto.</p>
-						</div>
-							<p class="Idetidad-text">
-
-						<div role="tabpanel" class="tab-pane fade in active" ng-show="tab === 5">
-							<br>
-							<div class="TeamMajor-container">
-								<div class="container TeamContent">
-									<div class="row TeamInfo-container">
-										<div class="col-md-4 wrapper hvr-glow hvr-round-corners">
-											<h3 class="Identidad-title">Ingrid Yazmin Aguirre Salas</h3>
-											<div class="TeamDescription-container">
-												<img src="bla.jpg" class="Team-image img-responsive img-thumbnail hvr-round-corners">
-												<p class="TeamDescription-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-											</div>
-										</div>
-										<div class="col-md-4 wrapper hvr-glow hvr-round-corners">
-											<h3 class="Identidad-title">David Julián Aranzazu Navas</h3>
-											<div class="TeamDescription-container">
-												<img src="bla.jpg" class="Team-image img-responsive img-thumbnail hvr-round-corners">
-												<p class="TeamDescription-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-											</div>
-										</div>
-										<div class="col-md-4 wrapper hvr-glow hvr-round-corners">
-											<h3 class="Identidad-title">Miguel Ángel Asprilla Varela</h3>
-											<div class="TeamDescription-container">
-												<img src="bla.jpg" class="Team-image img-responsive img-thumbnail hvr-round-corners">
-												<p class="TeamDescription-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-											</div>
-										</div>
-									</div>
-									<div class="row TeamInfo-container">
-										<div class="col-md-4 wrapper hvr-glow hvr-round-corners">
-											<h3 class="Identidad-title">Aymer Esteban López Gómez</h3>
-											<div class="TeamDescription-container">
-												<img src="bla.jpg" class="Team-image img-responsive img-thumbnail hvr-round-corners">
-												<p class="TeamDescription-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-											</div>
-										</div>
-										<div class="col-md-4 wrapper hvr-glow hvr-round-corners">
-											<h3 class="Identidad-title">Humberto José Henao Gonzalez</h3>
-											<div class="TeamDescription-container">
-												<img src="bla.jpg" class="Team-image img-responsive img-thumbnail hvr-round-corners">
-												<p class="TeamDescription-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-											</div>
-										</div>
-										<div class="col-md-4 wrapper hvr-glow hvr-round-corners">
-											<h3 class="Identidad-title">Juan Camilo Polanco Trujillo</h3>
-											<div class="TeamDescription-container">
-												<img src="bla.jpg" class="Team-image img-responsive img-thumbnail hvr-round-corners">
-												<p class="TeamDescription-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div> -->
 			</div>
 		</section>
     <!-- <section class="Brand">
@@ -230,58 +136,66 @@
 		</section> -->
     <section id="impacto" class="ImpactoMajor-container">
 			<div id="services" class="container text-center ImpactoContainer">
-				<h2>IMPACTO</h2>
+				<h2 class="text-center ImpactMain-title">IMPACTO</h2>
 				<br>
 				<div class="row slideanim ImpactoInfo-container">
-					<div class="col-md-6">
-						<img src="./images/socialempleo.jpg" alt="Social" class="hvr-glow img-thumbnail hvr-round-corners Impacto-image" max-width="100%">
-						<h4>SOCIAL</h4>
-						<p class="Impacto-text">Botica tendrá un impacto social por medio de la generación de empleo y la capacitación de empleados en temas relacionados con la tecnología.</p>
+					<div class="col-sm-6 col-md-6">
+						<div class="ImpactContent-container">
+							<img src="./images/socialempleo.jpg" alt="Social" class="hvr-glow img-thumbnail hvr-round-corners Impacto-image" max-width="100%">
+							<h4>SOCIAL</h4>
+							<p class="Impacto-text">Botica tendrá un impacto social por medio de la generación de empleo y la capacitación de empleados en temas relacionados con la tecnología.</p>
+						</div>
 					</div>
-					<div class="col-md-6">
-						<img src="./images/ambiental.jpg" alt="Regional" class="hvr-glow img-thumbnail hvr-round-corners Impacto-image" max-width="100%">
-						<h4>AMBIENTAL</h4>
-						<p class="Impacto-text">Botica generará un impacto en el medio ambiente gracias a la localización de los puntos azules que contiene la ciudad, además de mostrar el debido tratamiento que deben de tener algunos medicamentos luego de ser usados.</p>
+					<div class="col-sm-6 col-md-6">
+						<div class="ImpactContent-container">
+							<img src="./images/ambiental.jpg" alt="Regional" class="hvr-glow img-thumbnail hvr-round-corners Impacto-image" max-width="100%">
+							<h4>AMBIENTAL</h4>
+							<p class="Impacto-text">Botica generará un impacto en el medio ambiente gracias a la localización de los puntos azules que contiene la ciudad, además de mostrar el debido tratamiento que deben de tener algunos medicamentos luego de ser usados.</p>
+						</div>
 					</div>
 				</div>
 				<br><br>
 				<div class="row slideanim ImpactoInfo-container">
-					<div class="col-md-6">
-						<img src="./images/economico.jpg" alt="Economico" class="hvr-glow img-thumbnail hvr-round-corners Impacto-image" max-width="100%">
-						<h4>ECONÓMICO</h4>
-						<p class="Impacto-text">Gracias a la generación de empleo, se podrán apreciar mejoras en los ingresos de las personas. Esto a su vez contribuirá a participar directamente en el PIB de la región y del país a través de un sector tan poco explorado como el de la tecnología.</p>
+					<div class="col-sm-6 col-md-6">
+						<div class="ImpactContent-container">
+							<img src="./images/economico.jpg" alt="Economico" class="hvr-glow img-thumbnail hvr-round-corners Impacto-image" max-width="100%">
+							<h4>ECONÓMICO</h4>
+							<p class="Impacto-text">Gracias a la generación de empleo, se podrán apreciar mejoras en los ingresos de las personas. Esto a su vez contribuirá a participar directamente en el PIB de la región y del país a través de un sector tan poco explorado como el de la tecnología.</p>
+						</div>
 					</div>
-					<div class="col-md-6">
-						<img src="./images/tecnologico.jpg" alt="Tecnológico" class="hvr-glow img-thumbnail hvr-round-corners Impacto-image" max-width="100%">
-						<h4>TECNOLÓGICO</h4>
-						<p class="Impacto-text">Promoverá el uso de dispositivos móviles y otros dispositivos portátiles, el desarrollo de software y las iniciativas emprendedoras en el país, las cuales giren en torno al mundo de la tecnología.</p>
+					<div class="col-sm-6 col-md-6">
+						<div class="ImpactContent-container">
+							<img src="./images/tecnologico.jpg" alt="Tecnológico" class="hvr-glow img-thumbnail hvr-round-corners Impacto-image" max-width="100%">
+							<h4>TECNOLÓGICO</h4>
+							<p class="Impacto-text">Promoverá el uso de dispositivos móviles y otros dispositivos portátiles, el desarrollo de software y las iniciativas emprendedoras en el país, las cuales giren en torno al mundo de la tecnología.</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
     <section id="producto" class="ProductoMajor-container">
 			<div id="portfolio" class="container text-center ProductoContainer">
-				<h2>BENEFICIOS</h2><br>
+				<h2 class="text-center BenMain-title">BENEFICIOS</h2><br>
 				<br><br>
 				<div class="row text-center slideanim ProductoInfo-container">
-					<div class="col-sm-4">
-						<div class="thumbnail hvr-glow">
+					<div class="col-sm-4 col-md-4">
+						<div class="thumbnail hvr-glow ProductCont-infoContent">
 							<img src="./images/garantia.jpg" alt="Garantia" class="hvr-round-corners Producto-image" style="max-width:100%">
-							<p class="Producto-title"><strong>Garantía</strong></p>
+							<h4 class="Producto-title"><strong>Garantía</strong></h4>
 							<p class="Producto-text">Brindaremos productos y servicios que buscara satisfacerle,  pretendiendo acreditar la calidad de cualquiera de ellos. El beneficio principal será la confiabilidad, bajo costos o flexibilidad. Cualquier error notificado, luego de ser detectado será atendido y solucionado en menor tiempo posible. Si el producto presenta algún defecto, posterior a la entrega será cambiado previa evaluación de la droguería autorizado por Botica.</p>
 						</div>
 					</div>
-					<div class="col-sm-4">
-						<div class="thumbnail hvr-glow">
+					<div class="col-sm-4 col-md-4">
+						<div class="thumbnail hvr-glow ProductCont-infoContent">
 							<img src="./images/tiempo.jpg" alt="Tiempo" class="hvr-round-corners Producto-image" style="max-width:100%">
-							<p class="Producto-title"><strong>Tiempo</strong></p>
+							<h4 class="Producto-title"><strong>Tiempo</strong></h4>
 							<p class="Producto-text">A fin de que el servicio preste un funcionamiento que satisfaga a los usuarios, y la entrega de los productos y servicios, las compras que son involucradas en el sistema será solucionada entre la relación cliente-proveedor, es entonces que por medio de una evaluación constante, será efectivo y rentable.</p>
 						</div>
 					</div>
-					<div class="col-sm-4">
-						<div class="thumbnail hvr-glow">
+					<div class="col-sm-4 col-md-4">
+						<div class="thumbnail hvr-glow ProductCont-infoContent">
 							<img src="./images/precio.jpg" alt="Precio" class="hvr-round-corners Producto-image" style="max-width:100%">
-							<p class="Producto-title"><strong>Precio</strong></p>
+							<h4 class="Producto-title"><strong>Precio</strong></h4>
 							<p class="Producto-text">En cuanto al manejo de los productos será de una fácil adquisición puesto que no tendrá cobro alguno a la hora de la instalación, recibiendo a cambio un buen servicio  por el cual solo deberá pagar el costo de la venta directa.</p>
 						</div>
 					</div>

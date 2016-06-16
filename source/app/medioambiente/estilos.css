@@ -1,9 +1,14 @@
 .EnviromentHeaderMajor-container {
-  padding-top: 5em;
+  padding-top: 4em;
   padding-bottom: 2em;
+  background-color: #007e33;
+  opacity: 0.9;
 }
 section.EnviromentHeaderMajor-container>div.container>div.jumbotron {
   background: #007e33;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-family: 'Open Sans';
 }
 div.jumbotron>h1.EnviromentHeader-title {
   color: #fff;
@@ -49,8 +54,11 @@ div.navbar-collapse ul.nav li a:hover {
 }
 .EnviromentInfo-title {
   padding-top: 1em;
-  padding-bottom: 2em;
+  padding-bottom: 0.3em;
   font-family: 'Open Sans';
+  margin-bottom: 2.5em;
+  border-bottom: 1px solid;
+  display: inline-block;
 }
 .EnviromentInfo-text {
   padding-bottom: 2em;
@@ -75,7 +83,7 @@ div.navbar-collapse ul.nav li a:hover {
 /** display inline-block
 	width 30em
 	vertical-align top**/
-  height: 17em;
+  height: 16em;
 /**margin-right 0.15em**/
   border: 2px solid #fff;
 }
@@ -103,6 +111,13 @@ div.navbar-collapse ul.nav li a:hover {
 .IconBp5 {
   max-width: 100%;
   padding-bottom: 2em;
+}
+.FindBluePoints-container {
+  text-align: center;
+  font-family: 'Open Sans';
+  background: #fafafa;
+  border: 0;
+  border-top: 1px solid #eee;
 }
 .map-responsive {
   display: inline-block;

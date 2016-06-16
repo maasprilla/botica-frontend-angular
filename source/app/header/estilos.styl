@@ -4,17 +4,17 @@
 
 body
   min-height 100vh
-.Header
-  height 60em /** antes 48em **/
-  text-align center
-  background-color #3D9BFF
-  background-image url('/images/header.jpg')
-  background-size 100% 100%
-  background-position center
-  background-repeat no-repeat
-  padding-top 50px
-  &-content
-    height 40em
+// .Header
+  // height 60em /** antes 48em **/
+  // text-align center
+  // background-color #3D9BFF
+  // background-image url('/images/header.jpg')
+  // background-size 100% 100%
+  // background-position center
+  // background-repeat no-repeat
+  // padding-top 50px
+  // &-content
+  //   height 40em
 .MainMenu
   position fixed
   right 0
@@ -116,67 +116,6 @@ body
   display none
 
 
-
-
-/** @media (max-width: 987px)
-  .MainMenu
-    padding-top 3em
-    &-list
-      width 100%
-      text-align center
-      padding-left 0
-    &-containerIndex
-      padding-left 0
-      padding-right 0
-  .MainMenu-list>li
-      display inline-block
-      float none**/
-
-/** @media screen and (min-width: 768px) and (max-width: 987px)
-  .DisplayTablet-view
-    display block
-    float left
-  .MainMenu-containerIndex
-    display none **/
-
-/** @media (max-width: 1323px)
-  .MainMenu-logo
-    float left **/
-
-// @media screen and (min-width: 768px) and (max-width: 992px)
-//   div.navbar-header>div.navbar-toggle
-//     display block
-//     position relative
-//   nav.navbar>div.container-fluid>div.navbar-collapse.collapse.MainMenu-containerIndex
-//     display none
-
-// @media (min-width: 992px)
-//   .collapse
-//     display none
-
-/**.MainMenu-list
-  display none **/
-
-
-/** --- CON ESTO SE SUPONÍA SE ORGANIZABA LA NAV ---
-
-@media (min-width: 768px) and (max-width: 992px)
-  .navbar-collapse.collapse
-    display none !important
-  .navbar-collapse.collapse.in
-    display block !important
-  .navbar-header .collapse, .navbar-toggle
-    display block !important
-  .navbar-header
-    float none
-  .MainMenu-list>li
-    display block
-  .nav>li
-    display block
-
----- SE PONE SIMILAR CUANDO SE ESTÁ LOGUEADO >:( ----- **/
-
-
 @media (max-width: 767px)
   .MainMenu
     padding-top 0
@@ -223,15 +162,26 @@ body
   #EnvDesktop
     display none
 
-@media (max-width: 695px)
-  .Header
-    height 28em
-    background-image url('/images/header.jpg')
-    background-size 100% 100%
-    background-repeat no-repeat
-    padding-top 50px
-    &-content
-      height 20em
+// @media (max-width: 695px)
+//   .Header
+//     height 28em
+//     background-image url('/images/header.jpg')
+//     background-size 100% 100%
+//     background-repeat no-repeat
+//     padding-top 50px
+//     &-content
+//       height 20em
+
+.Header
+  padding-top 50px
+
+@media screen and (min-width: 768px)
+  #HeaderImageMobile
+    display none
+
+@media screen and (max-width: 767px)
+  #HeaderImageDesktop
+    display none
 
 
 /** Estilos animaciones header **/
@@ -239,13 +189,13 @@ body
   .Header
     &-container
       width 37em
-      height 4.3em
+      height 2.5em
       display flex
       color #152836
       font-size 25px
       line-height 25px
       position absolute
-      top 10em
+      top 8em
       right 0
       bottom 0
       left 0
@@ -278,8 +228,8 @@ body
       100% {opacity: 0; animation-timing-function: ease-in-out; -webkit-transform: translateY(0%)}
     @-webkit-keyframes changetext2
       25% {opacity: 0; animation-timing-function: ease-in-out; -webkit-transform: translateY(0%)}
-      34% {opacity: 1; animation-timing-function: ease-in-out; -webkit-transform: translateY(-4em)}
-      53% {opacity: 1; animation-timing-function: ease-in-out; -webkit-transform: translateY(-4em)}
+      34% {opacity: 1; animation-timing-function: ease-in-out; -webkit-transform: translateY(-2em)}
+      53% {opacity: 1; animation-timing-function: ease-in-out; -webkit-transform: translateY(-2em)}
       54% {opacity: 0;}
       85% {opacity: 0;}
       100% {opacity: 0;}
@@ -288,10 +238,10 @@ body
       20% {opacity: 1; animation-timing-function: ease-in-out; -webkit-transform: translateY(0%)}
       22% {opacity: 0;}
       25% {opacity: 0; animation-timing-function: ease-in-out; -webkit-transform: translateY(0%)}
-      50% {opacity: 1; animation-timing-function: ease-in-out; -webkit-transform: translateY(-4em)}
-      55% {opacity: 1; animation-timing-function: ease-in-out; -webkit-transform: translateY(-4em)}
-      64% {opacity: 1; animation-timing-function: ease-in-out; -webkit-transform: translateY(-8.5em)}
-      84% {opacity: 1; animation-timing-function: ease-in-out; -webkit-transform: translateY(-8.5em)}
+      50% {opacity: 1; animation-timing-function: ease-in-out; -webkit-transform: translateY(-2em)}
+      55% {opacity: 1; animation-timing-function: ease-in-out; -webkit-transform: translateY(-2em)}
+      64% {opacity: 1; animation-timing-function: ease-in-out; -webkit-transform: translateY(-4.5em)}
+      84% {opacity: 1; animation-timing-function: ease-in-out; -webkit-transform: translateY(-4.5em)}
       85% {opacity: 0;}
       100% {opacity: 0;}
 
@@ -323,13 +273,13 @@ body
   .Header
     &-container
       width 28.5em
-      height 5.3em
+      height 3.5em
       display flex
       color #152836
       font-size 25px
       line-height 25px
       position absolute
-      top 10em
+      top 7.7em
       right 0
       bottom 0
       left 0
@@ -339,17 +289,18 @@ body
       list-style none
       padding-left 10px
       margin 0
+      text-align center
     &-container>p
       margin 0
       font-family 'Open Sans'
     &-paragraph1
-      animation changetext1 20.2s ease-in-out infinite
+      animation changetext1 25.2s ease-in-out infinite
       text-transform capitalize
     &-paragraph2
-      animation changetext2 20.2s ease-in-out infinite
+      animation changetext2 25.2s ease-in-out infinite
       text-transform capitalize
     &-paragraph3
-      animation changetext3 20.2s ease-in-out infinite
+      animation changetext3 25.2s ease-in-out infinite
       text-transform capitalize
     @-webkit-keyframes changetext1
       0% {opacity: 0; animation-timing-function: ease-in-out; -webkit-transform: translateY(100%)}
@@ -360,8 +311,8 @@ body
       100% {opacity: 0; animation-timing-function: ease-in-out; -webkit-transform: translateY(0%)}
     @-webkit-keyframes changetext2
       25% {opacity: 0; animation-timing-function: ease-in-out; -webkit-transform: translateY(0%)}
-      34% {opacity: 1; animation-timing-function: ease-in-out; -webkit-transform: translateY(-5.2em)}
-      53% {opacity: 1; animation-timing-function: ease-in-out; -webkit-transform: translateY(-5.2em)}
+      34% {opacity: 1; animation-timing-function: ease-in-out; -webkit-transform: translateY(-3.3em)}
+      53% {opacity: 1; animation-timing-function: ease-in-out; -webkit-transform: translateY(-3.3em)}
       54% {opacity: 0;}
       85% {opacity: 0;}
       100% {opacity: 0;}
@@ -370,10 +321,10 @@ body
       20% {opacity: 1; animation-timing-function: ease-in-out; -webkit-transform: translateY(0%)}
       22% {opacity: 0;}
       25% {opacity: 0; animation-timing-function: ease-in-out; -webkit-transform: translateY(0%)}
-      50% {opacity: 1; animation-timing-function: ease-in-out; -webkit-transform: translateY(-5.2em)}
-      55% {opacity: 1; animation-timing-function: ease-in-out; -webkit-transform: translateY(-5.2em)}
-      64% {opacity: 1; animation-timing-function: ease-in-out; -webkit-transform: translateY(-10.5em)}
-      84% {opacity: 1; animation-timing-function: ease-in-out; -webkit-transform: translateY(-10.5em)}
+      50% {opacity: 1; animation-timing-function: ease-in-out; -webkit-transform: translateY(-2.3em)}
+      55% {opacity: 1; animation-timing-function: ease-in-out; -webkit-transform: translateY(-2.3em)}
+      64% {opacity: 1; animation-timing-function: ease-in-out; -webkit-transform: translateY(-5.5em)}
+      84% {opacity: 1; animation-timing-function: ease-in-out; -webkit-transform: translateY(-5.5em)}
       85% {opacity: 0;}
       100% {opacity: 0;}
 

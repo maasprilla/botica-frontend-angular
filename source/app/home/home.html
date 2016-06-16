@@ -135,10 +135,17 @@
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">¿Deseas ver los precios de los productos?</h4>
+                <h4 class="modal-title" style="font-family:'Open Sans';">¿Deseas ver los precios de los productos?</h4>
               </div>
               <div class="modal-body">
-                <a data-dismiss="modal" ng-click="vm.goRegistroUser()"   >Registrate aquí</a>
+                <a data-dismiss="modal" ng-click="vm.goRegistroUser()" style="cursor:pointer; font-family:'Open Sans';">Registrate aquí</a>
+              </div>
+              <hr>
+              <div class="modal-header">
+                <h4 class="modal-title" style="font-family:'Open Sans';">¿Ya tienes cuenta?</h4>
+              </div>
+              <div class="modal-body">
+                <a data-dismiss="modal" ng-click="vm.goLogin()" style="cursor:pointer; font-family:'Open Sans';">Inicia sesión aquí</a>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
@@ -159,7 +166,7 @@
           <h4 class="HomeProduct-name">Bedoyecta Jeringa Prellenada</h4>
           <p class="HomeProduct-description">Caja x3 amp</p>
           <div class="HomeProduct-buttonContainer">
-            <a href="" class="HomeProduct-button btn btn-primary">Comprar</a>
+            <a href="" class="HomeProduct-button btn btn-primary" data-toggle="modal" data-target="#myModal2">Comprar</a>
           </div>
         </div>
         <div class="col-xs-6 col-sm-4 HomeProductInfo-desContainer HomeProduct-desSeparator">
@@ -169,7 +176,7 @@
           <h4 class="HomeProduct-name">Centrum Adultos Luteina</h4>
           <p class="HomeProduct-description">Frasco x100 tab</p>
           <div class="HomeProduct-buttonContainer">
-            <a href="" class="HomeProduct-button btn btn-primary">Comprar</a>
+            <a href="" class="HomeProduct-button btn btn-primary" data-toggle="modal" data-target="#myModal2">Comprar</a>
           </div>
         </div>
         <div class="col-xs-12 col-sm-4 HomeProductInfo-desContainer">
@@ -179,9 +186,37 @@
           <h4 class="HomeProduct-name">Differin 0.3% Gel</h4>
           <p class="HomeProduct-description">Tubo x30 gr</p>
           <div class="HomeProduct-buttonContainer">
-            <a href="" class="HomeProduct-button btn btn-primary">Comprar</a>
+            <a href="" class="HomeProduct-button btn btn-primary" data-toggle="modal" data-target="#myModal2">Comprar</a>
           </div>
         </div>
+
+        <div id="myModal2" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+
+
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" style="font-family:'Open Sans';">¿Deseas comprar el producto?</h4>
+              </div>
+              <div class="modal-body">
+                <a data-dismiss="modal" ng-click="vm.goRegistroUser()" style="cursor:pointer; font-family:'Open Sans';">Registrate aquí</a>
+              </div>
+              <hr>
+              <div class="modal-header">
+                <h4 class="modal-title" style="font-family:'Open Sans';">¿Ya tienes cuenta?</h4>
+              </div>
+              <div class="modal-body">
+                <a data-dismiss="modal" ng-click="vm.goLogin()" style="cursor:pointer; font-family:'Open Sans';">Inicia sesión aquí</a>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </div>
   </section>

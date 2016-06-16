@@ -7,8 +7,9 @@
 
 
     // 'http://localhost:31833/botica-backend-java/webresources')
+  //  'http://localhost:43096/botica-backend-java/webresources')
+  'http://localhost:8080/botica-backend-java/webresources')
     // 'http://localhost:43096/botica-backend-java/webresources')
-    'http://localhost:8080/botica_backend/webresources')
 
     .config(configure);
 

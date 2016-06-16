@@ -14,6 +14,10 @@
       $location.url('/regisuser');
     }
 
+    vm.goLogin=function(){
+      $location.url('/login');
+    }
+
   }
 
 
