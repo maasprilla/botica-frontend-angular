@@ -53,6 +53,18 @@
   display: flex;
   justify-content: space-around;
 }
+.icon>a {
+  color: #fff;
+}
+.icon>a:hover {
+  text-decoration: none;
+}
+.icon>a:active {
+  text-decoration: none;
+}
+.icon>a:focus {
+  text-decoration: none;
+}
 .Icons-container {
   width: 21em;
 }
