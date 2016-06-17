@@ -115,6 +115,29 @@
   padding: 0;
   font: bold 1px arial;
 }
+div.GeoDrogView-buttonsContainer {
+  height: 4em;
+  width: 100%;
+  text-align: center;
+}
+div.GeoDrogView-buttonsContainer>div.GeoDrogView-buttonContainer1 {
+  margin-bottom: 1em;
+}
+div.GeoDrogView-buttonsContainer>div.GeoDrogView-buttonContainer2 {
+  margin-bottom: 0.5em;
+}
+div.GeoDrogView-buttonsContainer>div.GeoDrogView-buttonContainer2>a.btn,
+div.GeoDrogView-buttonsContainer>div.GeoDrogView-buttonContainer1>a.btn {
+  color: #fff;
+}
+.spanicon {
+  margin-right: 0.3em;
+}
+@media (max-width: 450px) {
+  div.GeoDrogView-buttonsContainer>div.GeoDrogView-buttonContainer1>a.btn {
+    font-size: 11px;
+  }
+}
 @media (max-width: 463px) {
   .FormPerfilDrog-edit {
     padding-left: 0.5em;

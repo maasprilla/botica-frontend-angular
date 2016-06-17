@@ -40,6 +40,7 @@
 
           <md-input-container class="md-block DrogCreate-container">
             <label>Nombre</label>
+            <md-icon class="fa fa-user-md"></md-icon>
             <input md-maxlength="30" required md-no-asterisk name="nombre" ng-model="vm.usuario.nombre">
             <div ng-messages="FormRegistroDroguerias.nombre.$error">
               <div ng-message="required">Este campo no puede estar vacio.</div>
@@ -50,6 +51,7 @@
 
           <md-input-container class="md-block DrogCreate-container">
           <label>Email</label>
+          <md-icon class="fa fa-envelope"></md-icon>
           <input required type="email" name="email" ng-model="vm.usuario.email"
                  minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
           <div ng-messages="FormRegistroDroguerias.clientEmail.$error" role="alert">
@@ -61,6 +63,7 @@
 
           <md-input-container class="md-block DrogCreate-container">
             <label>Telefono</label>
+            <md-icon class="fa fa-phone"></md-icon>
             <input md-maxlength="10" required md-no-asterisk name="telefono" ng-model="vm.usuario.telefono" numbersonly>
             <div ng-messages="FormRegistroDroguerias.telefono.$error">
               <div ng-message="required">Este campo no puede estar vacio.</div>
@@ -71,6 +74,7 @@
 
           <md-input-container class="md-block DrogCreate-container">
             <label>Direccion</label>
+            <md-icon class="fa fa-hospital-o"></md-icon>
             <input md-maxlength="30" required md-no-asterisk name="direccion" ng-model="vm.usuario.direccion">
             <div ng-messages="FormRegistroDroguerias.direccion.$error">
               <div ng-message="required">Este campo no puede estar vacio.</div>
@@ -98,6 +102,7 @@
 
           <md-input-container class="md-block DrogCreate-container">
             <label>Nit</label>
+            <md-icon class="fa fa-certificate"></md-icon>
             <input md-maxlength="30" required md-no-asterisk name="nit" ng-model="vm.usuario.nit">
             <div ng-messages="FormRegistroDroguerias.nit.$error">
               <div ng-message="required">Este campo no puede estar vacio.</div>
@@ -107,6 +112,7 @@
 
           <md-input-container class="md-block DrogCreate-container">
             <label>Camara de Comercio</label>
+            <md-icon class="fa fa-certificate"></md-icon>
             <input md-maxlength="30" required md-no-asterisk name="camaracomercio" ng-model="vm.usuario.camaracomercio">
             <div ng-messages="FormRegistroDroguerias.camaracomercio.$error">
               <div ng-message="required">Este campo no puede estar vacio.</div>
@@ -116,6 +122,7 @@
 
           <md-input-container class="md-block DrogCreate-container">
             <label>Invima</label>
+            <md-icon class="fa fa-certificate"></md-icon>
             <input md-maxlength="30" required md-no-asterisk name="invima" ng-model="vm.usuario.invima">
             <div ng-messages="FormRegistroDroguerias.invima.$error">
               <div ng-message="required">Este campo no puede estar vacio.</div>
@@ -126,6 +133,7 @@
 
           <md-input-container class="md-block DrogCreate-container">
             <label>Password</label>
+            <md-icon class="fa fa-lock"></md-icon>
             <input required type="password" name="password" ng-model="vm.usuario.password">
             <div ng-messages="FormRegistroDroguerias.password.$error">
               <div ng-message="required">Este campo no puede estar vacio.</div>

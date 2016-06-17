@@ -34,6 +34,7 @@
         'app.geolocalizacion-drogueriaview',
         'app.imagenes',
         'app.medicamentos'
+
     ]);
 
 })();

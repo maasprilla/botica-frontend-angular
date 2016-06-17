@@ -35,43 +35,70 @@
 
   <section class="PanelPedidosUsuarios">
     <div ng-cloak class="PanelPedidosUsuarios-tabs">
+
   <md-content>
-    <md-tabs md-dynamic-height md-border-bottom>
-      <md-tab label="En Espera">
-        <md-content class="md-padding">
-          <md-subheader class="md-no-sticky">Pedidos En Espera</md-subheader>
-          <div ng-repeat="pedidoespera in vm.pedidosenespera">
-            <md-list-item class="secondary-button-padding PanelPedidosUsuarios-itemTitle">
-              <p>{{pedidoespera.descripcion}}</p>
-              <md-button class="md-secondary " ng-click="doSecondaryAction($event)">
-                <span class="glyphicon glyphicon-search" aria-hidden="true"> Ver Mas</span>
-              </md-button>
-            </md-list-item>
-        </div>
+    <md-tabs md-dynamic-height md-border-bottom >
+      <md-tab>
+    <md-tab-label>
+      <md--icon class="fa fa-hourglass-start"></md-icon>
+      <p>En Espera</p>
+    </md-tab-label>
+    <md-tab-body>
+      <md-subheader class="md-no-sticky">Pedidos En Espera</md-subheader>
+      <div ng-repeat="pedidoespera in vm.pedidosenespera" style="padding:1em">
+        <md-list-item class="secondary-button-padding PanelPedidosUsuarios-itemTitle">
+          <p>{{pedidoespera.descripcion}}</p>
+          <md-button class="md-icon-button md-primary" aria-label="Settings">
+          <md-icon class="fa fa-search"></md-icon>
+      </md-button>
 
-        </md-content>
-      </md-tab>
+        </md-list-item>
+    </div>
+    </md-tab-body>
+  </md-tab>
 
-      <md-tab label="Respuestas">
-        <md-content class="md-padding">
+  <md-tab>
+<md-tab-label>
+  <md--icon class="fa fa-pencil-square-o"></md-icon>
+  <p>Respuestas</p>
+</md-tab-label>
+<md-tab-body>
+<md-subheader class="md-no-sticky">Respuestas</md-subheader>
+</md-tab-body>
+</md-tab>
 
-        </md-content>
-      </md-tab>
-      <md-tab label="Concretados">
-        <md-content class="md-padding">
+<md-tab>
+<md-tab-label>
+<md--icon class="fa fa-check"></md-icon>
+<p>Concretados</p>
+</md-tab-label>
+<md-tab-body>
+<md-subheader class="md-no-sticky">Pedidos Concretados</md-subheader>
+</md-tab-body>
+</md-tab>
 
-        </md-content>
-      </md-tab>
-      <md-tab label="Cancelados">
-        <md-content class="md-padding">
+<md-tab>
+<md-tab-label>
+<md--icon class="fa fa-close"></md-icon>
+<p>Cancelados</p>
+</md-tab-label>
+<md-tab-body>
+<md-subheader class="md-no-sticky">Pedidos Cancelados</md-subheader>
+</md-tab-body>
+</md-tab>
 
-        </md-content>
-      </md-tab>
-      <md-tab label="Todos">
-        <md-content class="md-padding">
+<md-tab>
+<md-tab-label>
+<md--icon class="fa fa-archive"></md-icon>
+<p>Todos</p>
+</md-tab-label>
+<md-tab-body>
+<md-subheader class="md-no-sticky">Todos Mis Pedidos</md-subheader>
+</md-tab-body>
+</md-tab>
 
-        </md-content>
-      </md-tab>
+
+
     </md-tabs>
   </md-content>
 </div>
