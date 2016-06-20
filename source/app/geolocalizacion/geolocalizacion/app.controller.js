@@ -1,191 +1,189 @@
-(function(){
-  'use strict';
+(function() {
+    'use strict';
 
-  angular.module('app.geolocalizacion.controller', [
-  ]).controller('geolocalizacionCtrl', geolocalizacionCtrl);
-
-
-  geolocalizacionCtrl.$inject = ['$scope', '$timeout', 'uiGmapLogger', '$http','uiGmapGoogleMapApi', '$stateParams','$mdToast', 'Usuarios', '$location'];
-  function geolocalizacionCtrl($scope, $timeout, $log, $http, GoogleMapApi, $stateParams, $mdToast, Usuarios, $location){
-    var vm = this;
-    console.log('user');
-    console.log($stateParams.idUsuario);
-    vm.usuario = Usuarios.get({idUsuario: $stateParams.idUsuario });
-    console.log(vm.usuario);
-    $log.doLog = true;
-    var places={};
-    var newMarkers={};
-
-    $scope.lat= 40.74349;
-    $scope.lng= -73.990822;
+    angular.module('app.geolocalizacion.controller', []).controller('geolocalizacionCtrl', geolocalizacionCtrl);
 
 
-    $scope.toggleMap = function () {
-      $scope.searchbox.options.visible = !$scope.searchbox.options.visible
-    }
+    var map;
 
-    GoogleMapApi.then(function(maps) {
-      maps.visualRefresh = true;
-      $scope.defaultBounds = new google.maps.LatLngBounds(
-        new google.maps.LatLng(40.82148, -73.66450),
-        new google.maps.LatLng(40.66541, -74.31715));
+    function geolocalizacionCtrl(Usuarios, $stateParams, $location, $mdToast) {
 
 
-      $scope.map.bounds = {
-        northeast: {
-          latitude:$scope.defaultBounds.getNorthEast().lat(),
-          longitude:$scope.defaultBounds.getNorthEast().lng()
-        },
-        southwest: {
-          latitude:$scope.defaultBounds.getSouthWest().lat(),
-          longitude:-$scope.defaultBounds.getSouthWest().lng()
+        var vm = this;
 
-        }
-      }
-      $scope.searchbox.options.bounds = new google.maps.LatLngBounds($scope.defaultBounds.getNorthEast(), $scope.defaultBounds.getSouthWest());
-    });
-
-    angular.extend($scope, {
-      window: {
-        show: false,
-        options: {
-          pixelOffset: { width: 0, height: -40 }
-        },
-        templateurl:'window.tpl.html',
-        templateparameter: {},
-        closeClick: function () {
-          $scope.window.show = false;
-        }
-      },
-      map: {
-        control: {},
-        center: {
-          latitude: 3.5567217,
-          longitude: -76.28885220000001
-        },
-        zoom: 12,
-        dragging: false,
-        bounds: {},
-        markers: [],
-        idkey: 'place_id',
-        events: {
-          idle: function (map) {
-
-          },
-          dragend: function(map) {
-            //update the search box bounds after dragging the map
-            var bounds = map.getBounds();
-            var ne = bounds.getNorthEast();
-            var sw = bounds.getSouthWest();
-            $scope.searchbox.options.bounds = new google.maps.LatLngBounds(sw, ne);
-            //$scope.searchbox.options.visible = true;
-          }
-        }
-      },
-      searchbox: {
-        template: 'searchbox.tpl.html',
-        //position:'top-right',
-        position:'top-left',
-        options: {
-          bounds: {},
-          visible: true
-        },
-        //parentdiv:'searchBoxParent',
-        events: {
-          places_changed: function (searchBox) {
-            console.log('searchBox');
-
-            places = searchBox.getPlaces()
-            console.log(places);
-            $scope.lat=places[0].geometry.location.lat();
-
-            $scope.map.center.latitude=places[0].geometry.location.lat();
-            $scope.map.center.longitude=places[0].geometry.location.lng();
-            $scope.map.zoom=18;
-            console.log($scope.map.center);
+        var lat = null;
+        var lng = null;
+        var map = null;
+        var geocoder = null;
+        vm.marker = null;
+        var direccion = null;
+        var ciudad = null;
+        vm.usuario = null;
 
 
-
-
-            if (places.length == 0) {
-              return;
+        //jQuery(document).ready(function(){
+        //   lat = jQuery('#lat').val();
+        // lng = jQuery('#long').val();
+        //jQuery('#pasar').click(function(){
+        //  codeAddress();
+        // return false;
+        // });
+        getUsuarios();
+        //});
+        function initialize() {
+            geocoder = new google.maps.Geocoder();
+            if (lat && lng) { //if(lat !='' && lng != '') {
+                var latLng = new google.maps.LatLng(lat, lng);
+                console.log('latLng');
+                console.log(lat);
+                console.log(lng);
+            } else if (direccion && ciudad) {
+                var latLng = new google.maps.LatLng(3.5329039, -76.2946308);
+                console.log('direccion and ciudad');
+                codeAddress(direccion + '' + ciudad);
+            } else {
+                var latLng = new google.maps.LatLng(3.5329039, -76.2946308);
             }
-            // For each place, get the icon, place name, and location.
-            newMarkers = [];
-            var bounds = new google.maps.LatLngBounds();
-            for (var i = 0, place; place = places[i]; i++) {
-              console.log('for');
-              console.log(place);
-              console.log(place.geometry.location.lat());
-              // Create a marker for each place.
-              var marker = {
-                idKey:i,
-                place_id: place.place_id,
-                name: place.name,
-                latitude: place.geometry.location.lat(),
-                longitude: place.geometry.location.lng(),
-                templateurl:'window.tpl.html',
-                templateparameter: place,
-                showWindow:true,
-                options:{
-                  labelAnchor:'22 0'
-                },
-                show:true,
-                icon:'images/clientes1.jpg',
-                coords:{
-                  latitude:place.geometry.location.lat(),
-                  longitude:place.geometry.location.lng()
-                },
-                events: {
-                  click: function (marker) {
-                    $scope.window.coords = {
-                      latitude: marker.model.latitude,
-                      longitude: marker.model.longitude
-                    }
-                    $scope.window.templateparameter = marker.model.templateparameter;
-                    $scope.window.show = true;
+            var myOptions = {
+                center: latLng,
+                zoom: 18,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            map = new google.maps.Map(document.getElementById("map"), myOptions);
+            vm.marker = new google.maps.Marker({
+                map: map,
+                position: latLng,
+                draggable: false
+            });
 
-                  }
+            // Create the search box and link it to the UI element.
+            var input = document.getElementById('pac-input');
+            var searchBox = new google.maps.places.SearchBox(input);
+            map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+            // Bias the SearchBox results towards current map's viewport.
+            map.addListener('bounds_changed', function() {
+                searchBox.setBounds(map.getBounds());
+            });
+            var markers = [];
+            // [START region_getplaces]
+            // Listen for the event fired when the user selects a prediction and retrieve
+            // more details for that place.
+            searchBox.addListener('places_changed', function() {
+                var places = searchBox.getPlaces();
+                console.log('placesssss');
+                console.log(places);
+
+                if (places.length == 0) {
+                    return;
                 }
-              };
-              console.log('marker');
-              console.log(marker);
-              newMarkers.push(marker);
-              bounds.extend(place.geometry.location);
-            }
 
-            $scope.map.bounds = {
-              northeast: {
-                latitude: bounds.getNorthEast().lat(),
-                longitude: bounds.getNorthEast().lng()
-              },
-              southwest: {
-                latitude: bounds.getSouthWest().lat(),
-                longitude: bounds.getSouthWest().lng()
-              }
-            }
+                // Clear out the old markers.
+                // markers.forEach(function(vm.marker) {
+                //     vm.marker.setMap(null);
+                //     vm.marker.setAnimation(null);
+                // });
+                markers = [];
 
-            $scope.map.markers = newMarkers;
-            console.log('mmmm');
-            console.log($scope.map);
-          }
+                // For each place, get the icon, name and location.
+                var bounds = new google.maps.LatLngBounds();
+                var place=places[0];
+
+                  console.log('place');
+                  console.log(place.formatted_address);
+                  codeAddress(place.formatted_address)
+                  direccion=place.formatted_address;
+                  console.log(direccion);
+
+
+
+                    if (place.geometry.viewport) {
+                        // Only geocodes have viewport.
+                        bounds.union(place.geometry.viewport);
+                    } else {
+                        bounds.extend(place.geometry.location);
+                    }
+
+                map.fitBounds(bounds);
+            });
+            // [END region_getplaces]
+
+            updatePosition(latLng);
         }
-      }
-    });
+
+        function codeAddress(direccion) {
+            var address = direccion;
+            geocoder.geocode({
+                'address': address
+            }, function(results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    map.setCenter(results[0].geometry.location);
+                    console.log('code');
+                    console.log(results[0].geometry.location.lng());
+                    console.log(results[0].geometry.location.lat());
+                    vm.marker.setPosition(results[0].geometry.location);
+                    updatePosition(results[0].geometry.location);
+                    google.maps.event.addListener(vm.marker, 'dragend', function() {
+                        updatePosition(vm.marker.getPosition());
+                    });
+                } else {
+                    alert("No podemos encontrar la dirección, error: " + status);
+                }
+            });
+        }
+
+        function updatePosition(latLng) {
+            jQuery('#lat').val(latLng.lat());
+            jQuery('#long').val(latLng.lng());
+
+        }
 
 
-    vm.update = function() {
-        vm.usuario.latitud=$scope.map.center.latitude;
-        vm.usuario.longitud=$scope.map.center.longitude;
-        console.log(vm.usuario);
-        Usuarios.update(vm.usuario, function() {
-            $location.path('/bienvenido');
-            $mdToast.show(
-                $mdToast.simple()
-                    .textContent('Se ha  actualizado el usuario...')
-                    .position('bottom right'));
-        });
+        function getUsuarios() {
+
+            return Usuarios.get({
+                idUsuario: $stateParams.idUsuario
+            }).$promise.then(function(data) {
+                console.log('data');
+                console.log(data);
+                vm.usuario = data;
+                data.latitud;
+                data.longitud;
+                if (data.latitud != null && data.latitud != null) {
+                    console.log('map');
+
+                    lat = data.latitud;
+                    lng = data.longitud;
+                    initialize();
+                } else {
+                    direccion = data.direccion;
+                    ciudad = data.ciudad.nombre;
+                    console.log(direccion);
+                    console.log(ciudad);
+                    initialize();
+                }
+
+                vm.saveLocation = function() {
+                    console.log('mappp');
+                    console.log(map.getCenter().lng());
+                    console.log(map.getCenter().lat());
+                    // vm.usuario.longitud=marker.getPosition().lng();
+                    // vm.usuario.latitud=marker.getPosition().lat();
+                    // Usuarios.update(vm.usuario, function() {
+                    //     $location.path('/geolocalizaciondrogueriasview/'+$stateParams.idUsuario);
+                    //     $mdToast.show(
+                    //         $mdToast.simple()
+                    //             .textContent('Se ha  actualizado el usuario...')
+                    //             .position('bottom right'));
+                    // });
+                }
+
+
+            });
+        }
+
+
+
+
     }
-  }
-
 })();

@@ -11,7 +11,7 @@
       return{
         scope:{},
         templateUrl:'app/geolocalizacion/geolocalizacion-drogueriaview/geolocalizacion.html',
-        controller: 'geolocalizacionDrogueriaViewCtrl',
+        controller: 'mapaView',
         controllerAs: 'vm'
       }
     }

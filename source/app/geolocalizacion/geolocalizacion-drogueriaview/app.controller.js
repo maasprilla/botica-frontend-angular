@@ -1,275 +1,169 @@
-(function(){
-  'use strict';
+(function() {
+    'use strict';
 
-  angular.module('app.geolocalizacion-drogueriaview.controller', [
-  ]).controller('geolocalizacionDrogueriaViewCtrl', geolocalizacionDrogueriaViewCtrl)
-  .controller('geoCtrl', geoCtrl);
+    angular.module('app.geolocalizacion-drogueriaview.controller', []).controller('mapaView', mapaView);
 
-  function geoCtrl($scope, Usuarios, $stateParams) {
-      var vm=this;
+    function mapaView(Usuarios, $stateParams) {
+        var vm = this;
 
-      vm.mapOptions = {
-          zoom: 4,
-          center: new google.maps.LatLng(40.0000, -98.0000),
-          mapTypeId: google.maps.MapTypeId.TERRAIN
-      }
+        var lat = null;
+        var lng = null;
+        var map = null;
+        var geocoder = null;
+        var marker = null;
+        var direccion=null;
+        var ciudad=null;
 
-      $scope.map = new google.maps.Map(document.getElementById('map'), vm.mapOptions);
-      $scope.markers = [];
-      console.log('map');
-      console.log( $scope.map);
+        function funcionClick() {
+            console.log('event');
+        }
 
-      var infoWindow = new google.maps.InfoWindow();
+        getUsuarios();
 
-      vm.createMarker = function(info) {
-
-          var marker = new google.maps.Marker({
-              map: $scope.map,
-              position: new google.maps.LatLng(info.lat, info.long),
-              title: info.city
-          });
-          marker.content = '<div class="infoWindowContent">' + info.desc + '</div>';
-
-          google.maps.event.addListener(marker, 'click', function() {
-              infoWindow.setContent('<h2>' + marker.title + '</h2>' + marker.content);
-              infoWindow.open($scope.map, marker);
-          });
-
-          $scope.markers.push(marker);
-
-      }
-
-      // for (var i = 0; i < cities.length; i++) {
-      //   createMarker(cities[i]);
-      // }
-
-      // vm.createMarker({
-      //     city: 'Los Angeles',
-      //     desc: 'This city is live!',
-      //     lat: 34.0500,
-      //     long: -118.2500
-      // });
+        //jQuery(document).ready(function(){
+        //   lat = jQuery('#lat').val();
+        // lng = jQuery('#long').val();
+        //jQuery('#pasar').click(function(){
+        //  codeAddress();
+        // return false;
+        // });
+        //initialize();
+        //});
+        function initialize() {
+            geocoder = new google.maps.Geocoder();
+            if (lat && lng) { //if(lat !='' && lng != '') {
+                console.log('aqui bien');
+                console.log(lat);
+                console.log(lng);
 
 
-
-
-
-      $scope.openInfoWindow = function(e, selectedMarker) {
-          e.preventDefault();
-          google.maps.event.trigger(selectedMarker, 'click');
-      }
-      getUsuarios();
-
-
-      function getUsuarios() {
-
-          return Usuarios.get({
-              idUsuario: $stateParams.idUsuario
-          }).$promise.then(function(data) {
-              console.log('data');
-              console.log(data);
-              data.latitud;
-              data.longitud;
-              if(data.latitud!=null && data.latitud!=null){
-              vm.mapOptions = {
-                  zoom: 18,
-                  center: new google.maps.LatLng(data.latitud, data.longitud),
-                  mapTypeId: google.maps.MapTypeId.TERRAIN
-              }
-              $scope.map = new google.maps.Map(document.getElementById('map'), vm.mapOptions);
-              console.log('aaa');
-              console.log(vm.mapOptions.center.lat());
-              //map.center.latitude = places[0].geometry.location.lat()
-              vm.createMarker({
-                  city: data.nombre,
-                  desc: data.direccion,
-                  lat: data.latitud,
-                  long: data.longitud
-              })
+                var latLng = new google.maps.LatLng(lat, lng);
+            } else if (direccion && ciudad) {
+              var latLng = new google.maps.LatLng(3.5329039, -76.2946308);
+                console.log('direccion and ciudad');
+                codeAddress(direccion+''+ciudad);
+            }else {
+                var latLng = new google.maps.LatLng(3.5329039, -76.2946308);
             }
+            console.log('pos');
+            console.log(latLng.lng());
+            var myOptions = {
+                center: latLng,
+                zoom: 18,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            map = new google.maps.Map(document.getElementById("map"), myOptions);
+            marker = new google.maps.Marker({
+                map: map,
+                position: latLng,
+                title: "miguel",
+                animation: google.maps.Animation.BOUNCE,
+                draggable: false
+            });
 
-
-          });
-
-      }
-
-
-  }
-
-
-  geolocalizacionDrogueriaViewCtrl.$inject = ['$scope', '$timeout', 'uiGmapLogger', '$http','uiGmapGoogleMapApi', '$stateParams','$mdToast', 'Usuarios', '$q'];
-  function geolocalizacionDrogueriaViewCtrl($scope, $timeout, $log, $http, GoogleMapApi, $stateParams, $mdToast, Usuarios, $q){
-    var vm = this;
-    console.log('user');
-    activate();
-    $log.doLog = true;
-    var places={};
-    var newMarkers={};
-
-    $scope.lat= 40.74349;
-    $scope.lng= -73.990822;
-
-
-    $scope.toggleMap = function () {
-      $scope.searchbox.options.visible = !$scope.searchbox.options.visible
-    }
-
-    GoogleMapApi.then(function(maps) {
-      maps.visualRefresh = true;
-      $scope.defaultBounds = new google.maps.LatLngBounds(
-        new google.maps.LatLng(40.82148, -73.66450),
-        new google.maps.LatLng(40.66541, -74.31715));
-
-
-      $scope.map.bounds = {
-        northeast: {
-          latitude:$scope.defaultBounds.getNorthEast().lat(),
-          longitude:$scope.defaultBounds.getNorthEast().lng()
-        },
-        southwest: {
-          latitude:$scope.defaultBounds.getSouthWest().lat(),
-          longitude:-$scope.defaultBounds.getSouthWest().lng()
-
-        }
-      }
-      $scope.searchbox.options.bounds = new google.maps.LatLngBounds($scope.defaultBounds.getNorthEast(), $scope.defaultBounds.getSouthWest());
-    });
-
-    angular.extend($scope, {
-      window: {
-        show: false,
-        options: {
-          pixelOffset: { width: 0, height: -40 }
-        },
-        templateurl:'window.tpl.html',
-        templateparameter: {},
-        closeClick: function () {
-          $scope.window.show = false;
-        }
-      },
-      map: {
-        control: {},
-        center: {
-          latitude: 3.5567217,
-          longitude: -76.28885220000001
-        },
-        zoom: 12,
-        dragging: false,
-        bounds: {},
-        markers: [],
-        idkey: 'place_id',
-        events: {
-          idle: function (map) {
-
-          },
-          dragend: function(map) {
-            //update the search box bounds after dragging the map
-            var bounds = map.getBounds();
-            var ne = bounds.getNorthEast();
-            var sw = bounds.getSouthWest();
-            $scope.searchbox.options.bounds = new google.maps.LatLngBounds(sw, ne);
-            //$scope.searchbox.options.visible = true;
-          }
-        }
-      },
-      searchbox: {
-        template: 'searchbox.tpl.html',
-        //position:'top-right',
-        position:'top-left',
-        options: {
-          bounds: {},
-          visible: true
-        },
-        //parentdiv:'searchBoxParent',
-        events: {
-          places_changed: function (searchBox) {
-
-            places = searchBox.getPlaces()
-            console.log(places);
-            $scope.lat=places[0].geometry.location.lat();
-
-            $scope.map.center.latitude=places[0].geometry.location.lat();
-            $scope.map.center.longitude=places[0].geometry.location.lng();
-            $scope.map.zoom=18;
-            console.log($scope.map.center);
-
-
-
-
-            if (places.length == 0) {
-              return;
-            }
-            // For each place, get the icon, place name, and location.
-            newMarkers = [];
-            var bounds = new google.maps.LatLngBounds();
-            for (var i = 0, place; place = places[i]; i++) {
-              // Create a marker for each place.
-              var marker = {
-                idKey:i,
-                place_id: place.place_id,
-                name: place.name,
-                latitude: place.geometry.location.lat(),
-                longitude: place.geometry.location.lng(),
-                templateurl:'window.tpl.html',
-                templateparameter: place,
-                events: {
-                  click: function (marker) {
-                    $scope.window.coords = {
-                      latitude: marker.model.latitude,
-                      longitude: marker.model.longitude
-                    }
-                    $scope.window.templateparameter = marker.model.templateparameter;
-                    $scope.window.show = true;
-
-                  }
+            marker.addListener('click', function() {
+                if (marker.getAnimation() != null) {
+                    marker.setAnimation(null);
+                    vm.infowindow.open(map, marker);
+                } else {
+                    marker.setAnimation(google.maps.Animation.BOUNCE);
+                    vm.infowindow.close(map, marker);
                 }
-              };
-              newMarkers.push(marker);
-              bounds.extend(place.geometry.location);
-            }
 
-            $scope.map.bounds = {
-              northeast: {
-                latitude: bounds.getNorthEast().lat(),
-                longitude: bounds.getNorthEast().lng()
-              },
-              southwest: {
-                latitude: bounds.getSouthWest().lat(),
-                longitude: bounds.getSouthWest().lng()
-              }
-            }
 
-            $scope.map.markers = newMarkers;
-          }
+            });
+
+            google.maps.event.addListener(vm.infowindow, 'domready', function() {
+
+
+
+            });
+
+
+
+
+
+            updatePosition(latLng);
         }
-      }
-    });
 
-    function activate() {
-        var promises = [getUsuarios()];
-        return $q.all(promises).then(function() {
+        function codeAddress(direccion) {
+            var address = direccion;
+            geocoder.geocode({
+                'address': address
+            }, function(results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    map.setCenter(results[0].geometry.location);
+                    marker.setPosition(results[0].geometry.location);
+                    updatePosition(results[0].geometry.location);
+                    google.maps.event.addListener(marker, 'dragend', function() {
+                        updatePosition(marker.getPosition());
+                    });
+                } else {
+                    alert("No podemos encontrar la dirección, error: " + status);
+                }
+            });
+        }
 
-        });
+        function updatePosition(latLng) {
+            jQuery('#lat').val(latLng.lat());
+            jQuery('#long').val(latLng.lng());
+
+        }
+
+
+
+
+        function getUsuarios() {
+
+            return Usuarios.get({
+                idUsuario: $stateParams.idUsuario
+            }).$promise.then(function(data) {
+                console.log('data');
+                console.log(data);
+                data.latitud;
+                data.longitud;
+                var content = '<div id="iw-container">' +
+                    '<div class="iw-title">' + data.nombre + '</div>' +
+                    '<div class="iw-content">' +
+                    '<div class="iw-subTitle">History</div>' +
+                    '<img src="http://maps.marnoto.com/en/5wayscustomizeinfowindow/images/vistalegre.jpg" alt="Porcelain Factory of Vista Alegre" height="115" width="83">' +
+                    '<p>Founded in 1824, the Porcelain Factory of Vista Alegre was the first industrial unit dedicated to porcelain production in Portugal. For the foundation and success of this risky industrial development was crucial the spirit of persistence of its founder, José Ferreira Pinto Basto. Leading figure in Portuguese society of the nineteenth century farm owner, daring dealer, wisely incorporated the liberal ideas of the century, having become "the first example of free enterprise" in Portugal.</p>' +
+                    '<div class="iw-subTitle">Contacts</div>' +
+                    '<p>VISTA ALEGRE ATLANTIS, SA<br>3830-292 Ílhavo - Portugal<br>' +
+                    '<br>Phone. +351 234 320 600<br>e-mail: geral@vaa.pt<br>www: www.myvistaalegre.com</p>' +
+                    '</div>' +
+                    '<div class="iw-bottom-gradient"></div>' +
+                    '</div>';
+
+                vm.infowindow = new google.maps.InfoWindow({
+                    content: content,
+                    maxWidth: 350,
+                });
+                if (data.latitud != null && data.latitud != null) {
+                    console.log('map');
+
+                    lat = data.latitud;
+                    lng = data.longitud;
+
+
+                    initialize();
+
+
+
+                }else{
+                  direccion=data.direccion;
+                  ciudad=data.ciudad.nombre;
+                  console.log(direccion);
+                  console.log(ciudad);
+                  initialize();
+                }
+
+
+            });
+        }
+
+
+
     }
-
-    function getUsuarios() {
-
-  return Usuarios.get(
-    {idUsuario: $stateParams.idUsuario }
-  ).$promise.then(function(data) {
-    console.log('data');
-    console.log(data);
-    $scope.map.center.latitude=data.latitud;
-    $scope.map.center.longitude=data.longitud;
-    $scope.map.zoom=18;
-
-
-  });
-
-}
-
-
-
-  }
 
 })();
