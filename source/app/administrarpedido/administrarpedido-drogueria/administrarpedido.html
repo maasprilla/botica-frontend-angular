@@ -1,0 +1,106 @@
+<div class="MajorContainer-elements">
+  <section class="HeaderUserCreate">
+    <div class="container UserCreateHeader-container">
+      <div class="row">
+        <div class="col-md-4 IconsUserTop-container">
+          <div class="UserHeaderCreate-content"></div>
+        </div>
+        <div class="col-md-4 HeaderUserCreate-content">
+
+            <img src="./images/regisadmin.png" alt="Usuarios" class="UserHeaderImage Gear" style="max-width:15em">
+
+        </div>
+        <div class="col-md-4 IconsUserTop-container">
+          <div class="UserHeaderCreate-content"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container AdminPedidoList-Content">
+      <div class="row AdminPedidoListIcon-container">
+        <div class="col-md-3 text-center IconsAdminPedidoList">
+          <i class="material-icons" style="font-size:48px;color:#f9f9f9">account_circle</i>
+        </div>
+        <div class="col-md-3 text-center IconsAdminPedidoList">
+          <i class="material-icons" style="font-size:48px;color:#f9f9f9">list</i>
+        </div>
+        <div class="col-md-3 text-center IconsAdminPedidoList">
+          <i class="material-icons" style="font-size:48px;color:#f9f9f9">desktop_windows</i>
+        </div>
+        <div class="col-md-3 text-center IconsAdminPedidoList">
+          <i class="material-icons" style="font-size:48px;color:#f9f9f9">remove_red_eye</i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="PanelPedidosUsuarios">
+    <div ng-cloak class="PanelPedidosUsuarios-tabs">
+
+  <md-content>
+    <md-tabs md-dynamic-height md-border-bottom >
+      <md-tab>
+    <md-tab-label>
+      <md--icon class="fa fa-hourglass-start"></md-icon>
+      <p>En Espera</p>
+    </md-tab-label>
+    <md-tab-body>
+      <md-subheader class="md-no-sticky">Pedidos En Espera</md-subheader>
+      <div ng-repeat="pedidoespera in vm.pedidosenespera" style="padding:1em">
+        <md-list-item class="secondary-button-padding PanelPedidosUsuarios-itemTitle">
+          <p>{{pedidoespera.descripcion}}</p>
+          <md-button class="md-icon-button md-primary" aria-label="Settings">
+          <md-icon class="fa fa-search"></md-icon>
+      </md-button>
+
+        </md-list-item>
+    </div>
+    </md-tab-body>
+  </md-tab>
+
+  <md-tab>
+<md-tab-label>
+  <md--icon class="fa fa-pencil-square-o"></md-icon>
+  <p>Respuestas</p>
+</md-tab-label>
+<md-tab-body>
+<md-subheader class="md-no-sticky">Respuestas</md-subheader>
+</md-tab-body>
+</md-tab>
+
+<md-tab>
+<md-tab-label>
+<md--icon class="fa fa-check"></md-icon>
+<p>Concretados</p>
+</md-tab-label>
+<md-tab-body>
+<md-subheader class="md-no-sticky">Pedidos Concretados</md-subheader>
+</md-tab-body>
+</md-tab>
+
+<md-tab>
+<md-tab-label>
+<md--icon class="fa fa-close"></md-icon>
+<p>Cancelados</p>
+</md-tab-label>
+<md-tab-body>
+<md-subheader class="md-no-sticky">Pedidos Cancelados</md-subheader>
+</md-tab-body>
+</md-tab>
+
+<md-tab>
+<md-tab-label>
+<md--icon class="fa fa-archive"></md-icon>
+<p>Todos</p>
+</md-tab-label>
+<md-tab-body>
+<md-subheader class="md-no-sticky">Todos Mis Pedidos</md-subheader>
+</md-tab-body>
+</md-tab>
+
+
+
+    </md-tabs>
+  </md-content>
+</div>
+  </section>
+</div>

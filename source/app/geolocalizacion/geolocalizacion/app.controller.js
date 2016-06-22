@@ -28,7 +28,7 @@
         //  codeAddress();
         // return false;
         // });
-        getUsuarios();
+        initialize();
         //});
         function initialize() {
             geocoder = new google.maps.Geocoder();
@@ -70,45 +70,74 @@
             // Listen for the event fired when the user selects a prediction and retrieve
             // more details for that place.
             searchBox.addListener('places_changed', function() {
-                var places = searchBox.getPlaces();
-                console.log('placesssss');
-                console.log(places);
+              searchBox.setBounds(map.getBounds());
+});
 
-                if (places.length == 0) {
-                    return;
-                }
+var markers = [];
+// [START region_getplaces]
+// Listen for the event fired when the user selects a prediction and retrieve
+// more details for that place.
+searchBox.addListener('places_changed', function() {
+ var places = searchBox.getPlaces();
+ vm.marker.setMap(null);
 
-                // Clear out the old markers.
-                // markers.forEach(function(vm.marker) {
-                //     vm.marker.setMap(null);
-                //     vm.marker.setAnimation(null);
-                // });
-                markers = [];
+ if (places.length == 0) {
+   return;
+ }
 
-                // For each place, get the icon, name and location.
-                var bounds = new google.maps.LatLngBounds();
-                var place=places[0];
+ // Clear out the old markers.
+ markers.forEach(function(marker) {
 
-                  console.log('place');
-                  console.log(place.formatted_address);
-                  codeAddress(place.formatted_address)
-                  direccion=place.formatted_address;
-                  console.log(direccion);
+   marker.setMap(null);
+ });
+ markers = [];
+
+ // For each place, get the icon, name and location.
+ var bounds = new google.maps.LatLngBounds();
+ places.forEach(function(place) {
+  //  var icon = {
+  //    url: place.icon,
+  //    size: new google.maps.Size(71, 71),
+  //    origin: new google.maps.Point(0, 0),
+  //    anchor: new google.maps.Point(17, 34),
+  //    scaledSize: new google.maps.Size(25, 25)
+  //  };
+  var infowindow = new google.maps.InfoWindow({
+      content: '<input type="button" value="guardar"></input>',
+      maxWidth: 350,
+  });
+
+   // Create a marker for each place.
+   var newMarker=new google.maps.Marker({
+     map: map,
+     //icon: icon,
+     title: place.name,
+     position: place.geometry.location,
+     draggable: true
+   });
+
+   newMarker.addListener('click', function() {
+           infowindow.open(map, newMarker);
+   });
+
+   markers.push(newMarker);
 
 
 
-                    if (place.geometry.viewport) {
-                        // Only geocodes have viewport.
-                        bounds.union(place.geometry.viewport);
-                    } else {
-                        bounds.extend(place.geometry.location);
-                    }
+   updatePosition(place.geometry.location);
 
-                map.fitBounds(bounds);
-            });
+   if (place.geometry.viewport) {
+     // Only geocodes have viewport.
+     bounds.union(place.geometry.viewport);
+   } else {
+     bounds.extend(place.geometry.location);
+   }
+ });
+ map.fitBounds(bounds);
+});
             // [END region_getplaces]
 
-            updatePosition(latLng);
+
         }
 
         function codeAddress(direccion) {
