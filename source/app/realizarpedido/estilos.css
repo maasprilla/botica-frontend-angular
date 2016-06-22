@@ -20,6 +20,10 @@
   height: 30em;
   background-color: #fffafa;
 }
+.FormPedido-carroList {
+  height: 20em;
+  background-color: #fffafa;
+}
 .badgeBotica {
   font-size: 8px;
   padding: 0.2em 0.4em;
@@ -27,6 +31,10 @@
   position: absolute;
   top: 3px;
   right: 55px;
+}
+.itemListCarrito {
+  text-align: left;
+  width: 25em;
 }
 .RealizarPedidoMajor-container {
   background-color: #fafafa;

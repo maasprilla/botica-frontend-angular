@@ -28,23 +28,23 @@
             // vm.readonly=true;
             //
             //vm.nombreproducto;
-        var productos = new Array();
+        vm.productos = new Array();
 
         //vm.contenidopedido=[];
         vm.addProducto = function(item) {
 
 
-            var cantProductos = productos.length;
+            var cantProductos = vm.productos.length;
 
             var isAdd = vm.addCantidad(item);
             if (isAdd == false) {
-                productos[cantProductos] = {
+                vm.productos[cantProductos] = {
                     medicamento: item,
                     cantidad: 1
                 };
             }
             console.log('mis productos');
-            console.log(productos);
+            console.log(vm.productos);
 
 
             // for (var i = 0; i<productos.length ; i++) {
@@ -66,9 +66,9 @@
         }
 
         vm.addCantidad = function(item) {
-            for (var i = 0; i < productos.length; i++) {
-                if (productos[i].medicamento.idMedicamento == item.idMedicamento) {
-                    productos[i].cantidad++;
+            for (var i = 0; i < vm.productos.length; i++) {
+                if (vm.productos[i].medicamento.idMedicamento == item.idMedicamento) {
+                    vm.productos[i].cantidad++;
                     console.log('suma');
                     return true;
                 }
@@ -78,10 +78,10 @@
         }
 
         vm.cantidadPedida = function(item) {
-            for (var i = 0; i < productos.length; i++) {
-                if (productos[i].medicamento.idMedicamento == item.idMedicamento) {
+            for (var i = 0; i < vm.productos.length; i++) {
+                if (vm.productos[i].medicamento.idMedicamento == item.idMedicamento) {
                     console.log('igual');
-                    return productos[i].cantidad;
+                    return vm.productos[i].cantidad;
                 }
             }
             return 0;

@@ -59,6 +59,18 @@
                     </md-tab-label>
                     <md-tab-body>
                         <md-subheader class="md-no-sticky">Mi Carrito</md-subheader>
+                        <md-list ng-cloak class="FormPedido-carroList">
+                            <md-list-item ng-repeat="item in vm.productos">
+                              <div class="itemListCarrito">
+                                <p >{{item.medicamento.nombre}}</p>
+                                <h6>cantidad: <span>{{vm.cantidadPedida(item.medicamento)}}</span></h6>
+                              </div>
+                                <button type="button" class="btn btn-primary btn-xs" ng-click="vm.addProducto(item.medicamento)"><span class="fa fa-plus"></span></button>
+                                <button type="button" class="btn btn-primary btn-xs" ng-click="vm.addProducto(item.idMedicamento)"><span class="fa fa-minus"></span></button>
+                                <md-divider></md-divider>
+                            </md-list-item>
+                        </md-list>
+                        <button type="button" class="btn btn-success">Enviar</button>
                     </md-tab-body>
                 </md-tab>
 
