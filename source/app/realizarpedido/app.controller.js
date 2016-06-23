@@ -4,15 +4,14 @@
     angular.module('app.realizarpedido.controller', []).controller('realizarPedidoCreateCtrl', realizarPedidoCreateCtrl);
 
 
-    realizarPedidoCreateCtrl.$inject = ['$stateParams', '$location', '$mdToast', 'ZonasEnvios', 'Pedidos', 'Ciudades', 'Medicamentos'];
+    realizarPedidoCreateCtrl.$inject = ['$stateParams', '$location', '$mdToast', 'ZonasEnvios', 'Pedidos', 'Ciudades', 'Medicamentos', '$mdDialog', '$scope'];
 
-    function realizarPedidoCreateCtrl($stateParams, $location, $mdToast, ZonasEnvios, Pedidos, Ciudades, Medicamentos) {
+    function realizarPedidoCreateCtrl($stateParams, $location, $mdToast, ZonasEnvios, Pedidos, Ciudades, Medicamentos, $mdDialog, $scope) {
 
         var vm = this;
         vm.medicamentosAutocomplete;
 
         vm.search = function() {
-                console.log('cambio');
                 vm.foundMedicamentosByNombre();
             }
             //
@@ -21,7 +20,7 @@
             // vm.producto={idusuario:{idUsuario:vm.currentuser}, idEstadoPedido:{idEstadoPedido:1}};
             //
             //
-            // vm.zonasenvios=ZonasEnvios.query();
+            vm.zonasenvios=ZonasEnvios.query();
             //
             // vm.ciudades=Ciudades.query();
             //
@@ -69,44 +68,56 @@
             for (var i = 0; i < vm.productos.length; i++) {
                 if (vm.productos[i].medicamento.idMedicamento == item.idMedicamento) {
                     vm.productos[i].cantidad++;
-                    console.log('suma');
                     return true;
                 }
             }
-            console.log('nada');
             return false;
         }
 
         vm.cantidadPedida = function(item) {
             for (var i = 0; i < vm.productos.length; i++) {
                 if (vm.productos[i].medicamento.idMedicamento == item.idMedicamento) {
-                    console.log('igual');
-                    return vm.productos[i].cantidad;
+                     return vm.productos[i].cantidad;
                 }
             }
             return 0;
         }
 
-        //
-        // vm.create=function(){
-        //     //vm.producto.medicamentoList=vm.contenidopedido;
-        //     vm.producto.medicamentoList=productos;
-        //     vm.producto.cantidad=5;
-        //     console.log(vm.producto);
-        //     Pedidos.save(vm.producto, function() {
-        //             $location.path('/administrarpedido/usuario');
-        //             $mdToast.show(
-        //                 $mdToast.simple()
-        //                     .textContent('Se ha  guardado el Pedido...')
-        //                     .position('bottom right'));
-        //                   },function (error) {
-        //                     $mdToast.show(
-        //                       $mdToast.simple()
-        //                       .textContent('el pedido esta mal')
-        //                       .position('bottom right'));
-        //
-        //         });
-        // }
+
+        vm.create=function(){
+            //vm.producto.medicamentoList=vm.contenidopedido;
+            vm.pedido={medicamentoList:vm.productos};
+            console.log(vm.pedido);
+            Pedidos.save(vm.pedido, function() {
+                    $location.path('/administrarpedido/usuario');
+                    $mdToast.show(
+                        $mdToast.simple()
+                            .textContent('Se ha  guardado el Pedido...')
+                            .position('bottom right'));
+                          },function (error) {
+                            $mdToast.show(
+                              $mdToast.simple()
+                              .textContent('el pedido esta mal')
+                              .position('bottom right'));
+
+                });
+        }
+
+        vm.showTabDialog = function(ev) {
+    $mdDialog.show({
+      controller: 'realizarPedidoCreateCtrl',
+      controllerAs:'vm',
+      templateUrl: 'app/realizarpedido/panelpedido.html',
+      parent: angular.element(document.body),
+      targetEvent: ev,
+      clickOutsideToClose:true
+    })
+        .then(function(answer) {
+          vm.status = 'You said the information was "' + answer + '".';
+        }, function() {
+          vm.status = 'You cancelled the dialog.';
+        });
+  };
 
         vm.foundCiudadesByNombre = function(nombre) {
             return Ciudades.foundByNombre({
@@ -120,6 +131,20 @@
             });
         }
 
+        $scope.hide = function() {
+          $mdDialog.hide();
+        };
+        $scope.cancel = function() {
+          $mdDialog.cancel();
+        };
+        $scope.answer = function(answer) {
+          $mdDialog.hide(answer);
+        };
+
     }
+
+
+
+
 
 })();

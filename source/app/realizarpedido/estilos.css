@@ -85,6 +85,10 @@
   color: #fff;
   font-family: 'Open Sans';
 }
+.PanelRealizarPedido {
+  padding: 3em;
+  text-align: center;
+}
 .AgregarProd {
   text-align: center;
   font-family: 'Open Sans';
