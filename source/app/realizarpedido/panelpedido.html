@@ -1,3 +1,4 @@
+<section ng-controller="realizarPedidoCreateCtrl as vm">
 <div class="PanelRealizarPedido">
 <h1 class="FormRealizarPedido-tittle">Datos de Envio</h1>
 
@@ -47,5 +48,6 @@ La ciudad "{{vm.searchTextCiudades}}" no se encuentra.
 
 
 
- <md-button class="md-raised md-primary">Realizar Pedido</md-button>
+ <md-button class="md-raised md-primary" ng-click="vm.create()">Realizar Pedido</md-button>
 </div>
+</section>

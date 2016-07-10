@@ -85,8 +85,9 @@
 
 
         vm.create=function(){
-            //vm.producto.medicamentoList=vm.contenidopedido;
-            vm.pedido={medicamentoList:vm.productos};
+          console.log('mis productos');
+          console.log(vm.productos);
+            vm.pedido={pedidoHasMedicamentoList:vm.productos};
             console.log(vm.pedido);
             Pedidos.save(vm.pedido, function() {
                     $location.path('/administrarpedido/usuario');
@@ -105,8 +106,8 @@
 
         vm.showTabDialog = function(ev) {
     $mdDialog.show({
-      controller: 'realizarPedidoCreateCtrl',
-      controllerAs:'vm',
+      //controller: 'realizarPedidoCreateCtrl',
+      //controllerAs:'vm',
       templateUrl: 'app/realizarpedido/panelpedido.html',
       parent: angular.element(document.body),
       targetEvent: ev,
