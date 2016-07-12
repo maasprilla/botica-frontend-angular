@@ -10,7 +10,7 @@
     $urlRouterProvider.otherwise('/');
     $stateProvider.
             state('administrarpedido-drogueria',{
-              url:'/administrarpedido/drogueria',
+              url:'/administrarpedidodrogue/drogueria',
               views:{
                 'encabezadosimple':{
                   template:'<encabezadosimple/>'

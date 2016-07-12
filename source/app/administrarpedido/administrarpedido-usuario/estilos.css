@@ -1,3 +1,9 @@
+#tableModalMorePedido th>div {
+  text-align: left;
+}
+#tableModalMorePedido th>div>span {
+  color: #000;
+}
 .MajorContainer-elements {
   min-height: calc(80vh);
 }

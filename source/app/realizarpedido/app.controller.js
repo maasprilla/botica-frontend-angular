@@ -11,7 +11,7 @@
         var vm = this;
         vm.medicamentosAutocomplete;
         vm.currentuser=$stateParams.idUsuario;
-        vm.pedido={idusuario:{idUsuario:vm.currentuser},pedidoHasMedicamentoList:[]};
+        vm.pedido={idusuario:{idUsuario:vm.currentuser},idEstadoPedido:{idEstadoPedido:"1"},pedidoHasMedicamentoList:[]};
 
         vm.search = function() {
                 vm.foundMedicamentosByNombre();
@@ -97,7 +97,7 @@
 
 
             console.log(PedidosTemporales.CurrentPedido[0].medicamento.idMedicamento);
-            for (var i = 0; i < PedidosTemporales.CurrentPedido.length; i++) {              
+            for (var i = 0; i < PedidosTemporales.CurrentPedido.length; i++) {
               vm.pedido.pedidoHasMedicamentoList[i]={
               cantidad:PedidosTemporales.CurrentPedido[i].cantidad,
               idMedicamento:PedidosTemporales.CurrentPedido[i].medicamento
