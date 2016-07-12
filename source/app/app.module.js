@@ -10,8 +10,8 @@
         'satellizer',
         'ngTable',
         'angularFileUpload',
-        'uiGmapgoogle-maps',
         '720kb.datepicker',
+        'app.mapa.onGoogleReady',
         //'templates',
         'app.config',
         'app.footer',
@@ -35,7 +35,9 @@
         'app.imagenes',
         'app.medicamentos',
         'app.contacto',
-        'app.terminos'
+        'app.terminos',
+        'app.respuestapedido'
+
     ]);
 
 })();

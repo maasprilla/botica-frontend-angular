@@ -16,6 +16,26 @@
 .HeaderRealizarPedido-icons {
   padding: 1em 1.5em 1em 0;
 }
+.FormPedido-list {
+  height: 30em;
+  background-color: #fffafa;
+}
+.FormPedido-carroList {
+  height: 20em;
+  background-color: #fffafa;
+}
+.badgeBotica {
+  font-size: 8px;
+  padding: 0.2em 0.4em;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  right: 55px;
+}
+.itemListCarrito {
+  text-align: left;
+  width: 25em;
+}
 .RealizarPedidoMajor-container {
   background-color: #fafafa;
   background-repeat: no-repeat;
@@ -30,6 +50,7 @@
   background-color: #fffafa;
   padding: 2em;
   width: 30em;
+  height: 40em;
   font-family: 'Open Sans';
   text-align: center;
   display: inline-block;
@@ -63,6 +84,10 @@
   border-radius: 0.5em;
   color: #fff;
   font-family: 'Open Sans';
+}
+.PanelRealizarPedido {
+  padding: 3em;
+  text-align: center;
 }
 .AgregarProd {
   text-align: center;

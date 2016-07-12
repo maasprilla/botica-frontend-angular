@@ -1,0 +1,51 @@
+<div class="PanelRealizarPedido">
+<h1 class="FormRealizarPedido-tittle">Datos de Envio</h1>
+
+<md-input-container class="md-block RealizarPedido-input">
+<label>Direccion</label>
+<input md-maxlength="30" required md-no-asterisk name="direccion" ng-model="vm.pedido.direccion">
+<div ng-messages="FormRealizarPedido.direccion.$error">
+<div ng-message="required">This is required.</div>
+<div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+</div>
+</md-input-container>
+
+<md-autocomplete required
+md-selected-item="vm.pedido.ciudad"
+md-search-text="vm.searchTextCiudades"
+md-items="item in vm.foundCiudadesByNombre(vm.searchTextCiudades)"
+md-item-text="item.nombre"
+md-min-length="1"
+md-floating-label="Ciudad de Domicilio"
+class="FormRegistro-input">
+<md-item-template>
+<span md-highlight-text="vm.searchTextCiudades" md-highlight-flags="^i">
+{{item.nombre}}</span>
+</md-item-template>
+<md-not-found>
+La ciudad "{{vm.searchTextCiudades}}" no se encuentra.
+</md-not-found>
+</md-autocomplete>
+
+<md-input-container class="md-block RealizarPedido-input">
+<label>Zona de Envio</label>
+<md-select ng-model="vm.pedido.idZonaEnvio.idZonaEnvio">
+<md-option ng-repeat="zonaenvio in vm.zonasenvios"  value="{{zonaenvio.idZonaEnvio}}">
+  {{zonaenvio.descripcionZona}}
+</md-option>
+</md-select>
+</md-input-container>
+
+<md-input-container class="md-block RealizarPedido-input">
+<label>Descripcion</label>
+<input md-maxlength="200" required md-no-asterisk name="descripcion" ng-model="vm.pedido.descripcion">
+<div ng-messages="FormRealizarPedido.descripcion.$error">
+<div ng-message="required">This is required.</div>
+<div ng-message="md-maxlength">The name has to be less than 200 characters long.</div>
+</div>
+</md-input-container>
+
+
+
+ <md-button class="md-raised md-primary" ng-click="vm.create()">Realizar Pedido</md-button>
+</div>

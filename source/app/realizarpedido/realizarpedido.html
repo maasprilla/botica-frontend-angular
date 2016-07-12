@@ -1,35 +1,82 @@
 <section class="HeaderRealizarPedido">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-      </div>
-      <div class="col-md-4 HeaderRealizarPedido-logo">
-          <img src="./images/pedido.png" alt="Realizar Pedido" class="HeaderRealizarPedido-logoImg" style="max-width:15em">
-      </div>
-      <div class="col-md-4">
-      </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4 HeaderRealizarPedido-logo">
+                <img src="./images/pedido.png" alt="Realizar Pedido" class="HeaderRealizarPedido-logoImg" style="max-width:15em">
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="container HeaderRealizarPedido-content">
-    <div class="row HeaderRealizarPedido-containerIcon">
-      <div class="col-md-3 text-center HeaderRealizarPedido-icons">
-        <i class="material-icons" style="font-size:48px;color:#f9f9f9">desktop_windows</i>
-      </div>
-      <div class="col-md-3 text-center HeaderRealizarPedido-icons">
-        <i class="material-icons" style="font-size:48px;color:#f9f9f9">account_circle</i>
-      </div>
-      <div class="col-md-3 text-center HeaderRealizarPedido-icons">
-        <i class="material-icons" style="font-size:48px;color:#f9f9f9">search</i>
-      </div>
-      <div class="col-md-3 text-center HeaderRealizarPedido-icons">
-        <i class="material-icons" style="font-size:48px;color:#f9f9f9">add_shopping_cart</i>
-      </div>
+    <div class="container HeaderRealizarPedido-content">
+        <div class="row HeaderRealizarPedido-containerIcon">
+            <div class="col-md-3 text-center HeaderRealizarPedido-icons">
+                <i class="material-icons" style="font-size:48px;color:#f9f9f9">desktop_windows</i>
+            </div>
+            <div class="col-md-3 text-center HeaderRealizarPedido-icons">
+                <i class="material-icons" style="font-size:48px;color:#f9f9f9">account_circle</i>
+            </div>
+            <div class="col-md-3 text-center HeaderRealizarPedido-icons">
+                <i class="material-icons" style="font-size:48px;color:#f9f9f9">search</i>
+            </div>
+            <div class="col-md-3 text-center HeaderRealizarPedido-icons">
+                <i class="material-icons" style="font-size:48px;color:#f9f9f9">add_shopping_cart</i>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 <section class="RealizarPedidoMajor-container">
-  <form id="FormRealizarPedido" class="FormRealizarPedido" enctype="multipart/form-data">
-    <h1 class="FormRealizarPedido-tittle">Pedido</h1>
+    <form id="FormRealizarPedido" class="FormRealizarPedido">
+
+        <md-content>
+            <md-tabs md-dynamic-height md-border-bottom>
+                <md-tab>
+                    <md-tab-label>
+                        <md--icon class="fa fa-shopping-basket"></md-icon>
+                            <p>Medicamentos</p>
+                    </md-tab-label>
+                    <md-tab-body>
+                        <div>
+                            <md-icon class="fa fa-shopping-basket"></md-icon>
+                            <input type="text" placeholder="Buscar Medicamentos" ng-change="vm.search()" ng-model="vm.searchMedicamento" />
+                        </div>
+                        <md-list ng-cloak class="FormPedido-list">
+                            <md-list-item ng-repeat="item in vm.medicamentosAutocomplete">
+                                <p style="text-align:left">{{item.nombre}}</p>
+                                <button type="button" class="btn btn-primary btn-xs" ng-click="vm.addProducto(item)"><span class=" label-success badgeBotica" style="color: white;" ng-show="vm.cantidadPedida(item)>0">{{vm.cantidadPedida(item)}}</span>Añadir</button>
+                                <md-divider></md-divider>
+                            </md-list-item>
+                        </md-list>
+                    </md-tab-body>
+                </md-tab>
+
+                <md-tab>
+                    <md-tab-label>
+                        <md--icon class="fa fa-cart-plus"></md-icon>
+                            <p>Mi Carrito</p>
+                    </md-tab-label>
+                    <md-tab-body>
+                        <md-subheader class="md-no-sticky">Mi Carrito</md-subheader>
+                        <md-list ng-cloak class="FormPedido-carroList">
+                            <md-list-item ng-repeat="item in vm.productos">
+                              <div class="itemListCarrito">
+                                <p >{{item.medicamento.nombre}}</p>
+                                <h6>cantidad: <span>{{vm.cantidadPedida(item.medicamento)}}</span></h6>
+                              </div>
+                                <button type="button" class="btn btn-primary btn-xs" ng-click="vm.addProducto(item.medicamento)"><span class="fa fa-plus"></span></button>
+                                <button type="button" class="btn btn-primary btn-xs" ng-click="vm.addProducto(item.idMedicamento)"><span class="fa fa-minus"></span></button>
+                                <md-divider></md-divider>
+                            </md-list-item>
+                        </md-list>
+                        <button type="button" class="btn btn-success" ng-click="vm.showTabDialog($event)">Enviar</button>
+                    </md-tab-body>
+                </md-tab>
+
+            </md-tabs>
+        </md-content>
+        <!-- <h1 class="FormRealizarPedido-tittle">Pedido</h1>
 
     <md-input-container class="md-block RealizarPedido-input">
       <label>Direccion</label>
@@ -108,7 +155,7 @@
 
     </div>
 
-    <input type="submit" ng-click="vm.create()" value="Realizar Pedido" class="FormRealizarPedido-button" />
+    <input type="submit" ng-click="vm.create()" value="Realizar Pedido" class="FormRealizarPedido-button" /> -->
 
-  </form>
+    </form>
 </section>

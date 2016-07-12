@@ -1,0 +1,94 @@
+.MajorContainer-elements
+  min-height calc(80vh)
+
+.PriceList
+  background-color #166ba2
+  height 28em
+  padding-top 3.6em
+  &-logo
+    text-align center
+    padding-top 1em
+  &-logoImg
+    width 100%
+    border solid 4px #f9f9f9
+    border-radius 50%
+    height 15em
+    width 15em
+  &-icons
+    padding 1em 1.5em 1em 0
+
+.PriceTable
+  padding 2em 0
+  font-family 'Open Sans'
+  text-align center
+  background-color #fafafa
+  &-title
+    margin-top 0
+    padding-bottom 1em
+    color #15283
+  &-containerTable
+    background-color #fafafa
+    padding 0
+    padding-top 3em
+  &-table
+    width 100%
+    margin 0 0 50px 0
+  &-table th
+    background #152836
+    color #fafafa
+    font-weight bold
+    padding 5px
+    text-align center
+  &-table td
+    color #337ab7
+    border-bottom 1px solid #ccc
+    padding 5px
+    text-align center
+  &-table tr:last-child td
+    border-top 1px solid #ccc
+  &-table tbody
+    border 1px solid #152836
+
+.ng-binding.sort-indicator
+  color #fafafa
+
+/**@media only screen and (max-width: 760px), (min-width: 768px) and (max-width: 1024px) **/
+
+@media screen and (max-width: 768px)
+  .PriceTable
+    &-table, &-table thead, &-table tbody, &-table th, &-table td, &-table tr
+      display block
+    &-table thead tr
+      position absolute
+      top -9999px
+      left -9999px
+    &-table tr
+      border 1px solid #ccc
+    &-table td
+      border none
+      position relative
+    &-table td:before
+      position relative
+      font-weight bold
+    &-table td:nth-of-type(1):before
+      content "Droguería: "
+    &-table td:nth-of-type(2):before
+      content "Ciudad: "
+    &-table td:nth-of-type(3):before
+      content "Producto: "
+    &-table td:nth-of-type(4):before
+      content "Registro Invima: "
+    &-table td:nth-of-type(5):before
+      content "Precio: "
+
+@media screen and (max-width: 1000px)
+  .PriceList
+    &-Content
+      text-align center
+    &-icons
+      max-width 55px
+      margin-right 0.5em
+      display inline-block
+    &-containerIcon
+      text-align center
+      display inline-block

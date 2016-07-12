@@ -34,7 +34,7 @@
   </section>
 
   <section class="PanelPedidosUsuarios">
-
+    <div ng-cloak class="PanelPedidosUsuarios-tabs">
 
   <md-content>
     <md-tabs md-dynamic-height md-border-bottom >
@@ -48,12 +48,13 @@
       <div ng-repeat="pedidoespera in vm.pedidosenespera" style="padding:1em">
         <md-list-item class="secondary-button-padding PanelPedidosUsuarios-itemTitle">
           <p>{{pedidoespera.descripcion}}</p>
-          <md-button class="md-icon-button md-primary" aria-label="Settings" type="button" class="btn btn-primary" data-toggle="modal" data-target="#panelrespuestas" data-whatever="@mdo">
-          <md-icon class="fa fa-inbox" ng-click="vm.numerorespuestaspedido(pedidoespera.idPedido)"></md-icon>
+          <md-button class="md-icon-button md-primary" aria-label="Settings" type="button" class="btn btn-primary" data-toggle="modal" data-target="#createRespuestaPedido" data-whatever="@mdo">
+          <md-icon class="fa fa-check" ng-click="vm.updateCurrentPedido(pedidoespera.idPedido)"></md-icon>
       </md-button>
           <md-button class="md-icon-button md-primary" aria-label="Settings" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
           <md-icon class="fa fa-search" ng-click="vm.updateCurrentPedido(pedidoespera.idPedido)"></md-icon>
       </md-button>
+
 
         </md-list-item>
     </div>
@@ -87,7 +88,8 @@
 </md-tab-label>
 <md-tab-body>
 <md-subheader class="md-no-sticky">Pedidos Cancelados</md-subheader>
-</md-tab-body></md-tab>
+</md-tab-body>
+</md-tab>
 
 <md-tab>
 <md-tab-label>
@@ -106,8 +108,7 @@
 </div>
   </section>
 
-
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal fade" id="createRespuestaPedido" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -135,10 +136,20 @@
          <td data-title="'Cantidad'" >
              {{medicamento.cantidad}}
          </td>
+         <td data-title="'Precio Unid'" >
+             <input placeholder="Precio" type="number" ng-model="medicamento.precio" ng-change="vm.calcularTotal()"></input>
+         </td>
 
      </tr>
+     <tr>
+       <td></td>
+       <td></td>
+       <td><label>Total: {{vm.total}} </label></td>
+     </tr>
         </table>
+        <textarea  ng-model="vm.respuesta.descripcion">Descripcion</textarea>
 
+        <md-button class="md-raised md-primary" ng-click="vm.create()">Enviar Respuesta</md-button>
 
       </div>
       <div class="modal-footer">
@@ -146,23 +157,5 @@
       </div>
     </div>
   </div>
-</div>
-
-
-<div class="modal fade" id="panelrespuestas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-<div class="modal-dialog" role="document">
-  <div class="modal-content">
-    <div class="modal-header">
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      <h4 class="modal-title" id="exampleModalLabel">Pedido</h4>
-    </div>
-    <div class="modal-body">
-        {{vm.numerorespuestas}}
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-    </div>
-  </div>
-</div>
 </div>
 </div>
