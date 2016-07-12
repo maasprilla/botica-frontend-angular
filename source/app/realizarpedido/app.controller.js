@@ -4,12 +4,14 @@
     angular.module('app.realizarpedido.controller', []).controller('realizarPedidoCreateCtrl', realizarPedidoCreateCtrl);
 
 
-    realizarPedidoCreateCtrl.$inject = ['$stateParams', '$location', '$mdToast', 'ZonasEnvios', 'Pedidos', 'Ciudades', 'Medicamentos', '$mdDialog', '$scope'];
+    realizarPedidoCreateCtrl.$inject = ['$stateParams', '$location', '$mdToast', 'ZonasEnvios', 'Pedidos', 'Ciudades', 'Medicamentos','PedidosTemporales', '$mdDialog', '$scope'];
 
-    function realizarPedidoCreateCtrl($stateParams, $location, $mdToast, ZonasEnvios, Pedidos, Ciudades, Medicamentos, $mdDialog, $scope) {
-
+    function realizarPedidoCreateCtrl($stateParams, $location, $mdToast, ZonasEnvios, Pedidos, Ciudades, Medicamentos,PedidosTemporales,  $mdDialog, $scope) {
+        console.log('inicio controller');
         var vm = this;
         vm.medicamentosAutocomplete;
+        vm.currentuser=$stateParams.idUsuario;
+        vm.pedido={idusuario:{idUsuario:vm.currentuser},pedidoHasMedicamentoList:[]};
 
         vm.search = function() {
                 vm.foundMedicamentosByNombre();
@@ -44,6 +46,10 @@
             }
             console.log('mis productos');
             console.log(vm.productos);
+
+            PedidosTemporales.CurrentPedido=vm.productos;
+            console.log('temporal');
+            console.log(PedidosTemporales.CurrentPedido);
 
 
             // for (var i = 0; i<productos.length ; i++) {
@@ -85,9 +91,22 @@
 
 
         vm.create=function(){
-            //vm.producto.medicamentoList=vm.contenidopedido;
-            vm.pedido={medicamentoList:vm.productos};
-            console.log(vm.pedido);
+          console.log('temporal');
+          console.log(PedidosTemporales.CurrentPedido);
+            // vm.pedido.pedidoHasMedicamentoList=PedidosTemporales.CurrentPedido;
+
+
+            console.log(PedidosTemporales.CurrentPedido[0].medicamento.idMedicamento);
+            for (var i = 0; i < PedidosTemporales.CurrentPedido.length; i++) {              
+              vm.pedido.pedidoHasMedicamentoList[i]={
+              cantidad:PedidosTemporales.CurrentPedido[i].cantidad,
+              idMedicamento:PedidosTemporales.CurrentPedido[i].medicamento
+              }
+            }
+
+          console.log('pedido');
+          console.log(vm.pedido);
+
             Pedidos.save(vm.pedido, function() {
                     $location.path('/administrarpedido/usuario');
                     $mdToast.show(
