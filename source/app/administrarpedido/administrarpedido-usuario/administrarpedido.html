@@ -48,6 +48,9 @@
       <div ng-repeat="pedidoespera in vm.pedidosenespera" style="padding:1em">
         <md-list-item class="secondary-button-padding PanelPedidosUsuarios-itemTitle">
           <p>{{pedidoespera.descripcion}}</p>
+          <md-button class="md-icon-button md-primary" aria-label="Settings" type="button" class="btn btn-primary" data-toggle="modal" data-target="#panelrespuestas" data-whatever="@mdo">
+          <md-icon class="fa fa-inbox" ng-click="vm.numerorespuestaspedido(pedidoespera.idPedido)"></md-icon>
+      </md-button>
           <md-button class="md-icon-button md-primary" aria-label="Settings" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
           <md-icon class="fa fa-search" ng-click="vm.updateCurrentPedido(pedidoespera.idPedido)"></md-icon>
       </md-button>
@@ -136,11 +139,30 @@
      </tr>
         </table>
 
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
+</div>
+
+
+<div class="modal fade" id="panelrespuestas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <h4 class="modal-title" id="exampleModalLabel">Pedido</h4>
+    </div>
+    <div class="modal-body">
+        {{vm.numerorespuestas}}
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
 </div>
 </div>

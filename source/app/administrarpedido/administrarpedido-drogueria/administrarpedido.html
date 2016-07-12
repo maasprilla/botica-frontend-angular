@@ -48,9 +48,13 @@
       <div ng-repeat="pedidoespera in vm.pedidosenespera" style="padding:1em">
         <md-list-item class="secondary-button-padding PanelPedidosUsuarios-itemTitle">
           <p>{{pedidoespera.descripcion}}</p>
-          <md-button class="md-icon-button md-primary" aria-label="Settings">
-          <md-icon class="fa fa-search"></md-icon>
+          <md-button class="md-icon-button md-primary" aria-label="Settings" type="button" class="btn btn-primary" data-toggle="modal" data-target="#createRespuestaPedido" data-whatever="@mdo">
+          <md-icon class="fa fa-check" ng-click="vm.updateCurrentPedido(pedidoespera.idPedido)"></md-icon>
       </md-button>
+          <md-button class="md-icon-button md-primary" aria-label="Settings" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+          <md-icon class="fa fa-search" ng-click="vm.updateCurrentPedido(pedidoespera.idPedido)"></md-icon>
+      </md-button>
+
 
         </md-list-item>
     </div>
@@ -103,4 +107,55 @@
   </md-content>
 </div>
   </section>
+
+  <div class="modal fade" id="createRespuestaPedido" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">Pedido</h4>
+      </div>
+      <div class="modal-body">
+        <label>Direccion</label>
+        <input placeholder="Direccion" ng-model="vm.moreCurrentPedido.direccion" disabled="true">
+        <label>Ciudad</label>
+        <input placeholder="Ciudad" ng-model="vm.moreCurrentPedido.ciudad.nombre" disabled="true">
+        <label>Departamento</label>
+        <input placeholder="Departamento" ng-model="vm.moreCurrentPedido.ciudad.departamento.nombre" disabled="true">
+        <label>Zona de Envio</label>
+        <input placeholder="Zona de Envio" ng-model="vm.moreCurrentPedido.idZonaEnvio.descripcionZona" disabled="true">
+        <label>Descripcion</label>
+        <textarea disabled="true" ng-model="vm.moreCurrentPedido.descripcion">Descripcion</textarea>
+
+        <table id="tableModalMorePedido" class="table table-hover"  ng-table="vm.usersTable">
+            <tr ng-repeat="medicamento in vm.moreCurrentPedido.pedidoHasMedicamentoList">
+
+         <td data-title="'Nombre Medicamento'" >
+             {{medicamento.idMedicamento.nombre}}
+         </td>
+         <td data-title="'Cantidad'" >
+             {{medicamento.cantidad}}
+         </td>
+         <td data-title="'Precio Unid'" >
+             <input placeholder="Precio" type="number" ng-model="medicamento.precio" ng-change="vm.calcularTotal()"></input>
+         </td>
+
+     </tr>
+     <tr>
+       <td></td>
+       <td></td>
+       <td><label>Total: {{vm.total}} </label></td>
+     </tr>
+        </table>
+        <textarea  ng-model="vm.respuesta.descripcion">Descripcion</textarea>
+
+        <md-button class="md-raised md-primary" ng-click="vm.create()">Enviar Respuesta</md-button>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 </div>
