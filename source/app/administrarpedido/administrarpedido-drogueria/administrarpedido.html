@@ -116,28 +116,49 @@
         <h4 class="modal-title" id="exampleModalLabel">Pedido</h4>
       </div>
       <div class="modal-body">
-        <label>Direccion</label>
-        <input placeholder="Direccion" ng-model="vm.moreCurrentPedido.direccion" disabled="true">
-        <label>Ciudad</label>
-        <input placeholder="Ciudad" ng-model="vm.moreCurrentPedido.ciudad.nombre" disabled="true">
-        <label>Departamento</label>
-        <input placeholder="Departamento" ng-model="vm.moreCurrentPedido.ciudad.departamento.nombre" disabled="true">
-        <label>Zona de Envio</label>
-        <input placeholder="Zona de Envio" ng-model="vm.moreCurrentPedido.idZonaEnvio.descripcionZona" disabled="true">
-        <label>Descripcion</label>
-        <textarea disabled="true" ng-model="vm.moreCurrentPedido.descripcion">Descripcion</textarea>
+        <div class="AdminPedDrogModal-inputsContainer">
+          <label>Direccion</label>
+          <div class="form-group">
+            <input class="form-control" placeholder="Direccion" ng-model="vm.moreCurrentPedido.direccion" disabled="true">
+          </div>
+        </div>
+        <div class="AdminPedDrogModal-inputsContainer2">
+          <label>Ciudad</label>
+          <div class="form-group">
+            <input class="form-control" placeholder="Ciudad" ng-model="vm.moreCurrentPedido.ciudad.nombre" disabled="true">
+          </div>
+        </div>
+        <div class="AdminPedDrogModal-inputsContainer">
+          <label>Departamento</label>
+          <div class="form-group">
+            <input class="form-control" placeholder="Departamento" ng-model="vm.moreCurrentPedido.ciudad.departamento.nombre" disabled="true">
+          </div>
+        </div>
+        <div class="AdminPedDrogModal-inputsContainer2">
+          <label>Zona de Envio</label>
+          <div class="form-group">
+            <input class="form-control" placeholder="Zona de Envio" ng-model="vm.moreCurrentPedido.idZonaEnvio.descripcionZona" disabled="true">
+          </div>
+        </div>
 
-        <table id="tableModalMorePedido" class="table table-hover"  ng-table="vm.usersTable">
+        <label>Descripcion</label>
+        <div class="form-group">
+          <textarea class="form-control AdminPedDrogModal-textArea" disabled="true" ng-model="vm.moreCurrentPedido.descripcion">Descripcion</textarea>
+        </div>
+
+        <table id="tableModalMorePedido" class="table table-hover AdminPedDrogModal-productInfoTable"  ng-table="vm.usersTable">
             <tr ng-repeat="medicamento in vm.moreCurrentPedido.pedidoHasMedicamentoList">
 
-         <td data-title="'Nombre Medicamento'" >
-             {{medicamento.idMedicamento.nombre}}
-         </td>
-         <td data-title="'Cantidad'" >
-             {{medicamento.cantidad}}
-         </td>
-         <td data-title="'Precio Unid'" >
-             <input placeholder="Precio" type="number" ng-model="medicamento.precio" ng-change="vm.calcularTotal()"></input>
+            <td data-title="'Nombre Medicamento'" >
+                {{medicamento.idMedicamento.nombre}}
+            </td>
+
+            <td data-title="'Cantidad'" >
+                {{medicamento.cantidad}}
+            </td>
+
+         <td data-title="'Precio Unidad'" >
+           <input class="form-control PriceInput-info" placeholder="Precio" type="number" ng-model="medicamento.precio" ng-change="vm.calcularTotal()"></input>
          </td>
 
      </tr>
@@ -147,7 +168,9 @@
        <td><label>Total: {{vm.total}} </label></td>
      </tr>
         </table>
-        <textarea  ng-model="vm.respuesta.descripcion">Descripcion</textarea>
+        <div class="form-group">
+          <textarea class="form-control AdminPedDrogModal-textArea" ng-model="vm.respuesta.descripcion">Descripcion</textarea>
+        </div>
 
         <md-button class="md-raised md-primary" ng-click="vm.create()">Enviar Respuesta</md-button>
 

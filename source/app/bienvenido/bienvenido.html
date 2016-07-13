@@ -50,7 +50,8 @@
         <div class="col-sm-4 col-md-4 WelcomeOpt-contentContainer">
           <i class="material-icons" style="font-size:48px">assignment</i>
           <p class="WelcomeOpt-text">Observa los pedidos en lista de espera</p>
-          <a href="#/administrarpedido/usuario" class="WelcomeOpt-link"><strong>Administrar pedido</strong></a>
+          <li ng-show="vm.isUser()" style="list-style:none;"><a href="#/administrarpedido/usuario" class="WelcomeOpt-link"><strong>Administrar pedido</strong></a></li>
+          <li ng-show="vm.isDrog()" style="list-style:none;"><a href="#/administrarpedido/drogueria" class="WelcomeOpt-link"><strong>Administrar pedido</strong></a></li>
         </div>
       </div>
     </div>

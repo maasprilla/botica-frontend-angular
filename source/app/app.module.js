@@ -34,6 +34,8 @@
         'app.geolocalizacion-drogueriaview',
         'app.imagenes',
         'app.medicamentos',
+        'app.contacto',
+        'app.terminos',
         'app.respuestapedido'
 
     ]);
