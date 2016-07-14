@@ -10,6 +10,19 @@
   function RespuestaPedido($resource, BASEURL) {
       return $resource(BASEURL + '/respuestaspedidos/:idRespuestaPedido', {
           idRespuestaPedido: '@idRespuestaPedido'
+      },{
+        'update':{
+          method:'PUT'
+        },
+        findByIdUsuario:{
+          url:BASEURL + '/respuestaspedidos/usuario/:idUsuario',
+          method:'GET',
+          isArray:true,
+          params:{
+            idUsuario:'@idUsuario'
+          }
+
+        }
       })
   }
 

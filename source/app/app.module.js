@@ -12,7 +12,7 @@
         'angularFileUpload',
         '720kb.datepicker',
         'app.mapa.onGoogleReady',
-        'templates',
+        //'templates',
         'app.config',
         'app.footer',
         'app.header',
@@ -34,6 +34,8 @@
         'app.geolocalizacion-drogueriaview',
         'app.imagenes',
         'app.medicamentos',
+        'app.contacto',
+        'app.terminos',
         'app.respuestapedido'
 
     ]);
