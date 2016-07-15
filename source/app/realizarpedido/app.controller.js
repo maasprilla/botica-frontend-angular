@@ -108,6 +108,7 @@
           console.log(vm.pedido);
 
             Pedidos.save(vm.pedido, function() {
+              $scope.hide();
                     $location.path('/administrarpedido/usuario');
                     $mdToast.show(
                         $mdToast.simple()

@@ -26,6 +26,11 @@
         vm.pedidosenespera = Pedidos.findByidEstadoPedido({
             idEstadoPedido: 1
         });
+
+        vm.pedidosconcretados = Pedidos.findByidEstadoPedido({
+            idEstadoPedido: 3
+        });
+
         vm.respuestaspedidos = RespuestaPedido.findByIdUsuario({
             idUsuario: 1
         });
