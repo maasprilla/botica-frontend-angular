@@ -10,8 +10,12 @@
 
     var vm=this;
 
+    
+
     vm.pedidos=Pedidos.query();
     console.log(vm.pedidos);
+
+    
 
 
 

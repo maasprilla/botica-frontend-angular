@@ -1,3 +1,9 @@
+#tableModalMorePedido th>div {
+  text-align: left;
+}
+#tableModalMorePedido th>div>span {
+  color: #000;
+}
 .MajorContainer-elements {
   min-height: calc(80vh);
 }
@@ -13,6 +19,26 @@
 }
 .PanelPedidosUsuarios-itemTitle {
   text-align: left;
+}
+.AdminPedModal-inputsContainer {
+  width: 48%;
+  display: inline-block;
+  margin-right: 3%;
+}
+.AdminPedModal-inputsContainer2 {
+  width: 48%;
+  display: inline-block;
+}
+.AdminPedModal-textArea {
+  resize: none;
+}
+@media screen and (max-width: 429px) {
+  .AdminPedModal-inputsContainer,
+  .AdminPedModal-inputsContainer2 {
+    width: 100%;
+    display: block;
+    margin-right: 0;
+  }
 }
 @media screen and (max-width: 480px) {
   span {
