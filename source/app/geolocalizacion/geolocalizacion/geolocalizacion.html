@@ -1,17 +1,12 @@
-<div class="MajorContainer-elements">
-  <section class="geolocalizacion-section">
-    <h1 class="text-center GeoMain-title">GEOLOCALIZACIÓN.</h1>
-    <md-button ng-click="vm.update()" class="md-raised md-primary">Guardar</md-button>
-
-    <script type="text/javascript" src="http://maps.google.com/maps/api/js?libraries=places&sensor=false"></script>
-
-    <script id="searchbox.tpl.html" type="text/ng-template">
-        <input type="text" placeholder="Search">
-      </script>
-      <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options">
-          <ui-gmap-search-box template="searchbox.template" events="searchbox.events"></ui-gmap-search-box>
-      </ui-gmap-google-map>
-
-
+<section ng-controller="geolocalizacionCtrl" class="mapaCreate">
+  <input type="text" id="lat"/>
+  <input type="text" id="long"/>
+  <input type="text" id="address"/>
+  <section id="google" name="google" action="#">
+    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+    <!-- <md-button type="button" id="savelocation" class="md-raised md-primary savelocation" ng-click="vm.saveLocation()">Guardar</md-button> -->
+    <div id="map" style="width:100%;height:48em;"></div>
+    <!--<input type="text" name="lat" id="lat"/>
+    <input type="text" name="lng" id="long"/>-->
   </section>
-</div>
+</section>

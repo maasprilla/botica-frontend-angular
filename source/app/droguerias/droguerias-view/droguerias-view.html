@@ -37,7 +37,6 @@
           <input type="file" value="Search" accept="image/png, image/jpg, image/jpeg," class="well my-drop-zone"  uploader="vm.uploader" on-read-img="vm.loadFoto($fileContent)"/>
           <img class="imagen" ng-if="vm.usuario.imgPerfil" ng-src="{{'data:image/png;base64,' + vm.usuario.imgPerfil}}" width="188%" />
         </div>
-        <button type="submit" class="FormPerfilUser-buttonimg">Guardar</button>
       </div>
         <article class="FormPerfilDrog-info">
               <h3 class="FormPerfilDrog-tittle">Perfil De Droguerías</h3>
@@ -52,8 +51,7 @@
                   <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
                 </div>
               </md-input-container>
-              <label class="FormPerfilDrog-edit"  onclick="habilitarinput(this);">Editar</label>
-              <button class="FormPerfilUser-button"onclick="desabilitarinput(this);">Guardar</button>
+
 
             </div>
 
@@ -71,8 +69,7 @@
                 </div>
               </div>
               </md-input-container>
-              <label class="FormPerfilDrog-edit" onclick="habilitarinput(this);">Editar</label>
-              <button class="FormPerfilUser-button"onclick="desabilitarinput(this);">Guardar</button>
+
             </div>
 
             <div>
@@ -84,8 +81,7 @@
                   <div ng-message="md-maxlength">The name has to be less than 10 characters long.</div>
                 </div>
               </md-input-container>
-              <label class="FormPerfilDrog-edit" onclick="habilitarinput(this);">Editar</label>
-              <button class="FormPerfilUser-button"onclick="desabilitarinput(this);">Guardar</button>
+
             </div>
 
             <div>
@@ -97,8 +93,7 @@
                   <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
                 </div>
               </md-input-container>
-              <label class="FormPerfilDrog-edit"onclick="habilitarinput(this);">Editar</label>
-              <button class="FormPerfilUser-button"onclick="desabilitarinput(this);">Guardar</button>
+
 
             </div>
 
@@ -113,8 +108,7 @@
                       </md-option>
                   </md-select>-->
               </md-input-container>
-              <label class="FormPerfilDrog-edit" onclick="habilitarinput(this);">Editar</label>
-              <button class="FormPerfilUser-button"onclick="desabilitarinput(this);">Guardar</button>
+
 
             </div>
 
@@ -127,8 +121,7 @@
                 <div ng-message="md-maxlength">El Nit no puede tener mas de 30 caracteres.</div>
               </div>
             </md-input-container>
-            <label class="FormPerfilDrog-edit" onclick="habilitarinput(this);">Editar</label>
-            <button class="FormPerfilUser-button"onclick="desabilitarinput(this);">Guardar</button>
+
 
             </div>
 
@@ -142,8 +135,7 @@
                 <div ng-message="md-maxlength">La Camara y Comercio no puede tener mas de 30 caracteres.</div>
               </div>
             </md-input-container>
-            <label class="FormPerfilDrog-edit" onclick="habilitarinput(this);">Editar</label>
-            <button class="FormPerfilUser-button"onclick="desabilitarinput(this);">Guardar</button>
+
 
           </div>
 
@@ -157,15 +149,25 @@
                 <div ng-message="md-maxlength">El Invima no puede tener mas de 30 caracteres.</div>
               </div>
             </md-input-container>
-            <label class="FormPerfilDrog-edit" onclick="habilitarinput(this);">Editar</label>
-            <button class="FormPerfilUser-button"onclick="desabilitarinput(this);">Guardar</button>
+
 
           </div>
           <div class="FormPerfilDrog-linkContainer">
           <a class="FormPerfilDrog-buttonLink" href="#/geolocalizacion/{{vm.usuario.idUsuario}}">Establcer Ubicacion en el Mapa</a>
           <a class="FormPerfilDrog-buttonLink" href="#/geolocalizaciondrogueriasview/{{vm.usuario.idUsuario}}" >{{vm.isLocation}}Ver mi Ubicacion</a>
         </div>
+
+          <div class="ButtosMajor-container">
+            <div class="GeoDrogView-buttonsContainer">
+              <div class="GeoDrogView-buttonContainer2">
+                <a href="#/geolocalizaciondrogueriasview/{{vm.usuario.idUsuario}}" class="GeoDrogView-button2 btn btn-primary"><span class="fa fa-map-marker spanicon"></span>Ver Ubicacion</a>
+              </div>
+            </div>
+          </div>
+
+
         </article>
+
       </form>
 
       </section>

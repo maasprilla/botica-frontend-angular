@@ -5,9 +5,11 @@
       'app.droguerias.create',
       'app.droguerias.list',
       'app.droguerias.services',
-      'app.droguerias.view'
+      'app.droguerias.view',
+      'app.droguerias.edit',
+      'app.droguerias.precios'
 
-      
+
 
     ]);
 })();

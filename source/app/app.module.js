@@ -10,8 +10,8 @@
         'satellizer',
         'ngTable',
         'angularFileUpload',
-        'uiGmapgoogle-maps',
         '720kb.datepicker',
+        'app.mapa.onGoogleReady',
         //'templates',
         'app.config',
         'app.footer',
@@ -33,7 +33,11 @@
         'app.geolocalizacion',
         'app.geolocalizacion-drogueriaview',
         'app.imagenes',
-        'app.medicamentos'
+        'app.medicamentos',
+        'app.contacto',
+        'app.terminos',
+        'app.respuestapedido'
+
     ]);
 
 })();
