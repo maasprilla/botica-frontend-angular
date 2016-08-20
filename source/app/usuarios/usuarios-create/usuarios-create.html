@@ -136,9 +136,10 @@
         <md-input-container class="md-block UserCreate-container">
           <label>Password</label>
           <md-icon class="fa fa-lock"></md-icon>
-          <input required type="password" name="password" ng-model="vm.usuario.password">
-          <div ng-messages="FormRegistroUsuarios.password.$error">
-            <div ng-message="required">Este campo no puede estar vacio.</div>
+          <input minlength="5" maxlength="20" ng-pattern=".{5,}" required type="password" name="password" ng-model="vm.usuario.password">
+          <div ng-messages="FormRegistroUsuarios.password.$error" role="alert">
+            <!-- <div ng-message="required">Este campo no puede estar vacio.</div> -->
+            <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">La contraseña debe tener entre 5 y 20 caracteres.</div>
           </div>
         </md-input-container>
 

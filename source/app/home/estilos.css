@@ -132,6 +132,12 @@
 .HomeDrogSearchInp-container {
   text-align: center;
 }
+.HomeDrogButton {
+  font-size: 19.5px;
+  background: #fafafa;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.3);
+  top: -0.17px;
+}
 .HomeProduct-title {
   margin-top: 1.3em;
   margin-bottom: 1.3em;
