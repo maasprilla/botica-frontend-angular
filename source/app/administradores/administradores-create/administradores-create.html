@@ -117,9 +117,10 @@
 
           <md-input-container class="md-block AdminCreate-container">
             <label>Password</label>
-            <input required type="password" name="password" ng-model="vm.administrador.password">
+            <input minlength="5" maxlength="20" ng-pattern=".{5,}" required type="password" name="password" ng-model="vm.administrador.password">
             <div ng-messages="FormRegistroAdministradores.password.$error">
-              <div ng-message="required">Este campo no puede estar vacio.</div>
+              <!-- <div ng-message="required">Este campo no puede estar vacio.</div> -->
+              <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">La contraseña debe tener entre 5 y 20 caracteres.</div>
             </div>
           </md-input-container>
 

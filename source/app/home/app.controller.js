@@ -19,9 +19,14 @@
     }
 
     vm.foundDrogueriasByNombre= function(nombre){
-        return Droguerias.foundByNombre({
+        return Droguerias.findDrogueriaByNombre({
             nombre:nombre
         });
+    }
+
+    vm.goDogueria=function(item){
+      var id=item+'';
+      $location.url('/drogueriasview/'+id);
     }
 
   }

@@ -41,7 +41,7 @@
           <md-input-container class="md-block DrogCreate-container">
             <label>Nombre</label>
             <md-icon class="fa fa-user-md"></md-icon>
-            <input md-maxlength="30" required md-no-asterisk name="nombre" ng-model="vm.usuario.nombre">
+            <input md-maxlength="30" required md-no-asterisk name="nombre" ng-model="vm.usuario.nombre" onkeypress="return soloLetras(event);">
             <div ng-messages="FormRegistroDroguerias.nombre.$error">
               <div ng-message="required">Este campo no puede estar vacio.</div>
               <div ng-message="md-maxlength">El Nombre no puede tener mas de 30 caracteres.</div>
@@ -64,7 +64,7 @@
           <md-input-container class="md-block DrogCreate-container">
             <label>Telefono</label>
             <md-icon class="fa fa-phone"></md-icon>
-            <input md-maxlength="10" required md-no-asterisk name="telefono" ng-model="vm.usuario.telefono" numbersonly>
+            <input md-maxlength="10" required md-no-asterisk name="telefono" ng-model="vm.usuario.telefono"  onkeypress="return SoloNumeros(event);">
             <div ng-messages="FormRegistroDroguerias.telefono.$error">
               <div ng-message="required">Este campo no puede estar vacio.</div>
               <div ng-message="md-maxlength">El Telefono no puede tener mas de 10 caracteres.</div>
@@ -103,7 +103,7 @@
           <md-input-container class="md-block DrogCreate-container">
             <label>Nit</label>
             <md-icon class="fa fa-certificate"></md-icon>
-            <input md-maxlength="30" required md-no-asterisk name="nit" ng-model="vm.usuario.nit">
+            <input md-maxlength="30" required md-no-asterisk name="nit" ng-model="vm.usuario.nit" onkeypress="return SoloNumeros(event);">
             <div ng-messages="FormRegistroDroguerias.nit.$error">
               <div ng-message="required">Este campo no puede estar vacio.</div>
               <div ng-message="md-maxlength">El Nit no puede tener mas de 30 caracteres.</div>
@@ -113,7 +113,7 @@
           <md-input-container class="md-block DrogCreate-container">
             <label>Camara de Comercio</label>
             <md-icon class="fa fa-certificate"></md-icon>
-            <input md-maxlength="30" required md-no-asterisk name="camaracomercio" ng-model="vm.usuario.camaracomercio">
+            <input md-maxlength="30" required md-no-asterisk name="camaracomercio" ng-model="vm.usuario.camaracomercio" onkeypress="return SoloNumeros(event);">
             <div ng-messages="FormRegistroDroguerias.camaracomercio.$error">
               <div ng-message="required">Este campo no puede estar vacio.</div>
               <div ng-message="md-maxlength">La Camara y Comercio no puede tener mas de 30 caracteres.</div>
@@ -123,7 +123,7 @@
           <md-input-container class="md-block DrogCreate-container">
             <label>Invima</label>
             <md-icon class="fa fa-certificate"></md-icon>
-            <input md-maxlength="30" required md-no-asterisk name="invima" ng-model="vm.usuario.invima">
+            <input md-maxlength="30" required md-no-asterisk name="invima" ng-model="vm.usuario.invima" onkeypress="return SoloNumeros(event);">
             <div ng-messages="FormRegistroDroguerias.invima.$error">
               <div ng-message="required">Este campo no puede estar vacio.</div>
               <div ng-message="md-maxlength">El Invima no puede tener mas de 30 caracteres.</div>
@@ -134,9 +134,14 @@
           <md-input-container class="md-block DrogCreate-container">
             <label>Password</label>
             <md-icon class="fa fa-lock"></md-icon>
-            <input required type="password" name="password" ng-model="vm.usuario.password">
-            <div ng-messages="FormRegistroDroguerias.password.$error">
-              <div ng-message="required">Este campo no puede estar vacio.</div>
+            <input minlength="5" maxlength="20" ng-pattern=".{5,}" required type="password" name="password" ng-model="vm.usuario.password"/>
+            <div ng-messages="FormRegistroDroguerias.password.$error" role="alert">
+              <!-- <div ng-message="required">Este campo no puede estar vacio.</div>
+              <div ng-message="md-minlength">La contraseña no puede tener menos de 5 caracteres.</div>
+              <div ng-message="md-maxlength">La contraseña no puede tener más de 20 caracteres.</div> -->
+              <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">La contraseña debe tener entre 5 y 20 caracteres.</div>
+              <!-- <span ng-show="FormRegistroDroguerias.password.$error">La contraseña debe tener entre 5 y 20 caracteres.</span> -->
+              <!-- <div ng-message="alert"  class="some-message">La contraseña debe tener entre 5 y 20 caracteres.</div> -->
             </div>
           </md-input-container>
 

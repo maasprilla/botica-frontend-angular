@@ -81,6 +81,10 @@
               md-search-text="vm.searchTextCiudades"
               md-items="item in vm.foundCiudadesByNombre(vm.searchTextCiudades)"
               md-item-text="item.nombre"
+              md-search-text="vm.searchTextDrogurias"
+              md-items="item in vm.foundDrogueriasByNombre(vm.searchTextDrogurias)"
+              md-item-text="item.nombre"
+              md-selected-item-change="vm.goDogueria(item.idUsuario);"
               md-min-length="1"
               placeholder = "Buscar Droguerias"
               class="FormRegistro-autocomplete">
@@ -90,6 +94,11 @@
             </md-item-template>
             <md-not-found>
               La drogueria "{{vm.searchTextCiudades}}" no se encuentra.
+              <span md-highlight-text="vm.searchTextDrogurias" md-highlight-flags="^i">
+                {{item.nombre}}</span>
+            </md-item-template>
+            <md-not-found>
+              La drogueria "{{vm.searchTextDrogurias}}" no se encuentra.
             </md-not-found>
           </md-autocomplete>
             <span class="input-group-btn">
