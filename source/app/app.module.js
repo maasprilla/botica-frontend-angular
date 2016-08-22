@@ -12,7 +12,7 @@
         'angularFileUpload',
         '720kb.datepicker',
         'app.mapa.onGoogleReady',
-        'templates',
+        //'templates',
         'app.config',
         'app.footer',
         'app.header',

@@ -76,7 +76,22 @@
       <div class="row HomeDrogContent" style="text-align:center;">
         <div class="HomeDrogSearch-Content">
           <div class="form-group input-group HomeDrogSearchInp-container">
-            <input type="text" class="form-control HomeDrogInput" placeholder="Buscar droguerías...">
+            <md-autocomplete required
+              md-selected-item="vm.drogueria"
+              md-search-text="vm.searchTextCiudades"
+              md-items="item in vm.foundCiudadesByNombre(vm.searchTextCiudades)"
+              md-item-text="item.nombre"
+              md-min-length="1"
+              placeholder = "Buscar Droguerias"
+              class="FormRegistro-autocomplete">
+            <md-item-template>
+              <span md-highlight-text="vm.searchTextCiudades" md-highlight-flags="^i">
+                {{item.nombre}}</span>
+            </md-item-template>
+            <md-not-found>
+              La drogueria "{{vm.searchTextCiudades}}" no se encuentra.
+            </md-not-found>
+          </md-autocomplete>
             <span class="input-group-btn">
               <button class="btn btn-default HomeDrogButton" type="button">
                 <span class="glyphicon glyphicon-search"></span>
