@@ -41,7 +41,7 @@
 
           <md-input-container class="md-block AdminCreate-container">
             <label>Nombre</label>
-            <input md-maxlength="30" required md-no-asterisk name="nombre" ng-model="vm.administrador.nombre">
+            <input md-maxlength="30" required md-no-asterisk name="nombre" ng-model="vm.administrador.nombre" onkeypress="return soloLetras(event);">
             <div ng-messages="FormRegistroAdministradores.nombre.$error">
               <div ng-message="required">Este campo no puede estar vacio.</div>
               <div ng-message="md-maxlength">El Nombre no puede tener mas de 30 caracteres.</div>
@@ -50,7 +50,7 @@
 
           <md-input-container class="md-block AdminCreate-container">
             <label>Apellido</label>
-            <input md-maxlength="30" required md-no-asterisk name="apellido" ng-model="vm.administrador.apellido">
+            <input md-maxlength="30" required md-no-asterisk name="apellido" ng-model="vm.administrador.apellido" onkeypress="return soloLetras(event);">
             <div ng-messages="FormRegistroAdministradores.apellido.$error">
               <div ng-message="required">Este campo no puede estar vacio.</div>
               <div ng-message="md-maxlength">El Apellido no puede tener mas de 30 caracteres.</div>
@@ -59,7 +59,7 @@
 
           <md-input-container class="md-block UserCreate-container">
           <label>Cedula</label>
-          <input md-maxlength="10" pattern=".{6,}" required md-no-asterisk name="cedula" ng-model="vm.usuario.dni">
+          <input md-maxlength="10" pattern=".{6,}" required md-no-asterisk name="cedula" ng-model="vm.usuario.dni" onkeypress="return SoloNumeros(event);">
           <div ng-messages="FormRegistroUsuarios.cedula.$error">
             <div ng-message="required">Este campo no puede estar vacio.</div>
             <div ng-message="md-maxlength">La Cedula no puede tener mas de 10 caracteres.</div>
@@ -80,7 +80,7 @@
 
           <md-input-container class="md-block AdminCreate-container">
             <label>Telefono</label>
-            <input md-maxlength="10" required md-no-asterisk name="telefono" ng-model="vm.administrador.telefono" numbersonly>
+            <input md-maxlength="10" required md-no-asterisk name="telefono" ng-model="vm.administrador.telefono" onkeypress="return SoloNumeros(event);">
             <div ng-messages="FormRegistroAdminstradores.telefono.$error">
               <div ng-message="required">Este campo no puede estar vacio.</div>
               <div ng-message="md-maxlength">El Telefono no puede tener mas de 10 caracteres.</div>

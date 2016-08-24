@@ -1,25 +1,25 @@
-<div class="MajorContainer-elements ContactoMajor-container">
-  <section class="ContactForm-container">
-    <form action="../scriptphp/mail.php" method="POST" enctype="multipart/form-data" class="FormularioContacto">
+<div class="MajorContainer-elements">
+  <section class="ContactForm-content">
+    <form class="Contact-form">
       <h1 class="ContactTitle">Contáctenos</h1>
       <div class="form-group">
         <label class="Form-nameLabel" for="">Nombres:</label>
-        <input class="form-control" id="name" name="name" placeholder="Nombres (*)" type="text" required="">
+        <input class="form-control" placeholder="Nombres" type="text" required>
       </div>
       <div class="form-group">
         <label class="Form-nameLabel" for="">Apellidos:</label>
-        <input class="form-control" id="lastname" name="lastname" placeholder="Apellidos (*)" type="text" required="">
+        <input class="form-control" placeholder="Apellidos" type="text" required>
       </div>
       <div class="form-group">
         <label class="Form-nameLabel" for="">E-mail:</label>
-        <input class="form-control" id="email" name="email" placeholder="E-mail (*)" type="email" required="">
+        <input class="form-control" placeholder="E-mail" type="email" required>
       </div>
       <div class="form-group">
-        <label class="Form-nameLabel" for="">Mensaje:</label>
-        <textarea class="form-control textarea FormContact-text" id="comments" name="comments" placeholder="Mensaje" rows="5"></textarea><br>
+        <label class="Form-nameLabel">Mensaje:</label>
+        <textarea class="form-control textarea FormContact-text" placeholder="Mensaje" rows="5" required></textarea><br>
       </div>
       <div class="form-group Button-container">
-        <input type="submit" value="ENVIAR" class="btn btn-default pull-right Contact-button">
+        <input type="submit" value="ENVIAR" class="btn btn-default Contact-button">
       </div>
     </form>
   </section>

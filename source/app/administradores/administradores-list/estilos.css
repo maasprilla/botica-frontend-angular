@@ -64,6 +64,10 @@
 }
 /** @media only screen and (max-width: 760px), (min-width: 768px) and (max-width: 1024px) **/
 @media screen and (max-width: 768px) {
+  .AdminTable {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+  }
   .AdminTable-table,
   .AdminTable-table thead,
   .AdminTable-table tbody,
@@ -72,13 +76,17 @@
   .AdminTable-table tr {
     display: block;
   }
+  .AdminTable-table tbody {
+    border: none;
+  }
   .AdminTable-table thead tr {
     position: absolute;
     top: -9999px;
     left: -9999px;
   }
   .AdminTable-table tr {
-    border: 1px solid #ccc;
+    border: 1px solid #152836;
+    margin-bottom: 1em;
   }
   .AdminTable-table td {
     border: none;

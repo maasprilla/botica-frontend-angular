@@ -24,7 +24,7 @@
                 $location.path('/');
                 $mdToast.show(
                     $mdToast.simple()
-                        .textContent('Se ha  guardado el Usuario...')
+                        .textContent('Se ha guardado el Usuario...')
                         .position('bottom right'));
                       },function (error) {
                         $mdToast.show(
