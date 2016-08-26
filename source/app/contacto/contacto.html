@@ -1,4 +1,4 @@
-<div class="MajorContainer-elements">
+<!-- <div class="MajorContainer-elements">
   <section class="ContactForm-content">
     <form class="Contact-form">
       <h1 class="ContactTitle">Contáctenos</h1>
@@ -22,5 +22,36 @@
         <input type="submit" value="ENVIAR" class="btn btn-default Contact-button">
       </div>
     </form>
+  </section>
+</div> -->
+
+<div class="MajorContainer-elements" data-ng-controller="ContactFormController as vm"> <!-- data-ng-controller="ContactFormController as cf" -->
+  <section class="ContactHeaderMajor-container">
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="text-center ContactHeader-title">Contáctenos</h1>
+        <p class="text-center ContactHeader-text">Envianos tu mensaje si tienes dudas, sugerencias o necesitas más información</p>
+        <div class="text-center">
+          <i class="material-icons" style="font-size:48px; color:white; opacity:0.9;">email</i>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="ContactForm-content">
+      <form name="contactForm" class="Contact-form" data-ng-submit="vm.sendMail()">
+        <md-input-container class="InputFormContact-container">
+          <label>Nombre:</label>
+          <input class="Input-contactForm" type="text" data-ng-model="vm.contactName" required>
+        </md-input-container>
+        <md-input-container class="InputFormContact-container">
+          <label>Email:</label>
+          <input class="Input-contactForm" type="email" data-ng-model="vm.contactEmail" required>
+        </md-input-container>
+        <md-input-container class="InputFormContact-container">
+          <label>Mensaje:</label>
+          <textarea class="FormContact-text" data-ng-model="vm.contactMsg" columns="1" required></textarea>
+        </md-input-container>
+        <md-button type="submit" class="md-raised md-primary FormContact-button" >ENVIAR</md-button> <!-- ng-class="{'md-raised md-hue-1': (contactForm.$dirty && contactForm.$valid)}" -->
+      </form>
   </section>
 </div>

@@ -1,27 +1,64 @@
+.ContactHeaderMajor-container {
+  padding-top: 4em;
+  padding-bottom: 2em;
+  background-color: #152836;
+  opacity: 0.9;
+}
+section.ContactHeaderMajor-container>div.container>div.jumbotron {
+  background: #152836;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+div.jumbotron>h1.ContactHeader-title {
+  color: #fff;
+}
+div.jumbotron>p.ContactHeader-text {
+  font-size: 27px;
+  color: #fff;
+}
 .ContactForm-content {
   text-align: center;
-  padding-top: 6em;
-  margin-bottom: 2em;
+  margin-bottom: 3.5em;
 }
 .Contact-form {
   margin-top: 3em;
-  background-color: #f5f5f5;
-  opacity: 0.9;
-  width: 35em;
+  background-color: #fffafa;
+  width: 45em;
   display: inline-block;
   border-radius: 5px;
   padding: 1em;
-  box-shadow: 0 1px 6px rgba(0,0,0,0.35);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.35);
+}
+.InputFormContact-container {
+  width: 100%;
 }
 .FormContact-text {
   resize: none;
 }
-@media screen and (max-width: 527px) {
+@media (min-width: 344) and (max-width: 767px) {
+  div.jumbotron>p.ContactHeader-text {
+    font-size: 21px;
+  }
+}
+@media screen and (max-width: 343px) {
+  div.jumbotron>h1.ContactHeader-title {
+    font-size: 30px;
+  }
+  div.jumbotron>p.ContactHeader-text {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 663px) {
   .Contact-form {
     width: 100%;
   }
   .ContactForm-content {
     margin-left: 0.5em;
     margin-right: 0.5em;
+  }
+}
+@media screen and (max-width: 480px) {
+  .InputFormContact-container {
+    font-size: 11px;
   }
 }
