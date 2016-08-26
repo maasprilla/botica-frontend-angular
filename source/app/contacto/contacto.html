@@ -39,17 +39,36 @@
   </section>
   <section class="ContactForm-content">
       <form name="contactForm" class="Contact-form" data-ng-submit="vm.sendMail()">
-        <md-input-container class="InputFormContact-container">
-          <label>Nombre:</label>
-          <input class="Input-contactForm" type="text" data-ng-model="vm.contactName" required>
+        <md-input-container class="md-icon-float md-block UserCreate-container">
+          <label>Nombre</label>
+          <md-icon class="fa fa-user"></md-icon>
+          <input  md-maxlength="30"  required md-no-asterisk name="nombre" ng-model="vm.contactName" onkeypress="return soloLetras(event);">
+          <div ng-messages="contactForm.nombre.$error">
+            <div ng-message="required">Este campo no puede estar vacio.</div>
+            <div ng-message="md-maxlength">El Nombre no puede tener mas de 30 caracteres.</div>
+          </div>
         </md-input-container>
-        <md-input-container class="InputFormContact-container">
-          <label>Email:</label>
-          <input class="Input-contactForm" type="email" data-ng-model="vm.contactEmail" required>
-        </md-input-container>
+
+        <md-input-container class="md-block UserCreate-container">
+        <label>Email</label>
+        <md-icon class="fa fa-envelope"></md-icon>
+        <input required type="email" name="email" ng-model="vm.contactEmail"
+               minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+        <div ng-messages="contactForm.email.$error" role="alert">
+          <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+            Su correo electrónico debe tener entre 10 y 100 caracteres de longitud y ser un formato de correo valido example@example.com.
+          </div>
+        </div>
+      </md-input-container>
+
+
         <md-input-container class="InputFormContact-container">
           <label>Mensaje:</label>
-          <textarea class="FormContact-text" data-ng-model="vm.contactMsg" columns="1" required></textarea>
+          <textarea name="mensaje"class="FormContact-text" data-ng-model="vm.contactMsg" columns="1" required></textarea>
+          <div ng-messages="contactForm.mensaje.$error">
+            <div ng-message="required">Este campo no puede estar vacio.</div>
+            <div ng-message="md-maxlength">El Nombre no puede tener mas de 30 caracteres.</div>
+          </div>
         </md-input-container>
         <md-button type="submit" class="md-raised md-primary FormContact-button" >ENVIAR</md-button> <!-- ng-class="{'md-raised md-hue-1': (contactForm.$dirty && contactForm.$valid)}" -->
       </form>

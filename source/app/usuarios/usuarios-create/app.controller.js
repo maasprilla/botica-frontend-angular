@@ -10,6 +10,8 @@
 
     var vm=this;
     vm.ciudades=Ciudades.query();
+    vm.dateMax=new Date();
+    vm.dateMax.setFullYear(vm.dateMax.getFullYear()-18);
 
 
 
