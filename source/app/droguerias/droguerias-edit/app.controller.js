@@ -1,12 +1,12 @@
 (function(){
   'use strict';
 
-  angular.module('app.droguerias.view.controller', [
-  ]).controller('drogueriasViewCtrl', drogueriasViewCtrl);
+  angular.module('app.droguerias.edit.controller', [
+  ]).controller('drogueriasEditCtrl', drogueriasEditCtrl);
 
 
-  drogueriasViewCtrl.$inject = ['$stateParams','$location', '$mdToast','Usuarios', '$q'];
-  function drogueriasViewCtrl($stateParams, $location, $mdToast, Usuarios, $q){
+  drogueriasEditCtrl.$inject = ['$stateParams','$location', '$mdToast','Usuarios', '$q'];
+  function drogueriasEditCtrl($stateParams, $location, $mdToast, Usuarios, $q){
           var vm=this;
 
           vm.usuario = {};
