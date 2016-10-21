@@ -18,8 +18,10 @@
 
 
             <ul id="MainMenuSecundary-list" class="nav navbar-nav navbar-right MainMenuSecundary-list">
-              <li class="MainMenu-item"><a  href="#/drogueriaslist" class="hvr-underline-from-center">Lista Droguerias</a></li>
-
+              <li ng-show="vm.isAdmin()" class="MainMenu-item"><a  href="#/usuarioslist" class="hvr-underline-from-center">Lista De Usuarios</a></li>
+              <li ng-show="vm.isUser()" class="MainMenu-item"><a  href="#/drogueriaslist" class="hvr-underline-from-center">Lista De Droguerias</a></li>
+              <li ng-show="vm.isAdmin()" class="MainMenu-item"><a  href="#/drogueriaslist" class="hvr-underline-from-center">Lista De Droguerias</a></li>
+              <li ng-show="vm.isAuthenticated()" class="MainMenu-item"><a href="#/contacto" class="MainMenu-link hvr-underline-from-center" >Contáctenos</a></li>
               <span class="glyphicon glyphicon-user" id="UserIconMovil" ng-show="vm.isAuthenticated()" style="font-size:21px; background-color:snow; padding:5px"></span>
               <li ng-show="vm.isAuthenticated()" onclick="showOptions()" class="MainMenu-item"><a href="" class="MainMenu-link" style="font-size:14px">{{vm.getCurrentUser()}}</a></li>
               <li id="PerfilDesktop" ng-show="vm.isAuthenticated()" class="MainMenu-item">
@@ -28,11 +30,11 @@
                     <div class="OptSelect">
                       <a ng-show="vm.isUser()" href="#/usuariosview/{{vm.getIdCurrentUser()}}" class="ViewProfile" style="color:#152836; text-decoration:none">Ver perfil</a>
                       <a ng-show="vm.isAdmin()" href="#/admnistradoresview/{{vm.getIdCurrentUser()}}" class="ViewProfile" style="color:#152836; text-decoration:none">Ver perfil</a>
-                      <a ng-show="vm.isDrog()" href="#/drogueriasview/{{vm.getIdCurrentUser()}}" class="ViewProfile" style="color:#152836; text-decoration:none">Ver perfil</a>
+                      <a ng-show="vm.isDrog()" href="#/drogueriasedit/{{vm.getIdCurrentUser()}}" class="ViewProfile" style="color:#152836; text-decoration:none">Ver perfil</a>
 
                     </div>
                     <div class="OptSelect2" style="border-top: 2px solid #152836">
-                      <a href="" class="MainMenu-link MainMenu-linkLogOut"  ng-click="vm.logout()" style="color:#152836; text-decoration:none">Cerrar Sesion</a>
+                      <a href="" class="MainMenu-link MainMenu-linkLogOut"  ng-click="vm.logout()" style="color:#152836; text-decoration:none">Cerrar Sesión</a>
                     </div>
 
               </li>

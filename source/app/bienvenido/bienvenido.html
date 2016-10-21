@@ -5,13 +5,83 @@
         <h1 class="WelcomeTitle">Bienvenido</h1>
         <p class="WelcomeText">Bienvenido a Botica, la plataforma para encontrar sus productos, droguerías o puntos azules desde la comodidad de su casa. Para nosotros es un placer que nos prefiera.</p>
         <hr class="m-y-2">
-        <div class="SearchButton-container">
-          <button type="button" class="btn btn-secondary WelcomeButton-buscarDrog"><a href="" class="WelcomeLink-buscarDrog">Busca tus droguerías</a></button>
+        <!-- <div ng-show="vm.isUser()">
+          <div class="SearchButton-container">
+            <button type="button" class="btn btn-secondary WelcomeButton-buscarDrog"><a href="" class="WelcomeLink-buscarDrog">Busca tus droguerías</a></button>
+          </div>
+          <div class="SearchIcon-container"><span class="glyphicon glyphicon-search" style="font-size:20px; top:0.4em; left:0.3em"></span></div>
+        </div> -->
+
+        <div ng-show="vm.isUser()" class="HomeDrogSearch-Content">
+          <div class="form-group input-group HomeDrogSearchInp-container">
+            <md-autocomplete required
+              md-selected-item="vm.drogueria"
+              md-item-text="item.nombre"
+              md-search-text="vm.searchTextDroguerias"
+              md-items="item in vm.foundDrogueriasByNombre(vm.searchTextDroguerias)"
+              md-selected-item-change="vm.goDogueria(item.idUsuario);"
+              md-min-length="1"
+              placeholder = "Buscar Droguerias"
+              class="FormRegistro-autocomplete">
+
+              <md-item-template>
+                <span md-highlight-text="vm.searchTextDroguerias" md-highlight-flags="^i">
+                  {{item.nombre}}</span>
+              </md-item-template>
+            <md-not-found>
+              La drogueria "{{vm.searchTextDrogurias}}" no se encuentra.
+            </md-not-found>
+          </md-autocomplete>
+            <span class="input-group-btn">
+              <button class="btn btn-default HomeDrogButton" type="button">
+                <span class="glyphicon glyphicon-search"></span>
+              </button>
+            </span>
+          </div>
         </div>
-        <div class="SearchIcon-container"><span class="glyphicon glyphicon-search" style="font-size:20px; top:0.4em; left:0.3em"></span></div>
       </div></center>
     </div>
   </section>
+
+  <section ng-show="vm.isUser()" class="WelcomeOptions" ng-controller="LoginController as login">
+    <div class="container WelcomeOpt-container">
+      <div class="row WelcomeOptInfo-container">
+        <div class="col-sm-3 col-md-3 WelcomeOpt-centerContainer">
+        </div>
+        <div class="col-sm-3 col-md-3 WelcomeOpt-contentContainer">
+          <i  class="material-icons" style="font-size:48px">add_shopping_cart</i>
+          <p  class="WelcomeOpt-text">Ordena uno o varios productos a través de nuestro formulario</p>
+          <a  href="#/realizarpedido/{{login.getIdCurrentUser()}}" class="WelcomeOpt-link"><strong>Realiza tu pedido</strong></a>
+        </div>
+
+        <div class="col-sm-3 col-md-3 WelcomeOpt-contentContainer">
+          <i  class="material-icons" style="font-size:48px">assignment</i>
+          <p  class="WelcomeOpt-text">Observa los pedidos en lista de espera</p>
+          <li style="list-style:none;"><a href="#/administrarpedido/usuario" class="WelcomeOpt-link"><strong>Administrar pedido</strong></a></li>
+        </div>
+        <div class="col-sm-3 col-md-3 WelcomeOpt-centerContainer">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section ng-show="vm.isDrog()" class="WelcomeOptions" ng-controller="LoginController as login">
+    <div class="container WelcomeOpt-container">
+      <div class="row WelcomeOptInfo-container">
+        <div class="col-sm-4 col-md-4 WelcomeOpt-centerContainer">
+        </div>
+
+        <div class="col-sm-4 col-md-4 WelcomeOpt-contentContainer">
+          <i  class="material-icons" style="font-size:48px">assignment</i>
+          <p  class="WelcomeOpt-text">Observa los pedidos en lista de espera</p>
+          <li style="list-style:none;"><a href="#/administrarpedido/drogueria" class="WelcomeOpt-link"><strong>Administrar pedido</strong></a></li>
+        </div>
+        <div class="col-sm-4 col-md-4 WelcomeOpt-centerContainer">
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="welcomesection">
     <div class="container WelcomeSect-container">
       <div class="row WelcomeSectInfo-container" style="text-align: center;">
@@ -34,26 +104,5 @@
       </div>
     </div>
   </section>
-  <section class="WelcomeOptions" ng-controller="LoginController as login">
-    <div class="container WelcomeOpt-container">
-      <div class="row WelcomeOptInfo-container">
-        <div class="col-sm-4 col-md-4 WelcomeOpt-contentContainer">
-          <i class="material-icons" style="font-size:48px">add_shopping_cart</i>
-          <p class="WelcomeOpt-text">Ordena uno o varios productos a través de nuestro formulario</p>
-          <a href="#/realizarpedido/{{login.getIdCurrentUser()}}" class="WelcomeOpt-link"><strong>Realiza tu pedido</strong></a>
-        </div>
-        <div class="col-sm-4 col-md-4 WelcomeOpt-centerContainer">
-          <i class="material-icons" style="font-size:48px">attach_money</i>
-          <p class="WelcomeOpt-text">Encuentra los precios de los productos</p>
-          <a href="" class="WelcomeOpt-link"><strong>Precios</strong></a>
-        </div>
-        <div class="col-sm-4 col-md-4 WelcomeOpt-contentContainer">
-          <i class="material-icons" style="font-size:48px">assignment</i>
-          <p class="WelcomeOpt-text">Observa los pedidos en lista de espera</p>
-          <li ng-show="vm.isUser()" style="list-style:none;"><a href="#/administrarpedido/usuario" class="WelcomeOpt-link"><strong>Administrar pedido</strong></a></li>
-          <li ng-show="vm.isDrog()" style="list-style:none;"><a href="#/administrarpedido/drogueria" class="WelcomeOpt-link"><strong>Administrar pedido</strong></a></li>
-        </div>
-      </div>
-    </div>
-  </section>
+
 </div>

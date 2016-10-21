@@ -5,8 +5,8 @@
   ]).controller('bienvenidoCtrl', bienvenidoCtrl);
 
 
-  bienvenidoCtrl.$inject = ['$q', '$location', '$mdToast','Usuarios', '$stateParams', '$auth'];
-  function bienvenidoCtrl($q, $location, $mdToast, Usuarios, $stateParams, $auth){
+  bienvenidoCtrl.$inject = ['$q', '$location', '$mdToast','Usuarios', '$stateParams', '$auth', 'Droguerias'];
+  function bienvenidoCtrl($q, $location, $mdToast, Usuarios, $stateParams, $auth, Droguerias){
 
     var vm=this;
 
@@ -52,6 +52,17 @@
     }
 
     //console.log($auth.getPayload().sub);
+
+    vm.foundDrogueriasByNombre= function(nombre){
+        return Droguerias.findDrogueriaByNombre({
+            nombre:nombre
+        });
+    }
+
+    vm.goDogueria=function(item){
+      var id=item+'';
+      $location.url('/drogueriasview/'+id);
+    }
 
 
 

@@ -51,14 +51,19 @@
 
 @media (max-width: 768px)
   .UserTable
+    margin-left 0.5em
+    margin-right 0.5em
     &-table, &-table thead, &-table tbody, &-table th, &-table td, &-table tr
       display block
+    &-table tbody
+      border none
     &-table thead tr
       position absolute
       top -9999px
       left -9999px
     &-table tr
-      border 1px solid #ccc
+      border 1px solid #152836
+      margin-bottom 1em
     &-table td
       border none
       position relative

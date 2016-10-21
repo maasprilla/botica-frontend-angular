@@ -12,6 +12,7 @@
 .WelcomeInfo-container {
   background-color: #166ba2;
   font-family: 'Open Sans';
+  padding-bottom: 0;
 }
 .SearchButton-container,
 .SearchIcon-container {
@@ -31,7 +32,6 @@
   padding-bottom: 2em;
   text-align: center;
   font-family: 'Open Sans';
-  background-color: #f6f6f6;
 }
 .WelcomeDescriptionContent {
   max-width: 33em;
@@ -50,6 +50,7 @@
   padding-bottom: 3em;
   text-align: center;
   font-family: 'Open Sans';
+  background-color: #f6f6f6;
 }
 .WelcomeOpt-text {
   font-size: 16px;

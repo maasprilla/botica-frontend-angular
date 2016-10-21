@@ -1,74 +1,3 @@
-<!-- <div class="MajorContainer-elements">
-  <section id="nosotros" class="Nosotros">
-    <div class="container Nosotros-container">
-      <div class="row">
-        <div class="col-md-6" style="text-align:center;">
-          <div class="UsImage-container">
-            <img src="./images/head.png" alt="Medicamentos" class="UsImage">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="UsInfo-container">
-            <h1 class="text-center UsTitle">Nosotros</h1>
-            <p class="UsText">La idea nace de acuerdo a la necesidad que tienen muchas personas a la hora de adquirir un medicamento. A su vez, el nombre de "Botica" se concibe porque en el pasado, en sitios conocidos como boticarios se recurría a la búsqueda de medicamentos. <a href="#/portafolioservicios" class="UsLink">Ver más.</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="objetivos" class="Objetivos">
-    <div class="container Objetivos-container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="ObjetivosInfo-container">
-            <h1 class="text-center ObjTitle">Objetivo</h1>
-            <p class="ObjText">Botica será un sistema de gestión de información que permita la organización y control de los medicamentos y pedidos, agilizará su proceso de distribución, realizando la implementación de interfaces amigables para que de esta manera facilite el uso del aplicativo para los usuarios.</p>
-          </div>
-        </div>
-        <div class="col-md-6" style="text-align:center;">
-          <div class="ObjetivosImage-container">
-            <img src="./images/shoppinglist.png" alt="Objetivos" class="ObjetivosImage">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="beneficios" class="Beneficios">
-    <div class="container Beneficios-container">
-      <div class="row">
-        <div class="col-md-6" style="text-align:center;">
-          <div class="BeneficiosImage-container">
-            <img src="./images/benefits.png" alt="Beneficios" class="BeneficiosImage">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="BeneficiosInfo-container">
-            <h1 class="text-center BenTitle">Beneficios</h1>
-            <p class="BenText">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="ambiental" class="MedioAmbienteHome">
-    <div class="container MedioAmbienteHome-container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="MDHomeInfo-container">
-            <h1 class="text-center MDHomeTitle">Medio Ambiente</h1>
-            <a href="#/medioambiente"></a>
-            <p class="MDHomeText">Para contribuir con la preservación del medio ambiente, botica contiene una página donde se presta un servicio de geolocalización con el cual los usuarios podrán ubicar fácilmente los puntos azules distribuidos por toda las ciudades para recolectar los desechos médicos. <a href="#/medioambiente" class="MDHomeLink">Ver más.</a></p>
-          </div>
-        </div>
-        <div class="col-md-6" style="text-align:center;">
-          <div class="MDHomeImage-container">
-            <img src="./images/medioambiente.png" alt="Medio ambiente" class="MDHomeImage">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</div> -->
 
 <div class="MajorContainer-elements">
   <section class="HomeDrogMajor-container">
@@ -78,25 +7,18 @@
           <div class="form-group input-group HomeDrogSearchInp-container">
             <md-autocomplete required
               md-selected-item="vm.drogueria"
-              md-search-text="vm.searchTextCiudades"
-              md-items="item in vm.foundCiudadesByNombre(vm.searchTextCiudades)"
               md-item-text="item.nombre"
-              md-search-text="vm.searchTextDrogurias"
-              md-items="item in vm.foundDrogueriasByNombre(vm.searchTextDrogurias)"
-              md-item-text="item.nombre"
+              md-search-text="vm.searchTextDroguerias"
+              md-items="item in vm.foundDrogueriasByNombre(vm.searchTextDroguerias)"
               md-selected-item-change="vm.goDogueria(item.idUsuario);"
               md-min-length="1"
               placeholder = "Buscar Droguerias"
               class="FormRegistro-autocomplete">
-            <md-item-template>
-              <span md-highlight-text="vm.searchTextCiudades" md-highlight-flags="^i">
-                {{item.nombre}}</span>
-            </md-item-template>
-            <md-not-found>
-              La drogueria "{{vm.searchTextCiudades}}" no se encuentra.
-              <span md-highlight-text="vm.searchTextDrogurias" md-highlight-flags="^i">
-                {{item.nombre}}</span>
-            </md-item-template>
+
+              <md-item-template>
+                <span md-highlight-text="vm.searchTextDroguerias" md-highlight-flags="^i">
+                  {{item.nombre}}</span>
+              </md-item-template>
             <md-not-found>
               La drogueria "{{vm.searchTextDrogurias}}" no se encuentra.
             </md-not-found>

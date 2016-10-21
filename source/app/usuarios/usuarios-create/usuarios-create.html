@@ -87,12 +87,24 @@
       </md-input-container>
 
       <md-input-container class="md-block UserCreate-container">
-        <label>Fecha de Nacimiento</label>
-        <md-icon class="fa fa-calendar-check-o"></md-icon>
-        <datepicker  date-format="yyyy-MM-dd">
-          <input ng-model="vm.usuario.fechaNac"/>
-        </datepicker>
-      </md-input-container>
+
+      <md-datepicker ng-model="vm.usuario.fechaNac"
+							 							 name="fechaNac"
+							 						 	 required
+							 						 	 md-max-date="vm.dateMax"
+							 						 	 md-placeholder="Fecha Nacimiento">
+
+                     </md-datepicker>
+                     <div ng-messages="FormRegistroUsuarios.fechaNac.$error">
+                       <div ng-message="valid">The entered value is not a date!</div>
+                       <div ng-message="required">This date is required!</div>
+                       <div ng-message="mindate">Date is too early!</div>
+                       <div ng-message="maxdate">Date is too late!</div>
+                     </div>
+                   </md-input-container>
+
+
+
 
       <md-input-container class="md-block UserCreate-container">
       <label>Telefono</label>
@@ -123,6 +135,9 @@
           md-min-length="1"
           md-floating-label="Ciudad de Domicilio"
           class="FormRegistro-autocomplete">
+          <div class="iconautocom-container">
+            <md-icon class="fa fa-map-marker"></md-icon>
+          </div>
         <md-item-template>
           <span md-highlight-text="vm.searchTextCiudades" md-highlight-flags="^i">
             {{item.nombre}}</span>
@@ -136,12 +151,14 @@
         <md-input-container class="md-block UserCreate-container">
           <label>Password</label>
           <md-icon class="fa fa-lock"></md-icon>
-          <input minlength="5" maxlength="20" ng-pattern=".{5,}" required type="password" name="password" ng-model="vm.usuario.password">
+          <input minlength="5" maxlength="20"  required type="password" name="password" ng-model="vm.usuario.password">
           <div ng-messages="FormRegistroUsuarios.password.$error" role="alert">
             <!-- <div ng-message="required">Este campo no puede estar vacio.</div> -->
             <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">La contraseña debe tener entre 5 y 20 caracteres.</div>
           </div>
         </md-input-container>
+
+
 
 
         <md-button type="submit" class="md-raised md-primary">Guardar</md-button>

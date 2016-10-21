@@ -18,7 +18,7 @@
                 $location.path('/registrodroguerias');
                 $mdToast.show(
                     $mdToast.simple()
-                        .textContent('Se ha  guardado el Usuario...')
+                        .textContent('Se ha guardado la Droguería...')
                         .position('bottom right'));
                       },function (error) {
                         $mdToast.show(

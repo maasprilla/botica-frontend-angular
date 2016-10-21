@@ -41,6 +41,11 @@
                 params: {
                     idEstadoPedido: '@idEstadoPedido'
                 }
+            },
+            findByConcretadoAndDrogueria: {
+                url: BASEURL + '/pedidos/pedidoConcretadoDrogueria',
+                method: 'GET',
+                isArray: true
             }
         })
     }

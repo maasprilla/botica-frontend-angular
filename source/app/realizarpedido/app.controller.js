@@ -80,6 +80,21 @@
             return false;
         }
 
+        vm.revCantidad = function(item) {
+            for (var i = 0; i < vm.productos.length; i++) {
+                if (vm.productos[i].medicamento.idMedicamento == item.idMedicamento) {
+                  if(vm.productos[i].cantidad>0){
+                    vm.productos[i].cantidad--;
+                    return true;
+                  }else{
+                    vm.productos.splice(i,1);
+                    return true;
+                  }
+                }
+            }
+            return false;
+        }
+
         vm.cantidadPedida = function(item) {
             for (var i = 0; i < vm.productos.length; i++) {
                 if (vm.productos[i].medicamento.idMedicamento == item.idMedicamento) {

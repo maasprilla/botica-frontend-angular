@@ -73,6 +73,9 @@
 
         vm.updatePedido=function(){
           vm.moreCurrentRespuestaPedido.idPedido.idEstadoPedido.idEstadoPedido=3;
+          vm.moreCurrentRespuestaPedido.idPedido.idSede=vm.moreCurrentRespuestaPedido.idSede;
+          console.log('respuesta');
+          console.log(vm.moreCurrentRespuestaPedido);
           Pedidos.update(vm.moreCurrentRespuestaPedido.idPedido, function() {
 
                   $mdToast.show(

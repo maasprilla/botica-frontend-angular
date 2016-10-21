@@ -9,7 +9,9 @@
     function contacto(){
       return{
         scope:{},
-        templateUrl:'app/contacto/contacto.html'
+        templateUrl:'app/contacto/contacto.html',
+        controller:'ContactFormController',
+        controllerAs:'vm'
       };
     }
 
