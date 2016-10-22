@@ -59,6 +59,10 @@
 }
 /**@media only screen and (max-width: 760px), (min-width: 768px) and (max-width: 1024px) **/
 @media (max-width: 768px) {
+  .UserTable {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+  }
   .UserTable-table,
   .UserTable-table thead,
   .UserTable-table tbody,
@@ -67,13 +71,17 @@
   .UserTable-table tr {
     display: block;
   }
+  .UserTable-table tbody {
+    border: none;
+  }
   .UserTable-table thead tr {
     position: absolute;
     top: -9999px;
     left: -9999px;
   }
   .UserTable-table tr {
-    border: 1px solid #ccc;
+    border: 1px solid #152836;
+    margin-bottom: 1em;
   }
   .UserTable-table td {
     border: none;

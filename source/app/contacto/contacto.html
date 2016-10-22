@@ -1,26 +1,76 @@
-<div class="MajorContainer-elements ContactoMajor-container">
-  <section class="ContactForm-container">
-    <form action="../scriptphp/mail.php" method="POST" enctype="multipart/form-data" class="FormularioContacto">
+<!-- <div class="MajorContainer-elements">
+  <section class="ContactForm-content">
+    <form class="Contact-form">
       <h1 class="ContactTitle">Contáctenos</h1>
       <div class="form-group">
         <label class="Form-nameLabel" for="">Nombres:</label>
-        <input class="form-control" id="name" name="name" placeholder="Nombres (*)" type="text" required="">
+        <input class="form-control" placeholder="Nombres" type="text" required>
       </div>
       <div class="form-group">
         <label class="Form-nameLabel" for="">Apellidos:</label>
-        <input class="form-control" id="lastname" name="lastname" placeholder="Apellidos (*)" type="text" required="">
+        <input class="form-control" placeholder="Apellidos" type="text" required>
       </div>
       <div class="form-group">
         <label class="Form-nameLabel" for="">E-mail:</label>
-        <input class="form-control" id="email" name="email" placeholder="E-mail (*)" type="email" required="">
+        <input class="form-control" placeholder="E-mail" type="email" required>
       </div>
       <div class="form-group">
-        <label class="Form-nameLabel" for="">Mensaje:</label>
-        <textarea class="form-control textarea FormContact-text" id="comments" name="comments" placeholder="Mensaje" rows="5"></textarea><br>
+        <label class="Form-nameLabel">Mensaje:</label>
+        <textarea class="form-control textarea FormContact-text" placeholder="Mensaje" rows="5" required></textarea><br>
       </div>
       <div class="form-group Button-container">
-        <input type="submit" value="ENVIAR" class="btn btn-default pull-right Contact-button">
+        <input type="submit" value="ENVIAR" class="btn btn-default Contact-button">
       </div>
     </form>
+  </section>
+</div> -->
+
+<div class="MajorContainer-elements" data-ng-controller="ContactFormController as vm"> <!-- data-ng-controller="ContactFormController as cf" -->
+  <section class="ContactHeaderMajor-container">
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="text-center ContactHeader-title">Contáctenos</h1>
+        <p class="text-center ContactHeader-text">Envianos tu mensaje si tienes dudas, sugerencias o necesitas más información</p>
+        <div class="text-center">
+          <i class="material-icons" style="font-size:48px; color:white; opacity:0.9;">email</i>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="ContactForm-content">
+      <form name="contactForm" class="Contact-form" data-ng-submit="vm.sendMail()">
+        <md-input-container class="md-icon-float md-block UserCreate-container">
+          <label>Nombre</label>
+          <md-icon class="fa fa-user"></md-icon>
+          <input  md-maxlength="30"  required md-no-asterisk name="nombre" ng-model="vm.contactName" onkeypress="return soloLetras(event);">
+          <div ng-messages="contactForm.nombre.$error">
+            <div ng-message="required">Este campo no puede estar vacio.</div>
+            <div ng-message="md-maxlength">El Nombre no puede tener mas de 30 caracteres.</div>
+          </div>
+        </md-input-container>
+
+        <md-input-container class="md-block UserCreate-container">
+        <label>Email</label>
+        <md-icon class="fa fa-envelope"></md-icon>
+        <input required type="email" name="email" ng-model="vm.contactEmail"
+               minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+        <div ng-messages="contactForm.email.$error" role="alert">
+          <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+            Su correo electrónico debe tener entre 10 y 100 caracteres de longitud y ser un formato de correo valido example@example.com.
+          </div>
+        </div>
+      </md-input-container>
+
+
+        <md-input-container class="InputFormContact-container">
+          <label>Mensaje:</label>
+          <textarea name="mensaje"class="FormContact-text" data-ng-model="vm.contactMsg" columns="1" required></textarea>
+          <div ng-messages="contactForm.mensaje.$error">
+            <div ng-message="required">Este campo no puede estar vacio.</div>
+            <div ng-message="md-maxlength">El Nombre no puede tener mas de 30 caracteres.</div>
+          </div>
+        </md-input-container>
+        <md-button type="submit" class="md-raised md-primary FormContact-button" >ENVIAR</md-button> <!-- ng-class="{'md-raised md-hue-1': (contactForm.$dirty && contactForm.$valid)}" -->
+      </form>
   </section>
 </div>

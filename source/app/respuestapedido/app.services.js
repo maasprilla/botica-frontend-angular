@@ -15,12 +15,9 @@
           method:'PUT'
         },
         findByIdUsuario:{
-          url:BASEURL + '/respuestaspedidos/usuario/:idUsuario',
+          url:BASEURL + '/respuestaspedidos/usuario',
           method:'GET',
-          isArray:true,
-          params:{
-            idUsuario:'@idUsuario'
-          }
+          isArray:true
 
         }
       })

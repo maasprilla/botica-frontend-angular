@@ -1,0 +1,186 @@
+.MajorContainer-elements {
+  min-height: calc(80vh);
+}
+.HeaderDrogView {
+  background-color: #166ba2;
+  height: 28em;
+  padding-top: 3.6em;
+}
+.HeaderDrogView-logo {
+  text-align: center;
+  padding-top: 1em;
+}
+.HeaderDrogView-logoImg {
+  width: 100%;
+  border: solid 4px #f9f9f9;
+  border-radius: 50%;
+  height: 15em;
+  width: 15em;
+}
+.HeaderDrogView-icons {
+  padding: 1em 1.5em 1em 0;
+}
+.FormPerfilDrog {
+  background-color: #fffafa;
+  font-family: 'Open Sans';
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+  margin: auto;
+  box-shadow: 0.1em 0.1em #555;
+  border-radius: 0.5em;
+  max-width: 55em;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+.FormPerfilDrog-input {
+  margin-bottom: 1em;
+  font-family: 'Open Sans';
+  border-radius: 1em;
+  display: inline-block;
+  width: 80%;
+}
+.FormPerfilDrog-edit {
+  display: inline-block;
+  font-family: 'Open Sans';
+  width: 10%;
+  color: #166ba2;
+  cursor: pointer;
+  padding-left: 1.5em;
+}
+.FormPerfilDrog-tittle {
+  color: #000;
+  font-family: 'Open Sans';
+  border: 1px solid #999;
+  margin: 0 0 1.5em 0;
+  padding: 0.5em 0;
+  box-shadow: 3px 2px 4px -3px #999;
+  text-align: center;
+}
+.FormPerfilDrog-img {
+  width: 9em;
+  height: 9em;
+  border: 1px solid #999;
+  box-shadow: 3px 3px 4px -3px #999;
+}
+.FormPerfilDrog-info {
+  width: 80%;
+  display: inline-block;
+}
+.FormPerfilDrog-label {
+  box-sizing: border-box;
+  padding: 2em;
+  border: 1px solid #999;
+  box-shadow: 3px 3px 4px -3px #999;
+}
+.FormPerfilDrog-input>label {
+  color: #3d9bff;
+}
+.dropzone {
+  position: relative;
+  color: #000;
+  text-align: center;
+}
+.dropzone:hover {
+  color: #fe5;
+  background-color: rgba(0,0,0,0.3);
+}
+.dropzone:dropped {
+  background: #222;
+  border: 10px solid #444;
+}
+.dropzone div {
+  position: absolute;
+  top: 3em;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+}
+.dropzone img {
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+}
+.dropzone [type="file"] {
+  cursor: pointer;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  font: bold 1px arial;
+}
+div.GeoDrogView-buttonsContainer {
+  height: 4em;
+  width: 100%;
+  text-align: center;
+}
+div.GeoDrogView-buttonsContainer>div.GeoDrogView-buttonContainer1 {
+  margin-bottom: 1em;
+}
+div.GeoDrogView-buttonsContainer>div.GeoDrogView-buttonContainer2 {
+  margin-bottom: 0.5em;
+}
+div.GeoDrogView-buttonsContainer>div.GeoDrogView-buttonContainer2>a.btn,
+div.GeoDrogView-buttonsContainer>div.GeoDrogView-buttonContainer1>a.btn {
+  color: #fff;
+}
+.spanicon {
+  margin-right: 0.3em;
+}
+@media (max-width: 450px) {
+  div.GeoDrogView-buttonsContainer>div.GeoDrogView-buttonContainer1>a.btn {
+    font-size: 11px;
+  }
+}
+@media (max-width: 463px) {
+  .FormPerfilDrog-edit {
+    padding-left: 0.5em;
+    font-size: 11px;
+  }
+  .FormPerfilDrog-label {
+    padding-left: 0.2em;
+  }
+}
+@media (max-width: 422px) {
+  .FormRegistro {
+    width: 100%;
+  }
+}
+@media (max-width: 800px) {
+  .FormPerfilDrog {
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+  }
+  .FormPerfilDrog-img {
+    margin-bottom: 2em;
+  }
+  .FormPerfilDrog-info {
+    width: 100%;
+  }
+}
+@media (max-width: 400px) {
+  .FormPerfilDrog {
+    padding: 1em;
+  }
+}
+@media screen and (max-width: 1001px) {
+  .HeaderDrogView-Content {
+    text-align: center;
+  }
+  .HeaderDrogView-icons {
+    max-width: 55px;
+    margin-right: 0.5em;
+    display: inline-block;
+  }
+  .HeaderDrogView-containerIcon {
+    text-align: center;
+    display: inline-block;
+  }
+}

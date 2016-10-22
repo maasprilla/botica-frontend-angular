@@ -26,6 +26,14 @@
             'update': {
                 method: 'PUT'
             },
+            findByidEstadoPedidoAndUsuario: {
+                url: BASEURL + '/pedidos/estadoPedidoAndUsuario/:idEstadoPedido',
+                method: 'GET',
+                isArray: true,
+                params: {
+                    idEstadoPedido: '@idEstadoPedido'
+                }
+            },
             findByidEstadoPedido: {
                 url: BASEURL + '/pedidos/estadoPedido/:idEstadoPedido',
                 method: 'GET',

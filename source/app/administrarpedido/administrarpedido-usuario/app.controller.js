@@ -23,17 +23,15 @@
 
         }
 
-        vm.pedidosenespera = Pedidos.findByidEstadoPedido({
+        vm.pedidosenespera = Pedidos.findByidEstadoPedidoAndUsuario({
             idEstadoPedido: 1
         });
 
-        vm.pedidosconcretados = Pedidos.findByidEstadoPedido({
+        vm.pedidosconcretados = Pedidos.findByidEstadoPedidoAndUsuario({
             idEstadoPedido: 3
         });
 
-        vm.respuestaspedidos = RespuestaPedido.findByIdUsuario({
-            idUsuario: 1
-        });
+        vm.respuestaspedidos = RespuestaPedido.findByIdUsuario();
 
 
         vm.moreCurrentPedido = null;

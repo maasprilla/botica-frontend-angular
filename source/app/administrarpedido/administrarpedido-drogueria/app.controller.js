@@ -16,7 +16,7 @@
 
 
     vm.pedidosenespera=Pedidos.findByidEstadoPedido({idEstadoPedido: 1});
-    vm.respuestaspedidos=RespuestaPedido.findByIdUsuario({idUsuario:1});
+    vm.respuestaspedidos=RespuestaPedido.findByIdUsuario();
     vm.total=0;
 
     vm.moreCurrentPedido = null;

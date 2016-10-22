@@ -10,6 +10,8 @@
 
     var vm=this;
     vm.ciudades=Ciudades.query();
+    vm.dateMax=new Date();
+    vm.dateMax.setFullYear(vm.dateMax.getFullYear()-18);
 
 
 
@@ -24,7 +26,7 @@
                 $location.path('/');
                 $mdToast.show(
                     $mdToast.simple()
-                        .textContent('Se ha  guardado el Usuario...')
+                        .textContent('Se ha guardado el Usuario...')
                         .position('bottom right'));
                       },function (error) {
                         $mdToast.show(

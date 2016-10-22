@@ -73,6 +73,21 @@
   border: 1px solid #999;
   box-shadow: 3px 3px 4px -3px #999;
 }
+.FormPerfilDrog-buttonLink {
+  background: #166ba2;
+  padding: 1em;
+  border-radius: 4px;
+  color: #fff;
+  text-decoration: none;
+}
+.FormPerfilDrog-linkContainer {
+  text-align: center;
+}
+.FormPerfilDrog-buttonLink:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: #3f51b5;
+}
 .FormPerfilDrog-input>label {
   color: #3d9bff;
 }
@@ -115,6 +130,21 @@
   padding: 0;
   font: bold 1px arial;
 }
+.FormPerfilDrog-linkContainer {
+  text-align: center;
+  margin-top: 1.5em;
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+}
+.ButtosMajor-container {
+  margin-top: 1.5em;
+  text-align: center;
+  box-sizing: border-box;
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+}
 div.GeoDrogView-buttonsContainer {
   height: 4em;
   width: 100%;
@@ -130,12 +160,19 @@ div.GeoDrogView-buttonsContainer>div.GeoDrogView-buttonContainer2>a.btn,
 div.GeoDrogView-buttonsContainer>div.GeoDrogView-buttonContainer1>a.btn {
   color: #fff;
 }
+.GeoDrogView-button2 {
+  padding: 1em;
+}
+.GeoDrogView-button2:hover {
+  background-color: #3f51b5;
+}
 .spanicon {
   margin-right: 0.3em;
 }
-@media (max-width: 450px) {
-  div.GeoDrogView-buttonsContainer>div.GeoDrogView-buttonContainer1>a.btn {
-    font-size: 11px;
+@media (max-width: 620px) {
+  .FormPerfilDrog-linkContainer>a.FormPerfilDrog-buttonLink:nth-child(2) {
+    margin-top: 1em;
+    font-size: 14px;
   }
 }
 @media (max-width: 463px) {
@@ -144,7 +181,7 @@ div.GeoDrogView-buttonsContainer>div.GeoDrogView-buttonContainer1>a.btn {
     font-size: 11px;
   }
   .FormPerfilDrog-label {
-    padding-left: 0.2em;
+    padding: 0.2em;
   }
 }
 @media (max-width: 422px) {
