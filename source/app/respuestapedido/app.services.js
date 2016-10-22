@@ -19,6 +19,12 @@
           method:'GET',
           isArray:true
 
+        },
+        findByIdDrogueria:{
+          url:BASEURL + '/respuestaspedidos/drogueria',
+          method:'GET',
+          isArray:true
+
         }
       })
   }

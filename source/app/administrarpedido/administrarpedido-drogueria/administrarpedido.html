@@ -91,6 +91,16 @@
 </md-tab-label>
 <md-tab-body>
 <md-subheader class="md-no-sticky">Pedidos Concretados</md-subheader>
+<div ng-repeat="pedidosconcretados in vm.pedidosconcretados" style="padding:1em">
+  <md-list-item class="secondary-button-padding PanelPedidosUsuarios-itemTitle">
+    <p>{{pedidosconcretados.descripcion}}</p>
+
+    <md-button class="md-icon-button md-primary" aria-label="Settings" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+    <md-icon class="fa fa-search" ng-click="vm.updateCurrentPedido(pedidosconcretados.idPedido)"></md-icon>
+</md-button>
+
+  </md-list-item>
+</div>
 </md-tab-body>
 </md-tab>
 
