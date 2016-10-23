@@ -77,6 +77,7 @@
           console.log('respuesta');
           console.log(vm.moreCurrentRespuestaPedido);
           Pedidos.update(vm.moreCurrentRespuestaPedido.idPedido, function() {
+            vm.updateestados();
 
                   $mdToast.show(
                       $mdToast.simple()
@@ -91,6 +92,18 @@
               });
               console.log('guardar');
               console.log(vm.moreCurrentRespuestaPedido.idPedido);
+        }
+
+        vm.updateestados=function(){
+          vm.pedidosenespera = Pedidos.findByidEstadoPedidoAndUsuario({
+              idEstadoPedido: 1
+          });
+
+          vm.pedidosconcretados = Pedidos.findByidEstadoPedidoAndUsuario({
+              idEstadoPedido: 3
+          });
+
+          vm.respuestaspedidos = RespuestaPedido.findByIdUsuario();
         }
 
 

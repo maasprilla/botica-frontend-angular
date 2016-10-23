@@ -19,14 +19,15 @@
               md-item-text="item.nombre"
               md-search-text="vm.searchTextDroguerias"
               md-items="item in vm.foundDrogueriasByNombre(vm.searchTextDroguerias)"
-              md-selected-item-change="vm.goDogueria(item.idUsuario);"
               md-min-length="1"
               placeholder = "Buscar Droguerias"
               class="FormRegistro-autocomplete">
 
               <md-item-template>
+                <a href="#/drogueriasview/{{item.idUsuario}}" style="text-decoration:none;">
                 <span md-highlight-text="vm.searchTextDroguerias" md-highlight-flags="^i">
                   {{item.nombre}}</span>
+                  </a>
               </md-item-template>
             <md-not-found>
               La drogueria "{{vm.searchTextDrogurias}}" no se encuentra.

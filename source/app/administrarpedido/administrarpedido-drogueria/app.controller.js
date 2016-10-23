@@ -38,6 +38,7 @@
       RespuestaPedido.save(vm.respuesta, function() {
         vm.respuesta=null;
               $location.path('/administrarpedido/drogueria');
+              vm.updateestados();
               $mdToast.show(
                   $mdToast.simple()
                       .textContent('Se ha  Enviado una Respuesta...')
@@ -62,6 +63,13 @@
       }
       console.log(vm.moreCurrentPedido);
 
+    }
+
+    vm.updateestados=function(){
+      vm.pedidosconcretados = Pedidos.findByConcretadoAndDrogueria();
+
+      vm.pedidosenespera=Pedidos.findByidEstadoPedido({idEstadoPedido: 1});
+      vm.respuestaspedidos=RespuestaPedido.findByIdDrogueria();
     }
 
 
