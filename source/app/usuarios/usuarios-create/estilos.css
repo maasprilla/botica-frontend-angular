@@ -33,26 +33,26 @@
   text-align: center;
   font-family: 'Open Sans';
   padding: 3em 0;
-  background-color: #fafafa;
+  background-color: #fff;
+  background-image: url("../../../images/fondo2.jpg");
 }
 .FormRegistro {
   background-color: #fffafa;
   display: inline-block;
   padding: 2em;
   border-radius: 0.5em;
-/** box-shadow 0.1em 0.1em  #555 **/
   width: 30em;
   background-repeat: no-repeat;
   background-position: center;
+  border: 1px solid #ccc;
   background-size: cover;
-/** color Snow **/
   text-align: center;
 }
 .FormRegistro-autocomplete {
   color: #000;
 }
 .FormRegistro-tittle {
-  color: #000;
+  color: #666;
   padding-bottom: 1em;
 }
 md-input-container .md-input {

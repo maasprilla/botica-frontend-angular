@@ -1,11 +1,11 @@
 .ContactHeaderMajor-container {
   padding-top: 4em;
   padding-bottom: 2em;
-  background-color: #152836;
+  background-color: #166ba2;
   opacity: 0.9;
 }
 section.ContactHeaderMajor-container>div.container>div.jumbotron {
-  background: #152836;
+  background: #166ba2;
   padding-top: 0;
   padding-bottom: 0;
 }
@@ -19,6 +19,7 @@ div.jumbotron>p.ContactHeader-text {
 .ContactForm-content {
   text-align: center;
   margin-bottom: 3.5em;
+  background-image: url("../../../images/fondo2.jpg");
 }
 .Contact-form {
   margin-top: 3em;
@@ -27,7 +28,7 @@ div.jumbotron>p.ContactHeader-text {
   display: inline-block;
   border-radius: 5px;
   padding: 1em;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.35);
+  border: 1px solid #ccc;
 }
 .InputFormContact-container {
   width: 100%;
