@@ -9,8 +9,8 @@
         <span class="icon-bar" style="background: #fafafa"></span>
         <span class="icon-bar" style="background: #fafafa"></span>
       </div>
-      <a class="navbar-brand MainMenuSecundary-linkLogo" href="/" ><figure class="MainMenu-logo"><img src="./images/logo.png" /></figure></a>
-    </div>
+      <a class="navbar-brand MainMenuSecundary-linkLogo" href="/" ng-show="!vm.isAuthenticated()"><figure class="MainMenu-logo"><img src="./images/logo.png" /></figure></a>
+      <a class="navbar-brand MainMenuSecundary-linkLogo" href="#/bienvenido" ng-show="vm.isAuthenticated()"><figure class="MainMenu-logo"><img src="./images/logo.png" /></figure></a>    </div>
 
     <!-- view desktop -->
     <div id="bs-example-navbar-collapse-1" class="navbar-collapse collapse MainMenu-container">
@@ -21,7 +21,6 @@
               <li class="MainMenu-item"><a onclick="anclaproducto();" class="MainMenu-link hvr-underline-from-center" style="cursor: pointer;">Producto</a></li>
               <li class="MainMenu-item"><a onclick="anclaimpacto();" class="MainMenu-link hvr-underline-from-center" style="cursor: pointer;">Impacto</a></li>
               <li class="MainMenu-item"><a onclick="anclabenefits();" class="MainMenu-link hvr-underline-from-center" style="cursor: pointer;">Beneficios</a></li>
-              <li class="MainMenu-item"><a href="#/contacto" class="MainMenu-link hvr-underline-from-center" >Contáctenos</a></li>
 
             </ul>
 

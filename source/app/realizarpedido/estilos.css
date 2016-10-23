@@ -17,7 +17,7 @@
   padding: 1em 1.5em 1em 0;
 }
 .FormPedido-list {
-  height: 30em;
+  height: 23em;
   background-color: #fffafa;
 }
 .FormPedido-carroList {
@@ -45,6 +45,8 @@
   text-align: center;
   padding-top: 3em;
   padding-bottom: 5em;
+  background-image: url("../../../images/fondo2.jpg");
+  box-shadow: inset 0px 0px 12px 1px rgba(0,0,0,0.5);
 }
 .FormRealizarPedido {
   background-color: #fffafa;
@@ -55,11 +57,12 @@
   text-align: center;
   display: inline-block;
   border-radius: 0.5em;
-  box-shadow: 0.1em 0.1em #555;
+  border: 1px solid #ccc;
 }
 .FormRealizarPedido-tittle {
   text-align: center;
   padding-bottom: 1em;
+  color: #ccc;
 }
 .FormRealizarPedido-input,
 .FormRealizarPedido-textarea {
@@ -99,6 +102,13 @@
 }
 .RealizarPedido-input>label {
   color: #4385f6;
+}
+.searchinput {
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 0.4em;
+  padding: 0.5em;
+  margin-top: 1em;
 }
 md-select-value.md-select-value.md-select-placeholder {
   color: #4385f6;

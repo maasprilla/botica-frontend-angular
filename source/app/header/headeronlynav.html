@@ -18,9 +18,7 @@
 
 
             <ul id="MainMenuSecundary-list" class="nav navbar-nav navbar-right MainMenuSecundary-list">
-              <li class="MainMenu-item hvr-underline-from-center" ng-show="vm.isAdmin()"><a  href="#/usuarioslist">Lista De Usuarios</a></li>
-              <li class="MainMenu-item hvr-underline-from-center" ng-show="vm.isUser()"><a  href="#/drogueriaslist">Lista De Droguerias</a></li>
-              <li class="MainMenu-item hvr-underline-from-center" ng-show="vm.isAdmin()"><a  href="#/drogueriaslist">Lista De Droguerias</a></li>
+
               <li id="LoginDesktop" ng-show="!vm.isAuthenticated()" class="MainMenu-item"><a href="" onclick="showLogin()" class="MainMenu-link hvr-underline-from-center">Iniciar Sesion▼</a>
                 <div id="PanelLogin" class="PanelLogin z-depth-1">
                   <form name="loginDespForm" class="PanelLogin-form" ng-submit="vm.signIn()">
@@ -50,12 +48,10 @@
 
               </li>
               <span class="glyphicon glyphicon-user" id="UserIconMovil" ng-show="vm.isAuthenticated()" style="font-size:21px; background-color:snow; padding:5px"></span>
-              <li ng-show="vm.isAuthenticated()" class="MainMenu-item"><a href="#/contacto" class="MainMenu-link hvr-underline-from-center" >Contáctenos</a></li>
               <li ng-show="vm.isAuthenticated()" onclick="showOptions()" class="MainMenu-item"><a href="" class="MainMenu-link" style="font-size:14px">{{vm.getCurrentUser()}}</a></li>
               <li id="LoginMovil" ng-show="!vm.isAuthenticated()" class="MainMenu-item "><a href="#/login" class="MainMenu-link hvr-underline-from-center" >Iniciar Sesion</a></li>
               <li ng-show="!vm.isAuthenticated()" class="MainMenu-item"><a href="#/regisuser" class="MainMenu-link hvr-underline-from-center" >Registrar Usuarios</a></li>
               <li ng-show="!vm.isAuthenticated()" class="MainMenu-item"><a href="#/regisdrog" class="MainMenu-link hvr-underline-from-center" >Registrar Droguerias</a></li>
-              <li ng-show="!vm.isAuthenticated()" class="MainMenu-item"><a href="#/contacto" class="MainMenu-link hvr-underline-from-center" >Contáctenos</a></li>
               <li id="PerfilDesktop" ng-show="vm.isAuthenticated()" class="MainMenu-item">
                 <span class="glyphicon glyphicon-user" onclick="showOptions()" style="font-size:40px; top:0; right: 2px; background-color:snow; padding:5px; border-bottom: 1px solid #152836"></span>
                   <div id="Options" class="Options z-depth-1">

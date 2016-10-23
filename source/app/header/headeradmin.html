@@ -9,17 +9,14 @@
         <span class="icon-bar" style="background: #fafafa"></span>
         <span class="icon-bar" style="background: #fafafa"></span>
       </div>
-      <a class="navbar-brand MainMenuSecundary-linkLogo" href="#/bienvenido" ><figure class="MainMenu-logo"><img src="./images/logo.png" /></figure></a>
-    </div>
+      <a class="navbar-brand MainMenuSecundary-linkLogo" href="/" ng-show="!vm.isAuthenticated()"><figure class="MainMenu-logo"><img src="./images/logo.png" /></figure></a>
+      <a class="navbar-brand MainMenuSecundary-linkLogo" href="#/bienvenido" ng-show="vm.isAuthenticated()"><figure class="MainMenu-logo"><img src="./images/logo.png" /></figure></a>    </div>
 
     <!-- view desktop -->
     <div id="bs-example-navbar-collapse-1" class="navbar-collapse collapse MainMenu-container">
 
 
             <ul id="MainMenuSecundary-list" class="nav navbar-nav navbar-right MainMenuSecundary-list">
-              <li class="MainMenu-item hvr-underline-from-center" ng-show="vm.isAuthenticated()"><a  href="#/usuarioslist">Lista De Usuarios</a></li>
-              <li class="MainMenu-item hvr-underline-from-center" ng-show="vm.isAuthenticated()"><a  href="#/drogueriaslist">Lista De Droguerias</a></li>
-              <li ng-show="vm.isAuthenticated()" class="MainMenu-item"><a href="#/contacto" class="MainMenu-link hvr-underline-from-center" >Contáctenos</a></li>
               <li id="LoginDesktop" ng-show="!vm.isAuthenticated()" class="MainMenu-item"><a href="" onclick="showLogin()" class="MainMenu-link hvr-underline-from-center">Iniciar Sesion▼</a>
                 <div id="PanelLogin" class="PanelLogin z-depth-1">
                   <form name="loginDespForm" class="PanelLogin-form" ng-submit="vm.signIn()">
@@ -50,7 +47,6 @@
               <li id="LoginMovil" ng-show="!vm.isAuthenticated()" class="MainMenu-item "><a href="#/login" class="MainMenu-link hvr-underline-from-center" >Iniciar Sesion</a></li>
               <li ng-show="!vm.isAuthenticated()" class="MainMenu-item"><a href="#/regisuser" class="MainMenu-link hvr-underline-from-center" >Registrar Usuarios</a></li>
               <li ng-show="!vm.isAuthenticated()" class="MainMenu-item"><a href="#/regisdrog" class="MainMenu-link hvr-underline-from-center" >Registrar Droguerias</a></li>
-              <li ng-show="!vm.isAuthenticated()" class="MainMenu-item"><a href="#/contacto" class="MainMenu-link hvr-underline-from-center" >Contáctenos</a></li>
               <li id="PerfilDesktop" ng-show="vm.isAuthenticated()" class="MainMenu-item">
                 <span class="glyphicon glyphicon-user" onclick="showOptions()" style="font-size:40px; top:0; right: 2px; background-color:snow; padding:5px; border-bottom: 1px solid #152836"></span>
                   <div id="Options" class="Options z-depth-1">

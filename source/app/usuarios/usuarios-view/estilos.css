@@ -17,6 +17,11 @@
 .HeaderUserView-icons {
   padding: 1em 1.5em 1em 0;
 }
+.section-user {
+  background-image: url("../../../images/fondo2.jpg");
+  box-shadow: inset 0px 0px 12px 1px rgba(0,0,0,0.5);
+  padding: 5em 0;
+}
 .FormPerfilUser {
   background-color: #fffafa;
   font-family: 'Open Sans';
@@ -24,10 +29,9 @@
   justify-content: space-between;
   padding: 2em;
   margin: auto;
-  box-shadow: 0.1em 0.1em #555;
+  border: 1px solid #ccc;
   border-radius: 0.5em;
   max-width: 55em;
-  margin-top: 3em;
   margin-bottom: 3em;
 }
 .FormPerfilUser-input {

@@ -29,7 +29,7 @@
 </section>
 <section class="RealizarPedidoMajor-container">
     <form id="FormRealizarPedido" class="FormRealizarPedido">
-
+      <h2 class="FormRealizarPedido-tittle">Realiza tu Pedido</h2>
         <md-content>
             <md-tabs md-dynamic-height md-border-bottom>
                 <md-tab>
@@ -40,7 +40,7 @@
                     <md-tab-body>
                         <div>
                             <md-icon class="fa fa-shopping-basket"></md-icon>
-                            <input type="text" placeholder="Buscar Medicamentos" ng-change="vm.search()" ng-model="vm.searchMedicamento" />
+                            <input type="text" placeholder="Buscar Medicamentos" ng-change="vm.search()" ng-model="vm.searchMedicamento" class="searchinput" />
                         </div>
                         <md-list ng-cloak class="FormPedido-list">
                             <md-list-item ng-repeat="item in vm.medicamentosAutocomplete">
